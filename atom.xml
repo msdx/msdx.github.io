@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>疯狂的键盘</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://githang.com/"/>
+  <updated>2017-09-16T03:32:26.000Z</updated>
+  <id>http://githang.com/</id>
+  
+  <author>
+    <name>浩码农</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让okhttp3优雅地打印日志</title>
+    <link href="http://githang.com/2017/09/16/OkHttp3-LogInterceptor/"/>
+    <id>http://githang.com/2017/09/16/OkHttp3-LogInterceptor/</id>
+    <published>2017-09-16T01:51:52.000Z</published>
+    <updated>2017-09-16T03:32:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。&lt;br&gt;本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志库的，都可以一看。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://githang.com/2017/09/15/hello-world/"/>
+    <id>http://githang.com/2017/09/15/hello-world/</id>
+    <published>2017-09-15T14:48:26.000Z</published>
+    <updated>2017-09-15T14:48:26.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
