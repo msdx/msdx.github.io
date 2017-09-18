@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-09-16T03:32:26.000Z</updated>
+  <updated>2017-09-18T13:56:17.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mask Layer</title>
+    <link href="http://githang.com/2017/09/18/Mask-Layer/"/>
+    <id>http://githang.com/2017/09/18/Mask-Layer/</id>
+    <published>2017-09-18T13:54:10.000Z</published>
+    <updated>2017-09-18T13:56:17.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;讲两个故事吧。&lt;/p&gt;
+&lt;p&gt;两年前，我用一部华为千元智能机拍了几张照片发在了朋友圈上。没多久，姐姐在微信上问我朋友圈上的照片是用什么拍的。我说用的系统自带的相机啊。&lt;br&gt;姐姐说，那照片看起来好唯美啊。&lt;br&gt;我点开朋友圈里的图上看了看，是有一种自然的朦胧感觉，像是加了羽
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>让okhttp3优雅地打印日志</title>
