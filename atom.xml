@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-09-21T07:12:41.000Z</updated>
+  <updated>2017-09-24T11:14:24.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一步步打造自己的通用上拉加载布局</title>
+    <link href="http://githang.com/2017/09/24/LoadMoreLayout/"/>
+    <id>http://githang.com/2017/09/24/LoadMoreLayout/</id>
+    <published>2017-09-24T11:10:40.000Z</published>
+    <updated>2017-09-24T11:14:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>ViewPager与CoordinatorLayout一起使用的一个Bug</title>
@@ -79,11 +103,11 @@
       <category term="Android" scheme="http://githang.com/categories/Android/"/>
     
     
+      <category term="github" scheme="http://githang.com/tags/github/"/>
+    
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
-      <category term="github" scheme="http://githang.com/tags/github/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     

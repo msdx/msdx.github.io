@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2017/09/24/LoadMoreLayout/</loc>
+    
+    <lastmod>2017-09-24T11:14:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</loc>
     
     <lastmod>2017-09-21T07:12:41.000Z</lastmod>

@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>Tag: CoordinatorLayout | 疯狂的键盘</title>
+  <title>一步步打造自己的通用上拉加载布局 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android研发工程师，左撇子。">
-<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://githang.com/tags/CoordinatorLayout/index.html">
+  <meta name="description" content="背景下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。">
+<meta name="keywords" content="github,Android,上拉加载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一步步打造自己的通用上拉加载布局">
+<meta property="og:url" content="http://githang.com/2017/09/24/LoadMoreLayout/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Android研发工程师，左撇子。">
+<meta property="og:description" content="背景下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。">
+<meta property="og:image" content="http://img.blog.csdn.net/20170924165424485?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170924184512936?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-24T11:14:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的键盘">
-<meta name="twitter:description" content="Android研发工程师，左撇子。">
+<meta name="twitter:title" content="一步步打造自己的通用上拉加载布局">
+<meta name="twitter:description" content="背景下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170924165424485?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -181,56 +185,120 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LoadMoreLayout" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/" class="archive-article-date">
-  	<time datetime="2017-09-21T05:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/">ViewPager与CoordinatorLayout一起使用的一个Bug</a>
+    <h1 class="article-title" itemprop="name">
+      一步步打造自己的通用上拉加载布局
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/24/LoadMoreLayout/" class="archive-article-date">
+  	<time datetime="2017-09-24T11:10:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。</p>
+<a id="more"></a>
+<p>在很久之前的项目开发中，就已经有上拉加载的这个需求。但是那时苦于没有找到一个合适的上拉加载的库，而项目迭代又紧，那时自己实现恐时间上来不及或者引入其他bug，就暂时用了秋百万的cube-sdk中的点击加载。<br>在今年该项目的又一次迭代开发中，由于使用到了RecyclerView，而对应的RecyclerView.Adapter又无法使用cube-sdk中的adapter，因此用不了其点击加载，考虑到自己这两年所积累的相关知识及对上拉加载的思考应已足够，就花了些时间，实现了一个相对简单的上拉加载布局。</p>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>我对上拉加载的思考起始于两年前读过的秋百万的一篇文章《<a href="https://www.liaohuqiu.net/cn/posts/the-pull-to-refresh-in-my-eyes/" target="_blank" rel="external">我眼中的下拉刷新</a>》。但是上拉加载与下拉刷新的差异，不止是拉的方向不同，它们所拉出来的Header或Footer在加载完成后的消失方式也会不同，这就导致了在实现层面上会有些区别。</p>
+<p>先说下拉刷新，通常是先让一个HeaderView位于ContentView外部而不显示出来，然后在下拉的时候让它与ContentView（或只有HeaderView）跟着移动下来，然后到一定距离触发刷新，HeaderView回滚到顶部停留，等刷新完成再慢慢滑动出去。</p>
+<p>而上拉加载，通常的场景是用于AbsListView或RecyclerView。它与下拉刷新的最大不同是，所加载出来的内容会插入到当前所显示的AbsListView或ReyclcerView中，并显示在原来最后显示的内容与FooterView之间。<br>以RecyclerView举例，当我们在上拉加载更多的布局里放一个RecyclerView与一个FooterView，并把FooterView设置在布局底部范围之后，然后让它随着RecyclerView一起上拉，并显示出来，这点并没有问题。这时的界面如下图：</p>
+<p><img src="http://img.blog.csdn.net/20170924165424485?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>这里我们思考一个问题：当数据加载完成，更新到RecyclerView中时，界面应该如何处理？<br>通常而言，这时候应该是新加载的数据从FooterView的位置开始显示，而FooterView消失。但我们让FooterView消失（移出显示范围之外），而让RecyclerView移回来，所加载的新内容就会在屏幕外面，需要用户再去手动滑动上来才能看到。这种体验就很不好了。<br>因此我个人觉得，这个FooterView不应该由我们的上拉加载的布局去控制，而是交由具体场景去实现，在上拉加载的布局当中，应只做ContentView的位移，以及相关的界面及功能接口的回调。</p>
+<h1 id="基本接口"><a href="#基本接口" class="headerlink" title="基本接口"></a>基本接口</h1><p>参考秋百万的下拉刷新的库，又考虑到目前实现比较简单的上拉加载，所以我先定义了以下两个接口：<br>一是上拉加载的UI回调接口，它应该至少有三个状态变化的回调：可以上拉，已经触发加载回调，上拉完成。除此之外，为配合实现一些更好的提示或动画，它至少需要提供两个值：能够触发加载的位移量，以及当前的位移量。当然，多一些其他参数，比如当前的位移方向、速度等的话，可以实现更多的效果，不过这里只是先完成基本功能，所以实现上就先简单点。根据所需要的这些回调，LoadMoreUIHandler接口定义如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Copyright (c) 2017. Xi'an iRain IOT Technology service CO., Ltd (ShenZhen). All Rights Reserved.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">package</span> com.githang.hiloadmore;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * <span class="doctag">@author</span> Geek_Soledad (msdx.android@qq.com)</span></div><div class="line"><span class="comment"> * <span class="doctag">@since</span> 2017-05-03 0.1</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">LoadMoreUIHandler</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onPrepare</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onBegin</span><span class="params">()</span></span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onComplete</span><span class="params">(<span class="keyword">boolean</span> hasMore)</span></span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onPositionChange</span><span class="params">(<span class="keyword">int</span> offsetY, <span class="keyword">int</span> offsetToLoadMore)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第二个接口是触发加载的回调接口，只有一个方法，如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Copyright (c) 2017. Xi'an iRain IOT Technology service CO., Ltd (ShenZhen). All Rights Reserved.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">package</span> com.githang.hiloadmore;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * <span class="doctag">@author</span> Geek_Soledad (msdx.android@qq.com)</span></div><div class="line"><span class="comment"> * <span class="doctag">@since</span> 2017-05-02 0.1</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">LoadMoreHandler</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">onLoadMore</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><p>我们首先来实现上拉。注意，由于API 14已能适配目前市场上所有Android设备，所以这里像判断是否可以上下拉动或对View进行位移操作，会直接使用到一些API 14以上才有的接口。</p>
+<p>首先布局直接继承自FrameLayout。其次，上拉过程需要知道当前的状态，能触发拉动的位移量，当前位移量，是否可以上拉等，所以定义变量，构造方法及一些基本的getter和setter方法如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoadMoreLayout</span> <span class="keyword">extends</span> <span class="title">FrameLayout</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">byte</span> STATUS_INIT = <span class="number">0</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">byte</span> STATUS_PREPARE = <span class="number">1</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">byte</span> STATUS_LOADING = <span class="number">2</span>;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">byte</span> STATUS_COMPLETE = <span class="number">3</span>;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">byte</span> mStatus = STATUS_INIT; <span class="comment">//上拉状态</span></div><div class="line"></div><div class="line">    View mContent;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mCurrentOffsetY; <span class="comment">//当前位移量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mOffsetYToLoadMore = <span class="number">200</span>; <span class="comment">// 触发加载至少需要的位移量</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> mResistance = (<span class="keyword">float</span>) Math.PI; <span class="comment">// View实际的位移量=手指拖动的量/它</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">float</span> mDownY; <span class="comment">//手指按下时的Y坐标</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mDragSlop; <span class="comment">//判断触发拖动操作的阙值</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> mHasMore; <span class="comment">// 是否可以加载更多</span></div><div class="line"></div><div class="line">    <span class="keyword">private</span> LoadMoreHandler mLoadMoreHandler;</div><div class="line">    <span class="keyword">private</span> LoadMoreUIHandler mLoadMoreUIHandler;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LoadMoreLayout</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">        mDragSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setHasMore</span><span class="params">(<span class="keyword">boolean</span> hasMore)</span> </span>&#123;</div><div class="line">        mHasMore = hasMore;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">hasMore</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mHasMore;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setOffsetYToLoadMore</span><span class="params">(<span class="keyword">int</span> offsetYToLoadMore)</span> </span>&#123;</div><div class="line">        mOffsetYToLoadMore = offsetYToLoadMore;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setResistance</span><span class="params">(<span class="keyword">float</span> resistance)</span> </span>&#123;</div><div class="line">        mResistance = resistance;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLoadMoreHandler</span><span class="params">(LoadMoreHandler loadMoreHandler)</span> </span>&#123;</div><div class="line">        mLoadMoreHandler = loadMoreHandler;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLoadMoreUIHandler</span><span class="params">(LoadMoreUIHandler loadMoreUIHandler)</span> </span>&#123;</div><div class="line">        mLoadMoreUIHandler = loadMoreUIHandler;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来，我们需要找到我们的ContentView，这里提供两种方式：一是获取布局里的第一个子View，二是提供一个设置ContentView的方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setContentView</span><span class="params">(View view)</span> </span>&#123;</div><div class="line">    mContent = view;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onFinishInflate</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onFinishInflate();</div><div class="line">    <span class="keyword">final</span> <span class="keyword">int</span> childCount = getChildCount();</div><div class="line">    <span class="keyword">if</span> (childCount &lt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"LoadMoreLayout needs at least one child"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (mContent == <span class="keyword">null</span>) &#123;</div><div class="line">        mContent = getChildAt(<span class="number">0</span>);</div><div class="line">        mContent.bringToFront();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来重写onLayout方法，确保在整个过程当中不会因layout操作导致内容位移位置不正确。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onLayout</span><span class="params">(<span class="keyword">boolean</span> changed, <span class="keyword">int</span> l, <span class="keyword">int</span> t, <span class="keyword">int</span> r, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> offsetY = mCurrentOffsetY;</div><div class="line">    <span class="keyword">int</span> paddingLeft = getPaddingLeft();</div><div class="line">    <span class="keyword">int</span> paddingTop = getPaddingTop();</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (mContent != <span class="keyword">null</span>) &#123;</div><div class="line">        MarginLayoutParams lp = (MarginLayoutParams) mContent.getLayoutParams();</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> left = paddingLeft + lp.leftMargin;</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> top = paddingTop + lp.topMargin + offsetY;</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> right = left + mContent.getMeasuredWidth();</div><div class="line">        <span class="keyword">final</span> <span class="keyword">int</span> bottom = top + mContent.getMeasuredHeight();</div><div class="line">        mContent.layout(left, top, right, bottom);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来就是对手指的事件处理了，这也是完成上拉加载的关键之一。</p>
+<p>首先是事件拦截，我们要先判断是否可以进行上拉或由LoadMoreLayout下拉，如果可以，则拦截事件，不让事件再往下传递，所以这里重写<code>onInterceptTouchEvent(MotionEvent ev)</code>方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent ev)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!isEnabled() || mContent == <span class="keyword">null</span> || !mHasMore) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onInterceptTouchEvent(ev);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">boolean</span> intercept = <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">switch</span> (ev.getAction()) &#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">            mDownY = ev.getY();</div><div class="line">            <span class="comment">// TODO 停止往回滑动</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">            <span class="keyword">int</span> offsetY = (<span class="keyword">int</span>) (ev.getY() - mDownY);<span class="comment">//当前拖动距离</span></div><div class="line">            <span class="keyword">if</span> (Math.abs(offsetY) &lt; mDragSlop) &#123;</div><div class="line">                <span class="comment">//小于可判定为拖动的阙值则不处理</span></div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">boolean</span> moveUp = offsetY &lt; <span class="number">0</span>;</div><div class="line">            <span class="keyword">boolean</span> canMoveDown = mCurrentOffsetY &lt; <span class="number">0</span>;</div><div class="line">            <span class="keyword">if</span> (moveUp &amp;&amp; mContent.canScrollVertically(<span class="number">1</span>)) &#123;<span class="comment">//如果子View可以继续往下滑动，则不拦截</span></div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (moveUp || canMoveDown) &#123;</div><div class="line">                intercept = <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> intercept || <span class="keyword">super</span>.onInterceptTouchEvent(ev);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后重写<code>onTouchEvent(MotionEvent ev)</code>方法，进行上拉加载的逻辑，以及移动ContentView的位置。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onTouchEvent</span><span class="params">(MotionEvent event)</span> </span>&#123;</div><div class="line">    <span class="keyword">switch</span> (event.getAction()) &#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_MOVE:</div><div class="line">            <span class="keyword">float</span> offsetY = event.getY() - mDownY;</div><div class="line">            <span class="keyword">if</span> (mStatus != STATUS_LOADING &amp;&amp; mStatus != STATUS_PREPARE) &#123;</div><div class="line">                mStatus = STATUS_PREPARE;</div><div class="line">                mLoadMoreUIHandler.onPrepare();</div><div class="line">            &#125;</div><div class="line">            movePos((<span class="keyword">int</span>) (offsetY / mResistance));</div><div class="line">            <span class="keyword">if</span> (mStatus == STATUS_PREPARE) &#123;</div><div class="line">                mLoadMoreUIHandler.onPositionChange(mCurrentOffsetY, mOffsetYToLoadMore);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_UP:</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_CANCEL:</div><div class="line">            onRelease();</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">super</span>.onTouchEvent(event);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>movePos(int)</code>实现对ContentView的位移，如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">movePos</span><span class="params">(<span class="keyword">int</span> offsetY)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (offsetY &gt; <span class="number">0</span> &amp;&amp; mCurrentOffsetY == <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (offsetY &gt; <span class="number">0</span>) &#123;</div><div class="line">        offsetY = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    mContent.setTranslationY(offsetY);</div><div class="line">    mCurrentOffsetY = offsetY;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>onRelease()</code>是手放开后判断是否触发加载，以及让ContentView归位的操作：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">onRelease</span><span class="params">()</span> </span>&#123;</div><div class="line">    performLoadMore();</div><div class="line">    <span class="comment">// TODO 让ContentView归位</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">performLoadMore</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (mStatus != STATUS_PREPARE) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (Math.abs(mCurrentOffsetY) &gt;= mOffsetYToLoadMore) &#123;</div><div class="line">        mStatus = STATUS_LOADING;</div><div class="line">        mLoadMoreHandler.onLoadMore();</div><div class="line">        mLoadMoreUIHandler.onBegin();</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        mLoadMoreUIHandler.onPrepare();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以上完成了上拉时对ContentView的位移，以及回调加载方法。但这只是完成了从最初的状态到开始的状态，我们还需要知道加载完成，这样才能让状态重置，以及知道是否还可以继续加载。所以还需要有如下方法：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadMoreComplete</span><span class="params">(<span class="keyword">boolean</span> hasMore)</span> </span>&#123;</div><div class="line">    mHasMore = hasMore;</div><div class="line">    mLoadMoreUIHandler.onComplete(hasMore);</div><div class="line">    mStatus = STATUS_COMPLETE;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>除此之外，我们还增加一个方法，用于外界触发它开始加载，可用于自动加载的实现。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">triggerToLoadMore</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!mHasMore || mStatus == STATUS_LOADING) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    mStatus = STATUS_LOADING;</div><div class="line">    mLoadMoreHandler.onLoadMore();</div><div class="line">    mLoadMoreUIHandler.onBegin();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>到这里，我们已经完成了从初始状态到上拉到加载到完成的整个过程。但是如果你够细心会发现，目前为止并没有提到如何让ContentView回去，并且上面的代码中有两处TODO的标记。因此如果一直上拉，最终是会把ContentView给拉出外面的。所以，我们接下来还要实现让ContentView回来的代码。</p>
+<p>我们知道，让一个View产生位移有多种方式，比如设置它的margin，设置父布局的padding，调用它的layout方法，或者是如上面我们的实现中使用<code>setTranslationY(float)</code> 方法。而让View滑动回去，由于此过程当中并不需要跟着手指来移动，所以也会有几种选择。<br>首先，既然前面我们是使用<code>setTranslationY(float)</code>来设置它的位置，那么最终肯定也是需要调用这个方法来恢复原位的。而在中间的过程当中，可供选择的处理方式至少有：</p>
+<ul>
+<li>先调用该方法直接设置回去，然后播放一个位移动画。简单粗暴。</li>
+<li>使用Scroller计算每次的位移量，然后调用这个ContentView的<code>setTranslationY(float)</code>方法设置它的位置让它慢慢回去。</li>
+</ul>
+<p>由于第二种方式它所处的位置与我们所记录的位移量是对应上的，并且在回滚过程当中当我们的手指按下去，是可以让它停住的，相对而言更为真实，所以这里选用第二种方式。<br>参考了秋百万的下拉刷新的库，这里定义了一个内部类，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">class ScrollChecker implements Runnable &#123;</div><div class="line">    private static final int MOVE_DELAY = 12;</div><div class="line"></div><div class="line">    private final Scroller mScroller;</div><div class="line"></div><div class="line">    private int mStart;</div><div class="line">    private boolean mIsRunning;</div><div class="line"></div><div class="line">    ScrollChecker() &#123;</div><div class="line">        mScroller = new Scroller(getContext());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void run() &#123;</div><div class="line">        boolean isFinish = !mScroller.computeScrollOffset() || mScroller.isFinished();</div><div class="line">        int curY = mScroller.getCurrY();</div><div class="line">        if (!isFinish) &#123;</div><div class="line">            movePos(curY + mStart);</div><div class="line">            postDelayed(this, MOVE_DELAY);</div><div class="line">        &#125; else &#123;</div><div class="line">            reset();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private void reset() &#123;</div><div class="line">        mIsRunning = false;</div><div class="line">        mStart = 0;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void tryToScrollTo(int to, int duration) &#123;</div><div class="line">        if (mCurrentOffsetY == to) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        removeCallbacks(this);</div><div class="line">        if (!mScroller.isFinished()) &#123;</div><div class="line">            mScroller.forceFinished(true);</div><div class="line">        &#125;</div><div class="line">        mStart = mCurrentOffsetY;</div><div class="line">        mScroller.startScroll(0, 0, 0, to - mStart, duration);</div><div class="line">        post(this);</div><div class="line">        mIsRunning = true;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    void abortIfRunning() &#123;</div><div class="line">        if (mIsRunning) &#123;</div><div class="line">            if (!mScroller.isFinished()) &#123;</div><div class="line">                mScroller.forceFinished(true);</div><div class="line">            &#125;</div><div class="line">            reset();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>它的代码很简单，首先有一个Scroller，用于计算位移量。然后当触发回滚时，我们每12毫秒就执行我们的这个Runnable的回调，获取当前Scroller的结果，设置到位移中去。并且它还提供了一个方法<code>abortIfRunning()</code>，用于在回滚过程中当手指继续操作我们的LoadMoreLayout时让ContentView暂停下来。<br>最后，我们修改一下前面的代码，实现ContentView的归位。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onInterceptTouchEvent</span><span class="params">(MotionEvent ev)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!isEnabled() || mContent == <span class="keyword">null</span> || !mHasMore) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.onInterceptTouchEvent(ev);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">boolean</span> intercept = <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">switch</span> (ev.getAction()) &#123;</div><div class="line">        <span class="keyword">case</span> MotionEvent.ACTION_DOWN:</div><div class="line">            mDownY = ev.getY();</div><div class="line">            mScrollChecker.abortIfRunning();<span class="comment">//当手指继续按下时，取消回滚</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    <span class="comment">//...这里代码和前面一样</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">onRelease</span><span class="params">()</span> </span>&#123;</div><div class="line">    performLoadMore();</div><div class="line">    mScrollChecker.tryToScrollTo(<span class="number">0</span>, mDuration);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="最终成果"><a href="#最终成果" class="headerlink" title="最终成果"></a>最终成果</h1><p>完整代码已经上传到Github，项目地址为：<a href="https://github.com/msdx/hi-loadmore" target="_blank" rel="external">https://github.com/msdx/hi-loadmore</a><br>项目运行效果如下：<br><img src="http://img.blog.csdn.net/20170924184512936?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="运行效果"></p>
+<h1 id="后续扩展"><a href="#后续扩展" class="headerlink" title="后续扩展"></a>后续扩展</h1><p>我在前面提到，上拉加载的Footer可能不适合在LoadMoreLayout里实现，所以在我的实现当中也是不包含这一方面的代码的。一般可以实现LoadMoreUILayout接口，来自定义自己的FooterView。而对于像ListView或RecyclerView，个人倾向于使用ListView的FooterView或在RecyclerView的Adapter中添加FooterView来实现。后续会更新Github上的项目，补充对LoadMoreLayout的扩展以实现RecyclerView的上拉加载。但是否会再写一篇，视补充的内容多少而定。如果内容少或简单，则只更新项目。有相关疑问或建议请移步github该项目上提issue。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://www.liaohuqiu.net/cn/posts/the-pull-to-refresh-in-my-eyes/" target="_blank" rel="external">《我眼中的下拉刷新》</a></li>
+<li>liaohuqiu/<a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh" target="_blank" rel="external">android-Ultra-Pull-To-Refresh</a></li>
+<li>nukc/<a href="https://github.com/nukc/LoadMoreLayout" target="_blank" rel="external">LoadMoreLayout</a></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>您的赞赏是我的最大动力<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CoordinatorLayout</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上拉加载</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -243,17 +311,134 @@ var _hmt = _hmt || [];
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2017/09/24/LoadMoreLayout/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ViewPager与CoordinatorLayout一起使用的一个Bug</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://githang.com/2017/09/24/LoadMoreLayout/",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4684296714025694",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -276,9 +461,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
