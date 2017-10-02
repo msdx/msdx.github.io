@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://githang.com/"/>
+  <link href="http://www.githang.com/"/>
   <updated>2017-09-24T14:28:39.000Z</updated>
-  <id>http://githang.com/</id>
+  <id>http://www.githang.com/</id>
   
   <author>
     <name>浩码农</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>一步步打造自己的通用上拉加载布局</title>
-    <link href="http://githang.com/2017/09/24/LoadMoreLayout/"/>
-    <id>http://githang.com/2017/09/24/LoadMoreLayout/</id>
+    <link href="http://www.githang.com/2017/09/24/LoadMoreLayout/"/>
+    <id>http://www.githang.com/2017/09/24/LoadMoreLayout/</id>
     <published>2017-09-24T11:10:40.000Z</published>
     <updated>2017-09-24T14:28:39.000Z</updated>
     
@@ -29,21 +29,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
+      <category term="github" scheme="http://www.githang.com/tags/github/"/>
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+      <category term="上拉加载" scheme="http://www.githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
   <entry>
     <title>ViewPager与CoordinatorLayout一起使用的一个Bug</title>
-    <link href="http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/"/>
-    <id>http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</id>
+    <link href="http://www.githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/"/>
+    <id>http://www.githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</id>
     <published>2017-09-21T05:01:36.000Z</published>
     <updated>2017-09-21T07:12:41.000Z</updated>
     
@@ -53,21 +53,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
+      <category term="Bug" scheme="http://www.githang.com/tags/Bug/"/>
     
-      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
+      <category term="CoordinatorLayout" scheme="http://www.githang.com/tags/CoordinatorLayout/"/>
     
   </entry>
   
   <entry>
     <title>蒙层</title>
-    <link href="http://githang.com/2017/09/18/Mask-Layer/"/>
-    <id>http://githang.com/2017/09/18/Mask-Layer/</id>
+    <link href="http://www.githang.com/2017/09/18/Mask-Layer/"/>
+    <id>http://www.githang.com/2017/09/18/Mask-Layer/</id>
     <published>2017-09-18T13:54:10.000Z</published>
     <updated>2017-09-18T14:04:48.000Z</updated>
     
@@ -78,17 +78,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>让okhttp3优雅地打印日志</title>
-    <link href="http://githang.com/2017/09/16/OkHttp3-LogInterceptor/"/>
-    <id>http://githang.com/2017/09/16/OkHttp3-LogInterceptor/</id>
+    <link href="http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/"/>
+    <id>http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/</id>
     <published>2017-09-16T01:51:52.000Z</published>
     <updated>2017-09-16T03:32:26.000Z</updated>
     
@@ -100,23 +100,23 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
+      <category term="github" scheme="http://www.githang.com/tags/github/"/>
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="http://www.githang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
-      <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
+      <category term="OkHttp" scheme="http://www.githang.com/tags/OkHttp/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://githang.com/2017/09/15/hello-world/"/>
-    <id>http://githang.com/2017/09/15/hello-world/</id>
+    <link href="http://www.githang.com/2017/09/15/hello-world/"/>
+    <id>http://www.githang.com/2017/09/15/hello-world/</id>
     <published>2017-09-15T14:48:26.000Z</published>
     <updated>2017-09-15T14:48:26.000Z</updated>
     
