@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>让okhttp3优雅地打印日志 | 疯狂的键盘</title>
+  <title>开发的没道理 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta name="keywords" content="Android,github,开源,OkHttp">
+  <meta name="description" content="在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。就比如Android开发人员常遇到的：产品告诉你要怎么做：“像iOS那样。”测试和你提了个Bug：“你这里和iO">
+<meta name="keywords" content="杂文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="让okhttp3优雅地打印日志">
-<meta property="og:url" content="http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/index.html">
+<meta property="og:title" content="开发的没道理">
+<meta property="og:url" content="http://www.githang.com/2017/10/03/Development-Unreasonableness/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta property="og:updated_time" content="2017-09-16T03:32:26.000Z">
+<meta property="og:description" content="在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。就比如Android开发人员常遇到的：产品告诉你要怎么做：“像iOS那样。”测试和你提了个Bug：“你这里和iO">
+<meta property="og:updated_time" content="2017-10-03T01:34:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="让okhttp3优雅地打印日志">
-<meta name="twitter:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
+<meta name="twitter:title" content="开发的没道理">
+<meta name="twitter:description" content="在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。就比如Android开发人员常遇到的：产品告诉你要怎么做：“像iOS那样。”测试和你提了个Bug：“你这里和iO">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -182,40 +182,33 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-OkHttp3-LogInterceptor" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Development-Unreasonableness" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      让okhttp3优雅地打印日志
+      开发的没道理
     </h1>
   
 
         
-        <a href="/2017/09/16/OkHttp3-LogInterceptor/" class="archive-article-date">
-  	<time datetime="2017-09-16T01:51:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
+        <a href="/2017/10/03/Development-Unreasonableness/" class="archive-article-date">
+  	<time datetime="2017-10-03T01:32:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。<br>本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志库的，都可以一看。</p>
-</blockquote>
+        <p>在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。<br>不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。<br>就比如Android开发人员常遇到的：<br>产品告诉你要怎么做：“像iOS那样。”<br>测试和你提了个Bug：“你这里和iOS的不一样。”<br>或者是面试设计出来的iOS风格的效果图。</p>
 <a id="more"></a>
-<p>okhttp3-loginterceptor是用于okhttp3的一个日志打印库，小巧轻量，相比square提供的okhttp3的logging-interceptor，它对每个请求和响应都进行编号 ，并且对于json的请求或响应内容，还将打印出格式化的JSON内容，而除了依赖okhttp3之外，它不会添加任何其他第三方依赖。那么它是如何小巧轻量而又不会向项目引入其他依赖的呢？等下我们在文中会提到，下面先开始介绍它的使用。</p>
-<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>okhttp3-loginterceptor在github上的项目地址为：<a href="https://github.com/parkingwang/okhttp3-loginterceptor" target="_blank" rel="external">https://github.com/parkingwang/okhttp3-loginterceptor</a> 。引入方式很简单，只需几行代码。如下：</p>
-<h2 id="声明依赖"><a href="#声明依赖" class="headerlink" title="声明依赖"></a>声明依赖</h2><p>添加依赖，以下的<code>latest.integration</code>建议换为当前最新版本的具体版本号。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.parkingwang:okhttp3-loginterceptor:latest.integration'</span></div></pre></td></tr></table></figure></p>
-<h2 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h2><p>然后在创建<code>OkHttpClient</code>对象的代码中添加其拦截器实例，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">OkHttpClient okHttpClient = new OkHttpClient.Builder()</div><div class="line">        .addInterceptor(new LogInterceptor()).build();</div></pre></td></tr></table></figure></p>
-<p>这样就完成了。然后你就可以看到类似这样的日志了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">W/OkHttp: [4 request]--&gt; GET https://api.github.com/users/defunkt http/1.1</div><div class="line">W/OkHttp: [4 request]--&gt; END GET</div><div class="line">W/OkHttp: [5 request]--&gt; GET https://api.github.com/zen http/1.1</div><div class="line">W/OkHttp: [5 request]--&gt; END GET</div><div class="line">W/OkHttp: [6 request]--&gt; GET https://api.github.com/users/msdx http/1.1</div><div class="line">W/OkHttp: [6 request]--&gt; END GET</div><div class="line">W/OkHttp: [4 response]&lt;-- 200 OK https://api.github.com/users/defunkt (1335ms)</div><div class="line">W/OkHttp: [4 response]Server: GitHub.com</div><div class="line">W/OkHttp: [4 response]Date: Thu, 12 Jan 2017 04:01:43 GMT</div><div class="line">W/OkHttp: [4 response]Content-Type: application/json; charset=utf-8</div><div class="line">W/OkHttp: [4 response]Transfer-Encoding: chunked</div></pre></td></tr></table></figure></p>
-<p>文章这就结束了？当然不，既然是专门介绍的文章当然得好好写写。</p>
-<h1 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h1><h2 id="适当地添加日志拦截器"><a href="#适当地添加日志拦截器" class="headerlink" title="适当地添加日志拦截器"></a>适当地添加日志拦截器</h2><p>首先，我们打印日志一般都是在debug的时候才需要，对于release即发布出去的版本，是不需要打印请求的日志的，所以通常我们会这样写代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();</div><div class="line">if (BuildConfig.DEBUG) &#123;</div><div class="line">    clientBuilder.addInterceptor(new LogInterceptor());</div><div class="line">&#125;</div><div class="line">return clientBuilder</div><div class="line">    //.XXX 省略一大堆设置其他参数的代码</div><div class="line">    .build();</div></pre></td></tr></table></figure></p>
-<h2 id="关于JSON格式化输出"><a href="#关于JSON格式化输出" class="headerlink" title="关于JSON格式化输出"></a>关于JSON格式化输出</h2><p>前面提到，okhttp3-loginterceptor除了okhttp3之外，不会向项目添加其他第三方依赖，尽量做到小巧轻量。所以当判断请求或响应的contentType的内容为JSON数据而尝试格式化输出JSON内容时，是采用反射的方式。在第一次调用JSON格式化的时候，会判断当前使用的是哪一个JSON解析库，然后调用其相关方法来格式化JSON。目前支持常用的JSON解析库，包括：gson, fastjson, moshi, org.json。当你的项目不包含以上这些库时，则不会进行格式化的JSON数据输出。</p>
-<h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</div></pre></td></tr></table></figure></p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>okhttp3-loginterceptor是我基于需要的功能，参考okhttp3-logging-interceptor的代码而封装的一个库。<br>首先，我们与服务器的数据交互使用json方式比较多，在开发或调试时需要更能直观地查看json数据，所以我封装了格式化输出json数据的功能。<br>其次，在应用中，经常是多个请求同时进行。通过日志中的线程名来判断哪一行是属于哪个响应，对应于哪个请求相当不便，所以我在每一行添加了一个前缀，也是为了更直观地查看日志。<br>我设想的是让它只做最需要的事，所以没添加也没打算添加其他一些日志库的酷炫输出日志格式的功能。</p>
+<p>首先需要肯定的是，多数产品经理，在定义一个产品或功能时，是比开发要专业的。多数测试人员，以及设计师，在他们的领域，都是要比其他人要专业的。但我们一个功能的产品，是经历了需求设计开发测试等各个方面的，每个领域的人员所看待的角度都不一样。闻道有先后，术业有专攻。此亦然。<br>商品分布的不对称产生的贸易和利润。信息掌握的不对称成就了各个行业巨头。我们同样是因为知识掌握的不对称，所以各司其职，但也在沟通中产生碰撞。</p>
+<p>而在实际我所经历移动开发当中，开发这一环，似乎更少了些话语权。<br>比如产品要求区分某两种情况的默认图，即使其他人都觉得没必要，但坚持之下，在缺少第二张默认图的情况下还是让我动了代码。而直到后来的大版本重构，与之相关的整块功能也砍掉的时候，那第二张默认图还是没有用出来。<br>或者是在Android开发当中，各种仿iOS的控件。当然这有其历史原因，Android 3.0以下无设计，5.0以及才开始走上设计之路。在5.0未普及于国内时，许多人对Android的UI及UE的看法就是丑——爆——了。导致不单app各种仿，ROM同样各种仿——MIUI不就是一个典型的例子？<br>但时至今日，毕竟大有不同。可欣慰的是，公司的设计目前也正慢慢区分两端设计。Material Design正被慢慢接受中。</p>
+<p>在我看来，开发人员也同样需要去了解一些产品知识，了解一些设计思路。以前在和一个同行的交流的时候，他也说过，招开发的时候，他在面试过程当中更多的是看一个人有没产品意识。如果设计、开发、产品都是掌握其所应掌握的知识的，那么测试人员是不是也应该有所要求？除了测试用例之外，是否也要对其所测试的平台有一定程度的了解？节前看到一份测试报告，指出用的一个模态对话框的“确定”完全看不出来是个按钮，点击它只是操作习惯。<br>然而，那个对话框正是Material Design中的对比话框。<br>然而，微信和支付宝中使用的同样是这种。</p>
+<p>而且我还没明白，操作习惯之下发现并点到了一个确定按钮，存在着什么问题。如果这成一个问题，那么当我以前第一次使用iPhone时，发现在界面中一个一个往下填之后找不到继续的按钮，最后才在右上角发现“完成”两个字而试着去点它时，这种交互是不是也是一种Bug？平台的差异性，作为一名合格的测试人员是不是得有足够的了解，才是测试的道理？</p>
+<p>我们有代码风格代码习惯，我们有设计模式设计原则。产品功能的完成，各个角色各司其职是其道理，但如果互不了解，开发人员放弃了自己的看法意见而沦落为代码的搬运工，又岂非是没了开发的道理？</p>
 
       
 
@@ -260,19 +253,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OkHttp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
@@ -284,7 +265,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
@@ -339,7 +320,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.githang.com/2017/10/03/Development-Unreasonableness/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -353,18 +334,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/09/18/Mask-Layer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          蒙层
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/09/24/LoadMoreLayout/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一步步打造自己的通用上拉加载布局</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +379,7 @@ var _hmt = _hmt || [];
 <script src="/gitment/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/",
+  id: "http://www.githang.com/2017/10/03/Development-Unreasonableness/",
   owner: 'msdx',
   repo: 'blog-comments',
   oauth: {

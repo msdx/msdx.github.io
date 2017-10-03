@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2017-09-24T14:28:39.000Z</updated>
+  <updated>2017-10-03T01:34:42.000Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发的没道理</title>
+    <link href="http://www.githang.com/2017/10/03/Development-Unreasonableness/"/>
+    <id>http://www.githang.com/2017/10/03/Development-Unreasonableness/</id>
+    <published>2017-10-03T01:32:37.000Z</published>
+    <updated>2017-10-03T01:34:42.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。&lt;br&gt;不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。&lt;br&gt;就比如Android开发人员常遇到的：&lt;br&gt;产品告诉你要怎么做：“像iOS那样。”&lt;br&gt;测试和你提了个Bug：“你这里和iOS的不一样。”&lt;br&gt;或者是面试设计出来的iOS风格的效果图。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>一步步打造自己的通用上拉加载布局</title>
@@ -32,9 +52,9 @@
       <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="github" scheme="http://www.githang.com/tags/github/"/>
-    
       <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
+    
+      <category term="github" scheme="http://www.githang.com/tags/github/"/>
     
       <category term="上拉加载" scheme="http://www.githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
@@ -103,9 +123,9 @@
       <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="github" scheme="http://www.githang.com/tags/github/"/>
-    
       <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
+    
+      <category term="github" scheme="http://www.githang.com/tags/github/"/>
     
       <category term="开源" scheme="http://www.githang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
