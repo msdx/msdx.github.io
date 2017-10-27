@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>让okhttp3优雅地打印日志 | 疯狂的键盘</title>
+  <title>梦——少年不生事 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta name="keywords" content="Android,github,开源,OkHttp">
+  <meta name="description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
+<meta name="keywords" content="梦">
 <meta property="og:type" content="article">
-<meta property="og:title" content="让okhttp3优雅地打印日志">
-<meta property="og:url" content="http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/index.html">
+<meta property="og:title" content="梦——少年不生事">
+<meta property="og:url" content="http://www.githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta property="og:updated_time" content="2017-09-16T03:32:26.000Z">
+<meta property="og:description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
+<meta property="og:updated_time" content="2017-10-27T16:42:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="让okhttp3优雅地打印日志">
-<meta name="twitter:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
+<meta name="twitter:title" content="梦——少年不生事">
+<meta name="twitter:description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -182,40 +182,39 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-OkHttp3-LogInterceptor" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Dream-Juvenile-does-not-make-trouble" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      让okhttp3优雅地打印日志
+      梦——少年不生事
     </h1>
   
 
         
-        <a href="/2017/09/16/OkHttp3-LogInterceptor/" class="archive-article-date">
-  	<time datetime="2017-09-16T01:51:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
+        <a href="/2017/10/27/Dream-Juvenile-does-not-make-trouble/" class="archive-article-date">
+  	<time datetime="2017-10-27T14:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。<br>本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志库的，都可以一看。</p>
-</blockquote>
+        <p>昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。</p>
 <a id="more"></a>
-<p>okhttp3-loginterceptor是用于okhttp3的一个日志打印库，小巧轻量，相比square提供的okhttp3的logging-interceptor，它对每个请求和响应都进行编号 ，并且对于json的请求或响应内容，还将打印出格式化的JSON内容，而除了依赖okhttp3之外，它不会添加任何其他第三方依赖。那么它是如何小巧轻量而又不会向项目引入其他依赖的呢？等下我们在文中会提到，下面先开始介绍它的使用。</p>
-<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>okhttp3-loginterceptor在github上的项目地址为：<a href="https://github.com/parkingwang/okhttp3-loginterceptor" target="_blank" rel="external">https://github.com/parkingwang/okhttp3-loginterceptor</a> 。引入方式很简单，只需几行代码。如下：</p>
-<h2 id="声明依赖"><a href="#声明依赖" class="headerlink" title="声明依赖"></a>声明依赖</h2><p>添加依赖，以下的<code>latest.integration</code>建议换为当前最新版本的具体版本号。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.parkingwang:okhttp3-loginterceptor:latest.integration'</span></div></pre></td></tr></table></figure></p>
-<h2 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h2><p>然后在创建<code>OkHttpClient</code>对象的代码中添加其拦截器实例，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">OkHttpClient okHttpClient = new OkHttpClient.Builder()</div><div class="line">        .addInterceptor(new LogInterceptor()).build();</div></pre></td></tr></table></figure></p>
-<p>这样就完成了。然后你就可以看到类似这样的日志了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">W/OkHttp: [4 request]--&gt; GET https://api.github.com/users/defunkt http/1.1</div><div class="line">W/OkHttp: [4 request]--&gt; END GET</div><div class="line">W/OkHttp: [5 request]--&gt; GET https://api.github.com/zen http/1.1</div><div class="line">W/OkHttp: [5 request]--&gt; END GET</div><div class="line">W/OkHttp: [6 request]--&gt; GET https://api.github.com/users/msdx http/1.1</div><div class="line">W/OkHttp: [6 request]--&gt; END GET</div><div class="line">W/OkHttp: [4 response]&lt;-- 200 OK https://api.github.com/users/defunkt (1335ms)</div><div class="line">W/OkHttp: [4 response]Server: GitHub.com</div><div class="line">W/OkHttp: [4 response]Date: Thu, 12 Jan 2017 04:01:43 GMT</div><div class="line">W/OkHttp: [4 response]Content-Type: application/json; charset=utf-8</div><div class="line">W/OkHttp: [4 response]Transfer-Encoding: chunked</div></pre></td></tr></table></figure></p>
-<p>文章这就结束了？当然不，既然是专门介绍的文章当然得好好写写。</p>
-<h1 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h1><h2 id="适当地添加日志拦截器"><a href="#适当地添加日志拦截器" class="headerlink" title="适当地添加日志拦截器"></a>适当地添加日志拦截器</h2><p>首先，我们打印日志一般都是在debug的时候才需要，对于release即发布出去的版本，是不需要打印请求的日志的，所以通常我们会这样写代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();</div><div class="line">if (BuildConfig.DEBUG) &#123;</div><div class="line">    clientBuilder.addInterceptor(new LogInterceptor());</div><div class="line">&#125;</div><div class="line">return clientBuilder</div><div class="line">    //.XXX 省略一大堆设置其他参数的代码</div><div class="line">    .build();</div></pre></td></tr></table></figure></p>
-<h2 id="关于JSON格式化输出"><a href="#关于JSON格式化输出" class="headerlink" title="关于JSON格式化输出"></a>关于JSON格式化输出</h2><p>前面提到，okhttp3-loginterceptor除了okhttp3之外，不会向项目添加其他第三方依赖，尽量做到小巧轻量。所以当判断请求或响应的contentType的内容为JSON数据而尝试格式化输出JSON内容时，是采用反射的方式。在第一次调用JSON格式化的时候，会判断当前使用的是哪一个JSON解析库，然后调用其相关方法来格式化JSON。目前支持常用的JSON解析库，包括：gson, fastjson, moshi, org.json。当你的项目不包含以上这些库时，则不会进行格式化的JSON数据输出。</p>
-<h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</div></pre></td></tr></table></figure></p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>okhttp3-loginterceptor是我基于需要的功能，参考okhttp3-logging-interceptor的代码而封装的一个库。<br>首先，我们与服务器的数据交互使用json方式比较多，在开发或调试时需要更能直观地查看json数据，所以我封装了格式化输出json数据的功能。<br>其次，在应用中，经常是多个请求同时进行。通过日志中的线程名来判断哪一行是属于哪个响应，对应于哪个请求相当不便，所以我在每一行添加了一个前缀，也是为了更直观地查看日志。<br>我设想的是让它只做最需要的事，所以没添加也没打算添加其他一些日志库的酷炫输出日志格式的功能。</p>
+<p>东杨没追上他那两个兄弟，眼看他们两个的背景越来越小，干脆放弃了追逐，放慢了摩托车的速度在公路上观赏起两边的风景来。</p>
+<p>却没一会儿，余光之中注意到了旁边似乎跟上来道白影。回过头来望去，一袭白衣飘然在侧，衣袂之间流露出的素雅恬静与来自座下的轰鸣声格格不入，却是同校的黄乐。东杨没怎么看过女生开摩托车驰骋在城市间，更不用说是班里那些兄弟谈论较多的黄乐，不免多看了几眼。黄乐自是注意到了他的目光，挑衅般也转过头去与他对视，一脸得意。两人并行。</p>
+<p>到了外城，那两兄弟也没联系东杨，东杨更兀自与黄乐结伴，直至傍晚将归，才发信息告知。</p>
+<p>回到内县，这一天下来仍似乎梦一场。但也从这天起，东杨与黄乐也熟悉了起来。经常两人结伴出校，路上有时谈笑人生，有时相伴无言，走到东杨的咖啡店之后才分别。也是在那之后，东杨才知道原来黄乐住的地方与自己的咖啡店相距不远，过个马路过条街她就到家了。时光开始如梭，岁月不再蹉跎。</p>
+<p>如果没有过去，那便是万般美好。但总有些过去总是过不去。东杨给一个客户送咖啡，地方较偏，七拐八弯终于送到，回来的时候却出现了些状况。从一个胡同口出来，东杨正想着是不是有捷径，身后熟悉而又清亮的嗓音传来：<br>“东杨！”<br>似是不可置信般，东杨回过过身，却一下子看到了多年前的女同学。<br>“宇桐？”东杨想，不应该是她的声音。正讶然间，前面同学身后又探出来两个人。<br>“小星，苏青！”东杨脱口而出。刚才正是苏青的声音。还未来得急欣喜，更加熟悉的声音在身后响起，声音很轻，但字字清晰仿佛叩在东杨心上。<br>“东杨……”<br>“田静？”东杨已经愕然，慢慢转过头去。前面柔弱似柳伫立墙边，低首垂眉不敢直视的，不是田静是谁？<br>“田静……”这一轻唤却是叫起前面人儿抬起了头。<br>是回来了么？东杨在心中念着，但问出来的却是：“你怎么也会在这里？”<br>田静迟迟未语。但身后又传来一个人的声音：<br>“东杨。”<br>东杨已经不知道这一刻的心情应该怎么形容了，回头看到黄乐一脸疑惑地问他：“这四个人是谁？”<br>“她们是……”东杨回看了三个初中的同学一眼，说，“这几个是同学。”<br>“那她呢？”黄乐不依不饶地问。<br>东杨又回过头去看田静。未待他回答，田静默默地转身离开。<br>此时黄乐也看了出来，也愤然转身就走。东杨待追过去，又回头想追田静，心下叫苦不迭。顿足搓手之时，忽然一切消失不见。<br>“田静，乐乐！”东杨喊了出来，却是没听到一点声音，周围黑成一片，原来是个梦境。冷汗泛起，轻松之间散开。</p>
+<p>次日，东杨见到黄乐，略微心虚。但黄乐仍是笑意盈然，对东杨的心虚毫不知情。</p>
+<p>东杨与黄乐之间最终还是结束了。<br>那天，东杨回到咖啡店，看到两个兄弟也在，但眼角嘴边都是乌青。<br>“谁打的？”<br>“大高个他们。”兄弟甲说。<br>“你家乐乐的人。”兄弟乙说。<br>东杨也知道大高个是乐乐的人。<br>事情的起因没人追究，正如事情的结果没人在意一样。自己的人从来没吃过这样的大亏，当然不能隐忍作了。东杨带着两个兄弟就杀到了大高个的地盘。在那里，东杨见到的还是大高个三个。<br>大高个三个并不是三个都是大高个，其中两个都不到一米七，但三个平均下来就一米八五以上了。<br>看到是东杨，大高个也收敛了下，客套询问何事。几人几句言语相激之下，又待打起。之前是二打三，现在三对三，东杨心想应当不亏能够揍回来，却不料里面门打开，从内室又走出了八九个人，个个挑衅地问道：“听说有人要在这里打架？”<br>这下东杨三人也都虚了，但气势上却丝毫不肯示弱。“人多怎么了？乐乐下的人都只会以多欺少吗？有胆气就一挑一。”说是怎么说，但是东杨心下也清楚，一挑一要是对上大高个，自己这边无论是谁也挑不起来。<br>果然还是大高个应话了：“好啊，一挑一就一挑一。我先上，你们谁想先上来随意。”本来按这里的规矩，一挑一是应战一方先出一个人，然后叫战对面某个人。接下来是哪一方输，则哪一方先出人叫战对面，直至一方认输或出不了人。大高个这样一说，起哄声更是四起。</p>
+<p>东杨几人恨恨地瞪着大高个，兄弟甲不堪示弱，走了出来准备接战。起哄声突然停了下来。黄衣走进，却是黄乐。<br>黄乐看了大高个一眼，大高个连忙退回众人之间。黄乐继续走到东杨前面，低声询问：“今日的事要不就算了？闹大了不管谁输谁赢都不好看。”<br>东杨久未作声。<br>黄乐又低声下去：“要不我让大高个私下和你兄弟道个歉，今天的事情不要闹了好吗？”<br>东杨心下也知再坚持下去也无法收场，说：“不用了。我们这就离去。”<br>双方无语，留的一方噤声，走的一方默然。</p>
+<p>东杨也不知道自己带着几个兄弟是要做些什么。他们没有可以保护的人，而他也没有了需要保护的人。霎那间，东杨像是想起了谁。</p>
+<p>有一天东杨走出教学楼，看到几个人围在墙角。里面似有女生呜咽声，但东杨却感觉也隐隐听到了另一个熟悉的声音。正想走过去看，旁边却走来大高个他们，笑脸阻住了东杨的去路。<br>“乐乐。”东杨叫了出来。熟悉的声音隐匿了。东杨喊了出来：“乐乐！”却是带着怒意。但大高个几个马上就把东杨给架走了。</p>
+<p>一天，下雨。出校，回去。<br>黄乐在校门口等了些会儿，雨未停，人未至。天色渐黄，雨意更深。大高个三个人看到了校门口的黄乐，撑伞送她回去。走到路口，黄乐在咖啡店前停了下来，看着前方的东杨。<br>东杨也停了下来，像是知道身后有人在望着他。但没停多久，又继续往前走去，进了咖啡店。<br>“乐乐姐，你们……”<br>“没你们的事儿。走吧。”黄乐也回转过身离去。</p>
 
       
 
@@ -260,19 +259,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OkHttp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">梦</a>
         		</li>
       		
 		</ul>
@@ -284,7 +271,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/日记//" class="article-tag-list-link color3">日记</a>
         		</li>
       		
 		</ul>
@@ -339,7 +326,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -353,18 +340,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/09/18/Mask-Layer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          蒙层
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/10/08/Miss/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">念</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -407,7 +385,7 @@ var _hmt = _hmt || [];
 <script src="/gitment/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/",
+  id: "http://www.githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/",
   owner: 'msdx',
   repo: 'blog-comments',
   oauth: {

@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>让okhttp3优雅地打印日志 | 疯狂的键盘</title>
+  <title>Tag: 梦 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta name="keywords" content="Android,github,开源,OkHttp">
-<meta property="og:type" content="article">
-<meta property="og:title" content="让okhttp3优雅地打印日志">
-<meta property="og:url" content="http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/index.html">
+  <meta name="description" content="Android研发工程师，左撇子。">
+<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
+<meta property="og:type" content="website">
+<meta property="og:title" content="疯狂的键盘">
+<meta property="og:url" content="http://www.githang.com/tags/梦/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
-<meta property="og:updated_time" content="2017-09-16T03:32:26.000Z">
+<meta property="og:description" content="Android研发工程师，左撇子。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="让okhttp3优雅地打印日志">
-<meta name="twitter:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
+<meta name="twitter:title" content="疯狂的键盘">
+<meta name="twitter:description" content="Android研发工程师，左撇子。">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -182,252 +181,71 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-OkHttp3-LogInterceptor" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      让okhttp3优雅地打印日志
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/27/Dream-Juvenile-does-not-make-trouble/" class="archive-article-date">
+  	<time datetime="2017-10-27T14:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/27/Dream-Juvenile-does-not-make-trouble/">梦——少年不生事</a>
     </h1>
   
 
-        
-        <a href="/2017/09/16/OkHttp3-LogInterceptor/" class="archive-article-date">
-  	<time datetime="2017-09-16T01:51:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。<br>本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志库的，都可以一看。</p>
-</blockquote>
-<a id="more"></a>
-<p>okhttp3-loginterceptor是用于okhttp3的一个日志打印库，小巧轻量，相比square提供的okhttp3的logging-interceptor，它对每个请求和响应都进行编号 ，并且对于json的请求或响应内容，还将打印出格式化的JSON内容，而除了依赖okhttp3之外，它不会添加任何其他第三方依赖。那么它是如何小巧轻量而又不会向项目引入其他依赖的呢？等下我们在文中会提到，下面先开始介绍它的使用。</p>
-<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>okhttp3-loginterceptor在github上的项目地址为：<a href="https://github.com/parkingwang/okhttp3-loginterceptor" target="_blank" rel="external">https://github.com/parkingwang/okhttp3-loginterceptor</a> 。引入方式很简单，只需几行代码。如下：</p>
-<h2 id="声明依赖"><a href="#声明依赖" class="headerlink" title="声明依赖"></a>声明依赖</h2><p>添加依赖，以下的<code>latest.integration</code>建议换为当前最新版本的具体版本号。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.parkingwang:okhttp3-loginterceptor:latest.integration'</span></div></pre></td></tr></table></figure></p>
-<h2 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h2><p>然后在创建<code>OkHttpClient</code>对象的代码中添加其拦截器实例，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">OkHttpClient okHttpClient = new OkHttpClient.Builder()</div><div class="line">        .addInterceptor(new LogInterceptor()).build();</div></pre></td></tr></table></figure></p>
-<p>这样就完成了。然后你就可以看到类似这样的日志了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">W/OkHttp: [4 request]--&gt; GET https://api.github.com/users/defunkt http/1.1</div><div class="line">W/OkHttp: [4 request]--&gt; END GET</div><div class="line">W/OkHttp: [5 request]--&gt; GET https://api.github.com/zen http/1.1</div><div class="line">W/OkHttp: [5 request]--&gt; END GET</div><div class="line">W/OkHttp: [6 request]--&gt; GET https://api.github.com/users/msdx http/1.1</div><div class="line">W/OkHttp: [6 request]--&gt; END GET</div><div class="line">W/OkHttp: [4 response]&lt;-- 200 OK https://api.github.com/users/defunkt (1335ms)</div><div class="line">W/OkHttp: [4 response]Server: GitHub.com</div><div class="line">W/OkHttp: [4 response]Date: Thu, 12 Jan 2017 04:01:43 GMT</div><div class="line">W/OkHttp: [4 response]Content-Type: application/json; charset=utf-8</div><div class="line">W/OkHttp: [4 response]Transfer-Encoding: chunked</div></pre></td></tr></table></figure></p>
-<p>文章这就结束了？当然不，既然是专门介绍的文章当然得好好写写。</p>
-<h1 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h1><h2 id="适当地添加日志拦截器"><a href="#适当地添加日志拦截器" class="headerlink" title="适当地添加日志拦截器"></a>适当地添加日志拦截器</h2><p>首先，我们打印日志一般都是在debug的时候才需要，对于release即发布出去的版本，是不需要打印请求的日志的，所以通常我们会这样写代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();</div><div class="line">if (BuildConfig.DEBUG) &#123;</div><div class="line">    clientBuilder.addInterceptor(new LogInterceptor());</div><div class="line">&#125;</div><div class="line">return clientBuilder</div><div class="line">    //.XXX 省略一大堆设置其他参数的代码</div><div class="line">    .build();</div></pre></td></tr></table></figure></p>
-<h2 id="关于JSON格式化输出"><a href="#关于JSON格式化输出" class="headerlink" title="关于JSON格式化输出"></a>关于JSON格式化输出</h2><p>前面提到，okhttp3-loginterceptor除了okhttp3之外，不会向项目添加其他第三方依赖，尽量做到小巧轻量。所以当判断请求或响应的contentType的内容为JSON数据而尝试格式化输出JSON内容时，是采用反射的方式。在第一次调用JSON格式化的时候，会判断当前使用的是哪一个JSON解析库，然后调用其相关方法来格式化JSON。目前支持常用的JSON解析库，包括：gson, fastjson, moshi, org.json。当你的项目不包含以上这些库时，则不会进行格式化的JSON数据输出。</p>
-<h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</div></pre></td></tr></table></figure></p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>okhttp3-loginterceptor是我基于需要的功能，参考okhttp3-logging-interceptor的代码而封装的一个库。<br>首先，我们与服务器的数据交互使用json方式比较多，在开发或调试时需要更能直观地查看json数据，所以我封装了格式化输出json数据的功能。<br>其次，在应用中，经常是多个请求同时进行。通过日志中的线程名来判断哪一行是属于哪个响应，对应于哪个请求相当不便，所以我在每一行添加了一个前缀，也是为了更直观地查看日志。<br>我设想的是让它只做最需要的事，所以没添加也没打算添加其他一些日志库的酷炫输出日志格式的功能。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>明年奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OkHttp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">梦</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/日记//" class="article-tag-list-link color3">日记</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/09/18/Mask-Layer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          蒙层
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/09/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-
-  
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-4684296714025694",
-    enable_page_level_ads: true
-  });
-</script>
+    
 
 
           </div>
@@ -450,9 +268,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
