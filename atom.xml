@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-10-28T03:37:48.000Z</updated>
+  <updated>2017-11-04T06:22:35.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CoordinatorLayout之初步认识</title>
+    <link href="http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/"/>
+    <id>http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</id>
+    <published>2017-11-04T05:30:59.000Z</published>
+    <updated>2017-11-04T06:22:35.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CoordinatorLayout是2015 I/O大会发布的一种布局，它可以说是一个非常强大的FrameLayout，主要用于协调(Coordinate)子控件，来帮助实现它们之间的一些交互效果。它适合用于应用的顶层布局，或是View之间交互的一个容器。&lt;/p&gt;
+&lt;p&gt;本篇主要是对CoordinatorLayout的相关内容进行一个初步的认识，看看CoordinatorLayout都提供了哪些特性来帮助完成View之间的交互。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
+    
+  </entry>
   
   <entry>
     <title>梦——少年不生事</title>
@@ -118,9 +141,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
-    
       <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
+    
+      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
     
   </entry>
   
