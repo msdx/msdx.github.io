@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20171104132913768?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171104134942664?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171104140015288?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-11-04T06:22:35.000Z">
+<meta property="og:updated_time" content="2017-11-04T06:26:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CoordinatorLayout之初步认识">
 <meta name="twitter:description" content="CoordinatorLayout是2015 I/O大会发布的一种布局，它可以说是一个非常强大的FrameLayout，主要用于协调(Coordinate)子控件，来帮助实现它们之间的一些交互效果。它适合用于应用的顶层布局，或是View之间交互的一个容器。 本篇主要是对CoordinatorLayout的相关内容进行一个初步的认识，看看CoordinatorLayout都提供了哪些特性来帮助完成">
@@ -228,6 +228,7 @@ var _hmt = _hmt || [];
 <p>这里dodgeInsetEdges设置的是所避让的方向，可以是一个或多个方向，也可以设置为<code>all</code>，即避让所有方向。<br>运行起来，我们发现ImageButton也可以避开而不被Snackbar遮挡了。<br><img src="http://img.blog.csdn.net/20171104140015288?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="dodgeInsetEdges 示例2"></p>
 <h1 id="Design-library-对CoordinatorLayout-的支持"><a href="#Design-library-对CoordinatorLayout-的支持" class="headerlink" title="Design library 对CoordinatorLayout 的支持"></a>Design library 对CoordinatorLayout 的支持</h1><p>在Design library中，提供了大量的material design 组件，其中一些组件可以和CoordinatorLayout配合使用，以快速实现交互。除了前面提到的Snackbar, FloatingActionButton之外，还有CollapsingToolbarLayout，AppBarLayout这些布局。除了这些布局，design library也实现了一些behavior，可以被直接使用，比如<code>appbar_scrolling_view_behavior</code>，还有前面使用到的<code>bottom_sheet_behavior</code>。这些例子网上较多，这里就不赘述了。</p>
 <p>下一篇将对CoordinatorLayout的源码一探究竟，以分析和理解它的实现原理。</p>
+<p>本文内容所涉及的完整代码见：<a href="https://github.com/msdx/CoordinatorLayout-Sample" target="_blank" rel="external">https://github.com/msdx/CoordinatorLayout-Sample</a></p>
 
       
 
