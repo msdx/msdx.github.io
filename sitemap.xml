@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2017/11/09/CoordinatorLayout-In-depth-understanding/</loc>
+    
+    <lastmod>2017-11-17T08:21:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</loc>
     
-    <lastmod>2017-11-05T02:18:18.000Z</lastmod>
+    <lastmod>2017-11-17T03:45:43.000Z</lastmod>
     
   </url>
   
