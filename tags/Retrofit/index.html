@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>ViewPager与CoordinatorLayout一起使用的一个Bug | 疯狂的键盘</title>
+  <title>Tag: Retrofit | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文记录一个关于ViewPager与CoordinatorLayout一起使用的Bug，目前虽然有解决问题的方法，但是引起这个bug的原因依然没有找到。">
-<meta name="keywords" content="Android,CoordinatorLayout,Bug">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ViewPager与CoordinatorLayout一起使用的一个Bug">
-<meta property="og:url" content="http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/index.html">
+  <meta name="description" content="Android研发工程师，左撇子。">
+<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
+<meta property="og:type" content="website">
+<meta property="og:title" content="疯狂的键盘">
+<meta property="og:url" content="http://githang.com/tags/Retrofit/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="本文记录一个关于ViewPager与CoordinatorLayout一起使用的Bug，目前虽然有解决问题的方法，但是引起这个bug的原因依然没有找到。">
-<meta property="og:updated_time" content="2017-10-25T08:33:51.000Z">
+<meta property="og:description" content="Android研发工程师，左撇子。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ViewPager与CoordinatorLayout一起使用的一个Bug">
-<meta name="twitter:description" content="本文记录一个关于ViewPager与CoordinatorLayout一起使用的Bug，目前虽然有解决问题的方法，但是引起这个bug的原因依然没有找到。">
+<meta name="twitter:title" content="疯狂的键盘">
+<meta name="twitter:description" content="Android研发工程师，左撇子。">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -182,94 +181,36 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CoordinatorLayout-ViewPager-Bug" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ViewPager与CoordinatorLayout一起使用的一个Bug
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/" class="archive-article-date">
+  	<time datetime="2017-11-25T10:51:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/">Retrofit 显示上传文件进度及日志记录</a>
     </h1>
   
 
-        
-        <a href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/" class="archive-article-date">
-  	<time datetime="2017-09-21T05:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文记录一个关于<code>ViewPager</code>与<code>CoordinatorLayout</code>一起使用的Bug，目前虽然有解决问题的方法，但是引起这个bug的原因依然没有找到。</p>
-<a id="more"></a>
-<h1 id="最初的布局是正常的"><a href="#最初的布局是正常的" class="headerlink" title="最初的布局是正常的"></a>最初的布局是正常的</h1><p>项目最初的布局树是这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CoordinatorLayout</div><div class="line">--RelativeLayout(height:match_parent)</div><div class="line">----各种View</div><div class="line">----FrameLayout(height:wrap_content)</div><div class="line">------layout</div><div class="line">------WrapHeightViewPager</div><div class="line">----ImageView</div></pre></td></tr></table></figure>
-<p>这里的布局要求是这样的：<br><code>layout</code>与<code>WrapHeightViewPager</code>同一时间最多只有其中一个会显示，也可能两个都不显示。当它们之间有任何一个显示的时候，<code>ImageView</code>要在它们上面，当它们两个都不显示的时候，<code>ImageView</code>要在底部。<br>所以我把这两个View放在了一个<code>FrameLayout</code>中，并且让<code>ImageView</code>在其之上来实现这个需求。</p>
-<p><code>WrapHeightViewPager</code>继承自<code>ViewPager</code>，以实现按内容自适应高度。它重写了以下方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">@Override  </div><div class="line">protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div class="line">    int height = 0;  </div><div class="line">    for (int i = 0; i &lt; getChildCount(); i++) &#123;  </div><div class="line">        View child = getChildAt(i);  </div><div class="line">        child.measure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));  </div><div class="line">        int h = child.getMeasuredHeight();  </div><div class="line">        if (h &gt; height) height = h;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    heightMeasureSpec = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);  </div><div class="line">  </div><div class="line">    super.onMeasure(widthMeasureSpec, heightMeasureSpec);  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>也就是在<code>onMeasure</code>的时候去测量子View，以子View的最大高度作为<code>ViewPager</code>的高度。</p>
-<h1 id="因交互需求而做的改动"><a href="#因交互需求而做的改动" class="headerlink" title="因交互需求而做的改动"></a>因交互需求而做的改动</h1><p>由于接下来在本次版本迭代中，交互会做比较大的改动，<code>layout</code>这一部分可能需要使用<code>CoordinatorLayout</code>中的<code>Behavior</code>来实现一些效果，<code>ImageView</code>也会影响到。所以我将涉及到的这两块View都抽出到<code>CoordinatorLayout</code>下，为后续的改动先做一个铺垫。改动后的布局树如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">CoordinatorLayout</div><div class="line">--RelativeLayout(height:match_parent)</div><div class="line">--FrameLayout(heiht:wrap_content)</div><div class="line">----layout</div><div class="line">----WrapHeightViewPager</div><div class="line">--ImageView</div></pre></td></tr></table></figure>
-<p>也就是把<code>FrameLayout</code>和<code>ImageView</code>从<code>RelativeLayout</code>中抽到外面来了。<br>然后为<code>ImageView</code>写了一个<code>Behavior</code>，使用<code>Behavior</code>来控制<code>ImageView</code>的UI逻辑。<br>然后发现，把布局抽出来后，一个Bug就来了。</p>
-<h1 id="Bug出现及原因追查"><a href="#Bug出现及原因追查" class="headerlink" title="Bug出现及原因追查"></a>Bug出现及原因追查</h1><p>我发现<code>WrapHeightViewPager</code>在第一次数据更新，有了数据之后，并没有被显示出来，但是第二次更新数据就出来了。<br>打印了<code>FrameLayout</code>高度，为0。<br>我以为是调用<code>setVisibility(int)</code>没起作用，打印了<code>WrapHeightViewPager</code>的<code>getVisibility()</code>，值为<code>VISIBLE</code>。也就是生效了。<br>打印了<code>WrapHeightViewPager</code>的高度，为0。</p>
-<p>换成<code>ViewPager</code>，能显示出来，但是高度已经是占满父布局了，看来应该是高度测量的问题。<br>继续换回来找原因。<br>打印里面的<code>addView(View)</code>和<code>onMeasure(int, int)</code>方法。发现前者有被调用，但后者只在界面初始化的时候被调用一次，这时没有数据所以计算出来的高度为0，在更新数据之后并没有跟着被调用，所以导致<code>WrapHeightViewPager</code>的高度仍然为0。</p>
-<h1 id="尝试解决"><a href="#尝试解决" class="headerlink" title="尝试解决"></a>尝试解决</h1><p>然后尝试。<br>在adapter更新数据之后，调用viewpager的<code>requestLayout()</code>，无效。<br>在<code>addView(View)</code>之后调用<code>requestLayout()</code>，无效。<br>改成<code>forceLayout()</code>，无效。<br>在<code>addView(View)</code>之后，调用<code>requestApplyInsets()</code>，居然起作用了！！<br>但是——<br><code>requestApplyInsets()</code>需要在API 20之后才可以使用，我们应用的<code>minSdkVersion</code>为15。</p>
-<p>继续寻找其他方法。<br>google，没找到一样的问题。<br>stackoverflow，同样没找到一样的问题。但其中有一个问题的答案给了我灵感：<a href="https://stackoverflow.com/a/33253976/2673757" target="_blank" rel="external">https://stackoverflow.com/a/33253976/2673757</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mHandler.postDelayed(new Runnable() &#123;</div><div class="line">    @Override</div><div class="line">    public void run() &#123;</div><div class="line">        mViewPager.requestLayout();</div><div class="line">    &#125;</div><div class="line">&#125;, 100);</div></pre></td></tr></table></figure>
-<p>由于在第二次的时候，<code>WrapHeightViewPager</code>会显示出来，也就是它的高度最终还是会测量的。但是在第一次一更新就去调用<code>requestLayout()</code>并没有效，所以我尝试也加了个延迟：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mBillPager.postDelayed(new Runnable() &#123;</div><div class="line">    @Override</div><div class="line">    public void run() &#123;</div><div class="line">        mBillPager.requestLayout();</div><div class="line">    &#125;</div><div class="line">&#125;, 100);</div></pre></td></tr></table></figure>
-<p>结果果然显示出来了。但是这样却还有两个问题：</p>
-<ol>
-<li>这里是写死的固定100毫秒的延迟，但是实际上我并不需要多少才够，100这个魔数让我看着并不舒服。</li>
-<li>有多个地方会更新adapter里的数据，<code>WrapContentViewPager</code>本身的业务无关的界面逻辑却要在业务逻辑里处理，代码耦合度大。</li>
-</ol>
-<p>于是今天早上继续探寻此问题。</p>
-<h1 id="继续求解"><a href="#继续求解" class="headerlink" title="继续求解"></a>继续求解</h1><p>我打印了<code>WrapHeightViewPager</code>的<code>onLayout(boolean, int, int, int, int)</code>方法，发现它是有被调用的。然后我试着把<code>requestLayout()</code>的调用放到它这里。直接调用还是不行，改为如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@Override</div><div class="line">protected void onLayout(boolean changed, int l, int t, int r, int b) &#123;</div><div class="line">    super.onLayout(changed, l, t, r, b);</div><div class="line">    if (changed) &#123;</div><div class="line">        post(new Runnable() &#123;</div><div class="line">            @Override</div><div class="line">            public void run() &#123;</div><div class="line">                requestLayout();</div><div class="line">            &#125;</div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>同样问题解决。现在业务逻辑的代码与改动布局之前基本一样，也就是布局上的重构没有影响到业务代码，两者分离。Bug暂先这样处理，不给业务逻辑带来其他代码。</p>
-<h1 id="使用Behavior来解决"><a href="#使用Behavior来解决" class="headerlink" title="使用Behavior来解决"></a>使用Behavior来解决</h1><p>今天又发现可以使用<code>CoordinatorLayout.Behavior</code>来解决这一问题。由于ViewPager更新时会回调到<code>Behavior</code>的<code>onLayoutChild(CoordinatorLayout parent, ViewPager child, int layoutDirection)</code>方法，所以可以在该方法重新对<code>ViewPager</code>进行layout操作。<br>代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Copyright (c) 2017. Xi'an iRain IOT Technology service CO., Ltd (ShenZhen). All Rights Reserved.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> android.content.Context;</div><div class="line"><span class="keyword">import</span> android.support.design.widget.CoordinatorLayout;</div><div class="line"><span class="keyword">import</span> android.support.v4.view.ViewPager;</div><div class="line"><span class="keyword">import</span> android.util.AttributeSet;</div><div class="line"><span class="keyword">import</span> android.view.View;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.githang.android.snippet.view.WrapHeightViewPager;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * <span class="doctag">@since</span> 2017-10-25 4.2.3</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewPagerBehavior</span> <span class="keyword">extends</span> <span class="title">CoordinatorLayout</span>.<span class="title">Behavior</span>&lt;<span class="title">ViewPager</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ViewPagerBehavior</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(context, attrs);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onLayoutChild</span><span class="params">(CoordinatorLayout parent, ViewPager child, <span class="keyword">int</span> layoutDirection)</span> </span>&#123;</div><div class="line">        parent.onLayoutChild(child, layoutDirection);</div><div class="line">        <span class="keyword">if</span> (child <span class="keyword">instanceof</span> WrapHeightViewPager) &#123;</div><div class="line">            <span class="keyword">int</span> height = <span class="number">0</span>;</div><div class="line">            <span class="keyword">int</span> measureHeight = parent.getHeight();</div><div class="line">            <span class="keyword">int</span> measureWidth = parent.getWidth();</div><div class="line">            <span class="keyword">int</span> widthMeasureSpec = View.MeasureSpec.makeMeasureSpec(measureWidth, View.MeasureSpec.AT_MOST);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; child.getChildCount(); i++) &#123;</div><div class="line">                View item = child.getChildAt(i);</div><div class="line">                item.measure(widthMeasureSpec, View.MeasureSpec.makeMeasureSpec(measureHeight, View.MeasureSpec.UNSPECIFIED));</div><div class="line">                <span class="keyword">int</span> h = item.getMeasuredHeight();</div><div class="line">                <span class="keyword">if</span> (h &gt; height) &#123;</div><div class="line">                    height = h;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            height += child.getPaddingTop() + child.getPaddingBottom();</div><div class="line">            child.layout(parent.getLeft(), child.getBottom() - height, child.getRight(), child.getBottom());</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>明年奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -279,17 +220,13 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CoordinatorLayout</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Retrofit</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -302,143 +239,17 @@ var _hmt = _hmt || [];
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/09/24/LoadMoreLayout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          一步步打造自己的通用上拉加载布局
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/09/18/Mask-Layer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">蒙层</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-
-  
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-4684296714025694",
-    enable_page_level_ads: true
-  });
-</script>
+    
 
 
           </div>
@@ -461,9 +272,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -17,7 +17,7 @@
 <meta property="og:description" content="上篇在对 CoordinatorLayout 作了一些简单介绍，以了解 CoordinatorLayout 带来的一些特性和常见用途。本篇将对 CoordinatorLayout 的源码进行一些分析，以了解它的相关特性的运行原理，以及 Behavior 的执行过程。">
 <meta property="og:image" content="http://img.blog.csdn.net/20171117110911174?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171117153440159?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-11-17T08:33:53.000Z">
+<meta property="og:updated_time" content="2017-11-17T09:19:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CoordinatorLayout 之深入理解">
 <meta name="twitter:description" content="上篇在对 CoordinatorLayout 作了一些简单介绍，以了解 CoordinatorLayout 带来的一些特性和常见用途。本篇将对 CoordinatorLayout 的源码进行一些分析，以了解它的相关特性的运行原理，以及 Behavior 的执行过程。">
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
 <p>这里可以对子 View 布局。效果类比上面。在实现类似于 BottomSheet 的上拉效果或其他各种拉的效果，通常会使用到这个方法来设置它的初始位置以及 layout 发生之后它应该在的位置。</p>
 <h2 id="嵌套滚动-1"><a href="#嵌套滚动-1" class="headerlink" title="嵌套滚动"></a>嵌套滚动</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Deprecated</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onStartNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View directTargetChild, @NonNull View target,</span></span></div><div class="line"><span class="function"><span class="params">        @ScrollAxis <span class="keyword">int</span> axes)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onStartNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View directTargetChild, @NonNull View target,</span></span></div><div class="line"><span class="function"><span class="params">        @ScrollAxis <span class="keyword">int</span> axes, @NestedScrollType <span class="keyword">int</span> type)</span></span>;</div><div class="line"><span class="meta">@Deprecated</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedScrollAccepted</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View directTargetChild, @NonNull View target,</span></span></div><div class="line"><span class="function"><span class="params">        @ScrollAxis <span class="keyword">int</span> axes)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedScrollAccepted</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View directTargetChild, @NonNull View target,</span></span></div><div class="line"><span class="function"><span class="params">        @ScrollAxis <span class="keyword">int</span> axes, @NestedScrollType <span class="keyword">int</span> type)</span></span>;</div><div class="line"><span class="meta">@Deprecated</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStopNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStopNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target, @NestedScrollType <span class="keyword">int</span> type)</span></span>;</div><div class="line"><span class="meta">@Deprecated</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout, @NonNull V child,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull View target, <span class="keyword">int</span> dxConsumed, <span class="keyword">int</span> dyConsumed,</span></span></div><div class="line"><span class="function"><span class="params">        <span class="keyword">int</span> dxUnconsumed, <span class="keyword">int</span> dyUnconsumed)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout, @NonNull V child,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull View target, <span class="keyword">int</span> dxConsumed, <span class="keyword">int</span> dyConsumed,</span></span></div><div class="line"><span class="function"><span class="params">        <span class="keyword">int</span> dxUnconsumed, <span class="keyword">int</span> dyUnconsumed, @NestedScrollType <span class="keyword">int</span> type)</span></span>;</div><div class="line"><span class="meta">@Deprecated</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedPreScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, @NonNull <span class="keyword">int</span>[] consumed)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedPreScroll</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, @NonNull <span class="keyword">int</span>[] consumed,</span></span></div><div class="line"><span class="function"><span class="params">        @NestedScrollType <span class="keyword">int</span> type)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onNestedFling</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target, <span class="keyword">float</span> velocityX, <span class="keyword">float</span> velocityY,</span></span></div><div class="line"><span class="function"><span class="params">        <span class="keyword">boolean</span> consumed)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onNestedPreFling</span><span class="params">(@NonNull CoordinatorLayout coordinatorLayout,</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull V child, @NonNull View target, <span class="keyword">float</span> velocityX, <span class="keyword">float</span> velocityY)</span></span>;</div></pre></td></tr></table></figure>
 <p>CoordinatorLayout 实现了嵌套滚动的接口，这一系列方法是 CoordinatorLayout 在对应方法中的回调。通常在做一些类似于上拉下拉的效果，而子 View 又包含了有同样方法的滚动效果的 View 时，会重写这些方法来实现嵌套滚动。</p>
-<p>其他方法暂时不述。</p>
+<p>其他方法暂且不述。</p>
 <p>通过 behavior 的这些方法，基本上我们不需要通过去重写一个 View，就可以通过 behavior 来扩展和增强它的交互功能，比如上一篇提到的，不管是 <code>FrameLayout</code> 还是 <code>ScrollView</code> 或是其他布局，使用了一个 BottomSheetBehavior，它就可以实现 BottomSheetBehavior 的这种效果。</p>
 <p>本篇对 CoordinatorLayout 的源码分析到这里，下篇开始将着重于 Behavior 的使用。</p>
 
@@ -414,6 +414,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Retrofit 显示上传文件进度及日志记录
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/" id="article-nav-older" class="article-nav-link-wrap">
@@ -573,6 +582,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
@@ -585,15 +598,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,6 +619,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">OkHttp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
             
             <div class="clearfix"></div>
