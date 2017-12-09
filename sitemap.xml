@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</loc>
+    
+    <lastmod>2017-12-09T05:14:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</loc>
     
     <lastmod>2017-11-25T13:01:51.000Z</lastmod>

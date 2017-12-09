@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-11-25T13:01:51.000Z</updated>
+  <updated>2017-12-09T05:14:17.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实现 RecyclerView 上拉加载及自动加载</title>
+    <link href="http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/"/>
+    <id>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</id>
+    <published>2017-12-09T02:06:00.000Z</published>
+    <updated>2017-12-09T05:14:17.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前在&lt;a href=&quot;http://githang.com/2017/09/24/LoadMoreLayout/&quot;&gt;《一步步打造自己的通用上拉加载布局》&lt;/a&gt;（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
+    
+      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Retrofit 显示上传文件进度及 bug 记录</title>
@@ -185,9 +209,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
-    
       <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
+    
+      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
     
   </entry>
   
@@ -232,9 +256,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
-    
       <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
