@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-12-09T13:25:12.000Z</updated>
+  <updated>2017-12-26T15:01:52.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>人贱不如纸</title>
+    <link href="http://githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/"/>
+    <id>http://githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/</id>
+    <published>2017-12-26T14:28:04.000Z</published>
+    <updated>2017-12-26T15:01:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一个技术人扎堆的不谈技术的微信群里，有人发了个跳楼的视频。一个平日活跃的人，在评论中叫好。&lt;br&gt;一段短短的视频，一个没有任何犹豫跳下来的人。&lt;br&gt;几句喝彩的话。&lt;br&gt;有人惋惜，但没有其他人质疑。&lt;br&gt;我无法理解那个喝彩的人的心态，正如无从理解跳楼者的动机。&lt;br&gt;喝
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="杂文" scheme="http://githang.com/tags/%E6%9D%82%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>实现 RecyclerView 上拉加载及自动加载</title>
     <link href="http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/"/>
     <id>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</id>
     <published>2017-12-09T02:06:00.000Z</published>
-    <updated>2017-12-09T13:25:12.000Z</updated>
+    <updated>2017-12-09T13:59:21.000Z</updated>
     
     <summary type="html">
     
@@ -185,9 +211,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
-    
       <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
     
   </entry>
   

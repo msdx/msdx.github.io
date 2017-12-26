@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="之前在《一步步打造自己的通用上拉加载布局》（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。">
 <meta property="og:image" content="http://img.blog.csdn.net/20171209125510413?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWFvc2lkaWFveGlhbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-12-09T13:25:12.000Z">
+<meta property="og:updated_time" content="2017-12-09T13:59:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实现 RecyclerView 上拉加载及自动加载">
 <meta name="twitter:description" content="之前在《一步步打造自己的通用上拉加载布局》（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。">
@@ -223,7 +223,7 @@ var _hmt = _hmt || [];
 <h1 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h1><p>以上代码已提交至 Github 上的 <a href="https://github.com/msdx/hi-loadmore" target="_blank" rel="external">hi-loadmore</a> 项目，并且已发布至 bintray。使用方式如下：</p>
 <p>首先添加 Gradle 依赖：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.githang:hi-loadmore:0.1.1'</span></div><div class="line"><span class="comment">// OR</span></div><div class="line">implementation <span class="string">'com.githang:hi-loadmore:0.1.1'</span></div></pre></td></tr></table></figure>
-<p>然后在布局中使用 <code>LoadMoreRecyclerViewContainer</code>作为 <code>RecyclerView</code> 的父布局。接下来在 Java 代码中添加配置：</p>
+<p>然后在布局中使用 <code>LoadMoreRecyclerViewContainer</code> 作为 <code>RecyclerView</code> 的父布局。接下来在 Java 代码中添加配置：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">RecyclerFooterView footerView = <span class="keyword">new</span> RecyclerFooterView(<span class="keyword">this</span>);</div><div class="line">mLoadMoreLayout.setFooterView(footerView);</div><div class="line">mLoadMoreLayout.setLoadMoreUIHandler(footerView);</div><div class="line">mLoadMoreLayout.setHasMore(<span class="keyword">true</span>);</div></pre></td></tr></table></figure>
 <p>然后设置触发了上拉加载后的处理：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mLoadMoreLayout.setLoadMoreHandler(<span class="keyword">new</span> LoadMoreHandler() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onLoadMore</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">// 在这里请求数据</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
@@ -361,6 +361,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/12/26/Life-is-Cheaper-Than-Paper/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          人贱不如纸
+        
+      </div>
+    </a>
   
   
     <a href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/" id="article-nav-older" class="article-nav-link-wrap">
@@ -544,6 +553,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
@@ -557,14 +574,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
               </li>
             
             <div class="clearfix"></div>
