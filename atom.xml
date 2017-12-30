@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-12-26T15:10:31.000Z</updated>
+  <updated>2017-12-30T15:05:10.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跳一跳——电脑能做的事就不要人工来做啦</title>
+    <link href="http://githang.com/2017/12/30/Auto-Jump/"/>
+    <id>http://githang.com/2017/12/30/Auto-Jump/</id>
+    <published>2017-12-30T12:56:22.000Z</published>
+    <updated>2017-12-30T15:05:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;几年前参考网上的文章写过天天连萌自动玩的项目（之前写在 iteye 的博客上：&lt;a href=&quot;http://maosidiaoxian.iteye.com&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="monkey" scheme="http://githang.com/tags/monkey/"/>
+    
+  </entry>
   
   <entry>
     <title>人贱不如纸</title>
@@ -229,9 +257,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
-    
       <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
+    
+      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
     
   </entry>
   
@@ -276,9 +304,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
       <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
