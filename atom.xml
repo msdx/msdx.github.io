@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2017-12-31T15:34:30.000Z</updated>
+  <updated>2018-01-05T05:39:13.000Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2017 年总结</title>
+    <link href="http://githang.com/2018/01/05/Summary-of-2017/"/>
+    <id>http://githang.com/2018/01/05/Summary-of-2017/</id>
+    <published>2018-01-05T03:52:25.000Z</published>
+    <updated>2018-01-05T05:39:13.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。&lt;/p&gt;
+&lt;h1 id=&quot;个人&quot;&gt;&lt;a href=&quot;#个人&quot; class=&quot;headerlink&quot; title=&quot;个人&quot;&gt;&lt;/a&gt;个人&lt;/h1&gt;&lt;h2 id=&quot;开源&quot;&gt;&lt;a href=&quot;#开源&quot; class=&quot;headerlink&quot; title=&quot;开源&quot;&gt;&lt;/a&gt;开源&lt;/h2&gt;&lt;h3 id=&quot;以前的开源项目&quot;&gt;&lt;a href=&quot;#以前的开源项目&quot; class=&quot;headerlink&quot; title=&quot;以前的开源项目&quot;&gt;&lt;/a&gt;以前的开源项目&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/status-bar-compat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;status-bar-compat&lt;/code&gt;&lt;/a&gt; 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/fir-publisher&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;fir-publisher&lt;/code&gt;&lt;/a&gt; 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内部使用的状态。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>跳一跳——电脑能做的事就不要人工来做啦</title>
     <link href="http://githang.com/2017/12/30/Auto-Jump/"/>
     <id>http://githang.com/2017/12/30/Auto-Jump/</id>
     <published>2017-12-30T12:56:22.000Z</published>
-    <updated>2017-12-31T15:34:30.000Z</updated>
+    <updated>2018-01-05T03:43:51.000Z</updated>
     
     <summary type="html">
     
@@ -299,9 +321,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
-    
       <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
