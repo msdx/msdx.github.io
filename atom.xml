@@ -321,9 +321,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
       <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
