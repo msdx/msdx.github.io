@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>Tag: Retrofit | 疯狂的键盘</title>
+  <title>一个动态权限库的设计 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android研发工程师，左撇子。">
-<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://githang.com/tags/Retrofit/index.html">
+  <meta name="description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
+<meta name="keywords" content="Android,runtime-permission">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一个动态权限库的设计">
+<meta property="og:url" content="http://githang.com/2018/01/09/The-Design-of-HeyPermission/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Android研发工程师，左撇子。">
+<meta property="og:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
+<meta property="og:updated_time" content="2018-01-12T08:03:57.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的键盘">
-<meta name="twitter:description" content="Android研发工程师，左撇子。">
+<meta name="twitter:title" content="一个动态权限库的设计">
+<meta name="twitter:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -177,36 +178,195 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-The-Design-of-HeyPermission" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/" class="archive-article-date">
-  	<time datetime="2017-11-25T10:51:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/">Retrofit 显示上传文件进度及 bug 记录</a>
+    <h1 class="article-title" itemprop="name">
+      一个动态权限库的设计
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/09/The-Design-of-HeyPermission/" class="archive-article-date">
+  	<time datetime="2018-01-09T13:41:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。</p>
+</blockquote>
+<p>从 Android 6.0（API 23）开始，用户可以在应用运行时向其授予权限（6.0 以下，国内厂商也多数做了类似的权限管理），而不是在应用安装时授予。这一方法既可以简化应用的安装过程，也可以让用户对应用的功能进行更多的限制。</p>
+<p>在 Android 系统中，系统权限分为两类：正常权限以及危险权限。其中正常权限是不会直接给用户隐私权带来风险的，如果应用在其清单中声明了该权限，则系统会自动授予该权限。而危险权限，从 6.0 开始，而需要应用动态申请，并且由用户授予。</p>
+<p>官方的动态权限 API 是从 Android 6.0 才引入的，那么，自然需要做好6.0 起及 6.0 之前的不同版本的权限适配，从而催生了一些动态权限兼容封装库。比如：</p>
+<ul>
+<li>谷歌官方的 googlesamples/<a href="https://github.com/googlesamples/easypermissions" target="_blank" rel="external">easypermissions</a></li>
+<li>基于编译期注解的 permissions-dispatcher/<a href="https://github.com/permissions-dispatcher/PermissionsDispatcher" target="_blank" rel="external">PermissionsDispatcher</a></li>
+<li>yanzhenjie/<a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="external">AndPermission</a></li>
+<li>其他的封装库等等，就不一一列举了。</li>
+</ul>
+<p>然而，我在项目中准备去使用的时候，却发现这几个库都无法完全满足我的想法，于是就想到自己也去造一个轮子，也就是今天要讲的——hey-permission。</p>
+<p>我所设想的权限封装库是这样子的：</p>
+<ol>
+<li>6.0 前后接口调用的兼容处理。</li>
+<li>可以按权限组申请，及申请多个权限组（也就是可变长参数）。</li>
+<li>申请前判断是否获得所申请的权限，如果有未获得的权限，则只申请这些未获得的权限。</li>
+<li>能分别回调以下结果（开发者有声明则回调）：<ul>
+<li>权限申请通过；</li>
+<li>权限申请被拒绝（还可再申请）；</li>
+<li>权限申请被永久拒绝（再申请会直接回调拒绝）。</li>
+</ul>
+</li>
+<li>一个界面可能有不同的功能需要分别申请相同或不同的权限。所以：<ul>
+<li>权限申请通过的回调方法里能区分不同的 requestCode；</li>
+<li>权限申请被拒绝（包括永久拒绝）的方法可以统一处理，也可以分开处理；</li>
+<li>如果父类统一处理，子类可以单独处理某个权限申请被拒绝的结果。</li>
+</ul>
+</li>
+<li>支持不管申请通过还是拒绝都执行同样方法的情况。</li>
+<li>申请权限时，如果没有被用户拒绝过，则直接申请。如果被用户拒绝过（但不是永久拒绝），则能弹出提示用户权限重要性的对话框。</li>
+<li>如果申请权限时，已经被永久拒绝，也就是无法再弹出申请权限的请求对话框时，可以引导用户到应用设置里面授予权限。</li>
+<li>权限申请的回调中，如果用户拒绝了部分权限，但不是永久拒绝，则开发者可以处理是否弹出提示用户权限重要性的对话框。如果开发者在这里已处理，则不回调被拒绝的方法。</li>
+<li>轻量，不使用编译期注解（会受构建工具影响）。</li>
+</ol>
+<p>那么，再看看 Android 6.0（API 23）里都为此提供了哪些 API ？</p>
+<ol>
+<li>请求申请多个权限。</li>
+<li>查询是否具有某个权限。</li>
+<li>查询是否应该显示提示用户权限重要性的UI。它有如下结果：<ul>
+<li>如果在之前没有被拒绝过，则返回否。</li>
+<li>如果被拒绝过，但还可以再申请，则返回是。</li>
+<li>如果被永久拒绝，则返回否。</li>
+</ul>
+</li>
+<li>权限申请结果回调。它会返回请求码，所申请的权限以及处理结果的数组，它们一一对应。</li>
+</ol>
+<p>其中根据第三条，我们可以在权限被拒绝时来判断是否被永久拒绝。</p>
+<p>接下来，我们可以开始构思整个权限申请的流程，它主要有两部分：一是权限申请；二是申请结果的回调。<br>下面来绘制一下权限申请的流程：</p>
+<p><div id="flowchart-0" class="flow-chart"></div><br>对应的核心代码则是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">requestPermissions</span><span class="params">(@NonNull BasePermissionInvoker invoker,</span></span></div><div class="line"><span class="function"><span class="params">                                       @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></div><div class="line"><span class="function">                                       @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[]... permissionSets) </span>&#123;</div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; permissionList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (String[] permissionSet : permissionSets) &#123;</div><div class="line">        permissionList.addAll(Arrays.asList(permissionSet));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">final</span> String[] permissions = permissionList.toArray(<span class="keyword">new</span> String[permissionList.size()]);</div><div class="line">    <span class="keyword">if</span> (hasPermissions(invoker.getContext(), permissions)) &#123;</div><div class="line">        notifyAlreadyHasPermissions(invoker, requestCode, permissions);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(permissions)) &#123;</div><div class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">false</span>, invoker, requestCode, permissions)) &#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    invoker.executeRequestPermissions(requestCode, permissions);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后是权限申请结果的回调处理：</p>
+<p><div id="flowchart-1" class="flow-chart"></div><br>对应的核心代码则是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull BasePermissionInvoker invoker, @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></div><div class="line"><span class="function">        @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!invoker.needHandleThisRequestCode(requestCode)) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; granted = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; denied = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; permissions.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (grantResults[i] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">            granted.add(permissions[i]);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            denied.add(permissions[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (denied.isEmpty()) &#123;</div><div class="line">        <span class="comment">// all permissions were granted</span></div><div class="line">        invokePermissionsResultMethod(PermissionsGranted.class, invoker, requestCode, granted);</div><div class="line">        invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">final</span> String[] deniedPermissions = denied.toArray(<span class="keyword">new</span> String[denied.size()]);</div><div class="line">    <span class="keyword">boolean</span> neverAskAgain = <span class="keyword">true</span>;</div><div class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(deniedPermissions)) &#123;</div><div class="line">        neverAskAgain = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">true</span>, invoker, requestCode, deniedPermissions)) &#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (neverAskAgain) &#123;</div><div class="line">        invokePermissionsResultMethod(PermissionsNeverAskAgain.class,</div><div class="line">                invoker, requestCode, denied);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        invokePermissionsResultMethod(PermissionsDenied.class, invoker, requestCode, denied);</div><div class="line">    &#125;</div><div class="line">    invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上就是最核心的逻辑。</p>
+<p>接下来思考三个问题：</p>
+<ol>
+<li>Activity, Fragment, SupportFragment 都会需要申请权限及结果回调。</li>
+<li>采用哪种形式进行回调？是回调接口还是注解？</li>
+<li>在显示权限重要性的回调里，需要提供一个对象用于实际上的直接发起权限申请。</li>
+</ol>
+<p>对于第一个问题，我是参考了 google 官方的 easypermissions，对实际发起权限申请的 Activity, Fragment 及 SupportFragment 做了一层包装，抽象为 <code>BasePermissionInvoker</code> 抽象类，并定义了一些依赖它们去实现的行为，如 <code>shouldShowRequestPermissionRationale(@NonNull String... permissions)</code>，<code>startActivityForResult(Intent intent, int requestCode)</code>等。<br>而发起权限的方法并没有定义在这里，这是考虑到了第三个问题的对象只需要直接申请权限的接口，而不需要暴露其他接口。所以针对第三个问题，我另外定义了 <code>PermissionRequestExecutor</code> 接口，里面只声明了一个方法 <code>void executeRequestPermissions(int code, String... permissions);</code>，由 <code>BasePermissionInvoker</code> 去实现。<br>然后继承自 <code>BasePermissionInvoker</code>，在 Activity, Fragment 及 SupportFragment 的封装中对这些方法做具体的实现。</p>
+<p>最后是对第二个问题的思考，回调方式如何选择？</p>
+<p>一是开发者向用户显示权限重要性的提示，这个开发者可以显示也可以不显示。并且如上面的流程图所示，如果权限申请被拒绝了，而开发者显示了权限重要性的话，那么即表明权限申请已被拒绝，则不用再回调被拒绝的方法。否则表示开发者未处理，则要回调到权限被拒绝的方法。所以这种情况可以使用回调接口的方法，通过返回值来判断。</p>
+<p>第二种情况是权限申请结果的回调。申请结果的回调有通过、拒绝、永久拒绝多种，并且我们希望可以在 Activity 或 Fragment 等的基类能够统一处理被拒绝的情况，另一方面，我们需要不同的权限请求，能够在各自的方法里去处理回调。基于这些想法，因此采用了注解的方式。通过不同的 <code>requestCode</code> 来回调对应的方法；并且被拒绝的注解，它接收的参数是应该是数组类型，也就是我们可以在基本统一处理，也可以在某一个类通过再声明对应的注解来单独处理某一种情况。</p>
+<p>以上就是 hey-permission 的整个结构设计。具体实现时会遇到一些细节问题，比如判断权限时考虑 6.0 之前的 Ops，比如 SupportFragment 的权限申请结果是通过 AppCompatActivity 来分发，比如回调的注解方法的参数，等等，这些就不在这里赘述，具体可参考项目源码，地址为：<a href="https://github.com/parkingwang/hey-permission" target="_blank" rel="external">https://github.com/parkingwang/hey-permission</a> 。</p>
+<p>目前已实现如下特性：</p>
+<ul>
+<li>单个权限/权限组申请</li>
+<li>注解回调结果<ul>
+<li><code>@PermissionsGranted</code> 申请权限均被允许</li>
+<li><code>@PermissionsDenied</code> 申请权限被拒绝（下次还可询问用户）</li>
+<li><code>@PermissionsNeverAskAgain</code> 申请权限被永久拒绝</li>
+<li><code>@PermissionsResult</code> 申请权限结果（允许或拒绝都会回调）</li>
+</ul>
+</li>
+<li>注解回调方法可以是任意参数<ul>
+<li>如果参数中有 int，则第一个 int 参数将接收此次的 requestCode</li>
+<li>如果参数中有 List<string>，则第一个 List 参数将接收此次申请通过（<code>@PermissionsGranted</code>）或被拒绝（其他注解）的 permissions</string></li>
+</ul>
+</li>
+<li>回调注解支持处理多个 requestCode<ul>
+<li>仅申请允许的注解只能处理单个 requestCode</li>
+<li>其他权限结果注解支持多个 requestCode，如果为空则表示处理所有 requestCode</li>
+</ul>
+</li>
+<li>提示用户权限的重要性（回调方法）<ul>
+<li>默认的对话框供调用</li>
+</ul>
+</li>
+<li>被永久拒绝后提示用户去系统设置添加权限的对话框</li>
+<li>支持以下组件<ul>
+<li>Activity</li>
+<li>Fragment</li>
+<li>SupportFragment<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">start=>start: 开始
+end=>end: 结束
+hasPermissions=>condition: 是否都有权限？
+requestPermissions=>inputoutput: 请求申请多个权限
+executeRequestPermissions=>operation: 执行申请未被授予的权限
+shouldShowRationale=>condition: 是否显示权限重要性的UI？
+showRationale=>operation: 显示提示权限重要性的UI
+permissionsGranted=>inputoutput: 回调权限已被授予
+
+start->requestPermissions->hasPermissions
+hasPermissions(yes)->permissionsGranted->end
+hasPermissions(no)->shouldShowRationale
+shouldShowRationale(yes)->showRationale->end
+shouldShowRationale(no)->executeRequestPermissions->end</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":30,"text-margin":8,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">start=>start: 开始
+end=>end: 结束
+onPermissionsResult=>inputoutput: 权限申请结果回调
+group=>operation: 按被授予和被拒绝对权限分组
+isDeniedPermissionsEmpty=>condition: 是否没有被拒绝的权限？
+shouldShowRationale=>condition: 是否显示提示
+权限重要性的UI？
+permissionsGranted=>inputoutput: 回调权限已被授予
+permissionsDenied=>inputoutput: 回调权限已被拒绝
+permissionsNeverAskAgain=>inputoutput: 回调权限已被永久拒绝
+hasShowRationale=>condition: 开发者返回已处理显示权限重要性的UI？
+
+start->onPermissionsResult->group->isDeniedPermissionsEmpty
+isDeniedPermissionsEmpty(yes)->permissionsGranted->end
+isDeniedPermissionsEmpty(no)->shouldShowRationale
+shouldShowRationale(yes)->hasShowRationale
+hasShowRationale(yes)->end
+shouldShowRationale(no)->permissionsNeverAskAgain->end
+hasShowRationale(no)->permissionsDenied->end</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":30,"text-margin":8,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>明年奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -216,13 +376,13 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Retrofit</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">runtime-permission</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -235,17 +395,134 @@ var _hmt = _hmt || [];
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2018/01/09/The-Design-of-HeyPermission/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/01/05/Summary-of-2017/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017 年总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://githang.com/2018/01/09/The-Design-of-HeyPermission/",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4684296714025694",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -273,9 +550,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

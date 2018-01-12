@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-01-11T07:59:24.929Z</updated>
+  <updated>2018-01-12T08:03:57.560Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个动态权限库的设计</title>
+    <link href="http://githang.com/2018/01/09/The-Design-of-HeyPermission/"/>
+    <id>http://githang.com/2018/01/09/The-Design-of-HeyPermission/</id>
+    <published>2018-01-09T13:41:37.000Z</published>
+    <updated>2018-01-12T08:03:57.560Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="runtime-permission" scheme="http://githang.com/tags/runtime-permission/"/>
+    
+  </entry>
   
   <entry>
     <title>2017 年总结</title>
