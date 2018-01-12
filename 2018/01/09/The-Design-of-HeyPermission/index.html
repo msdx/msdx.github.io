@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://githang.com/2018/01/09/The-Design-of-HeyPermission/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
-<meta property="og:updated_time" content="2018-01-12T08:03:57.560Z">
+<meta property="og:updated_time" content="2018-01-12T08:08:55.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个动态权限库的设计">
 <meta name="twitter:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
@@ -203,6 +203,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <p>从 Android 6.0（API 23）开始，用户可以在应用运行时向其授予权限（6.0 以下，国内厂商也多数做了类似的权限管理），而不是在应用安装时授予。这一方法既可以简化应用的安装过程，也可以让用户对应用的功能进行更多的限制。</p>
 <p>在 Android 系统中，系统权限分为两类：正常权限以及危险权限。其中正常权限是不会直接给用户隐私权带来风险的，如果应用在其清单中声明了该权限，则系统会自动授予该权限。而危险权限，从 6.0 开始，而需要应用动态申请，并且由用户授予。</p>
+<a id="more"></a>
 <p>官方的动态权限 API 是从 Android 6.0 才引入的，那么，自然需要做好6.0 起及 6.0 之前的不同版本的权限适配，从而催生了一些动态权限兼容封装库。比如：</p>
 <ul>
 <li>谷歌官方的 googlesamples/<a href="https://github.com/googlesamples/easypermissions" target="_blank" rel="external">easypermissions</a></li>
