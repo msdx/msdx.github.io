@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://githang.com/2018/01/09/The-Design-of-HeyPermission/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
-<meta property="og:updated_time" content="2018-01-12T08:14:03.841Z">
+<meta property="og:updated_time" content="2018-01-13T01:39:06.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个动态权限库的设计">
 <meta name="twitter:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
@@ -311,13 +311,17 @@ shouldShowRationale(no)->executeRequestPermissions->end</textarea><textarea id="
 end=>end: 结束
 onPermissionsResult=>inputoutput: 权限申请结果回调
 group=>operation: 按被授予和被拒绝对权限分组
-isDeniedPermissionsEmpty=>condition: 是否没有被拒绝的权限？
+isDeniedPermissionsEmpty=>condition: 是否没有被
+拒绝的权限？
 shouldShowRationale=>condition: 是否显示提示
 权限重要性的UI？
 permissionsGranted=>inputoutput: 回调权限已被授予
 permissionsDenied=>inputoutput: 回调权限已被拒绝
-permissionsNeverAskAgain=>inputoutput: 回调权限已被永久拒绝
-hasShowRationale=>condition: 开发者返回已处理显示权限重要性的UI？
+permissionsNeverAskAgain=>inputoutput: 回调权限已
+被永久拒绝
+hasShowRationale=>condition: 开发者返回
+已处理显示权限
+重要性的UI？
 
 start->onPermissionsResult->group->isDeniedPermissionsEmpty
 isDeniedPermissionsEmpty(yes)->permissionsGranted->end
