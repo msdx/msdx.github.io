@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-01-13T01:39:06.698Z</updated>
+  <updated>2018-02-03T14:00:43.794Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对读取短信验证码封装库的思考</title>
+    <link href="http://githang.com/2018/02/03/Sms-Captcha/"/>
+    <id>http://githang.com/2018/02/03/Sms-Captcha/</id>
+    <published>2018-02-03T12:22:23.000Z</published>
+    <updated>2018-02-03T14:00:43.794Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。&lt;/p&gt;
+&lt;p&gt;项目目前挂在 github 上的公司组织下，地址为：&lt;a href=&quot;https://github.com/parkingwang/sms-captcha&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/parkingwang/sms-captcha&lt;/a&gt;。使用方法很简单，在界面创建时注册：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mCaptchaObserver = SmsCaptcha.with(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .captchaLength(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .addressLike(&lt;span class=&quot;string&quot;&gt;&quot;10657%&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .fillTo(mSmsCode)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .createAndRegister();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;界面销毁时移除注册：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mCaptchaObserver.unregister();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="captcha" scheme="http://githang.com/tags/captcha/"/>
+    
+  </entry>
   
   <entry>
     <title>一个动态权限库的设计</title>
@@ -125,9 +151,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
-    
       <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+    
+      <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
     
   </entry>
   
@@ -276,9 +302,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
-    
       <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
@@ -347,9 +373,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
-    
       <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
