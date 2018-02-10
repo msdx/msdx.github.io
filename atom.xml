@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-02-04T00:32:36.907Z</updated>
+  <updated>2018-02-10T17:30:19.613Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你来了呀</title>
+    <link href="http://githang.com/2018/02/11/2018/You-Are-Here/"/>
+    <id>http://githang.com/2018/02/11/2018/You-Are-Here/</id>
+    <published>2018-02-10T16:59:46.000Z</published>
+    <updated>2018-02-10T17:30:19.613Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;就在那不经意间，从列表里看到了一个人名，仿佛许久都未曾记起。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我回到大学，重过带有抱憾的生活。&lt;br&gt;我拖着行李，独自回到宿舍。宿舍里早已回来三人，我打着招呼，放下行李箱，爬上了自己的床位，仿佛想一睡三年。
+        
+      
+    
+    </summary>
+    
+      <category term="拾梦者" scheme="http://githang.com/categories/%E6%8B%BE%E6%A2%A6%E8%80%85/"/>
+    
+    
+      <category term="梦" scheme="http://githang.com/tags/%E6%A2%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>对读取短信验证码封装库的思考</title>
@@ -151,9 +180,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
-    
       <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
+    
+      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
@@ -302,9 +331,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="github" scheme="http://githang.com/tags/github/"/>
-    
       <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
+    
+      <category term="github" scheme="http://githang.com/tags/github/"/>
     
   </entry>
   
@@ -373,9 +402,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
       <category term="github" scheme="http://githang.com/tags/github/"/>
+    
+      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
     
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
     
