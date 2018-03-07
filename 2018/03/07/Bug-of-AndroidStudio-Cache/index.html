@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 18-19-27屏幕截图.png">
 <meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 18-30-12屏幕截图.png">
 <meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png">
-<meta property="og:updated_time" content="2018-03-07T11:09:20.299Z">
+<meta property="og:updated_time" content="2018-03-07T11:36:19.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深踩 AndroidStudio 缓存的坑">
 <meta name="twitter:description" content="本文记录的是今天在群里提到的昨天所踩的一个坑，有关 AndroidStudio 缓存的。 故事是这样开始的。我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。">
@@ -207,20 +207,23 @@ var _hmt = _hmt || [];
 <p>故事是这样开始的。<br>我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。<br><a id="more"></a></p>
 <p>这时候回到 AndroidStudio 再去 <code>Sync Project with Gradle Files</code> 肯定是拉不下来的。众所周知，Gradle 的缓存策略中，对于 SNAPSHOT 版本默认的缓存周期是 24 小时，也就是从我上次更新之后，24小时内都会使用上次的缓存。</p>
 <blockquote>
-<p>不周知的我这里提一下，在 Gradle 用户指南的依赖管理一章中，有提到 Gradle 对于动态版本和变化模块的缓存时间默认是 24 小时。<br>何为动态版本？你见过的像 <code>3.+</code> 这种就是动态版本，它会取检查到的最高的版本号。又比如 <code>latest.integration</code>，它也是动态版本，取最新的集成版本。<br>而动态模块，就是像 <code>0.2-SNAPSHOT</code> 这种后面带 <code>SNAPSHOT</code> 的版本了。</p>
+<p>不周知的也没关系，我这里提一下，在 Gradle 用户指南的依赖管理一章中，有提到 Gradle 对于动态版本和变化模块的缓存时间默认是 24 小时。<br>何为动态版本？你见过的像 <code>3.+</code> 这种就是动态版本，它会取检查到的最高的版本号。又比如 <code>latest.integration</code>，它也是动态版本，取最新的集成版本。<br>而动态模块，就是像 <code>0.2-SNAPSHOT</code> 这种后面带 <code>SNAPSHOT</code> 的版本了。<br>这两者的区别就是，前者尽管你代码中的版本号写法不变，但实际上它仍然是去取最新版本。而后者它的版本号还是一样，仍然是 <code>xxx-SNAPSHOT</code>，但实际上这个版本所对应的内容已经变了。</p>
 </blockquote>
+<p>这里再啰嗦一下，缓存周期也是可以修改的，在 Gradle 用户指南中同样有详细说明，就是添加如下配置：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">configurations.all &#123;</div><div class="line">    resolutionStrategy.cacheDynamicVersionsFor <span class="number">10</span>, <span class="string">'minutes'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当然这里我贪省事，就懒得去改。</p>
 <p>那怎么办？把 <code>~/.gradle/caches</code> 整个给干掉？<br>不不不，那样太小题大做。这个问题我早已遭遇过，并且对于“汉化”过一遍 Gradle 用户指南的我来说太简单了。命令行下执行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./gradlew aTD --refresh-dependencies</div></pre></td></tr></table></figure>
 <p>这里啰嗦一下，<code>aTD</code> 是项目中一个 Gradle 任务的缩写，全称是 <code>assembleTestingDebug</code>，其中 <code>Testing</code> 是一个 <code>ProductFlavor</code>。这并不重要，<strong>重点是后面的参数 <code>--refresh-dependencies</code>，加上这个参数，表示强制更新依赖。</strong><br>但是回到 AndroidStudio 写代码，发现代码提示中新的 API 还是没有出来。看来是 Android Studio 没有更新。不过没关系，这事我也有经验。点开右边的 Gradle 面板，找到 <code>androidDependencies</code> 任务，右键，<code>Create xxxxx Configuration</code>，然后在弹出的面板的 Arguments 一栏中输入前面提到的参数 <code>--refresh-dependencies</code>，添加完，在运行那里选择它执行。<br><img src="http://upyun.githang.com/2018/03/07/WX20180307-181812@2x.png" alt="WX20180307-181812@2x"><br>等执行完，按照几年前的经验，这时候应该出来了吧？</p>
-<p>然而，并没有。<br>这时候我忽然想起，我们公司搭过 maven 私服，去年的时候我在上面配置了对 OJO 的代理，这时候拉取的是私服上的版本，是它没有更新？<br>没关系，解决方法很简单，删！<br>于是我登录到 nexus 上，找到缓存的这个库，右键，整个版本删掉。删了服务器上的之后，还觉得不放心，于是再把.gradle里缓存的给找出来删掉，我当时应该是这样子的：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 18-19-27屏幕截图.png" alt="2018-03-07 18-19-27屏幕截图"><br>最后把再执行前面步骤。命令行中已经可以看到重新下载了这个依赖了，并且我也检查了 <code>.gradle/caches/modules-2</code> 下对应的源码 jar 包，确实是更新了。<br>再回到 Android Studio，发现依然没有更新。<br>啊（这里应读四声）！这时候我想到了，新版的 Android Studio 为了提速，多了一层缓存：对于第三方依赖会把它们解压出来，放到 .gradle/caches/transforms-1 目录中。<br>删！<br>于是继续：</p>
+<p>然而，并没有。<br>这时候我忽然想起，我们公司搭过 maven 私服，去年的时候我在上面配置了对 OJO 的代理，这时候拉取的是私服上的版本，是它没有更新？<br>没关系，解决方法很简单，删！<br>于是我登录到 nexus 上，找到缓存的这个库，右键，整个版本删掉。删了服务器上的之后，还觉得不放心，于是再把.gradle里缓存的给找出来删掉，我当时应该是这样子的：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 18-19-27屏幕截图.png" alt="2018-03-07 18-19-27屏幕截图"><br>最后再执行前面步骤。命令行中已经可以看到重新下载了这个依赖了，并且我也检查了 <code>.gradle/caches/modules-2</code> 下对应的源码 jar 包，确实是更新了。<br>再回到 Android Studio，发现依然没有更新。<br>啊（这里应读四声）！这时候我想到了，新版的 Android Studio 为了提速，多了一层缓存：对于第三方依赖会把它们解压出来，放到 .gradle/caches/transforms-1 目录中。<br>于是继续：<br>删！</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -name "hichart*" |xargs rm -rf</div></pre></td></tr></table></figure>
 <p>然后再构建，让它重新缓存，这时候应该就可以了吧。<br>在 Android Studio 中执行了构建，然后发现它确实重新缓存了。但是——<br>悲剧就此发展，深坑就此塌陷！<br>这时候，我发现不单是新加的 API 没有出来，编辑器里有关这个库的代码全都变红了！尽管！项目还是能跑起来！当时的屏幕是这样的：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 18-30-12屏幕截图.png" alt="2018-03-07 18-30-12屏幕截图"></p>
 <p>咦，不对。咋回事？</p>
-<p>这时候我机智地想到，这里缓存的路径有包含 hash 作为名称的文件夹，更新了之后，hash 值也不同了，所以应该是哪里的索引没有对应上。于是在 <code>transforms-1/metadata-1.1</code> 中发现了一个叫 <code>results.bin</code> 的文件。再搜一下里面有没有包含那个库的内容：</p>
+<p>这时候我机智地想到，这里缓存的路径有包含 hash 作为名称的文件夹，更新了之后，hash 值也不同了，所以应该是哪里的索引没有对应上。于是找啊找，就在 <code>transforms-1/metadata-1.1</code> 中发现了一个叫 <code>results.bin</code> 的文件。再搜一下里面有没有包含那个库的内容：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat results.bin| grep "hichart"</div></pre></td></tr></table></figure>
 <p>提示是二进制文件。那就加个参数：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat results.bin| grep -a "hichart"</div></pre></td></tr></table></figure>
-<p>果然有。那好，那就再——<br>删！<br>等等——我这下谨慎了一下，还是重命名一下好了。于是重命名，然后再执行构建，然而，有关这个库的引用还是报错。</p>
+<p>果然有。那好，那就再——<br>删！<br>等等——我这时谨慎了一下，还是重命名一下好了。于是重命名，然后再执行构建，然而，有关这个库的引用还是报错。</p>
 <p>这时候的我陷入了一番沉思，然后再试其他方法：</p>
 <ul>
 <li>Sync with File System</li>
@@ -228,17 +231,18 @@ var _hmt = _hmt || [];
 <li>File -&gt; Invalidate Caches / Restart</li>
 </ul>
 <p>还是无效。带着郁闷，我下班了。</p>
-<p>虽然这问题此刻表现得如此顽固，然而最终它还是被我解决了。<br>早上一来，估计是有点急了，毕竟项目的开发时间由此被我拖多了一天了，但是本着一颗运维的心，自己踩陷的坑无论怎样也要把它踩平。<br>于是我开始往其他缓存方面上考虑，也没有去想合不合逻辑。我想到了 Gradle 在构建时会对一个任务的输入做快照，于是找到项目里的 <code>.gradle/buildOutputCleanup</code> 目录，删！<br>还不行，那就 <code>.gradle/4.4</code>（当前使用的 Gradle 版本），删！<br>还不对，那就 <code>.gradle</code>，删！<br>还不对，那就 Android Studio 的配置文件夹，<code>~/.AndroidStudio3.1</code>，删！<br>删完重新打开 Android Studio，这时候发现没有了之前的问题了，不，是问题升级了——这时候已经不是那个库报红了，而是引用第三方库的地方都报红了！！！尽管，还是可以运行起来！！</p>
-<p>百般无奈之下，继续 google，看到的还是前面提到的 Invilate Cache 的方法。忽然在 Stackoverflow 中看到了看起来不是很常见的回答：</p>
+<hr>
+<p>虽然这问题此刻表现得如此顽固，然而最终它还是被我解决了。<br>早上一来，估计是有点急了，毕竟项目的开发时间由此被我拖多了一天了，但是本着一颗运维的心，自己踩陷的坑无论怎样也要把它踩平。<br>于是我开始往其他缓存方面上考虑，也没有去想合不合逻辑。我想到了 Gradle 在构建时会对一个任务的输入做快照，于是找到项目里的 <code>.gradle/buildOutputCleanup</code> 目录，删！<br>还不行，那就 <code>.gradle/4.4</code>（当前使用的 Gradle 版本），删！<br>还不对，那就整个 <code>.gradle</code>，删！<br>还不对，那就 Android Studio 的配置文件夹，<code>~/.AndroidStudio3.1</code>，删！<br>删完重新打开 Android Studio，这时候发现没有了之前的问题了，你以为问题解决了吗？不，是问题升级了——这时候已经不是那个库报红了，而是引用第三方库的地方都报红了！！！尽管，还是可以运行起来！！</p>
+<p>百般无奈之下，继续 google，看到的还是前面提到的 Invilate Cache 的方法。忽然在 Stackoverflow 中看到了一个看起来不是很常见的回答：</p>
 <blockquote>
 <p>退出 Android Studio，删除所有的 .iml 文件以及 .idea 目录，打开 Android Studio 重新导入项目。</p>
 </blockquote>
 <p>咦？这方法没试过，于是我试了一下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">find . -name "*.iml" |xargs rm</div><div class="line">find . -name ".idea" |xargs rm -rf</div></pre></td></tr></table></figure>
 <p>然后重新打开 Android Studio，点 <code>Sync with File System</code>，这时候奇迹终于出来了，应该说，Android Studio 终于正常了，编辑器不报红了！</p>
-<p>那么，根本原因究竟是什么呢？<br>有着打破沙锅问到底精神的我，对此问题仍不放弃。<br>我看了一下 .iml 文件，没什么异常。那就再看.idea 目录。</p>
+<p>压抑着心中的万分激动，有着打破沙锅问到底精神的我，对此问题仍不放弃思考<br>究竟是什么原因呢？<br>我看了一下 .iml 文件，没什么异常。那就再看.idea 目录。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find .idea -type f |xargs grep "hichart"</div></pre></td></tr></table></figure>
-<p>结果如下：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png" alt="2018-03-07 19-00-12屏幕截图"><br>原来是在 .idea/libraries 里会缓存每一个第三方库的 classes, javadoc 以及 sources 所对应的路径。其中 classes 对应的正是前面所提到的 transforms-1 里的目录，同样也正如前面所说，其中包含的路径是有 hash 值的，更新了依赖之后，hash 值不同，新的缓存路径也不同了，而这里还是用的原来被删的那个路径，找不到对应的文件当然编辑器里就提示 <code>cannot resolve symbol</code> 了。所以正确的解决方案应该是删除 <code>.idea/libraries/</code> 里对应该第三方库的 xml 文件让它重新生成，或者是直接修改该 xml 文件的内容，改为更新依赖之后的路径。</p>
+<p>结果如下：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png" alt="2018-03-07 19-00-12屏幕截图"><br>原来是在 .idea/libraries 里会缓存每一个第三方库的 classes, javadoc 以及 sources 所对应的路径。其中 classes 对应的正是前面所提到的 transforms-1 里的目录，同样也正如前面所说，其中包含的路径是有 hash 值的，更新了依赖之后，hash 值不同，新的缓存路径也不同了，而这里还是用的原来被删的那个路径，找不到对应的文件当然编辑器里就提示 <code>cannot resolve symbol</code> 了。所以正确而直接的解决方案应该是删除 <code>.idea/libraries/</code> 里对应该第三方库的 xml 文件让它重新生成，或者是直接修改该 xml 文件的内容，改为更新依赖之后的路径。</p>
 
       
 
