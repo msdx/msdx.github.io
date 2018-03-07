@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>梦——少年不生事 | 疯狂的键盘</title>
+  <title>深踩 AndroidStudio 缓存的坑 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
-<meta name="keywords" content="梦">
+  <meta name="description" content="本文记录的是今天在群里提到的昨天所踩的一个坑，有关 AndroidStudio 缓存的。 故事是这样开始的。我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。">
+<meta name="keywords" content="bug,AndroidStudio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="梦——少年不生事">
-<meta property="og:url" content="http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/index.html">
+<meta property="og:title" content="深踩 AndroidStudio 缓存的坑">
+<meta property="og:url" content="http://githang.com/2018/03/07/Bug-of-AndroidStudio-Cache/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
-<meta property="og:updated_time" content="2017-11-18T11:39:13.000Z">
+<meta property="og:description" content="本文记录的是今天在群里提到的昨天所踩的一个坑，有关 AndroidStudio 缓存的。 故事是这样开始的。我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。">
+<meta property="og:image" content="http://upyun.githang.com/2018/03/07/WX20180307-181812@2x.png">
+<meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 18-19-27屏幕截图.png">
+<meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 18-30-12屏幕截图.png">
+<meta property="og:image" content="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png">
+<meta property="og:updated_time" content="2018-03-07T11:09:20.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梦——少年不生事">
-<meta name="twitter:description" content="昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。">
+<meta name="twitter:title" content="深踩 AndroidStudio 缓存的坑">
+<meta name="twitter:description" content="本文记录的是今天在群里提到的昨天所踩的一个坑，有关 AndroidStudio 缓存的。 故事是这样开始的。我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。">
+<meta name="twitter:image" content="http://upyun.githang.com/2018/03/07/WX20180307-181812@2x.png">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -178,38 +183,62 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Dream-Juvenile-does-not-make-trouble" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Bug-of-AndroidStudio-Cache" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      梦——少年不生事
+      深踩 AndroidStudio 缓存的坑
     </h1>
   
 
         
-        <a href="/2017/10/27/Dream-Juvenile-does-not-make-trouble/" class="archive-article-date">
-  	<time datetime="2017-10-27T14:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
+        <a href="/2018/03/07/Bug-of-AndroidStudio-Cache/" class="archive-article-date">
+  	<time datetime="2018-03-07T09:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。</p>
-<a id="more"></a>
-<p>东杨没追上他那两个兄弟，眼看他们两个的背景越来越小，干脆放弃了追逐，放慢了摩托车的速度在公路上观赏起两边的风景来。<br>没一会儿，余光之中注意到了旁边似乎跟上来道白影。回过头来望去，一袭白衣飘然在侧，衣袂之间流露出的素雅恬静与来自座下的轰鸣声格格不入，却是同校的黄乐。东杨没怎么看过女生开摩托车驰骋在城市间，更不用说是班里那些兄弟谈论较多的黄乐，不免多看了几眼。黄乐自是注意到了他的目光，挑衅般也转过头去与他对视，一脸得意。两人并行。</p>
-<p>到了外城，那两兄弟也没联系东杨，东杨更兀自与黄乐结伴，直至傍晚将归，才发信息告知。</p>
-<p>回到内县，这一天下来仍似乎梦一场。但也从这天起，东杨与黄乐也熟悉了起来。经常两人结伴出校，路上有时谈笑风生，有时相伴无言，走到东杨的咖啡店之后才分别。也是在那之后，东杨才知道原来黄乐住的地方与自己的咖啡店相距不远，过个马路过条街她就到家了。时光开始如梭，岁月不再蹉跎。</p>
-<p>如果没有过去，那便是万般美好。但总有些过去总是过不去。东杨给一个客户送咖啡，地方较偏，七拐八弯终于送到，回来的时候却出现了些状况。从一个胡同口出来，东杨正想着是不是有捷径，身后熟悉而又清亮的嗓音传来：<br>“东杨！”<br>似是不可置信般，东杨回过过身，却一下子看到了多年前的女同学。<br>“宇桐？”东杨想，不应该是她的声音。正讶然间，前面同学身后又探出来两个人。<br>“小星，苏青！”东杨脱口而出。刚才正是苏青的声音。还未来得急欣喜，更加熟悉的声音在身后响起，声音很轻，但咬字清晰仿佛叩在东杨心上：<br>“东杨？”<br>“田静？”东杨已经愕然，慢慢转过头去。前面柔弱似柳伫立墙边，低首垂眉不敢直视的，不是田静是谁？<br>“田静……”这一轻唤却是叫起前面人儿抬起了头。<br>是回来了么？东杨在心中念着，但问出来的却是：“你怎么也会在这里？”<br>田静迟迟未语。但身后又传来一个人的声音：<br>“东杨。”<br>东杨已经不知道这一刻的心情应该怎么形容了，回头看到黄乐一脸疑惑地问他：“这四个人是谁？”<br>“她们是……”东杨回看了三个初中的同学一眼，说，“这几个是同学。”<br>“那她呢？”黄乐不依不饶地问。<br>东杨又回过头去看田静。未待他回答，田静默默地转身离开。<br>此时黄乐也看了出来，也愤然转身就走。东杨待追过去，又回头想追另外一边的人，心下叫苦不迭。顿足搓手之时，忽然所有人都消失不见，独留空巷，路口，红墙，石路。<br>“田静，乐乐！”东杨喊了出来。他着急地大喊，却是没听到自己一丁点声音，周围黑成一片，原来是个梦境。冷汗在身上泛起，轻松从眉间散开。</p>
-<p>次日，东杨见到黄乐，略微心虚。但黄乐仍是笑意盈然，对东杨的心虚毫不知情。</p>
-<p>东杨与黄乐之间最终还是结束了。<br>那天，东杨回到咖啡店，看到两个兄弟也在，但眼角嘴边都是乌青。<br>“谁打的？”<br>“大高个他们。”兄弟甲说。<br>“你家乐乐的人。”兄弟乙说。<br>东杨也知道大高个是乐乐的人。<br>事情的起因没人追究，正如事情的结果没人在意一样。自己的人从来没吃过这样的大亏，当然不能善罢干休。东杨带着两个兄弟就杀到了大高个的地盘。在那里，东杨见到的还是大高个三个。<br>大高个三个并不是三个都是大高个，其中两个都不到一米七，但三个平均下来就一米八五以上了。<br>看到是东杨，大高个也收敛了下，客套询问何事。几人几句言语相激之下，又待打起。之前是二打三，现在三对三，东杨心想应当不亏能够揍回来，却不料里面门打开，从内室又走出了八九个人，个个挑衅地问道：“听说有人要在这里打架？”<br>这下东杨三人也都虚了，但气势上却丝毫不肯示弱。“人多怎么了？乐乐下的人都只会以多欺少吗？有胆气就一挑一。”说是怎么说，但是东杨心下也清楚，一挑一要是对上大高个，自己这边无论是谁也挑不起来。<br>果然还是大高个应话了：“既然你提了乐乐姐，那就一挑一。我先上，你们谁想先上来随意。”本来按这里的规矩，一挑一是应战一方先出一个人，然后叫战对面某个人。接下来是哪一方输，则哪一方先出人叫战对面，直至一方认输或出不了人。大高个这样一说，起哄声更是四起。</p>
-<p>东杨几人恨恨地瞪着大高个，兄弟甲不堪示弱，走了出来准备接战。<br>起哄声突然停了下来。鹅黄衣裙走进，却是黄乐。<br>黄乐看了大高个一眼，大高个连忙退回众人之间。黄乐继续走到东杨前面，低声询问：“今日的事要不就算了？闹大了不管谁输谁赢都不好看。”<br>东杨久未作声。<br>黄乐又低声下气地说：“要不我让大高个私下和你兄弟道个歉，今天的事情不要闹了好吗？”<br>东杨心下也知再坚持下去也无法收场，反会让乐乐难堪，说：“不用了。我们这就离去。”<br>双方无语，留的一方噤声，走的一方默然。</p>
-<p>东杨也不知道自己带着几个兄弟是要做些什么。他们没有可以保护的人，而他也没有了需要保护的人。霎那间，东杨像是想起了谁。</p>
-<p>有一天东杨走出教学楼，看到几个人围在墙角。里面似有女生呜咽声，但东杨却感觉也隐隐听到了另一个熟悉的声音。正想走过去看，旁边却走来大高个他们，笑脸阻住了东杨的去路。<br>“乐乐。”东杨叫了出来。熟悉的声音隐匿了。东杨喊了出来：“乐乐！”仿佛用上了全身之力，声音之中带着怒意。但大高个几个马上就把东杨给架走了。</p>
-<p>一天，下雨。出校，回去。<br>黄乐在校门口等了好些会儿，雨未停，人未至。天色渐黄，雨意更深。大高个三个人看到了校门口的黄乐，撑伞送她回去。走到路口，黄乐在咖啡店前停了下来，看到了前方背朝着她的东杨。<br>东杨也停了下来，像是知道身后有人在望着他。但没停多久，又继续迈步往前走，进了咖啡店。<br>“乐乐姐，你们……”<br>“没你们的事儿。走吧。”黄乐也回转过身离去。</p>
+        <p>本文记录的是今天在群里提到的昨天所踩的一个坑，有关 AndroidStudio 缓存的。</p>
+<p>故事是这样开始的。<br>我负责的一个项目，对一个图表库有外部依赖。这个图表库是我在维护的，由于新功能在开发中，所以我就使用了 SNAPSHOT 版本发布到 OJO(oss.jfrog.org) 上。我在项目中刚更新了依赖，忽然想到还少几个 API，于是发布了 SNAPSHOT 版本。<br><a id="more"></a></p>
+<p>这时候回到 AndroidStudio 再去 <code>Sync Project with Gradle Files</code> 肯定是拉不下来的。众所周知，Gradle 的缓存策略中，对于 SNAPSHOT 版本默认的缓存周期是 24 小时，也就是从我上次更新之后，24小时内都会使用上次的缓存。</p>
+<blockquote>
+<p>不周知的我这里提一下，在 Gradle 用户指南的依赖管理一章中，有提到 Gradle 对于动态版本和变化模块的缓存时间默认是 24 小时。<br>何为动态版本？你见过的像 <code>3.+</code> 这种就是动态版本，它会取检查到的最高的版本号。又比如 <code>latest.integration</code>，它也是动态版本，取最新的集成版本。<br>而动态模块，就是像 <code>0.2-SNAPSHOT</code> 这种后面带 <code>SNAPSHOT</code> 的版本了。</p>
+</blockquote>
+<p>那怎么办？把 <code>~/.gradle/caches</code> 整个给干掉？<br>不不不，那样太小题大做。这个问题我早已遭遇过，并且对于“汉化”过一遍 Gradle 用户指南的我来说太简单了。命令行下执行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./gradlew aTD --refresh-dependencies</div></pre></td></tr></table></figure>
+<p>这里啰嗦一下，<code>aTD</code> 是项目中一个 Gradle 任务的缩写，全称是 <code>assembleTestingDebug</code>，其中 <code>Testing</code> 是一个 <code>ProductFlavor</code>。这并不重要，<strong>重点是后面的参数 <code>--refresh-dependencies</code>，加上这个参数，表示强制更新依赖。</strong><br>但是回到 AndroidStudio 写代码，发现代码提示中新的 API 还是没有出来。看来是 Android Studio 没有更新。不过没关系，这事我也有经验。点开右边的 Gradle 面板，找到 <code>androidDependencies</code> 任务，右键，<code>Create xxxxx Configuration</code>，然后在弹出的面板的 Arguments 一栏中输入前面提到的参数 <code>--refresh-dependencies</code>，添加完，在运行那里选择它执行。<br><img src="http://upyun.githang.com/2018/03/07/WX20180307-181812@2x.png" alt="WX20180307-181812@2x"><br>等执行完，按照几年前的经验，这时候应该出来了吧？</p>
+<p>然而，并没有。<br>这时候我忽然想起，我们公司搭过 maven 私服，去年的时候我在上面配置了对 OJO 的代理，这时候拉取的是私服上的版本，是它没有更新？<br>没关系，解决方法很简单，删！<br>于是我登录到 nexus 上，找到缓存的这个库，右键，整个版本删掉。删了服务器上的之后，还觉得不放心，于是再把.gradle里缓存的给找出来删掉，我当时应该是这样子的：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 18-19-27屏幕截图.png" alt="2018-03-07 18-19-27屏幕截图"><br>最后把再执行前面步骤。命令行中已经可以看到重新下载了这个依赖了，并且我也检查了 <code>.gradle/caches/modules-2</code> 下对应的源码 jar 包，确实是更新了。<br>再回到 Android Studio，发现依然没有更新。<br>啊（这里应读四声）！这时候我想到了，新版的 Android Studio 为了提速，多了一层缓存：对于第三方依赖会把它们解压出来，放到 .gradle/caches/transforms-1 目录中。<br>删！<br>于是继续：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -name "hichart*" |xargs rm -rf</div></pre></td></tr></table></figure>
+<p>然后再构建，让它重新缓存，这时候应该就可以了吧。<br>在 Android Studio 中执行了构建，然后发现它确实重新缓存了。但是——<br>悲剧就此发展，深坑就此塌陷！<br>这时候，我发现不单是新加的 API 没有出来，编辑器里有关这个库的代码全都变红了！尽管！项目还是能跑起来！当时的屏幕是这样的：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 18-30-12屏幕截图.png" alt="2018-03-07 18-30-12屏幕截图"></p>
+<p>咦，不对。咋回事？</p>
+<p>这时候我机智地想到，这里缓存的路径有包含 hash 作为名称的文件夹，更新了之后，hash 值也不同了，所以应该是哪里的索引没有对应上。于是在 <code>transforms-1/metadata-1.1</code> 中发现了一个叫 <code>results.bin</code> 的文件。再搜一下里面有没有包含那个库的内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat results.bin| grep "hichart"</div></pre></td></tr></table></figure>
+<p>提示是二进制文件。那就加个参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat results.bin| grep -a "hichart"</div></pre></td></tr></table></figure>
+<p>果然有。那好，那就再——<br>删！<br>等等——我这下谨慎了一下，还是重命名一下好了。于是重命名，然后再执行构建，然而，有关这个库的引用还是报错。</p>
+<p>这时候的我陷入了一番沉思，然后再试其他方法：</p>
+<ul>
+<li>Sync with File System</li>
+<li>Sync Project with Gradle Files</li>
+<li>File -&gt; Invalidate Caches / Restart</li>
+</ul>
+<p>还是无效。带着郁闷，我下班了。</p>
+<p>虽然这问题此刻表现得如此顽固，然而最终它还是被我解决了。<br>早上一来，估计是有点急了，毕竟项目的开发时间由此被我拖多了一天了，但是本着一颗运维的心，自己踩陷的坑无论怎样也要把它踩平。<br>于是我开始往其他缓存方面上考虑，也没有去想合不合逻辑。我想到了 Gradle 在构建时会对一个任务的输入做快照，于是找到项目里的 <code>.gradle/buildOutputCleanup</code> 目录，删！<br>还不行，那就 <code>.gradle/4.4</code>（当前使用的 Gradle 版本），删！<br>还不对，那就 <code>.gradle</code>，删！<br>还不对，那就 Android Studio 的配置文件夹，<code>~/.AndroidStudio3.1</code>，删！<br>删完重新打开 Android Studio，这时候发现没有了之前的问题了，不，是问题升级了——这时候已经不是那个库报红了，而是引用第三方库的地方都报红了！！！尽管，还是可以运行起来！！</p>
+<p>百般无奈之下，继续 google，看到的还是前面提到的 Invilate Cache 的方法。忽然在 Stackoverflow 中看到了看起来不是很常见的回答：</p>
+<blockquote>
+<p>退出 Android Studio，删除所有的 .iml 文件以及 .idea 目录，打开 Android Studio 重新导入项目。</p>
+</blockquote>
+<p>咦？这方法没试过，于是我试了一下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">find . -name "*.iml" |xargs rm</div><div class="line">find . -name ".idea" |xargs rm -rf</div></pre></td></tr></table></figure>
+<p>然后重新打开 Android Studio，点 <code>Sync with File System</code>，这时候奇迹终于出来了，应该说，Android Studio 终于正常了，编辑器不报红了！</p>
+<p>那么，根本原因究竟是什么呢？<br>有着打破沙锅问到底精神的我，对此问题仍不放弃。<br>我看了一下 .iml 文件，没什么异常。那就再看.idea 目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find .idea -type f |xargs grep "hichart"</div></pre></td></tr></table></figure>
+<p>结果如下：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png" alt="2018-03-07 19-00-12屏幕截图"><br>原来是在 .idea/libraries 里会缓存每一个第三方库的 classes, javadoc 以及 sources 所对应的路径。其中 classes 对应的正是前面所提到的 transforms-1 里的目录，同样也正如前面所说，其中包含的路径是有 hash 值的，更新了依赖之后，hash 值不同，新的缓存路径也不同了，而这里还是用的原来被删的那个路径，找不到对应的文件当然编辑器里就提示 <code>cannot resolve symbol</code> 了。所以正确的解决方案应该是删除 <code>.idea/libraries/</code> 里对应该第三方库的 xml 文件让它重新生成，或者是直接修改该 xml 文件的内容，改为更新依赖之后的路径。</p>
 
       
 
@@ -254,7 +283,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">梦</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AndroidStudio</a>
         		</li>
       		
 		</ul>
@@ -266,7 +299,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/拾梦者//" class="article-tag-list-link color4">拾梦者</a>
+        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -321,7 +354,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2018/03/07/Bug-of-AndroidStudio-Cache/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,18 +368,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          CoordinatorLayout之初步认识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/08/Miss/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">念</div>
+    <a href="/2018/02/15/Huizhou-West-Lake-Tour/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">惠州西湖行</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -389,7 +413,7 @@ var _hmt = _hmt || [];
 <script src="/gitment/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "梦——少年不生事",
+  id: "深踩 AndroidStudio 缓存的坑",
   owner: 'msdx',
   repo: 'blog-comments',
   oauth: {
