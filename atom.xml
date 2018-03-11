@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-03-08T02:03:03.580Z</updated>
+  <updated>2018-03-11T01:43:14.665Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>被固化的思维</title>
+    <link href="http://githang.com/2018/03/11/Solidified-Thinking/"/>
+    <id>http://githang.com/2018/03/11/Solidified-Thinking/</id>
+    <published>2018-03-11T01:14:34.000Z</published>
+    <updated>2018-03-11T01:43:14.665Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我是在元旦之时意识到发生在我身上的这个严峻的问题的。&lt;/p&gt;
+&lt;p&gt;那时跟我家橙子及她朋友们一赶快到佛山玩几天，最后一天是回到广州去了一个地方摘草莓。当时我和小橙子一组，他们一对一组，摘了一会儿我就停下来了。&lt;br&gt;我望着面前一排排田垄，不禁停下来思考一个问题：我站在一条沟
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>深踩 AndroidStudio 缓存的坑</title>
@@ -394,9 +417,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
-    
       <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
+    
+      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
     
   </entry>
   
@@ -441,33 +464,11 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
       <category term="github" scheme="http://githang.com/tags/github/"/>
     
+      <category term="开源" scheme="http://githang.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
       <category term="OkHttp" scheme="http://githang.com/tags/OkHttp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://githang.com/2017/09/15/hello-world/"/>
-    <id>http://githang.com/2017/09/15/hello-world/</id>
-    <published>2017-09-15T14:48:26.000Z</published>
-    <updated>2017-09-15T14:48:26.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   
