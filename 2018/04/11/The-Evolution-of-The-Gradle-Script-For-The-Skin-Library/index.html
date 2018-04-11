@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>皮肤库的 Gradle 脚本演化 | 疯狂的键盘</title>
+  <title>皮肤包项目的 Gradle 脚本演化 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 ThemeSkinning 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没">
 <meta name="keywords" content="Android,Gradle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="皮肤库的 Gradle 脚本演化">
+<meta property="og:title" content="皮肤包项目的 Gradle 脚本演化">
 <meta property="og:url" content="http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 ThemeSkinning 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没">
-<meta property="og:updated_time" content="2018-04-11T08:55:17.872Z">
+<meta property="og:updated_time" content="2018-04-11T23:37:25.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="皮肤库的 Gradle 脚本演化">
+<meta name="twitter:title" content="皮肤包项目的 Gradle 脚本演化">
 <meta name="twitter:description" content="我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 ThemeSkinning 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -185,7 +185,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      皮肤库的 Gradle 脚本演化
+      皮肤包项目的 Gradle 脚本演化
     </h1>
   
 
@@ -428,7 +428,7 @@ var _hmt = _hmt || [];
 <script src="/gitment/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "皮肤库的 Gradle 脚本演化",
+  id: "皮肤包项目的 Gradle 脚本演化",
   owner: 'msdx',
   repo: 'blog-comments',
   oauth: {
@@ -590,18 +590,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
@@ -610,7 +598,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
