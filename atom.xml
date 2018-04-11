@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-04-08T15:42:37.988Z</updated>
+  <updated>2018-04-11T08:55:17.872Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>皮肤库的 Gradle 脚本演化</title>
+    <link href="http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/"/>
+    <id>http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/</id>
+    <published>2018-04-11T06:02:17.000Z</published>
+    <updated>2018-04-11T08:55:17.872Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 &lt;a href=&quot;https://github.com/burgessjp/ThemeSkinning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ThemeSkinning&lt;/a&gt; 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。&lt;br&gt;背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没有使用皮肤库的写死的代码，都是判断当前主题是哪一个，然后返回默认资源或者是指定皮肤的资源。这些代码都类似如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="Gradle" scheme="http://githang.com/tags/Gradle/"/>
+    
+  </entry>
   
   <entry>
     <title>关于第一工场的设想</title>
@@ -436,27 +458,6 @@
       <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
     
       <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>蒙层</title>
-    <link href="http://githang.com/2017/09/18/Mask-Layer/"/>
-    <id>http://githang.com/2017/09/18/Mask-Layer/</id>
-    <published>2017-09-18T13:54:10.000Z</published>
-    <updated>2017-09-18T14:04:48.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;讲两个故事吧。&lt;/p&gt;
-&lt;p&gt;两年前，我用一部华为千元智能机拍了几张照片发在了朋友圈上。没多久，姐姐在微信上问我朋友圈上的照片是用什么拍的。我说用的系统自带的相机啊。&lt;br&gt;姐姐说，那照片看起来好唯美啊。&lt;br&gt;我点开朋友圈里的图上看了看，是有一种自然的朦胧感觉，像是加了羽化的效果。&lt;br&gt;我翻过手机看了下镜头。平滑的手机后背，只有镜头凸起，即便有着保护壳，镜片的表面也是伤痕累累。我回复说，可能是镜头磨损太严重了吧。&lt;br&gt;后来我在淘宝花了十八块钱买了一对镜片，给手机换上一只。然后试了下拍照，果真是清晰了一些，能看到分明的棱角。而在此之前对着拍出来的模糊照片，我一直以为是软件或像素的问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
