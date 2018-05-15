@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-04-11T23:37:25.037Z</updated>
+  <updated>2018-05-15T10:15:03.911Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Phabricator 添加对 Kotlin 的语法高亮</title>
+    <link href="http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/"/>
+    <id>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</id>
+    <published>2018-05-15T03:44:26.000Z</published>
+    <updated>2018-05-15T10:15:03.911Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直难以忍受在做 Code Review 时，Phabricator 无法对 kotlin 代码进行高亮显示，直到今天项目的阶段性开发终于告一段落进入测试，于是着手处理该问题。&lt;/p&gt;
+&lt;p&gt;Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我就配置为使用 pygments。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Phabricator" scheme="http://githang.com/tags/Phabricator/"/>
+    
+  </entry>
   
   <entry>
     <title>皮肤包项目的 Gradle 脚本演化</title>
@@ -434,30 +455,6 @@
       <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
       <category term="github" scheme="http://githang.com/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ViewPager与CoordinatorLayout一起使用的一个Bug</title>
-    <link href="http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/"/>
-    <id>http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</id>
-    <published>2017-09-21T05:01:36.000Z</published>
-    <updated>2017-10-25T08:33:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文记录一个关于&lt;code&gt;ViewPager&lt;/code&gt;与&lt;code&gt;CoordinatorLayout&lt;/code&gt;一起使用的Bug，目前虽然有解决问题的方法，但是引起这个bug的原因依然没有找到。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
-    
-      <category term="Bug" scheme="http://githang.com/tags/Bug/"/>
     
   </entry>
   

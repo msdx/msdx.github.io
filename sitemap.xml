@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</loc>
+    
+    <lastmod>2018-05-15T10:15:03.911Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/</loc>
     
     <lastmod>2018-04-11T23:37:25.037Z</lastmod>
