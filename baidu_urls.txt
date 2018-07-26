@@ -1,1 +1,1 @@
-http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/
+http://githang.com/2018/06/22/BadgeDrawable/

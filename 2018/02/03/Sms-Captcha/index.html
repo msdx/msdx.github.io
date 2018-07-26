@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://githang.com/2018/02/03/Sms-Captcha/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。 项目目前挂在 github 上的公司组织下，地址为：https://github.com/parkingwang/sms-captcha。使用方法很简单，在界面创建时注册： 12345mCaptchaObserver = SmsCaptcha.with(this)        .captcha">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-02-04T00:32:36.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对读取短信验证码封装库的思考">
@@ -199,25 +200,25 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。</p>
-<p>项目目前挂在 github 上的公司组织下，地址为：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="external">https://github.com/parkingwang/sms-captcha</a>。使用方法很简单，在界面创建时注册：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mCaptchaObserver = SmsCaptcha.with(<span class="keyword">this</span>)</div><div class="line">        .captchaLength(<span class="number">4</span>)</div><div class="line">        .addressLike(<span class="string">"10657%"</span>)</div><div class="line">        .fillTo(mSmsCode)</div><div class="line">        .createAndRegister();</div></pre></td></tr></table></figure>
+<p>项目目前挂在 github 上的公司组织下，地址为：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="noopener">https://github.com/parkingwang/sms-captcha</a>。使用方法很简单，在界面创建时注册：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mCaptchaObserver = SmsCaptcha.with(<span class="keyword">this</span>)</span><br><span class="line">        .captchaLength(<span class="number">4</span>)</span><br><span class="line">        .addressLike(<span class="string">"10657%"</span>)</span><br><span class="line">        .fillTo(mSmsCode)</span><br><span class="line">        .createAndRegister();</span><br></pre></td></tr></table></figure>
 <p>界面销毁时移除注册：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mCaptchaObserver.unregister();</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mCaptchaObserver.unregister();</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h1 id="业务的实现"><a href="#业务的实现" class="headerlink" title="业务的实现"></a>业务的实现</h1><p>这里读取短信验证码的实现说来也很简单，核心逻辑就是动态注册一个短信的内容观察者，然后继承 <code>ContentObserver</code>，在收到回调之后查询指定号码的未读短信，通过正则过滤出验证码出来。最核心的代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    <span class="comment">// 获取短信内容</span></div><div class="line">    <span class="keyword">final</span> String body = cursor.getString(cursor.getColumnIndex(BODY));</div><div class="line">    <span class="comment">// 使用正则表达式匹配出验证码</span></div><div class="line">    <span class="keyword">final</span> Matcher matcher = mCaptchaPattern.matcher(body);</div><div class="line">    <span class="keyword">if</span> (!matcher.find() || matcher.groupCount() != <span class="number">1</span>) &#123;</div><div class="line">        <span class="comment">// 匹配不出来则找下一条</span></div><div class="line">        <span class="keyword">continue</span>;</div><div class="line">    &#125;</div><div class="line">    String code = matcher.group(<span class="number">1</span>);</div><div class="line">    <span class="keyword">if</span> (TextUtils.isDigitsOnly(code)) &#123;</div><div class="line">        <span class="keyword">if</span> (mCaptchaListener != <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="comment">// 找到后回调并退出</span></div><div class="line">            mCaptchaListener.onCaptchaReceived(code);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125; <span class="keyword">while</span> (cursor.moveToNext());</div></pre></td></tr></table></figure>
-<p>完整的代码可参考项目：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="external">https://github.com/parkingwang/sms-captcha</a>。全部代码也很简单，目前就两个类，加一起也就两百多行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="comment">// 获取短信内容</span></span><br><span class="line">    <span class="keyword">final</span> String body = cursor.getString(cursor.getColumnIndex(BODY));</span><br><span class="line">    <span class="comment">// 使用正则表达式匹配出验证码</span></span><br><span class="line">    <span class="keyword">final</span> Matcher matcher = mCaptchaPattern.matcher(body);</span><br><span class="line">    <span class="keyword">if</span> (!matcher.find() || matcher.groupCount() != <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// 匹配不出来则找下一条</span></span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    String code = matcher.group(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (TextUtils.isDigitsOnly(code)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (mCaptchaListener != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 找到后回调并退出</span></span><br><span class="line">            mCaptchaListener.onCaptchaReceived(code);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">while</span> (cursor.moveToNext());</span><br></pre></td></tr></table></figure>
+<p>完整的代码可参考项目：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="noopener">https://github.com/parkingwang/sms-captcha</a>。全部代码也很简单，目前就两个类，加一起也就两百多行。</p>
 <h1 id="封装的思考"><a href="#封装的思考" class="headerlink" title="封装的思考"></a>封装的思考</h1><p>在做好了之后，我就想到如何把它造成一个通用的轮子，以便可以在其他项目中使用。</p>
 <h2 id="验证码的正则表达式"><a href="#验证码的正则表达式" class="headerlink" title="验证码的正则表达式"></a>验证码的正则表达式</h2><p>首先，从内容中匹配出验证码，最简单有效的就是使用正则表达式了，所以，接下来的思考就是如何设计拼接出尽可能通用的正则表达式。<br>应用的验证码的文本格式通常按顺序包含如下信息：<br>包含应用名称的信息，“验证码”这三个字，连续的多位数字，其他内容。<br>需要注意的是，在这个“其他内容”中，也可能会包含多位数字，比如像这样的：如有疑问，请拨打客服电话xxx-xxxxxxxx。像这样的信息，如果你的正则表达式是如下这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.*应用名称.*验证码.*\d&#123;4&#125;.*</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.*应用名称.*验证码.*\d&#123;4&#125;.*</span><br></pre></td></tr></table></figure>
 <p>由于正则表达式默认是贪婪模式，那么它就会匹配到后面的电话号码中的数字。所以需要使验证码这三个字与数字之间的搜索为懒惰模式，即加上问号，改为如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.*应用名称.*验证码.*?\d&#123;4&#125;.*</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.*应用名称.*验证码.*?\d&#123;4&#125;.*</span><br></pre></td></tr></table></figure>
 <p>这种情况是确实存在的。当你是为一个项目写代码时，可以不考虑。但是当你是想做一个 SDK 给多个项目使用时，却应当尽可能地考虑存在的情况。尽可能的考虑严谨、周全。</p>
 <p>另外，如果验证码的位数不固定，可能是 4-6 位之间，则匹配则为 <code>\d{4,6}</code>，则如果都是4位，也可以写为 <code>\d{4,4}</code>。</p>
 <h2 id="短信的查询条件"><a href="#短信的查询条件" class="headerlink" title="短信的查询条件"></a>短信的查询条件</h2><p>注册了短信的内容观察者之后，会在短信内容会变化时回调，然后在收到回调之后，我们就需要按照条件去查询符合结果的短信，并检索出内容里包含的验证码。这里的查询条件也简单说一下。<br>首先，要查询的短信验证码必须是未读的，因为已读的短信可能是过去已经使用的，对我们没有任何意义。<br>其次，有些应用的验证验证码的发送号码可能不是固定的，比如更换了短信服务端，所以应允许发送号码的模糊查询，可以查询以什么开头的号码。所以查询条件应该可以指定为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">address=xxxxxx AND read=0</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">address=xxxxxx AND read=0</span><br></pre></td></tr></table></figure>
 <p>或</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">address LIKE %xxxxx AND read=0</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">address LIKE %xxxxx AND read=0</span><br></pre></td></tr></table></figure>
 <p>这两种模式。</p>
 <p>剩下的封装工作就都比较简单，就不足一谈了。</p>
 <h1 id="对产品的思考"><a href="#对产品的思考" class="headerlink" title="对产品的思考"></a>对产品的思考</h1><p>当你把代码实现之后，跑到手上的华为测试机，可能会发现，什么效果都没有。是代码出问题了吗？<br>再细查，会发现查询短信的时候，都没有查询出手机接收到的那条验证码短信，然后再试图扩大查询范围，发现手机里凡是涉及到验证码的短信都查询不出来。<br>各种尝试无果之后，你点开了短信里的“设置”，发现有个“高级”，点进去之后看到了一个“验证码安全保护”的功能，底下有一行小字“禁止第三方应用读取和使用验证码信息”的描述，这个功能是打开的状态。你恍然大悟，把它给关掉，再一试，果然验证码出来了。</p>
@@ -534,7 +535,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,7 +555,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,27 +575,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -590,7 +595,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,11 +607,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">

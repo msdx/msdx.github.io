@@ -15,7 +15,8 @@
 <meta property="og:url" content="http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="一直难以忍受在做 Code Review 时，Phabricator 无法对 kotlin 代码进行高亮显示，直到今天项目的阶段性开发终于告一段落进入测试，于是着手处理该问题。 Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我">
-<meta property="og:updated_time" content="2018-05-15T10:15:03.911Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-15T12:06:44.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Phabricator 添加对 Kotlin 的语法高亮">
 <meta name="twitter:description" content="一直难以忍受在做 Code Review 时，Phabricator 无法对 kotlin 代码进行高亮显示，直到今天项目的阶段性开发终于告一段落进入测试，于是着手处理该问题。 Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我">
@@ -202,14 +203,14 @@ var _hmt = _hmt || [];
 <p>Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我就配置为使用 pygments。</p>
 <a id="more"></a>
 <p>Kotlin 的语法不高亮，一开始我以为是 pygments 不支持，但是 google 这个问题时，到了 pygments 的官网，我发现它从自 1.5 版本起就已经有了 kotlin 的语法分析器。我查看了服务器上的 pygments 模块，是1.6的版本，那也就是说 pygments 应该已经支持了 kotlin 的语法高亮。</p>
-<p>继续 google，找到了 Phabricator 官网上对 Phabricator 的修改的一条 Code Review 的记录：<a href="https://secure.phabricator.com/D16428#inline-52333" target="_blank" rel="external">https://secure.phabricator.com/D16428#inline-52333</a> 。根据它的修改，我到 Phabricator 的目录下去找 <code>PhutilPygmentsSyntaxHighlighter.php</code> 文件，但却没找到。不过其中一条评论（<a href="https://secure.phabricator.com/D16428#209650" target="_blank" rel="external">https://secure.phabricator.com/D16428#209650</a> ）提醒了一下我，中间过程略，最后我到 Phabricator 的配置页面中修改了两项配置，并终于配置成功。</p>
+<p>继续 google，找到了 Phabricator 官网上对 Phabricator 的修改的一条 Code Review 的记录：<a href="https://secure.phabricator.com/D16428#inline-52333" target="_blank" rel="noopener">https://secure.phabricator.com/D16428#inline-52333</a> 。根据它的修改，我到 Phabricator 的目录下去找 <code>PhutilPygmentsSyntaxHighlighter.php</code> 文件，但却没找到。不过其中一条评论（<a href="https://secure.phabricator.com/D16428#209650" target="_blank" rel="noopener">https://secure.phabricator.com/D16428#209650</a> ）提醒了我，中间过程略，最后我到 Phabricator 的配置页面中修改了两项配置，并终于配置成功。</p>
 <p>以下是我所作的配置修改。</p>
 <p>在 Phabricator 首页，点击 <code>Config</code> 进入配置页面，然后点击 <code>Core Settings</code>，在右面板中找到语法高亮的配置项 <code>Syntax Highlighting</code>，进去之后，修改 pyments.dropdown-choices 的配置。参考其全局默认配置，拷贝了该配置，然后在里面加入一项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;kt&quot;: &quot;Kotlin&quot;,</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;kt&quot;: &quot;Kotlin&quot;,</span><br></pre></td></tr></table></figure>
 <p>点击 <code>Save Config Entry</code> 保存。</p>
-<p>接着点击 <code>syntax.filemap</code>，参数刚才提到的 CodeReview 的评论（<a href="https://secure.phabricator.com/D16428#209650" target="_blank" rel="external">https://secure.phabricator.com/D16428#209650</a> ），拷贝一下全局配置，并且在配置中新增 <code>&quot;@\\.kt$@&quot;: &quot;kotlin&quot;</code> 一项，注意 json 中的 <code>,</code>。<br>保存之后，再看看 Audits 中的语法高亮是不是多了一项 <code>Kotlin</code>，而且代码中的关键字也能高亮起来了。</p>
+<p>接着点击 <code>syntax.filemap</code>，参考刚才提到的 CodeReview 的评论（<a href="https://secure.phabricator.com/D16428#209650" target="_blank" rel="noopener">https://secure.phabricator.com/D16428#209650</a> ），拷贝一下全局配置，并且在配置中新增 <code>&quot;@\\.kt$@&quot;: &quot;kotlin&quot;</code> 一项，注意 json 中的 <code>,</code>。<br>保存之后，再看看 Audits 中的语法高亮果然多了一项 <code>Kotlin</code>，而且代码中的关键字也能高亮起来了。</p>
 <p>如果没有起作用，可尝试清一下缓存。<br>具体为进入 <code>Phabricator</code> 的应用目录，执行以下命令清一下缓存：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./bin/cache purge --all</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/cache purge --all</span><br></pre></td></tr></table></figure>
 
       
 
@@ -334,6 +335,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/06/22/BadgeDrawable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用 Drawable 实现图标角标
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/" id="article-nav-older" class="article-nav-link-wrap">
@@ -506,7 +516,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,7 +536,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,27 +556,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -562,7 +576,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,11 +588,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">

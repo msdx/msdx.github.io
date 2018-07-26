@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-05-15T10:15:03.911Z</updated>
+  <updated>2018-07-26T02:45:15.478Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用 Drawable 实现图标角标</title>
+    <link href="http://githang.com/2018/06/22/BadgeDrawable/"/>
+    <id>http://githang.com/2018/06/22/BadgeDrawable/</id>
+    <published>2018-06-22T06:24:27.000Z</published>
+    <updated>2018-07-26T02:45:15.478Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;我在去年曾经写过一篇类似的《使用 Drawable 实现小红点》，但是小红点的具体实现是在这个类里面的。这次是在其思路上进行扩展，使得小红点或者说是角标的样式更加灵活。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。&lt;br&gt;&lt;img src=&quot;http://upyun.githang.com/2018/07/26/2-0运营.png!/fw/400&quot; alt=&quot;2-0运营&quot;&gt;&lt;/p&gt;
+&lt;p&gt;对于这种需求，我们以往的解决方式通常是使用一个 &lt;code&gt;RelativeLayout&lt;/code&gt;，里面再放置一个 &lt;code&gt;TextView&lt;/code&gt;，一个 &lt;code&gt;ImageView&lt;/code&gt; 和一个表示小红点的普通的 &lt;code&gt;View&lt;/code&gt;，并且，我们还需要根据小红点的大小，写死这个 &lt;code&gt;View&lt;/code&gt; 的外边距参数以让它的中心能够“正好”位于图标的右上角。&lt;/p&gt;
+&lt;p&gt;这种实现它有如下缺点：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="drawable" scheme="http://githang.com/tags/drawable/"/>
+    
+      <category term="角标" scheme="http://githang.com/tags/%E8%A7%92%E6%A0%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Phabricator 添加对 Kotlin 的语法高亮</title>
     <link href="http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/"/>
     <id>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</id>
     <published>2018-05-15T03:44:26.000Z</published>
-    <updated>2018-05-15T10:15:03.911Z</updated>
+    <updated>2018-05-15T12:06:44.459Z</updated>
     
     <summary type="html">
     
@@ -46,7 +73,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 &lt;a href=&quot;https://github.com/burgessjp/ThemeSkinning&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ThemeSkinning&lt;/a&gt; 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。&lt;br&gt;背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没有使用皮肤库的写死的代码，都是判断当前主题是哪一个，然后返回默认资源或者是指定皮肤的资源。这些代码都类似如下：&lt;/p&gt;
+      &lt;p&gt;我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 &lt;a href=&quot;https://github.com/burgessjp/ThemeSkinning&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ThemeSkinning&lt;/a&gt; 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。&lt;br&gt;背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没有使用皮肤库的写死的代码，都是判断当前主题是哪一个，然后返回默认资源或者是指定皮肤的资源。这些代码都类似如下：&lt;/p&gt;
     
     </summary>
     
@@ -176,10 +203,10 @@
     <summary type="html">
     
       &lt;p&gt;在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。&lt;/p&gt;
-&lt;p&gt;项目目前挂在 github 上的公司组织下，地址为：&lt;a href=&quot;https://github.com/parkingwang/sms-captcha&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/parkingwang/sms-captcha&lt;/a&gt;。使用方法很简单，在界面创建时注册：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mCaptchaObserver = SmsCaptcha.with(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .captchaLength(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .addressLike(&lt;span class=&quot;string&quot;&gt;&quot;10657%&quot;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .fillTo(mSmsCode)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .createAndRegister();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;项目目前挂在 github 上的公司组织下，地址为：&lt;a href=&quot;https://github.com/parkingwang/sms-captcha&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/parkingwang/sms-captcha&lt;/a&gt;。使用方法很简单，在界面创建时注册：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mCaptchaObserver = SmsCaptcha.with(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .captchaLength(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .addressLike(&lt;span class=&quot;string&quot;&gt;&quot;10657%&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .fillTo(mSmsCode)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .createAndRegister();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;界面销毁时移除注册：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;mCaptchaObserver.unregister();&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mCaptchaObserver.unregister();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -229,8 +256,8 @@
     
       &lt;p&gt;虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。&lt;/p&gt;
 &lt;h1 id=&quot;个人&quot;&gt;&lt;a href=&quot;#个人&quot; class=&quot;headerlink&quot; title=&quot;个人&quot;&gt;&lt;/a&gt;个人&lt;/h1&gt;&lt;h2 id=&quot;开源&quot;&gt;&lt;a href=&quot;#开源&quot; class=&quot;headerlink&quot; title=&quot;开源&quot;&gt;&lt;/a&gt;开源&lt;/h2&gt;&lt;h3 id=&quot;以前的开源项目&quot;&gt;&lt;a href=&quot;#以前的开源项目&quot; class=&quot;headerlink&quot; title=&quot;以前的开源项目&quot;&gt;&lt;/a&gt;以前的开源项目&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/status-bar-compat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;status-bar-compat&lt;/code&gt;&lt;/a&gt; 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/fir-publisher&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;fir-publisher&lt;/code&gt;&lt;/a&gt; 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内部使用的状态。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/status-bar-compat&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;status-bar-compat&lt;/code&gt;&lt;/a&gt; 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/msdx/fir-publisher&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;fir-publisher&lt;/code&gt;&lt;/a&gt; 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内部使用的状态。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -249,7 +276,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;几年前参考网上的文章写过天天连萌自动玩的项目（之前写在 iteye 的博客上：&lt;a href=&quot;http://maosidiaoxian.iteye.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://maosidiaoxian.iteye.com&lt;/a&gt;，github 项目地址为：&lt;a href=&quot;https://github.com/GameTerminator/lianmeng&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/GameTerminator/lianmeng&lt;/a&gt;），这次微信小游戏里的跳一跳玩了玩，就自然而然地想到用同样的方式来做。&lt;/p&gt;
+      &lt;p&gt;几年前参考网上的文章写过天天连萌自动玩的项目（之前写在 iteye 的博客上：&lt;a href=&quot;http://maosidiaoxian.iteye.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://maosidiaoxian.iteye.com&lt;/a&gt;，github 项目地址为：&lt;a href=&quot;https://github.com/GameTerminator/lianmeng&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/GameTerminator/lianmeng&lt;/a&gt;），这次微信小游戏里的跳一跳玩了玩，就自然而然地想到用同样的方式来做。&lt;/p&gt;
 &lt;p&gt;经过几次修正和简化，最终思路和实现如下：&lt;/p&gt;
     
     </summary>
@@ -431,30 +458,6 @@
     
     
       <category term="杂文" scheme="http://githang.com/tags/%E6%9D%82%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一步步打造自己的通用上拉加载布局</title>
-    <link href="http://githang.com/2017/09/24/LoadMoreLayout/"/>
-    <id>http://githang.com/2017/09/24/LoadMoreLayout/</id>
-    <published>2017-09-24T11:10:40.000Z</published>
-    <updated>2017-09-24T14:28:39.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h1&gt;&lt;p&gt;下拉刷新是App交互中非常常见的场景，而与其对应的上拉加载，在很多场景中也已经是用户意识中理所当然的一种交互了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
-    
-      <category term="github" scheme="http://githang.com/tags/github/"/>
     
   </entry>
   

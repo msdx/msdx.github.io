@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://githang.com/2017/09/16/OkHttp3-LogInterceptor/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="现在应该有许多人都是使用okhttp来作为项目的网络请求的底层库，那么，还有人在沿用着对每个请求在执行前后手动打印一下参数及地址这种古老的日志打印方式吗？okhttp的灵活而强大的特点之一，就是其提供了一个拦截器接口，使得我们在打印日志时极为方便，并且对我们的接口代码无入侵性。本篇文章介绍一个okhttp3的日志打印库，无论是使用古老方式来打印日志的，还是使用square官方okhttp3的日志">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-09-16T03:32:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="让okhttp3优雅地打印日志">
@@ -203,14 +204,14 @@ var _hmt = _hmt || [];
 </blockquote>
 <a id="more"></a>
 <p>okhttp3-loginterceptor是用于okhttp3的一个日志打印库，小巧轻量，相比square提供的okhttp3的logging-interceptor，它对每个请求和响应都进行编号 ，并且对于json的请求或响应内容，还将打印出格式化的JSON内容，而除了依赖okhttp3之外，它不会添加任何其他第三方依赖。那么它是如何小巧轻量而又不会向项目引入其他依赖的呢？等下我们在文中会提到，下面先开始介绍它的使用。</p>
-<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>okhttp3-loginterceptor在github上的项目地址为：<a href="https://github.com/parkingwang/okhttp3-loginterceptor" target="_blank" rel="external">https://github.com/parkingwang/okhttp3-loginterceptor</a> 。引入方式很简单，只需几行代码。如下：</p>
-<h2 id="声明依赖"><a href="#声明依赖" class="headerlink" title="声明依赖"></a>声明依赖</h2><p>添加依赖，以下的<code>latest.integration</code>建议换为当前最新版本的具体版本号。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile <span class="string">'com.parkingwang:okhttp3-loginterceptor:latest.integration'</span></div></pre></td></tr></table></figure></p>
-<h2 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h2><p>然后在创建<code>OkHttpClient</code>对象的代码中添加其拦截器实例，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">OkHttpClient okHttpClient = new OkHttpClient.Builder()</div><div class="line">        .addInterceptor(new LogInterceptor()).build();</div></pre></td></tr></table></figure></p>
-<p>这样就完成了。然后你就可以看到类似这样的日志了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">W/OkHttp: [4 request]--&gt; GET https://api.github.com/users/defunkt http/1.1</div><div class="line">W/OkHttp: [4 request]--&gt; END GET</div><div class="line">W/OkHttp: [5 request]--&gt; GET https://api.github.com/zen http/1.1</div><div class="line">W/OkHttp: [5 request]--&gt; END GET</div><div class="line">W/OkHttp: [6 request]--&gt; GET https://api.github.com/users/msdx http/1.1</div><div class="line">W/OkHttp: [6 request]--&gt; END GET</div><div class="line">W/OkHttp: [4 response]&lt;-- 200 OK https://api.github.com/users/defunkt (1335ms)</div><div class="line">W/OkHttp: [4 response]Server: GitHub.com</div><div class="line">W/OkHttp: [4 response]Date: Thu, 12 Jan 2017 04:01:43 GMT</div><div class="line">W/OkHttp: [4 response]Content-Type: application/json; charset=utf-8</div><div class="line">W/OkHttp: [4 response]Transfer-Encoding: chunked</div></pre></td></tr></table></figure></p>
+<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>okhttp3-loginterceptor在github上的项目地址为：<a href="https://github.com/parkingwang/okhttp3-loginterceptor" target="_blank" rel="noopener">https://github.com/parkingwang/okhttp3-loginterceptor</a> 。引入方式很简单，只需几行代码。如下：</p>
+<h2 id="声明依赖"><a href="#声明依赖" class="headerlink" title="声明依赖"></a>声明依赖</h2><p>添加依赖，以下的<code>latest.integration</code>建议换为当前最新版本的具体版本号。<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile <span class="string">'com.parkingwang:okhttp3-loginterceptor:latest.integration'</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h2><p>然后在创建<code>OkHttpClient</code>对象的代码中添加其拦截器实例，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OkHttpClient okHttpClient = new OkHttpClient.Builder()</span><br><span class="line">        .addInterceptor(new LogInterceptor()).build();</span><br></pre></td></tr></table></figure></p>
+<p>这样就完成了。然后你就可以看到类似这样的日志了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">W/OkHttp: [4 request]--&gt; GET https://api.github.com/users/defunkt http/1.1</span><br><span class="line">W/OkHttp: [4 request]--&gt; END GET</span><br><span class="line">W/OkHttp: [5 request]--&gt; GET https://api.github.com/zen http/1.1</span><br><span class="line">W/OkHttp: [5 request]--&gt; END GET</span><br><span class="line">W/OkHttp: [6 request]--&gt; GET https://api.github.com/users/msdx http/1.1</span><br><span class="line">W/OkHttp: [6 request]--&gt; END GET</span><br><span class="line">W/OkHttp: [4 response]&lt;-- 200 OK https://api.github.com/users/defunkt (1335ms)</span><br><span class="line">W/OkHttp: [4 response]Server: GitHub.com</span><br><span class="line">W/OkHttp: [4 response]Date: Thu, 12 Jan 2017 04:01:43 GMT</span><br><span class="line">W/OkHttp: [4 response]Content-Type: application/json; charset=utf-8</span><br><span class="line">W/OkHttp: [4 response]Transfer-Encoding: chunked</span><br></pre></td></tr></table></figure></p>
 <p>文章这就结束了？当然不，既然是专门介绍的文章当然得好好写写。</p>
-<h1 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h1><h2 id="适当地添加日志拦截器"><a href="#适当地添加日志拦截器" class="headerlink" title="适当地添加日志拦截器"></a>适当地添加日志拦截器</h2><p>首先，我们打印日志一般都是在debug的时候才需要，对于release即发布出去的版本，是不需要打印请求的日志的，所以通常我们会这样写代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();</div><div class="line">if (BuildConfig.DEBUG) &#123;</div><div class="line">    clientBuilder.addInterceptor(new LogInterceptor());</div><div class="line">&#125;</div><div class="line">return clientBuilder</div><div class="line">    //.XXX 省略一大堆设置其他参数的代码</div><div class="line">    .build();</div></pre></td></tr></table></figure></p>
+<h1 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h1><h2 id="适当地添加日志拦截器"><a href="#适当地添加日志拦截器" class="headerlink" title="适当地添加日志拦截器"></a>适当地添加日志拦截器</h2><p>首先，我们打印日志一般都是在debug的时候才需要，对于release即发布出去的版本，是不需要打印请求的日志的，所以通常我们会这样写代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder();</span><br><span class="line">if (BuildConfig.DEBUG) &#123;</span><br><span class="line">    clientBuilder.addInterceptor(new LogInterceptor());</span><br><span class="line">&#125;</span><br><span class="line">return clientBuilder</span><br><span class="line">    //.XXX 省略一大堆设置其他参数的代码</span><br><span class="line">    .build();</span><br></pre></td></tr></table></figure></p>
 <h2 id="关于JSON格式化输出"><a href="#关于JSON格式化输出" class="headerlink" title="关于JSON格式化输出"></a>关于JSON格式化输出</h2><p>前面提到，okhttp3-loginterceptor除了okhttp3之外，不会向项目添加其他第三方依赖，尽量做到小巧轻量。所以当判断请求或响应的contentType的内容为JSON数据而尝试格式化输出JSON内容时，是采用反射的方式。在第一次调用JSON格式化的时候，会判断当前使用的是哪一个JSON解析库，然后调用其相关方法来格式化JSON。目前支持常用的JSON解析库，包括：gson, fastjson, moshi, org.json。当你的项目不包含以上这些库时，则不会进行格式化的JSON数据输出。</p>
-<h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</div></pre></td></tr></table></figure></p>
+<h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</span><br></pre></td></tr></table></figure></p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>okhttp3-loginterceptor是我基于需要的功能，参考okhttp3-logging-interceptor的代码而封装的一个库。<br>首先，我们与服务器的数据交互使用json方式比较多，在开发或调试时需要更能直观地查看json数据，所以我封装了格式化输出json数据的功能。<br>其次，在应用中，经常是多个请求同时进行。通过日志中的线程名来判断哪一行是属于哪个响应，对应于哪个请求相当不便，所以我在每一行添加了一个前缀，也是为了更直观地查看日志。<br>我设想的是让它只做最需要的事，所以没添加也没打算添加其他一些日志库的酷炫输出日志格式的功能。</p>
 
       
@@ -529,7 +530,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -537,7 +550,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,27 +570,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,7 +590,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,11 +602,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">

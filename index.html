@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://githang.com/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="Android研发工程师，左撇子。">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="疯狂的键盘">
 <meta name="twitter:description" content="Android研发工程师，左撇子。">
@@ -179,6 +180,102 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-BadgeDrawable" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/22/BadgeDrawable/">使用 Drawable 实现图标角标</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/22/BadgeDrawable/" class="archive-article-date">
+  	<time datetime="2018-06-22T06:24:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>我在去年曾经写过一篇类似的《使用 Drawable 实现小红点》，但是小红点的具体实现是在这个类里面的。这次是在其思路上进行扩展，使得小红点或者说是角标的样式更加灵活。</p>
+</blockquote>
+<p>在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。<br><img src="http://upyun.githang.com/2018/07/26/2-0运营.png!/fw/400" alt="2-0运营"></p>
+<p>对于这种需求，我们以往的解决方式通常是使用一个 <code>RelativeLayout</code>，里面再放置一个 <code>TextView</code>，一个 <code>ImageView</code> 和一个表示小红点的普通的 <code>View</code>，并且，我们还需要根据小红点的大小，写死这个 <code>View</code> 的外边距参数以让它的中心能够“正好”位于图标的右上角。</p>
+<p>这种实现它有如下缺点：<br>
+        
+          <a class="article-more-a" href="/2018/06/22/BadgeDrawable/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drawable</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">角标</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/22/BadgeDrawable/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Phabricator-Pygments-Kotlin-Syntax-Highlight" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -287,7 +384,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 <a href="https://github.com/burgessjp/ThemeSkinning" target="_blank" rel="external">ThemeSkinning</a> 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。<br>背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没有使用皮肤库的写死的代码，都是判断当前主题是哪一个，然后返回默认资源或者是指定皮肤的资源。这些代码都类似如下：</p>
+        <p>我在做的一个项目需要有换肤功能，换肤的方案是采用第三方库 <a href="https://github.com/burgessjp/ThemeSkinning" target="_blank" rel="noopener">ThemeSkinning</a> 的实现（在其基础上修复若干 bug）。皮肤的制作是把相关的资源放在一个 app module 中打包成 apk，当然资源的命名要和原有项目中的命名一致。目前的皮肤加载方式，是把皮肤包放到 assets 中去加载。这是背景一。<br>背景二，这个项目是我所接手过来的。虽然表面上是使用了皮肤加载库，但是项目中还有大量遗留的没有使用皮肤库的写死的代码，都是判断当前主题是哪一个，然后返回默认资源或者是指定皮肤的资源。这些代码都类似如下：</p>
         
           <a class="article-more-a" href="/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/#more">more >></a>
         
@@ -816,10 +913,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。</p>
-<p>项目目前挂在 github 上的公司组织下，地址为：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="external">https://github.com/parkingwang/sms-captcha</a>。使用方法很简单，在界面创建时注册：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mCaptchaObserver = SmsCaptcha.with(<span class="keyword">this</span>)</div><div class="line">        .captchaLength(<span class="number">4</span>)</div><div class="line">        .addressLike(<span class="string">"10657%"</span>)</div><div class="line">        .fillTo(mSmsCode)</div><div class="line">        .createAndRegister();</div></pre></td></tr></table></figure>
+<p>项目目前挂在 github 上的公司组织下，地址为：<a href="https://github.com/parkingwang/sms-captcha" target="_blank" rel="noopener">https://github.com/parkingwang/sms-captcha</a>。使用方法很简单，在界面创建时注册：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mCaptchaObserver = SmsCaptcha.with(<span class="keyword">this</span>)</span><br><span class="line">        .captchaLength(<span class="number">4</span>)</span><br><span class="line">        .addressLike(<span class="string">"10657%"</span>)</span><br><span class="line">        .fillTo(mSmsCode)</span><br><span class="line">        .createAndRegister();</span><br></pre></td></tr></table></figure>
 <p>界面销毁时移除注册：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mCaptchaObserver.unregister();</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mCaptchaObserver.unregister();</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2018/02/03/Sms-Captcha/#more">more >></a>
         
@@ -985,86 +1082,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Summary-of-2017" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/05/Summary-of-2017/">2017 年总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/05/Summary-of-2017/" class="archive-article-date">
-  	<time datetime="2018-01-05T03:52:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。</p>
-<h1 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h1><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><h3 id="以前的开源项目"><a href="#以前的开源项目" class="headerlink" title="以前的开源项目"></a>以前的开源项目</h3><ul>
-<li><a href="https://github.com/msdx/status-bar-compat" target="_blank" rel="external"><code>status-bar-compat</code></a> 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。</li>
-<li><a href="https://github.com/msdx/fir-publisher" target="_blank" rel="external"><code>fir-publisher</code></a> 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内部使用的状态。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/01/05/Summary-of-2017/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/杂文//" class="article-tag-list-link color3">杂文</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/05/Summary-of-2017/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1175,7 +1192,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1183,7 +1212,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1195,27 +1232,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1231,7 +1252,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1243,11 +1264,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">

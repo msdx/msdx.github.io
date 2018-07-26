@@ -15,6 +15,7 @@
 <meta property="og:url" content="http://githang.com/2018/01/09/The-Design-of-HeyPermission/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。  从 Android 6.0（API 23）开始，用户可以在应">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2018-01-13T01:39:06.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一个动态权限库的设计">
@@ -206,9 +207,9 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <p>官方的动态权限 API 是从 Android 6.0 才引入的，那么，自然需要做好6.0 起及 6.0 之前的不同版本的权限适配，从而催生了一些动态权限兼容封装库。比如：</p>
 <ul>
-<li>谷歌官方的 googlesamples/<a href="https://github.com/googlesamples/easypermissions" target="_blank" rel="external">easypermissions</a></li>
-<li>基于编译期注解的 permissions-dispatcher/<a href="https://github.com/permissions-dispatcher/PermissionsDispatcher" target="_blank" rel="external">PermissionsDispatcher</a></li>
-<li>yanzhenjie/<a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="external">AndPermission</a></li>
+<li>谷歌官方的 googlesamples/<a href="https://github.com/googlesamples/easypermissions" target="_blank" rel="noopener">easypermissions</a></li>
+<li>基于编译期注解的 permissions-dispatcher/<a href="https://github.com/permissions-dispatcher/PermissionsDispatcher" target="_blank" rel="noopener">PermissionsDispatcher</a></li>
+<li>yanzhenjie/<a href="https://github.com/yanzhenjie/AndPermission" target="_blank" rel="noopener">AndPermission</a></li>
 <li>其他的封装库等等，就不一一列举了。</li>
 </ul>
 <p>然而，我在项目中准备去使用的时候，却发现这几个库都无法完全满足我的想法，于是就想到自己也去造一个轮子，也就是今天要讲的——hey-permission。</p>
@@ -250,10 +251,10 @@ var _hmt = _hmt || [];
 <p>其中根据第三条，我们可以在权限被拒绝时来判断是否被永久拒绝。</p>
 <p>接下来，我们可以开始构思整个权限申请的流程，它主要有两部分：一是权限申请；二是申请结果的回调。<br>下面来绘制一下权限申请的流程：</p>
 <p><div id="flowchart-0" class="flow-chart"></div><br>对应的核心代码则是：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">requestPermissions</span><span class="params">(@NonNull BasePermissionInvoker invoker,</span></span></div><div class="line"><span class="function"><span class="params">                                       @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></div><div class="line"><span class="function">                                       @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[]... permissionSets) </span>&#123;</div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; permissionList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (String[] permissionSet : permissionSets) &#123;</div><div class="line">        permissionList.addAll(Arrays.asList(permissionSet));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">final</span> String[] permissions = permissionList.toArray(<span class="keyword">new</span> String[permissionList.size()]);</div><div class="line">    <span class="keyword">if</span> (hasPermissions(invoker.getContext(), permissions)) &#123;</div><div class="line">        notifyAlreadyHasPermissions(invoker, requestCode, permissions);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(permissions)) &#123;</div><div class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">false</span>, invoker, requestCode, permissions)) &#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    invoker.executeRequestPermissions(requestCode, permissions);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">requestPermissions</span><span class="params">(@NonNull BasePermissionInvoker invoker,</span></span></span><br><span class="line"><span class="function"><span class="params">                                       @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></span><br><span class="line"><span class="function">                                       @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[]... permissionSets) </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> List&lt;String&gt; permissionList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (String[] permissionSet : permissionSets) &#123;</span><br><span class="line">        permissionList.addAll(Arrays.asList(permissionSet));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">final</span> String[] permissions = permissionList.toArray(<span class="keyword">new</span> String[permissionList.size()]);</span><br><span class="line">    <span class="keyword">if</span> (hasPermissions(invoker.getContext(), permissions)) &#123;</span><br><span class="line">        notifyAlreadyHasPermissions(invoker, requestCode, permissions);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(permissions)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">false</span>, invoker, requestCode, permissions)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    invoker.executeRequestPermissions(requestCode, permissions);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后是权限申请结果的回调处理：</p>
 <p><div id="flowchart-1" class="flow-chart"></div><br>对应的核心代码则是：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(</span></span></div><div class="line"><span class="function"><span class="params">        @NonNull BasePermissionInvoker invoker, @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></div><div class="line"><span class="function">        @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!invoker.needHandleThisRequestCode(requestCode)) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; granted = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">final</span> List&lt;String&gt; denied = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; permissions.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (grantResults[i] == PackageManager.PERMISSION_GRANTED) &#123;</div><div class="line">            granted.add(permissions[i]);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            denied.add(permissions[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (denied.isEmpty()) &#123;</div><div class="line">        <span class="comment">// all permissions were granted</span></div><div class="line">        invokePermissionsResultMethod(PermissionsGranted.class, invoker, requestCode, granted);</div><div class="line">        invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">final</span> String[] deniedPermissions = denied.toArray(<span class="keyword">new</span> String[denied.size()]);</div><div class="line">    <span class="keyword">boolean</span> neverAskAgain = <span class="keyword">true</span>;</div><div class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(deniedPermissions)) &#123;</div><div class="line">        neverAskAgain = <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">true</span>, invoker, requestCode, deniedPermissions)) &#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (neverAskAgain) &#123;</div><div class="line">        invokePermissionsResultMethod(PermissionsNeverAskAgain.class,</div><div class="line">                invoker, requestCode, denied);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        invokePermissionsResultMethod(PermissionsDenied.class, invoker, requestCode, denied);</div><div class="line">    &#125;</div><div class="line">    invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">onRequestPermissionsResult</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        @NonNull BasePermissionInvoker invoker, @IntRange(from = <span class="number">0</span>)</span> <span class="keyword">int</span> requestCode,</span></span><br><span class="line"><span class="function">        @<span class="title">Size</span><span class="params">(min = <span class="number">1</span>)</span> @NonNull String[] permissions, @NonNull <span class="keyword">int</span>[] grantResults) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!invoker.needHandleThisRequestCode(requestCode)) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> List&lt;String&gt; granted = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">final</span> List&lt;String&gt; denied = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; permissions.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (grantResults[i] == PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">            granted.add(permissions[i]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            denied.add(permissions[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (denied.isEmpty()) &#123;</span><br><span class="line">        <span class="comment">// all permissions were granted</span></span><br><span class="line">        invokePermissionsResultMethod(PermissionsGranted.class, invoker, requestCode, granted);</span><br><span class="line">        invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">final</span> String[] deniedPermissions = denied.toArray(<span class="keyword">new</span> String[denied.size()]);</span><br><span class="line">    <span class="keyword">boolean</span> neverAskAgain = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">if</span> (invoker.shouldShowRequestPermissionRationale(deniedPermissions)) &#123;</span><br><span class="line">        neverAskAgain = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (invokeShowRationaleMethod(<span class="keyword">true</span>, invoker, requestCode, deniedPermissions)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (neverAskAgain) &#123;</span><br><span class="line">        invokePermissionsResultMethod(PermissionsNeverAskAgain.class,</span><br><span class="line">                invoker, requestCode, denied);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        invokePermissionsResultMethod(PermissionsDenied.class, invoker, requestCode, denied);</span><br><span class="line">    &#125;</span><br><span class="line">    invokePermissionsResultMethod(PermissionsResult.class, invoker, requestCode, denied);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上就是最核心的逻辑。</p>
 <p>接下来思考三个问题：</p>
 <ol>
@@ -265,7 +266,7 @@ var _hmt = _hmt || [];
 <p>最后是对第二个问题的思考，回调方式如何选择？</p>
 <p>一是开发者向用户显示权限重要性的提示，这个开发者可以显示也可以不显示。并且如上面的流程图所示，如果权限申请被拒绝了，而开发者显示了权限重要性的话，那么即表明权限申请已被拒绝，则不用再回调被拒绝的方法。否则表示开发者未处理，则要回调到权限被拒绝的方法。所以这种情况可以使用回调接口的方法，通过返回值来判断。</p>
 <p>第二种情况是权限申请结果的回调。申请结果的回调有通过、拒绝、永久拒绝多种，并且我们希望可以在 Activity 或 Fragment 等的基类能够统一处理被拒绝的情况，另一方面，我们需要不同的权限请求，能够在各自的方法里去处理回调。基于这些想法，因此采用了注解的方式。通过不同的 <code>requestCode</code> 来回调对应的方法；并且被拒绝的注解，它接收的参数是应该是数组类型，也就是我们可以在基本统一处理，也可以在某一个类通过再声明对应的注解来单独处理某一种情况。</p>
-<p>以上就是 hey-permission 的整个结构设计。具体实现时会遇到一些细节问题，比如判断权限时考虑 6.0 之前的 Ops，比如 SupportFragment 的权限申请结果是通过 AppCompatActivity 来分发，比如回调的注解方法的参数，等等，这些就不在这里赘述，具体可参考项目源码，地址为：<a href="https://github.com/parkingwang/hey-permission" target="_blank" rel="external">https://github.com/parkingwang/hey-permission</a> 。</p>
+<p>以上就是 hey-permission 的整个结构设计。具体实现时会遇到一些细节问题，比如判断权限时考虑 6.0 之前的 Ops，比如 SupportFragment 的权限申请结果是通过 AppCompatActivity 来分发，比如回调的注解方法的参数，等等，这些就不在这里赘述，具体可参考项目源码，地址为：<a href="https://github.com/parkingwang/hey-permission" target="_blank" rel="noopener">https://github.com/parkingwang/hey-permission</a> 。</p>
 <p>目前已实现如下特性：</p>
 <ul>
 <li>单个权限/权限组申请</li>
@@ -642,7 +643,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -650,7 +663,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,27 +683,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -698,7 +703,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -710,11 +715,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
