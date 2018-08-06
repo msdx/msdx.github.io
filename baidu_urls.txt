@@ -1,1 +1,1 @@
-http://githang.com/2018/06/22/BadgeDrawable/
+http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/

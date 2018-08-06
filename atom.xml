@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-07-26T02:45:15.478Z</updated>
+  <updated>2018-08-06T02:01:25.840Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,20 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Android Kotlin 风格指南</title>
+    <link href="http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/"/>
+    <id>http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/</id>
+    <published>2018-08-06T01:45:47.000Z</published>
+    <updated>2018-08-06T02:01:25.840Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文翻译自 &lt;a href=&quot;https://android.github.io/kotlin-guides/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android Kotlin Guides&lt;/a&gt; 的 &lt;a href=&quot;https://android.github.io/kotlin-guides/style.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Style Guide&lt;/a&gt;，翻译项目地址为：&lt;a href=&quot;https://github.com/msdx/kotlin-guides-cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/msdx/kotlin-guides-cn&lt;/a&gt; ，欢迎关注及校正。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文档是 Google Android 编码标准的 Kotlin 代码标准。当且仅当一个 Kotlin 源文件符合这里的规则时，我们就称其为 Google Android 代码风格的源文件。&lt;/p&gt;
+&lt;p&gt;与其他的编程风格指南一样，这里所涉及的问题不仅包括格式化的美观问题，也涉及了其他的约定及编码标准。但是，本文档主要关注我们普遍遵循的硬性规定，并避免给出不明确可执行（无论是通过人工还是工具）的建议。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;更新于：2018-05-18&lt;/em&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用 Drawable 实现图标角标</title>
     <link href="http://githang.com/2018/06/22/BadgeDrawable/"/>
     <id>http://githang.com/2018/06/22/BadgeDrawable/</id>
     <published>2018-06-22T06:24:27.000Z</published>
-    <updated>2018-07-26T02:45:15.478Z</updated>
+    <updated>2018-07-28T00:15:47.435Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;我在去年曾经写过一篇类似的《使用 Drawable 实现小红点》，但是小红点的具体实现是在这个类里面的。这次是在其思路上进行扩展，使得小红点或者说是角标的样式更加灵活。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。&lt;br&gt;&lt;img src=&quot;http://upyun.githang.com/2018/07/26/2-0运营.png!/fw/400&quot; alt=&quot;2-0运营&quot;&gt;&lt;/p&gt;
-&lt;p&gt;对于这种需求，我们以往的解决方式通常是使用一个 &lt;code&gt;RelativeLayout&lt;/code&gt;，里面再放置一个 &lt;code&gt;TextView&lt;/code&gt;，一个 &lt;code&gt;ImageView&lt;/code&gt; 和一个表示小红点的普通的 &lt;code&gt;View&lt;/code&gt;，并且，我们还需要根据小红点的大小，写死这个 &lt;code&gt;View&lt;/code&gt; 的外边距参数以让它的中心能够“正好”位于图标的右上角。&lt;/p&gt;
-&lt;p&gt;这种实现它有如下缺点：&lt;br&gt;
+&lt;p&gt;在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。&lt;br&gt;
     
     </summary>
     
@@ -438,26 +465,6 @@
     
     
       <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发的没道理</title>
-    <link href="http://githang.com/2017/10/03/Development-Unreasonableness/"/>
-    <id>http://githang.com/2017/10/03/Development-Unreasonableness/</id>
-    <published>2017-10-03T01:32:37.000Z</published>
-    <updated>2017-10-03T01:34:42.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在IT群里，总能看到对IT公司各职位之间的矛盾的调侃。比如产品与设计，设计与开发，产品与开发，开发与测试等等。&lt;br&gt;不同地域，不同公司，矛盾似乎就一直存在，尽管还能愉快或不愉快地协作。即使一些情况下一方或双方能退一步海阔天空，但有时候针对细节而起的争议，以开发的角度来讲，总能让人觉得不可理喻。&lt;br&gt;就比如Android开发人员常遇到的：&lt;br&gt;产品告诉你要怎么做：“像iOS那样。”&lt;br&gt;测试和你提了个Bug：“你这里和iOS的不一样。”&lt;br&gt;或者是面试设计出来的iOS风格的效果图。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="杂文" scheme="http://githang.com/tags/%E6%9D%82%E6%96%87/"/>
     
   </entry>
   

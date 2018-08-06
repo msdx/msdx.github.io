@@ -180,6 +180,106 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Android-Kotlin-Style-Guides" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/Android-Kotlin-Style-Guides/">Android Kotlin 风格指南</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/Android-Kotlin-Style-Guides/" class="archive-article-date">
+  	<time datetime="2018-08-06T01:45:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文翻译自 <a href="https://android.github.io/kotlin-guides/" target="_blank" rel="noopener">Android Kotlin Guides</a> 的 <a href="https://android.github.io/kotlin-guides/style.html" target="_blank" rel="noopener">Style Guide</a>，翻译项目地址为：<a href="https://github.com/msdx/kotlin-guides-cn" target="_blank" rel="noopener">https://github.com/msdx/kotlin-guides-cn</a> ，欢迎关注及校正。</p>
+</blockquote>
+<p>本文档是 Google Android 编码标准的 Kotlin 代码标准。当且仅当一个 Kotlin 源文件符合这里的规则时，我们就称其为 Google Android 代码风格的源文件。</p>
+<p>与其他的编程风格指南一样，这里所涉及的问题不仅包括格式化的美观问题，也涉及了其他的约定及编码标准。但是，本文档主要关注我们普遍遵循的硬性规定，并避免给出不明确可执行（无论是通过人工还是工具）的建议。</p>
+<p><em>更新于：2018-05-18</em><br>
+        
+          <a class="article-more-a" href="/2018/08/06/Android-Kotlin-Style-Guides/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CodeStyle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Kotlin//" class="article-tag-list-link color2">Kotlin</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/Android-Kotlin-Style-Guides/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-BadgeDrawable" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -203,9 +303,7 @@ var _hmt = _hmt || [];
         <blockquote>
 <p>我在去年曾经写过一篇类似的《使用 Drawable 实现小红点》，但是小红点的具体实现是在这个类里面的。这次是在其思路上进行扩展，使得小红点或者说是角标的样式更加灵活。</p>
 </blockquote>
-<p>在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。<br><img src="http://upyun.githang.com/2018/07/26/2-0运营.png!/fw/400" alt="2-0运营"></p>
-<p>对于这种需求，我们以往的解决方式通常是使用一个 <code>RelativeLayout</code>，里面再放置一个 <code>TextView</code>，一个 <code>ImageView</code> 和一个表示小红点的普通的 <code>View</code>，并且，我们还需要根据小红点的大小，写死这个 <code>View</code> 的外边距参数以让它的中心能够“正好”位于图标的右上角。</p>
-<p>这种实现它有如下缺点：<br>
+<p>在一些图标的右上角添加小红点，是我们开发中很常见的场景，比如下图所示，底部 TAB 会有小红点，上面的功能图标也会有小红点。<br>
         
           <a class="article-more-a" href="/2018/06/22/BadgeDrawable/#more">more >></a>
         
@@ -987,101 +1085,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-The-Design-of-HeyPermission" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/09/The-Design-of-HeyPermission/">一个动态权限库的设计</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/09/The-Design-of-HeyPermission/" class="archive-article-date">
-  	<time datetime="2018-01-09T13:41:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。</p>
-</blockquote>
-<p>从 Android 6.0（API 23）开始，用户可以在应用运行时向其授予权限（6.0 以下，国内厂商也多数做了类似的权限管理），而不是在应用安装时授予。这一方法既可以简化应用的安装过程，也可以让用户对应用的功能进行更多的限制。</p>
-<p>在 Android 系统中，系统权限分为两类：正常权限以及危险权限。其中正常权限是不会直接给用户隐私权带来风险的，如果应用在其清单中声明了该权限，则系统会自动授予该权限。而危险权限，从 6.0 开始，而需要应用动态申请，并且由用户授予。</p>
-        
-          <a class="article-more-a" href="/2018/01/09/The-Design-of-HeyPermission/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">runtime-permission</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/09/The-Design-of-HeyPermission/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1208,22 +1211,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
@@ -1232,11 +1219,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1248,11 +1251,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1264,10 +1275,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
               </li>
              
@@ -1276,11 +1283,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
               </li>
             
             <div class="clearfix"></div>
