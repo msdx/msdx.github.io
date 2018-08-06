@@ -9,14 +9,14 @@
   <title>Android Kotlin 风格指南 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本文翻译自 Android Kotlin Guides 的 Style Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  本文档是 Google Android 编码标准的 Kotlin 代码标准。当且仅当一个 Kotlin 源文件符合这里的规则时，我们就称其为 Google Android 代码风格的源文件。 与">
-<meta name="keywords" content="Android,Kotlin,CodeStyle">
+<meta name="keywords" content="Kotlin,Android,CodeStyle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Kotlin 风格指南">
 <meta property="og:url" content="http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="本文翻译自 Android Kotlin Guides 的 Style Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  本文档是 Google Android 编码标准的 Kotlin 代码标准。当且仅当一个 Kotlin 源文件符合这里的规则时，我们就称其为 Google Android 代码风格的源文件。 与">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-06T02:01:25.840Z">
+<meta property="og:updated_time" content="2018-08-06T14:21:32.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Kotlin 风格指南">
 <meta name="twitter:description" content="本文翻译自 Android Kotlin Guides 的 Style Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  本文档是 Google Android 编码标准的 Kotlin 代码标准。当且仅当一个 Kotlin 源文件符合这里的规则时，我们就称其为 Google Android 代码风格的源文件。 与">
@@ -511,7 +511,7 @@ var _hmt = _hmt || [];
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 在这里写多行 KDoc 文本，</span></span><br><span class="line"><span class="comment"> * 正常换行…</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">method</span><span class="params">(arg: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">// …</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>…或者是以下的单行形式：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 特别短的 KDoc. */</span></span><br></pre></td></tr></table></figure>
-<p>上面基本形式都是可以接受的。当整个 KDoc 块（包括注释标记）可以写在一行上时，可以使用单行形式。请注意，这仅适用于没有如 <code>@ return</code> 这样的块标签的情况。</p>
+<p>上面基本形式都是可以接受的。当整个 KDoc 块（包括注释标记）可以写在一行上时，可以使用单行形式。请注意，这仅适用于没有如 <code>@return</code> 这样的块标签的情况。</p>
 <h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>一个空白行——即只包含对齐的前导星号（<code>*</code>）的行——在段落之间以及块标签组（如果有）之前出现。</p>
 <h3 id="块标签"><a href="#块标签" class="headerlink" title="块标签"></a>块标签</h3><p>任何标准的“块标签”的使用都以 <code>@constructor</code>，<code>@receiver</code>，<code>@param</code>，<code>@property</code>，<code>@return</code>，<code>@throws</code>，<code>@see</code> 的顺序出现，并且它们不能有空的描述。当块标记不适合单行时，连续行从 <code>@</code> 的位置缩进 8 个空格。</p>
 <h2 id="摘要片段"><a href="#摘要片段" class="headerlink" title="摘要片段"></a>摘要片段</h2><p>每个 KDoc 块都以简短的摘要片段开头。这个片段非常重要：它是文本中唯一出现在某些上下文（如类和方法索引）中的部分。</p>
@@ -521,7 +521,7 @@ var _hmt = _hmt || [];
 <p>引用这个例外并不适合证明可以省略一般读者可能需要知道的相关信息。例如，对于名为 <code>getCanonicalName</code> 的函数或名为 <code>canonicalName</code> 的属性，如果一般读者可能不知道术语“规范名称”是什么意思的话，那就不要省略它的文档（省略的理由是它只会说<code>/** Returns the canonical name. */</code>）！</p>
 <h3 id="例外：重写"><a href="#例外：重写" class="headerlink" title="例外：重写"></a>例外：重写</h3><p>如果一个方法是重写父类的方法，那么可以不需要 KDoc。</p>
 <blockquote>
-<p>翻译耗时耗神，如觉得对您有用，还请打赏一下。</p>
+<p>翻译耗时耗神，如觉对您有用，还望能够打赏。</p>
 </blockquote>
 
       
@@ -567,11 +567,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -655,6 +655,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/06/Kotlin-Java-Interop-Guide/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Kotlin Java 互通指南
+        
+      </div>
+    </a>
   
   
     <a href="/2018/06/22/BadgeDrawable/" id="article-nav-older" class="article-nav-link-wrap">
@@ -827,15 +836,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">drawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -855,31 +872,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -891,11 +888,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -911,11 +924,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">

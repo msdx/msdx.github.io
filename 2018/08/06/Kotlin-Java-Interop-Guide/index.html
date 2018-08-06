@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>Archives: 2018/5 | 疯狂的键盘</title>
+  <title>Kotlin Java 互通指南 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android研发工程师，左撇子。">
-<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://githang.com/archives/2018/05/index.html">
+  <meta name="description" content="本文翻译自 Android Kotlin Guides 的 Interop Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  这是一组关于使用 Java 和 Kotlin 语言编写公共 API 的规则，目的是让代码在其他语言使用时也会感到习惯。 更新于：2018-05-18">
+<meta name="keywords" content="Kotlin,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin Java 互通指南">
+<meta property="og:url" content="http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Android研发工程师，左撇子。">
+<meta property="og:description" content="本文翻译自 Android Kotlin Guides 的 Interop Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  这是一组关于使用 Java 和 Kotlin 语言编写公共 API 的规则，目的是让代码在其他语言使用时也会感到习惯。 更新于：2018-05-18">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://githang.com/assets/kotlin_interop_checks_settings.png">
+<meta property="og:updated_time" content="2018-08-06T14:21:17.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的键盘">
-<meta name="twitter:description" content="Android研发工程师，左撇子。">
+<meta name="twitter:title" content="Kotlin Java 互通指南">
+<meta name="twitter:description" content="本文翻译自 Android Kotlin Guides 的 Interop Guide，翻译项目地址为：https://github.com/msdx/kotlin-guides-cn ，欢迎关注及校正。  这是一组关于使用 Java 和 Kotlin 语言编写公共 API 的规则，目的是让代码在其他语言使用时也会感到习惯。 更新于：2018-05-18">
+<meta name="twitter:image" content="http://githang.com/assets/kotlin_interop_checks_settings.png">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -178,71 +181,329 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Kotlin-Java-Interop-Guide" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/" class="archive-article-date">
-  	<time datetime="2018-05-15T03:44:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/">Phabricator 添加对 Kotlin 的语法高亮</a>
+    <h1 class="article-title" itemprop="name">
+      Kotlin Java 互通指南
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/06/Kotlin-Java-Interop-Guide/" class="archive-article-date">
+  	<time datetime="2018-08-06T14:06:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文翻译自 <a href="https://android.github.io/kotlin-guides/" target="_blank" rel="noopener">Android Kotlin Guides</a> 的 <a href="https://android.github.io/kotlin-guides/interop.html" target="_blank" rel="noopener">Interop Guide</a>，翻译项目地址为：<a href="https://github.com/msdx/kotlin-guides-cn" target="_blank" rel="noopener">https://github.com/msdx/kotlin-guides-cn</a> ，欢迎关注及校正。</p>
+</blockquote>
+<p>这是一组关于使用 Java 和 Kotlin 语言编写公共 API 的规则，目的是让代码在其他语言使用时也会感到习惯。</p>
+<p><em>更新于：2018-05-18</em><br><a id="more"></a></p>
+<h1 id="Java（被-Kotlin-调用时）"><a href="#Java（被-Kotlin-调用时）" class="headerlink" title="Java（被 Kotlin 调用时）"></a>Java（被 Kotlin 调用时）</h1><h2 id="不使用硬性关键字"><a href="#不使用硬性关键字" class="headerlink" title="不使用硬性关键字"></a>不使用硬性关键字</h2><p>不要使用 Kotlin 的<a href="https://kotlinlang.org/docs/reference/keyword-reference.html#hard-keywords" target="_blank" rel="noopener">硬性关键字</a>作为方法或字段的名称，因此它们会让 Kotlin 在调用时需要使用反引号来避免与其冲突。<a href="https://kotlinlang.org/docs/reference/keyword-reference.html#soft-keywords" target="_blank" rel="noopener">软关键字</a>，<a href="https://kotlinlang.org/docs/reference/keyword-reference.html#modifier-keywords" target="_blank" rel="noopener">修饰符关键字</a>和<a href="https://kotlinlang.org/docs/reference/keyword-reference.html#special-identifiers" target="_blank" rel="noopener">特殊标识符</a>则允许使用。</p>
+<p>例如，Mockito 的 <code>when</code> 函数在 Kotlin 使用时就需要反引号：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> callable = Mockito.mock(Callable::<span class="class"><span class="keyword">class</span>.<span class="title">java</span>)</span></span><br><span class="line">Mockito.`<span class="keyword">when</span>`(callable.call()).thenReturn(<span class="comment">/* … */</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="为空性注解"><a href="#为空性注解" class="headerlink" title="为空性注解"></a>为空性注解</h2><p>公共 API 中的每个非原始类型的参数、返回值和字段的类型都应该有一个可为空性的注解。没有这种注解的类型会被当作不确定是否可为空的<a href="https://kotlinlang.org/docs/reference/java-interop.html#null-safety-and-platform-types" target="_blank" rel="noopener">“平台”类型</a>。</p>
+<p>JSR 305包注解可用于设置合理的默认值，但目前不建议使用。它们需要一个选择加载的标志位才能被编译器认可，并且还与 Java 9 的模块系统冲突。</p>
+<h2 id="Lambda-参数放在最后"><a href="#Lambda-参数放在最后" class="headerlink" title="Lambda 参数放在最后"></a>Lambda 参数放在最后</h2><p>符合 <a href="https://kotlinlang.org/docs/reference/java-interop.html#sam-conversions" target="_blank" rel="noopener">SAM 转换</a>的参数类型应该放到最后。</p>
+<p>例如，RxJava 2 的 <code>Flowable.create()</code> 方法签名定义为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">Flowable&lt;T&gt; <span class="title">create</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    FlowableOnSubscribe&lt;T&gt; source,</span></span></span><br><span class="line"><span class="function"><span class="params">    BackpressureStrategy mode)</span> </span>&#123; <span class="comment">/* … */</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>因为 <code>FlowableOnSubscribe</code> 适合进行 SAM 转换，所以 Kotlin 对此方法的函数调用如下所示：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Flowable.create(&#123; <span class="comment">/* … */</span> &#125;, BackpressureStrategy.LATEST)</span><br></pre></td></tr></table></figure>
+<p>但是，如果方法签名中的参数调换过来，则函数调用可以使用 trailing-lambda 语法：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Flowable.create(BackpressureStrategy.LATEST) &#123; <span class="comment">/* … */</span> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="属性前缀"><a href="#属性前缀" class="headerlink" title="属性前缀"></a>属性前缀</h2><p>对于要在 Kotlin 中表示为属性的方法，必须使用严格的 “bean” 风格的前缀。</p>
+<p>访问器方法需要以 “get” 为前缀，如果是 <code>boolean</code> 类型的返回方法，使用 “is” 前缀。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="comment">/* … */</span> &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isActive</span><span class="params">()</span> </span>&#123; <span class="comment">/* … */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> name = user.name <span class="comment">// 会调用 user.getName()</span></span><br><span class="line"><span class="keyword">val</span> active = user.active <span class="comment">// 会调用 user.isActive()</span></span><br></pre></td></tr></table></figure>
+<p>对应的改值方法则需要 “set” 前缀。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="comment">/* … */</span> &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123; <span class="comment">/* … */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user.name = <span class="string">"Bob"</span> <span class="comment">// 会调用 user.setName(String)</span></span><br></pre></td></tr></table></figure>
+<p>如果您希望将方法公开为属性，请不要使用非标准前缀，如 “has”、“set” 或非 “get” 前缀的访问器方法。具有非标准前缀的方法是否可以接受作为函数调用，则取决于方法的行为。</p>
+<h2 id="操作符重载"><a href="#操作符重载" class="headerlink" title="操作符重载"></a>操作符重载</h2><p>注意在 Kotlin 中允许使用的特殊调用点语法（即<a href="https://kotlinlang.org/docs/reference/operator-overloading.html" target="_blank" rel="noopener">运算符重载</a>）的方法名称。确保方法名称与缩短的语法一起使用是有意义的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">IntBox</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> value;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">IntBox</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> IntBox <span class="title">plus</span><span class="params">(IntBox other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> IntBox(value + other.value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> one = IntBox(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">val</span> two = IntBox(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">val</span> three = one + two <span class="comment">// Invokes one.plus(two)</span></span><br></pre></td></tr></table></figure>
+<h1 id="Kotlin（被-Java-调用）"><a href="#Kotlin（被-Java-调用）" class="headerlink" title="Kotlin（被 Java 调用）"></a>Kotlin（被 Java 调用）</h1><h2 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h2><p>当一个文件包含顶级函数或属性时，<em>始终</em>用 <code>@file:JvmName(&quot;Foo)&quot;</code> 注解以提供一个好的名字。</p>
+<p>默认情况下，文件 “Foo.kt” 中的顶级成员最终会在一个名为 “FooKt” 的类中，这个类很没有吸引力并且泄漏了语言作为实现的细节。</p>
+<p>考虑添加 <code>@file:JvmMultifileClass</code> 注解将多个文件中的顶级成员合并为一个类。</p>
+<h2 id="Lambda-参数"><a href="#Lambda-参数" class="headerlink" title="Lambda 参数"></a>Lambda 参数</h2><p>要在 Java 中使用的<a href="https://kotlinlang.org/docs/reference/lambdas.html#function-types" target="_blank" rel="noopener">函数类型</a>应避免使用 <code>Unit</code> 返回类型。那样做的话就需要指定一条明确的 <code>return Unit.INSTANCE;</code> 语句，而这并不符合我们的语言习惯。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sayHi</span><span class="params">(callback: (<span class="type">String</span>)</span></span> -&gt; <span class="built_in">Unit</span>) = <span class="comment">/* … */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Kotlin caller:</span></span><br><span class="line">greeter.sayHi &#123; Log.d(<span class="string">"Greeting"</span>, <span class="string">"Hello, <span class="variable">$it</span>!"</span>) &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java caller:</span></span><br><span class="line">greeter.sayHi(name -&gt; &#123;</span><br><span class="line">    Log.d(<span class="string">"Greeting"</span>, <span class="string">"Hello, "</span> + name + <span class="string">"!"</span>);</span><br><span class="line">    <span class="keyword">return</span> Unit.INSTANCE;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这一语法也不允许提供语义命名的类型，以便能在其他类型上实现。</p>
+<p>在 Kotlin 中为 lambda 类型定义一个命名的单抽象方法（SAM）接口，可以纠正 Java 的问题，但是也阻止了在 Kotlin 中使用 lambda 语法。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GreeterCallback</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">greetName</span><span class="params">(name: <span class="type">String</span>)</span></span>: <span class="built_in">Unit</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sayHi</span><span class="params">(callback: <span class="type">GreeterCallback</span>)</span></span> = <span class="comment">/* … */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Kotlin 调用者</span></span><br><span class="line">greeter.sayHi(<span class="keyword">object</span> : GreeterCallback &#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">greetName</span><span class="params">(name: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        Log.d(<span class="string">"Greeting"</span>, <span class="string">"Hello, <span class="variable">$name</span>!"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 调用者</span></span><br><span class="line">greeter.sayHi(name -&gt; Log.d(<span class="string">"Greeting"</span>, <span class="string">"Hello, "</span> + name + <span class="string">"!"</span>));</span><br></pre></td></tr></table></figure>
+<p>在 Java 中定义一个命名的 SAM 接口，允许 Kotlin 使用较低级的  lambda 语法版本，其中必须明确指定接口类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在 Java 中定义</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">GreeterCallback</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">greetName</span><span class="params">(String name)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">sayHi</span><span class="params">(greeter: <span class="type">GreeterCallback</span>)</span></span> = <span class="comment">/* … */</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Kotlin 调用者：</span></span><br><span class="line">greeter.sayHi(GreeterCallback &#123; Log.d(<span class="string">"Greeting"</span>, <span class="string">"Hello, <span class="variable">$it</span>!"</span>) &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 调用者：</span></span><br><span class="line">greeter.sayHi(name -&gt; Log.d(<span class="string">"Greeter"</span>, <span class="string">"Hello, "</span> + name + <span class="string">"!"</span>));</span><br></pre></td></tr></table></figure>
+<p>目前还没有办法为在 Java 和 Kotlin 使用的 lambda 定义一种参数类型，使得它符合这两种语言的使用习惯。目前的建议是更推荐使用函数类型，尽管当返回类型为 <code>Unit</code> 时，在 Java 上体验不佳。</p>
+<p><em>注意：此建议将来可能会有变化。见 <a href="https://youtrack.jetbrains.com/issue/KT-7770" target="_blank" rel="noopener">KT-7770</a> 和 <a href="https://youtrack.jetbrains.com/issue/KT-21018" target="_blank" rel="noopener">KT-21018</a>。</em></p>
+<h2 id="避免使用-Nothing-泛型"><a href="#避免使用-Nothing-泛型" class="headerlink" title="避免使用 Nothing 泛型"></a>避免使用 <code>Nothing</code> 泛型</h2><p>泛型参数为 <code>Nothing</code> 的类型会作为 Java 的原始类型公开。原始类型很少在 Java 中使用，因此应该避免。</p>
+<h2 id="记录异常"><a href="#记录异常" class="headerlink" title="记录异常"></a>记录异常</h2><p>会抛出检查型异常的函数应该用 <code>@Throws</code> 来记录。KDoc 应该记录那些运行异常。</p>
+<p>要注意函数委托的 API ，因为它们可能会抛出检查型异常，而 Kotlin 会默许传播这些异常。</p>
+<h2 id="保护性拷贝"><a href="#保护性拷贝" class="headerlink" title="保护性拷贝"></a>保护性拷贝</h2><p>当从公共 API 返回共享或无主的只读集合时，将它们包装在不可修改的容器中或进行保护性拷贝。尽管 Kotlin 会强制执行它们的只读属性，但 Java 方面却没有这样的强制性。如果没有包装器或保护性拷贝，则通过返回长期存在的集合引用将违反不可变性。</p>
+<h2 id="伴随函数"><a href="#伴随函数" class="headerlink" title="伴随函数"></a>伴随函数</h2><p>在 “companion object” 中的公共函数必须用使用 <code>@JvmStatic</code> 注解才能暴露为静态方法。</p>
+<p>如果没有这个注解，这些函数仅可用作静态 <code>Companion</code> 字段上的实例方法。</p>
+<p><em>不正确：没有注解</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KotlinClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="function"><span class="keyword">fun</span> <span class="title">doWork</span><span class="params">()</span></span> &#123;</span><br><span class="line">            <span class="comment">/* … */</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        KotlinClass.Companion.doWork();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>正确：<code>@JvmStatic</code> 注解</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KotlinClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="meta">@JvmStatic</span> <span class="function"><span class="keyword">fun</span> <span class="title">doWork</span><span class="params">()</span></span> &#123;</span><br><span class="line">            <span class="comment">/* … */</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        KotlinClass.doWork();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="伴随常量"><a href="#伴随常量" class="headerlink" title="伴随常量"></a>伴随常量</h2><p>在 <code>companion object</code> 中的公共、非 <code>const</code> 的属性 <a href="待补充">_实际上为常量 _</a> 必须用 <code>@JvmField</code> 注解才能暴露为静态字段。</p>
+<p>如果没有这个注解，这些属性只能作为静态 <code>Companion</code> 字段中奇怪命名的 ‘getters’ 实例。而只使用 <code>@JvmStatic</code> 而不是 <code>@JvmField</code> 的话，会将奇怪命名的 ‘getters’ 移到类的静态方法中，但仍然是不正确的。</p>
+<p><em>不正确：没有注解</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KotlinClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        const <span class="keyword">val</span> INTEGER_ONE = <span class="number">1</span></span><br><span class="line">        <span class="keyword">val</span> BIG_INTEGER_ONE = BigInteger.ONE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        System.out.println(KotlinClass.INTEGER_ONE);</span><br><span class="line">        System.out.println(KotlinClass.Companion.getBIG_INTEGER_ONE());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>不正确：<code>@JvmStatic</code> 注解</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KotlinClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        const <span class="keyword">val</span> INTEGER_ONE = <span class="number">1</span></span><br><span class="line">        <span class="meta">@JvmStatic</span> <span class="keyword">val</span> BIG_INTEGER_ONE = BigInteger.ONE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        System.out.println(KotlinClass.INTEGER_ONE);</span><br><span class="line">        System.out.println(KotlinClass.getBIG_INTEGER_ONE());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>正确：<code>@JvmField</code> 注解</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KotlinClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        const <span class="keyword">val</span> INTEGER_ONE = <span class="number">1</span></span><br><span class="line">        <span class="meta">@JvmField</span> <span class="keyword">val</span> BIG_INTEGER_ONE = BigInteger.ONE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        System.out.println(KotlinClass.INTEGER_ONE);</span><br><span class="line">        System.out.println(KotlinClass.BIG_INTEGER_ONE);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="命名习惯"><a href="#命名习惯" class="headerlink" title="命名习惯"></a>命名习惯</h2><p>Kotlin 有着与 Java 不同的调用约定，这会改变你命名函数的方式。可以使用 <code>@JvmName</code> 来设计名称，使得它们对于两种语言的约定都符合习惯，或者匹配它们各自的标准库命名。</p>
+<p>这种情况最常出现在扩展功能和扩展属性上，因为接收器类型的位置不同。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sealed</span> <span class="class"><span class="keyword">class</span> <span class="title">Optional</span>&lt;<span class="type">T : Any</span>&gt;</span></span><br><span class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> <span class="title">Some</span>&lt;<span class="type">T : Any</span>&gt;</span>(<span class="keyword">val</span> value: T): Optional&lt;T&gt;()</span><br><span class="line"><span class="keyword">object</span> None : Optional&lt;<span class="built_in">Nothing</span>&gt;()</span><br><span class="line"></span><br><span class="line"><span class="meta">@JvmName(<span class="meta-string">"ofNullable"</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T&gt;</span> T?.<span class="title">asOptional</span><span class="params">()</span></span> = <span class="keyword">if</span> (<span class="keyword">this</span> == <span class="literal">null</span>) None <span class="keyword">else</span> Some(<span class="keyword">this</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从 KOTLIN 中调用：</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(<span class="keyword">vararg</span> args: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> nullableString: String? = <span class="string">"foo"</span></span><br><span class="line">    <span class="keyword">val</span> optionalString = nullableString.asOptional()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从 JAVA 中调用：</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">    String nullableString = <span class="string">"Foo"</span>;</span><br><span class="line">    Optional&lt;String&gt; optionalString =</span><br><span class="line">          Optionals.ofNullable(nullableString);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="默认参数的函数重载"><a href="#默认参数的函数重载" class="headerlink" title="默认参数的函数重载"></a>默认参数的函数重载</h2><p>具有默认值的参数的函数必须使用 <code>@JvmOverloads</code>。如果没有这个注解，则无法使用任何默认值来调用该函数。</p>
+<p>当使用 <code>@JvmOverloads</code> 时，检查所生成的方法以确保它们都有意义。如果没有的话，请使用以下的一种或两种方法进行重构，直到满意为止：</p>
+<ol>
+<li>更改参数顺序，以让有默认值的参数在结尾。</li>
+<li>将默认值移动到手动重载的函数中。</li>
+</ol>
+<p><em>不正确：没有 <code>@JvmOverloads</code></em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">sayHello</span><span class="params">(prefix: <span class="type">String</span> = <span class="string">"Mr."</span>, name: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        println(<span class="string">"Hello, <span class="variable">$prefix</span> <span class="variable">$name</span>"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        Greeting greeting = <span class="keyword">new</span> Greeting();</span><br><span class="line">        greeting.sayHello(<span class="string">"Mr."</span>, <span class="string">"Bob"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>正确：<code>@JvmOverloads</code> 注解。</em></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeting</span> </span>&#123;</span><br><span class="line">    <span class="meta">@JvmOverloads</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">sayHello</span><span class="params">(prefix: <span class="type">String</span> = <span class="string">"Mr."</span>, name: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        println(<span class="string">"Hello, <span class="variable">$prefix</span> <span class="variable">$name</span>"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JavaClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">        Greeting greeting = <span class="keyword">new</span> Greeting();</span><br><span class="line">        greeting.sayHello(<span class="string">"Bob"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Lint-检查"><a href="#Lint-检查" class="headerlink" title="Lint 检查"></a>Lint 检查</h1><h2 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h2><ul>
+<li><strong>Android Studio 版本：</strong> 3.2 Canary 10 或更高</li>
+<li><strong>Android Gradle 插件版本：</strong> 3.2.0-alpha10 或更高</li>
+</ul>
+<h2 id="支持的检查"><a href="#支持的检查" class="headerlink" title="支持的检查"></a>支持的检查</h2><p>现在有 Android Lint 检查可以帮助你检测和标记上述一些互通性的问题。目前仅检测 Java 中的问题（被 Kotlin 调用）。具体来说，所支持的检查有：</p>
+<ul>
+<li>未知的可为空性</li>
+<li>属性访问</li>
+<li>非硬性的 Kotlin 关键字</li>
+<li>Lambda 参数放在最后</li>
+</ul>
+<h2 id="Android-Studio"><a href="#Android-Studio" class="headerlink" title="Android Studio"></a>Android Studio</h2><p>要启用这些检查，请转到 <strong>File &gt; Preferences&gt; Editor &gt; Inspections</strong>，并检查你想要在 Kotlin 互通性下启用的规则：</p>
+<p><img src="/assets/kotlin_interop_checks_settings.png"></p>
+<p>检查了要启用的规则后，将在运行代码检查（<strong>Analyze &gt; Inspect Code…</strong>）时运行新的检查</p>
+<h2 id="命令行构建"><a href="#命令行构建" class="headerlink" title="命令行构建"></a>命令行构建</h2><p>要从命令行构建中启用这些检查，请在 <code>build.gradle</code> 文件中添加以下行：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    lintOptions &#123;</span><br><span class="line">        check <span class="string">'Interoperability'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有关 lintOptions 内支持的完整配置，请参阅 <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.LintOptions.html" target="_blank" rel="noopener">Android Gradle DSL 参考</a>。</p>
+<p>然后，在命令行中运行<code>./gradlew lint</code>。</p>
+<blockquote>
+<p>翻译耗时耗神，如觉对您有用，还望能够打赏。</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我的娃的奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Phabricator</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/工具//" class="article-tag-list-link color3">工具</a>
+        			<a href="/categories/Kotlin//" class="article-tag-list-link color2">Kotlin</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/06/Android-Kotlin-Style-Guides/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android Kotlin 风格指南</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Kotlin Java 互通指南",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4684296714025694",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -278,8 +539,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

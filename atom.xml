@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-06T02:01:25.840Z</updated>
+  <updated>2018-08-06T14:21:17.557Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kotlin Java 互通指南</title>
+    <link href="http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/"/>
+    <id>http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/</id>
+    <published>2018-08-06T14:06:22.000Z</published>
+    <updated>2018-08-06T14:21:17.557Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文翻译自 &lt;a href=&quot;https://android.github.io/kotlin-guides/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android Kotlin Guides&lt;/a&gt; 的 &lt;a href=&quot;https://android.github.io/kotlin-guides/interop.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Interop Guide&lt;/a&gt;，翻译项目地址为：&lt;a href=&quot;https://github.com/msdx/kotlin-guides-cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/msdx/kotlin-guides-cn&lt;/a&gt; ，欢迎关注及校正。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一组关于使用 Java 和 Kotlin 语言编写公共 API 的规则，目的是让代码在其他语言使用时也会感到习惯。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;更新于：2018-05-18&lt;/em&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
+    
+    
+      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="Java" scheme="http://githang.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android Kotlin 风格指南</title>
     <link href="http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/"/>
     <id>http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/</id>
     <published>2018-08-06T01:45:47.000Z</published>
-    <updated>2018-08-06T02:01:25.840Z</updated>
+    <updated>2018-08-06T14:21:32.153Z</updated>
     
     <summary type="html">
     
@@ -37,9 +63,9 @@
       <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
       <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
     
@@ -445,26 +471,6 @@
     
     
       <category term="梦" scheme="http://githang.com/tags/%E6%A2%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>念</title>
-    <link href="http://githang.com/2017/10/08/Miss/"/>
-    <id>http://githang.com/2017/10/08/Miss/</id>
-    <published>2017-10-08T15:53:00.000Z</published>
-    <updated>2017-10-20T04:53:58.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我心里万般感触，而我口上无话可说。&lt;br&gt;我又一遍从很多年前开始回想，仍在怀疑在那些片段中我是否只是个笑话。&lt;br&gt;如果把现在的时间算作久违的深夜，那么我在知道着自己是在用生命杀时间的时候，还是依然这么做了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
