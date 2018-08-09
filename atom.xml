@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-07T03:00:48.404Z</updated>
+  <updated>2018-08-09T08:18:54.174Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins 多分支构建</title>
+    <link href="http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/"/>
+    <id>http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</id>
+    <published>2018-08-09T07:22:57.000Z</published>
+    <updated>2018-08-09T08:18:54.174Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天终于搞定了 Jenkins 的多分支构建的配置。&lt;/p&gt;
+&lt;p&gt;以前在使用 gitlab-ci 时，可以根据不同的分支执行不同的构建，比如 release 分支执行发布到 fir 上的构建，其他分支只执行编译。但因为服务器上的 4G 内存还要跑其他服务，而 gitlab 又是个耗内存大户，经常报 5xx 错误而不得不重启（我后来不得不使用 cron 设置了隔几天自动重启的定时任务）。之后想起了一个 go 开发的 git 托管服务 gogs，于是老大把它给部署上，将项目从 gitlab 上迁移过来。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Jenkins" scheme="http://githang.com/categories/Jenkins/"/>
+    
+    
+      <category term="Jenkins" scheme="http://githang.com/tags/Jenkins/"/>
+    
+      <category term="Pipeline" scheme="http://githang.com/tags/Pipeline/"/>
+    
+      <category term="Multibranch" scheme="http://githang.com/tags/Multibranch/"/>
+    
+  </entry>
   
   <entry>
     <title>Kotlin Java 互通指南</title>
@@ -451,26 +476,6 @@
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>梦——少年不生事</title>
-    <link href="http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/"/>
-    <id>http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/</id>
-    <published>2017-10-27T14:15:00.000Z</published>
-    <updated>2017-11-18T11:39:13.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨晚做了一个很有故事的梦，似乎可以写成小说，也可以当作素材。到此刻，多数梦里情景都已忘记，但一些梦中感受仍教人流连。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="拾梦者" scheme="http://githang.com/categories/%E6%8B%BE%E6%A2%A6%E8%80%85/"/>
-    
-    
-      <category term="梦" scheme="http://githang.com/tags/%E6%A2%A6/"/>
     
   </entry>
   

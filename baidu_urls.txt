@@ -1,1 +1,1 @@
-http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/
+http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/
