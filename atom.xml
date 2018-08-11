@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-09T08:18:54.174Z</updated>
+  <updated>2018-08-11T07:15:30.553Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微知识#0 layoutInflater.inflate 方法的 ViewGroup 参数</title>
+    <link href="http://githang.com/2018/08/10/Micro-Knowledge-0/"/>
+    <id>http://githang.com/2018/08/10/Micro-Knowledge-0/</id>
+    <published>2018-08-10T14:14:25.000Z</published>
+    <updated>2018-08-11T07:15:30.553Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;LayoutInflater&lt;/code&gt; 常用的两个方法：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public View inflate(@LayoutRes int resource, @Nullable ViewGroup root)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;public View inflate(@LayoutRes int resource, @Nullable ViewGroup root, boolean attachToRoot)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;第一个方法的调用如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; View &lt;span class=&quot;title&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(@LayoutRes &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; resource, @Nullable ViewGroup root)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; inflate(resource, root, root != &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而在其实现中，第二个参数 &lt;code&gt;ViewGroup&lt;/code&gt; 类型的 &lt;code&gt;root&lt;/code&gt; 是否为空，会决定在从布局文件创建 &lt;code&gt;View&lt;/code&gt; 的时候，是否生成根元素的布局参数（即以 &lt;code&gt;layout_&lt;/code&gt; 开头的属性），关键代码如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="微知识" scheme="http://githang.com/categories/%E5%BE%AE%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins 多分支构建</title>
@@ -88,9 +112,9 @@
       <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
     
     
-      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
-    
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
     
       <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
     
@@ -444,29 +468,6 @@
     <summary type="html">
     
       &lt;p&gt;上篇在对 CoordinatorLayout 作了一些简单介绍，以了解 CoordinatorLayout 带来的一些特性和常见用途。本篇将对 CoordinatorLayout 的源码进行一些分析，以了解它的相关特性的运行原理，以及 Behavior 的执行过程。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="CoordinatorLayout" scheme="http://githang.com/tags/CoordinatorLayout/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoordinatorLayout之初步认识</title>
-    <link href="http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/"/>
-    <id>http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</id>
-    <published>2017-11-04T05:30:59.000Z</published>
-    <updated>2017-11-17T03:45:43.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;CoordinatorLayout是2015 I/O大会发布的一种布局，它可以说是一个非常强大的FrameLayout，主要用于协调(Coordinate)子控件，来帮助实现它们之间的一些交互效果。它适合用于应用的顶层布局，或是View之间交互的一个容器。&lt;/p&gt;
-&lt;p&gt;本篇主要是对CoordinatorLayout的相关内容进行一个初步的认识，看看 CoordinatorLayout 都提供了哪些特性来帮助完成View之间的交互。&lt;/p&gt;
     
     </summary>
     
