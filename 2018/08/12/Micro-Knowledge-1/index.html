@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="这是关于 Java 静态方法和静态变量的一段代码： 123456789public class TestStatic &amp;#123;    private int otherField = 0;    public static final BigInteger BIG_INTEGER = BigInteger.ONE;    public static void method() &amp;#123;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-15T02:00:51.021Z">
+<meta property="og:updated_time" content="2018-08-15T02:16:56.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解">
 <meta name="twitter:description" content="这是关于 Java 静态方法和静态变量的一段代码： 123456789public class TestStatic &amp;#123;    private int otherField = 0;    public static final BigInteger BIG_INTEGER = BigInteger.ONE;    public static void method() &amp;#123;">
@@ -207,8 +207,19 @@ var _hmt = _hmt || [];
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    TestStatic.Companion.method();</span><br><span class="line">    BigInteger bigInteger = TestStatic.Companion.getBIG_INTEGER();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果要使转换后的 Kotlin 代码在 Java 上调用起来和以前的习惯一样，则需要分别使用 <code>@JvmStatic</code> 和 <code>@JvmField</code> 注解，才能使它们暴露为静态方法或静态字段，如下：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JvmField</span> <span class="keyword">val</span> BIG_INTEGER = BigInteger.ONE</span><br><span class="line"></span><br><span class="line"><span class="meta">@JvmStatic</span> <span class="function"><span class="keyword">fun</span> <span class="title">method</span><span class="params">()</span></span> &#123;</span><br><span class="line">    println(<span class="string">"call method"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这时 Java 对 Kotlin 的调用习惯就和以前一样了：</p>
+<p>这样 Java 对 Kotlin 的调用习惯就和以前一样了：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    TestStatic.method();</span><br><span class="line">    BigInteger bigInteger = TestStatic.BIG_INTEGER;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于这一点，在《Android Kotlin 指南》的文档中有提到，分别如下：</p>
+<p>伴生函数：</p>
+<blockquote>
+<p>在 “companion object” 中的公共函数必须用使用 <code>@JvmStatic</code> 注解才能暴露为静态方法。</p>
+<p>如果没有这个注解，这些函数仅可用作静态 Companion 字段上的实例方法。</p>
+</blockquote>
+<p>伴生常量：</p>
+<blockquote>
+<p>在 <code>companion object</code> 中的公共、非 <code>const</code> 的属性 <strong>实际上为常量</strong> 必须用 <code>@JvmField</code> 注解才能暴露为静态字段。</p>
+<p>如果没有这个注解，这些属性只能作为静态 <code>Companion</code> 字段中奇怪命名的 ‘getters’ 实例。而只使用 <code>@JvmStatic</code> 而不是 <code>@JvmField</code> 的话，会将奇怪命名的 ‘getters’ 移到类的静态方法中，但仍然是不正确的。</p>
+</blockquote>
 
       
 
