@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="LayoutInflater 常用的两个方法： 123public View inflate(@LayoutRes int resource, @Nullable ViewGroup root)public View inflate(@LayoutRes int resource, @Nullable ViewGroup root, boolean attachToRoot) 第一个方法的调用如下">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-11T07:15:30.553Z">
+<meta property="og:updated_time" content="2018-08-11T07:21:37.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微知识#0 layoutInflater.inflate 方法的 ViewGroup 参数">
 <meta name="twitter:description" content="LayoutInflater 常用的两个方法： 123public View inflate(@LayoutRes int resource, @Nullable ViewGroup root)public View inflate(@LayoutRes int resource, @Nullable ViewGroup root, boolean attachToRoot) 第一个方法的调用如下">
@@ -200,7 +200,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p><code>LayoutInflater</code> 常用的两个方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public View inflate(@LayoutRes int resource, @Nullable ViewGroup root)</span><br><span class="line"></span><br><span class="line">public View inflate(@LayoutRes int resource, @Nullable ViewGroup root, boolean attachToRoot)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">inflate</span><span class="params">(@LayoutRes <span class="keyword">int</span> resource, @Nullable ViewGroup root)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">inflate</span><span class="params">(@LayoutRes <span class="keyword">int</span> resource, @Nullable ViewGroup root, <span class="keyword">boolean</span> attachToRoot)</span></span></span><br></pre></td></tr></table></figure>
 <p>第一个方法的调用如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">inflate</span><span class="params">(@LayoutRes <span class="keyword">int</span> resource, @Nullable ViewGroup root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> inflate(resource, root, root != <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>而在其实现中，第二个参数 <code>ViewGroup</code> 类型的 <code>root</code> 是否为空，会决定在从布局文件创建 <code>View</code> 的时候，是否生成根元素的布局参数（即以 <code>layout_</code> 开头的属性），关键代码如下：<br><a id="more"></a></p>
@@ -332,6 +332,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/12/Micro-Knowledge-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/09/Jenkins-Multibranch-Pipeline/" id="article-nav-older" class="article-nav-link-wrap">
@@ -504,6 +513,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
@@ -513,14 +530,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,11 +553,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,7 +569,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -568,11 +581,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -588,14 +597,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
@@ -608,7 +609,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -616,7 +621,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
             
             <div class="clearfix"></div>
