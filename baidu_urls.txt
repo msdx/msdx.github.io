@@ -1,1 +1,1 @@
-http://githang.com/2018/08/12/Micro-Knowledge-1/
+http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/

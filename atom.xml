@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-15T02:16:56.811Z</updated>
+  <updated>2018-08-17T03:40:27.838Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins 多分支构建中的邮件配置</title>
+    <link href="http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
+    <id>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
+    <published>2018-08-15T15:42:50.000Z</published>
+    <updated>2018-08-17T03:40:27.838Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前的《Jenkins 多分支构建》解决了多分支项目的构建问题，但是却漏了一个问题，那就是邮件通知。&lt;br&gt;作为开发，我们的主要精力是集中在开发实现上，所以也不能每次推完代码之后都去等着看构建结果，我们需要在构建失败的时候，Jenkins 能够通知我们去处理，所以邮件配置是不可少的。&lt;br&gt;在简单的 Freestyle 项目中，我们可以进行如下配置：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Jenkins" scheme="http://githang.com/categories/Jenkins/"/>
+    
+    
+      <category term="Jenkins" scheme="http://githang.com/tags/Jenkins/"/>
+    
+      <category term="email" scheme="http://githang.com/tags/email/"/>
+    
+  </entry>
   
   <entry>
     <title>微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解</title>
@@ -452,31 +474,9 @@
     
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
-    
       <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Retrofit 显示上传文件进度及 bug 记录</title>
-    <link href="http://githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/"/>
-    <id>http://githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</id>
-    <published>2017-11-25T10:51:10.000Z</published>
-    <updated>2017-11-25T13:01:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;因产品需求，需要实现图片上传显示文件进度。我在项目中是使用的 Retrofit 和 RxJava，虽网上不乏相关文章，然而在使用的过程中还是遇到了点坑，记录为文，谨供他人参考。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="Retrofit" scheme="http://githang.com/tags/Retrofit/"/>
+      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
