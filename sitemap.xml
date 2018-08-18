@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2018/08/18/Filling/</loc>
+    
+    <lastmod>2018-08-18T06:46:49.822Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</loc>
     
     <lastmod>2018-08-17T03:40:27.838Z</lastmod>

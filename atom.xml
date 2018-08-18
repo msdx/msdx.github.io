@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-17T03:40:27.838Z</updated>
+  <updated>2018-08-18T06:46:49.822Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>感慨</title>
+    <link href="http://githang.com/2018/08/18/Filling/"/>
+    <id>http://githang.com/2018/08/18/Filling/</id>
+    <published>2018-08-18T06:46:07.000Z</published>
+    <updated>2018-08-18T06:46:49.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我们以不同的方式在同一个地方共同地努力，却因此起跑线的不同而得到不同的结果。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins 多分支构建中的邮件配置</title>
@@ -156,9 +183,9 @@
       <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
       <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
     
@@ -453,30 +480,6 @@
     
     
       <category term="杂文" scheme="http://githang.com/tags/%E6%9D%82%E6%96%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现 RecyclerView 上拉加载及自动加载</title>
-    <link href="http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/"/>
-    <id>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</id>
-    <published>2017-12-09T02:06:00.000Z</published>
-    <updated>2017-12-09T13:59:21.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前在&lt;a href=&quot;http://githang.com/2017/09/24/LoadMoreLayout/&quot;&gt;《一步步打造自己的通用上拉加载布局》&lt;/a&gt;（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="RecyclerView" scheme="http://githang.com/tags/RecyclerView/"/>
-    
-      <category term="上拉加载" scheme="http://githang.com/tags/%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/"/>
     
   </entry>
   
