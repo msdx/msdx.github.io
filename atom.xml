@@ -18,8 +18,8 @@
   
   <entry>
     <title>在 drawable 资源中使用属性引用的兼容问题</title>
-    <link href="http://githang.com/2018/08/21/Incompatibility-Problem-About-Color-Attribute/"/>
-    <id>http://githang.com/2018/08/21/Incompatibility-Problem-About-Color-Attribute/</id>
+    <link href="http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/"/>
+    <id>http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</id>
     <published>2018-08-21T06:52:03.000Z</published>
     <updated>2018-08-22T01:55:45.242Z</updated>
     

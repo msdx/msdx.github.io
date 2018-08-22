@@ -1,1 +1,1 @@
-http://githang.com/2018/08/21/Incompatibility-Problem-About-Color-Attribute/
+http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/
