@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-08-22T01:55:45.242Z</updated>
+  <updated>2018-09-05T06:31:25.743Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改 Sonatype Nexus2 的 baseUrl</title>
+    <link href="http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/"/>
+    <id>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</id>
+    <published>2018-09-05T06:10:52.000Z</published>
+    <updated>2018-09-05T06:31:25.743Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;背景：&lt;br&gt;搭建 nexus 是使用的 sonatype 的官方 nexus docker 镜像，跑起来之后，发现访问路径带了 &lt;code&gt;/nexus&lt;/code&gt; 而不是 &lt;code&gt;/&lt;/code&gt;，于是想修改这个路径。&lt;/p&gt;
+&lt;p&gt;尝试方法一：&lt;br&gt;以管理员账号登录，打开 &lt;strong&gt;Administration&lt;/strong&gt; 中的 &lt;strong&gt;Servier&lt;/strong&gt; 面板，修改 &lt;strong&gt;Application Server Settings&lt;/strong&gt; 里的 &lt;code&gt;Base URL&lt;/code&gt; 配置。&lt;br&gt;但发现无效。勾上 &lt;code&gt;Force Base URL&lt;/code&gt; 之后依然不起作用，仓库不加上 &lt;code&gt;/nexus&lt;/code&gt; 无法访问。&lt;br&gt;此处实际上修改的是 nexus 数据目录下的 &lt;code&gt;conf/nexus.xml&lt;/code&gt; 配置文件。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Nexus" scheme="http://githang.com/categories/Nexus/"/>
+    
+    
+      <category term="nexus" scheme="http://githang.com/tags/nexus/"/>
+    
+  </entry>
   
   <entry>
     <title>在 drawable 资源中使用属性引用的兼容问题</title>
@@ -208,9 +229,9 @@
       <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
       <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
     
@@ -462,29 +483,6 @@
     
       <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>跳一跳——电脑能做的事就不要人工来做啦</title>
-    <link href="http://githang.com/2017/12/30/Auto-Jump/"/>
-    <id>http://githang.com/2017/12/30/Auto-Jump/</id>
-    <published>2017-12-30T12:56:22.000Z</published>
-    <updated>2018-01-05T03:43:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;几年前参考网上的文章写过天天连萌自动玩的项目（之前写在 iteye 的博客上：&lt;a href=&quot;http://maosidiaoxian.iteye.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://maosidiaoxian.iteye.com&lt;/a&gt;，github 项目地址为：&lt;a href=&quot;https://github.com/GameTerminator/lianmeng&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/GameTerminator/lianmeng&lt;/a&gt;），这次微信小游戏里的跳一跳玩了玩，就自然而然地想到用同样的方式来做。&lt;/p&gt;
-&lt;p&gt;经过几次修正和简化，最终思路和实现如下：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="monkey" scheme="http://githang.com/tags/monkey/"/>
     
   </entry>
   

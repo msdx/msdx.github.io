@@ -1,1 +1,1 @@
-http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/
+http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/
