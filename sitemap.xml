@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</loc>
+    
+    <lastmod>2018-11-13T08:23:37.891Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</loc>
     
     <lastmod>2018-09-05T06:31:25.743Z</lastmod>
