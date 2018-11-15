@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="ProGuard是一个压缩、优化和混淆Java字节码的工具，非常好用。本篇文章总结一下许多人在使用ProGuard时经常遇到的问题。 我把在使用ProGuard时经常遇到的问题分为两类，分别是导致构建失败的编译时问题，以及构建通过但运行时崩溃或结果不正确的运行时问题。大多数人所遇到的大多数问题，都可以在下面的内容中找到对应的解决套路。在开始讲这两类问题前，先明确一点：我们所说的添加混淆规则，不是指">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-13T08:23:37.891Z">
+<meta property="og:updated_time" content="2018-11-14T01:54:57.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ProGuard常见问题及解决套路">
 <meta name="twitter:description" content="ProGuard是一个压缩、优化和混淆Java字节码的工具，非常好用。本篇文章总结一下许多人在使用ProGuard时经常遇到的问题。 我把在使用ProGuard时经常遇到的问题分为两类，分别是导致构建失败的编译时问题，以及构建通过但运行时崩溃或结果不正确的运行时问题。大多数人所遇到的大多数问题，都可以在下面的内容中找到对应的解决套路。在开始讲这两类问题前，先明确一点：我们所说的添加混淆规则，不是指">
@@ -275,7 +275,7 @@ var _hmt = _hmt || [];
 <p>枚举？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-keepclassmembers enum * &#123; *; &#125;</span><br></pre></td></tr></table></figure>
 <p>掌握以上几条规则，通常可以解决绝大多数混淆以后运行出错的问题了。</p>
-<p>本篇讲到这里，希望对被以上常见问题所困扰的同学有所帮助。这里需要注意一下，对于第一类问题，在编译的时候就能暴露出来，而第二类问题，只有在运行到相关代码时才会出现。所以如果一个项目以前是不使用混淆的话，在启用混淆之后一定要做好回归测试。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>本篇讲到这里，希望对被以上常见问题所困扰的同学有所帮助。这里需要注意一下，对于第一类问题，在编译的时候就能暴露出来，而第二类问题，只有在运行到相关代码时才会出现。所以如果一个项目以前是不使用混淆的话，在启用混淆之后一定要做好回归测试。</p>
 
       
 
@@ -571,23 +571,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -599,6 +587,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
@@ -607,23 +623,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,7 +643,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -655,23 +667,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -683,7 +687,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,10 +696,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">captcha</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
