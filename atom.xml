@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-11-14T01:54:57.185Z</updated>
+  <updated>2018-11-22T05:52:14.813Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的 Mac 配置</title>
+    <link href="http://githang.com/2018/11/21/Mac-Preferences/"/>
+    <id>http://githang.com/2018/11/21/Mac-Preferences/</id>
+    <published>2018-11-21T14:21:11.000Z</published>
+    <updated>2018-11-22T05:52:14.813Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;软件&quot;&gt;&lt;a href=&quot;#软件&quot; class=&quot;headerlink&quot; title=&quot;软件&quot;&gt;&lt;/a&gt;软件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;iTerm + oh-my-zsh&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ProGuard常见问题及解决套路</title>
@@ -454,32 +477,6 @@
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="captcha" scheme="http://githang.com/tags/captcha/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个动态权限库的设计</title>
-    <link href="http://githang.com/2018/01/09/The-Design-of-HeyPermission/"/>
-    <id>http://githang.com/2018/01/09/The-Design-of-HeyPermission/</id>
-    <published>2018-01-09T13:41:37.000Z</published>
-    <updated>2018-01-13T01:39:06.698Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;在经过上一次尝试剖析源码后，我意识到自己并没有一种比较好的方式去讲解代码，从而无法把自己所知道的知识更好地输出。所以接下来，至少在源码讲解有新想法前，我都不会再去尝试，也尽量减少博客中的非核心代码，而以思路及想法为主。另外，我也将尝试改进技术博客的笔法，段落之间尽量连贯，整体内容尽量有节奏感，目标是做到深入浅出地表达出主题相关内容。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;从 Android 6.0（API 23）开始，用户可以在应用运行时向其授予权限（6.0 以下，国内厂商也多数做了类似的权限管理），而不是在应用安装时授予。这一方法既可以简化应用的安装过程，也可以让用户对应用的功能进行更多的限制。&lt;/p&gt;
-&lt;p&gt;在 Android 系统中，系统权限分为两类：正常权限以及危险权限。其中正常权限是不会直接给用户隐私权带来风险的，如果应用在其清单中声明了该权限，则系统会自动授予该权限。而危险权限，从 6.0 开始，而需要应用动态申请，并且由用户授予。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="runtime-permission" scheme="http://githang.com/tags/runtime-permission/"/>
     
   </entry>
   
