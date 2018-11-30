@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-11-22T05:52:14.813Z</updated>
+  <updated>2018-11-30T03:03:24.386Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,22 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Dinny —— Android 界面跳转协议化</title>
+    <link href="http://githang.com/2018/11/30/Dinny/"/>
+    <id>http://githang.com/2018/11/30/Dinny/</id>
+    <published>2018-11-30T01:34:13.000Z</published>
+    <updated>2018-11-30T03:03:24.386Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;代码灾区？&quot;&gt;&lt;a href=&quot;#代码灾区？&quot; class=&quot;headerlink&quot; title=&quot;代码灾区？&quot;&gt;&lt;/a&gt;代码灾区？&lt;/h1&gt;&lt;p&gt;在我们 Android 开发中，不可避免的一个情景是在 Activity 跳转的时候传数据。比如从一个 FromActivity 界面，跳转到一个 OtherActivity 界面，需要传 &lt;code&gt;username&lt;/code&gt; 和 &lt;code&gt;password&lt;/code&gt;，一般我们的写法是这样的：&lt;/p&gt;
+&lt;figure class=&quot;highlight kotlin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;val&lt;/span&gt; intent = Intent(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;, OtherActivity::&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;.&lt;span class=&quot;title&quot;&gt;java&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .putExtra(&lt;span class=&quot;string&quot;&gt;&quot;username&quot;&lt;/span&gt;, username)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .putExtra(&lt;span class=&quot;string&quot;&gt;&quot;password&quot;&lt;/span&gt;, password)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.startActivity(intent)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但当随着应用的迭代，需要跳转的界面增加之后，上面的一些问题就会显露出来。比如有多个界面会跳转到这里的 OtherActivity 来，并且有些界面会需要再传个 &lt;code&gt;mobile&lt;/code&gt;，或者有的界面还需要一个 &lt;code&gt;sms_code&lt;/code&gt;，如果每个界面都把跳转所需要传的数据写在自己页面上，那么就很易发生两个问题：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="Activity" scheme="http://githang.com/tags/Activity/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我的 Mac 配置</title>
     <link href="http://githang.com/2018/11/21/Mac-Preferences/"/>
     <id>http://githang.com/2018/11/21/Mac-Preferences/</id>
     <published>2018-11-21T14:21:11.000Z</published>
-    <updated>2018-11-22T05:52:14.813Z</updated>
+    <updated>2018-11-29T07:17:20.299Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;软件&quot;&gt;&lt;a href=&quot;#软件&quot; class=&quot;headerlink&quot; title=&quot;软件&quot;&gt;&lt;/a&gt;软件&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;iTerm + oh-my-zsh&lt;/strong&gt;
-        
-      
+      &lt;h1 id=&quot;软件&quot;&gt;&lt;a href=&quot;#软件&quot; class=&quot;headerlink&quot; title=&quot;软件&quot;&gt;&lt;/a&gt;软件&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;iTerm + oh-my-zsh&lt;/strong&gt; 代替默认终端&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alfred&lt;/strong&gt; 代替 Spotlight，修改其快捷键为 option + r&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h1&gt;&lt;h2 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.ci &#39;commit&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.co &#39;checkout&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.di &#39;diff&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.st &#39;status&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.mg &#39;merge&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.pl &#39;pull&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.ps &#39;push&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.pf &#39;push --force-with-lease&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.lg &quot;log --all --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d %Cgreen(%ci)%Creset %s %C(bold blue)&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git config --global alias.reflg &quot;reflog --format=&#39;%C(auto)%h %&amp;lt;|(20)%gd %C(blue)%cr%C(reset) %gs&#39;&quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -451,32 +472,6 @@
     
     
       <category term="梦" scheme="http://githang.com/tags/%E6%A2%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对读取短信验证码封装库的思考</title>
-    <link href="http://githang.com/2018/02/03/Sms-Captcha/"/>
-    <id>http://githang.com/2018/02/03/Sms-Captcha/</id>
-    <published>2018-02-03T12:22:23.000Z</published>
-    <updated>2018-02-04T00:32:36.907Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在我的目前阶段，许多开源项目的产生都是直接来源于项目本身的需求，比如这次要讲的读取短信验证码的封装库。&lt;/p&gt;
-&lt;p&gt;项目目前挂在 github 上的公司组织下，地址为：&lt;a href=&quot;https://github.com/parkingwang/sms-captcha&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/parkingwang/sms-captcha&lt;/a&gt;。使用方法很简单，在界面创建时注册：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mCaptchaObserver = SmsCaptcha.with(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .captchaLength(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .addressLike(&lt;span class=&quot;string&quot;&gt;&quot;10657%&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .fillTo(mSmsCode)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .createAndRegister();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;界面销毁时移除注册：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mCaptchaObserver.unregister();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
-      <category term="captcha" scheme="http://githang.com/tags/captcha/"/>
     
   </entry>
   
