@@ -4,7 +4,6 @@ Disallow:
 Disallow: /resume
 Disallow: /AndroidSnippet
 Disallow: /hi-chart
-Disallow: /resume
 Disallow: /androiddoc
 Sitemap: http://www.githang.com/sitemap.xml
 
