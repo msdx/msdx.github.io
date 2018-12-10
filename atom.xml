@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-11-30T03:03:24.386Z</updated>
+  <updated>2018-12-10T04:09:20.137Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AndroidManifest 权限</title>
+    <link href="http://githang.com/2018/12/10/AndroidManifest-Permissions/"/>
+    <id>http://githang.com/2018/12/10/AndroidManifest-Permissions/</id>
+    <published>2018-12-10T03:42:23.000Z</published>
+    <updated>2018-12-10T04:09:20.137Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在开发中，android lint 工具会提示以下几个权限只允许系统应用使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;android.permission.READ_LOGS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android.permission.BATTERY_STATS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android.permission.WRITE_SETTINGS&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Dinny —— Android 界面跳转协议化</title>
@@ -449,29 +474,6 @@
       <category term="旅游" scheme="http://githang.com/tags/%E6%97%85%E6%B8%B8/"/>
     
       <category term="惠州" scheme="http://githang.com/tags/%E6%83%A0%E5%B7%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你来了呀</title>
-    <link href="http://githang.com/2018/02/11/You-Are-Here/"/>
-    <id>http://githang.com/2018/02/11/You-Are-Here/</id>
-    <published>2018-02-10T16:59:46.000Z</published>
-    <updated>2018-11-30T03:19:29.240Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;就在那不经意间，从列表里看到了一个人名，仿佛许久都未曾记起。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我回到大学，重过带有抱憾的生活。&lt;br&gt;我拖着行李，独自回到宿舍。宿舍里早已回来三人，我打着招呼，放下行李箱，爬上了自己的床位，仿佛想一睡三年。&lt;br&gt;我又绕着操场跑圈，旁边不知还有谁在一直跑，我想，这次跑步应该能坚持下来。&lt;br&gt;我赤着脚走到了泳池边，看着湛蓝的池水似有一米来高，仍是心中忐忑。我想了想，这是在梦里呢，又有何惧呢，于是我下水了。我在水中走，时而走在水下，时而探出水面。我仿佛对水免疫了，但我仍是呛到了几口水。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="拾梦者" scheme="http://githang.com/categories/%E6%8B%BE%E6%A2%A6%E8%80%85/"/>
-    
-    
-      <category term="梦" scheme="http://githang.com/tags/%E6%A2%A6/"/>
     
   </entry>
   
