@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="在开发中，android lint 工具会提示以下几个权限只允许系统应用使用：  android.permission.READ_LOGS android.permission.BATTERY_STATS android.permission.WRITE_SETTINGS">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-10T04:09:20.137Z">
+<meta property="og:updated_time" content="2018-12-10T08:10:21.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AndroidManifest 权限">
 <meta name="twitter:description" content="在开发中，android lint 工具会提示以下几个权限只允许系统应用使用：  android.permission.READ_LOGS android.permission.BATTERY_STATS android.permission.WRITE_SETTINGS">
@@ -230,8 +230,7 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <h1 id="android-permission-READ-LOGS"><a href="#android-permission-READ-LOGS" class="headerlink" title="android.permission.READ_LOGS"></a>android.permission.READ_LOGS</h1><p>这个权限允许一个应用程序读取低级别的系统日志文件。但从 api 16 起，不再允许第三方程序使用，因为考虑到这些日志文件有可能包含用户的一些隐私信息。</p>
 <h1 id="android-permission-BATTERY-STATS"><a href="#android-permission-BATTERY-STATS" class="headerlink" title="android.permission.BATTERY_STATS"></a>android.permission.BATTERY_STATS</h1><p>允许一个应用程序收集电池统计信息。<br>从 android 4.4（api 19）起不再允许第三方程序这一权限，保护级别从 “dangerous” 移到了 “signature|system”（见 <a href="https://android.googlesource.com/platform/frameworks/base.git/+/3714141d287c965ea3451831dd5167f63f8db87b" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/base.git/+/3714141d287c965ea3451831dd5167f63f8db87b</a> ）。</p>
-<h1 id="android-permission-WRITE-SETTINGS"><a href="#android-permission-WRITE-SETTINGS" class="headerlink" title="android.permission.WRITE_SETTINGS"></a>android.permission.WRITE_SETTINGS</h1><p>允许一个应用读写系统设置。</p>
-<p>如果 app 的 target API 大于等于23，那么 app 用户必须通过权限管理界面来授权 app 这一权限。app 通过发送一个 action 为 <code>Settings.ACTION_MANAGE_WRITE_SETTINGS</code> 的 intent 来请求用户授权，并通过调用 <code>Settings.System.canWrite()</code> 来检查是否有这个权限。</p>
+<h1 id="android-permission-WRITE-SETTINGS"><a href="#android-permission-WRITE-SETTINGS" class="headerlink" title="android.permission.WRITE_SETTINGS"></a>android.permission.WRITE_SETTINGS</h1><p>允许一个应用读写系统设置。<br>如果 app 的 target API 大于等于23，那么 app 用户必须通过权限管理界面来授权 app 这一权限。app 通过发送一个 action 为 <code>Settings.ACTION_MANAGE_WRITE_SETTINGS</code> 的 intent 来请求用户授权，并通过调用 <code>Settings.System.canWrite()</code> 来检查是否有这个权限。</p>
 
       
 
@@ -356,6 +355,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Kotlin泛型上界与扩展函数
+        
+      </div>
+    </a>
   
   
     <a href="/2018/11/30/Dinny/" id="article-nav-older" class="article-nav-link-wrap">
@@ -562,10 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
@@ -578,7 +582,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -586,7 +590,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -598,6 +602,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
               </li>
              
@@ -606,11 +614,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,6 +630,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
               </li>
              
@@ -630,15 +646,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -654,19 +666,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,7 +682,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
             
             <div class="clearfix"></div>

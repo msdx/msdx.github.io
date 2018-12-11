@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-12-10T04:09:20.137Z</updated>
+  <updated>2018-12-11T03:49:08.638Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kotlin泛型上界与扩展函数</title>
+    <link href="http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/"/>
+    <id>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</id>
+    <published>2018-12-11T02:08:40.000Z</published>
+    <updated>2018-12-11T03:49:08.638Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;泛型场景&quot;&gt;&lt;a href=&quot;#泛型场景&quot; class=&quot;headerlink&quot; title=&quot;泛型场景&quot;&gt;&lt;/a&gt;泛型场景&lt;/h1&gt;&lt;p&gt;先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。&lt;br&gt;比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。&lt;/p&gt;
+&lt;h2 id=&quot;泛型递归和链式调用&quot;&gt;&lt;a href=&quot;#泛型递归和链式调用&quot; class=&quot;headerlink&quot; title=&quot;泛型递归和链式调用&quot;&gt;&lt;/a&gt;泛型递归和链式调用&lt;/h2&gt;&lt;p&gt;为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
+    
+    
+      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AndroidManifest 权限</title>
     <link href="http://githang.com/2018/12/10/AndroidManifest-Permissions/"/>
     <id>http://githang.com/2018/12/10/AndroidManifest-Permissions/</id>
     <published>2018-12-10T03:42:23.000Z</published>
-    <updated>2018-12-10T04:09:20.137Z</updated>
+    <updated>2018-12-10T08:10:21.912Z</updated>
     
     <summary type="html">
     
@@ -452,28 +473,6 @@
       <category term="bug" scheme="http://githang.com/tags/bug/"/>
     
       <category term="AndroidStudio" scheme="http://githang.com/tags/AndroidStudio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>惠州西湖行</title>
-    <link href="http://githang.com/2018/02/15/Huizhou-West-Lake-Tour/"/>
-    <id>http://githang.com/2018/02/15/Huizhou-West-Lake-Tour/</id>
-    <published>2018-02-15T08:52:00.000Z</published>
-    <updated>2018-02-17T02:15:06.343Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于忽得消息，年前部门提前休假，于是心血来潮之下，未作过多准备，便临时决定和小橙子去周边城市惠州走走。&lt;br&gt;我们于上午坐客车至惠州总站，车站离此次的目的地西湖不远，于是便入住于车站附近的如家酒店，下午小憩，再游西湖。&lt;br&gt;橙子易饿，出了酒店，先是去了一家甜品店，然后再折回西湖。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="游记" scheme="http://githang.com/categories/%E6%B8%B8%E8%AE%B0/"/>
-    
-    
-      <category term="旅游" scheme="http://githang.com/tags/%E6%97%85%E6%B8%B8/"/>
-    
-      <category term="惠州" scheme="http://githang.com/tags/%E6%83%A0%E5%B7%9E/"/>
     
   </entry>
   

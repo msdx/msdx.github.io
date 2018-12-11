@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</loc>
+    
+    <lastmod>2018-12-11T03:49:08.638Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2018/12/10/AndroidManifest-Permissions/</loc>
     
-    <lastmod>2018-12-10T04:09:20.137Z</lastmod>
+    <lastmod>2018-12-10T08:10:21.912Z</lastmod>
     
   </url>
   
