@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="泛型场景先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。 泛型递归和链式调用为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-11T03:49:08.638Z">
+<meta property="og:updated_time" content="2018-12-11T06:04:04.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin泛型上界与扩展函数">
 <meta name="twitter:description" content="泛型场景先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。 泛型递归和链式调用为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：">
@@ -216,6 +216,29 @@ var _hmt = _hmt || [];
         <a href="/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/" class="archive-article-date">
   	<time datetime="2018-12-11T02:08:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
 </a>
+        <!-- word count start -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.5k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">6分</span>
+      </span>
+    </span>
+</div>
+
+          
+        <!-- word count end -->
         
       </header>
     
@@ -254,7 +277,7 @@ var _hmt = _hmt || [];
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">Params</span> : <span class="type">HashMap</span>&lt;<span class="type">String, Any?</span>&gt;</span>() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : Params&gt;</span> T.<span class="title">putParams</span><span class="params">(key: <span class="type">String</span>, value: <span class="type">Any</span>?)</span></span>: T &#123;</span><br><span class="line">        put(key, value)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>由于<code>Params</code>没有泛型参数，所以第三个种场景也就解决了。然后我们在<code>Params</code>类里声明一个扩展函数，在这里我们使用了泛型。我们让这个泛型有<code>Params</code>上界，返回值类型是这个泛型。这样第一种场景也解决了。</p>
 <p>对于第二种场景，也是使用扩展函数来实现，但是这里的扩展函数需要声明在类的外面，否则无法调用到这个函数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">open class ParkParams : Params()</span><br><span class="line"></span><br><span class="line">fun &lt;T : ParkParams&gt; T.park(parkCode: String) = putParams(&quot;park_code&quot;, parkCode)</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="class"><span class="keyword">class</span> <span class="title">ParkParams</span> : <span class="type">Params</span></span>()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : ParkParams&gt;</span> T.<span class="title">park</span><span class="params">(parkCode: <span class="type">String</span>)</span></span> = putParams(<span class="string">"park_code"</span>, parkCode)</span><br></pre></td></tr></table></figure>
 <p>这样问题就解决了。<br>对比Java，我们也可以看到，Kotlin的实现看起来更简洁清晰。</p>
 
       
