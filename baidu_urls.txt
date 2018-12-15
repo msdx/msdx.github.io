@@ -1,1 +1,1 @@
-http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/
+http://githang.com/2018/12/16/Scientific-Internet-Access/
