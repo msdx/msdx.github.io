@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-12-15T17:23:10.259Z</updated>
+  <updated>2018-12-15T23:21:22.332Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://githang.com/2018/12/16/Scientific-Internet-Access/"/>
     <id>http://githang.com/2018/12/16/Scientific-Internet-Access/</id>
     <published>2018-12-15T16:11:14.000Z</published>
-    <updated>2018-12-15T17:23:10.259Z</updated>
+    <updated>2018-12-15T23:21:22.332Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h1&gt;&lt;p&gt;在 bwh 上。&lt;/p&gt;
 &lt;p&gt;使用的是 Centos 6 x86_64 devel。&lt;/p&gt;
-&lt;p&gt;Ubuntu 16.04 在安装 python-pip 时，可能出现需要交互的界面，导致一直没有结果。而交互式 shell 在浏览器上又打不开。&lt;/p&gt;
+&lt;p&gt;Ubuntu 16.04 在安装 python-pip 时，可能出现需要交互的界面，导致一直没有结果。而交互式 shell 在浏览器上又用不了（本机 Ubuntu, Firefox 和 Chrome 都试了）。&lt;/p&gt;
 &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&quot;安装-pip&quot;&gt;&lt;a href=&quot;#安装-pip&quot; class=&quot;headerlink&quot; title=&quot;安装 pip&quot;&gt;&lt;/a&gt;安装 pip&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install python-setuptools -y &amp;amp;&amp;amp; easy_install pip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;因使用不了交互式 shell，所以需要加 &lt;code&gt;-y&lt;/code&gt; 参数，确认安装。&lt;/p&gt;
     
