@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-12-18T07:50:04.067Z</updated>
+  <updated>2018-12-21T02:56:21.627Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计项目中的代码有多少行是你贡献的</title>
+    <link href="http://githang.com/2018/12/21/Git-Contribution-Statistics/"/>
+    <id>http://githang.com/2018/12/21/Git-Contribution-Statistics/</id>
+    <published>2018-12-21T02:03:01.000Z</published>
+    <updated>2018-12-21T02:56:21.627Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇内容仅对 Linux/Mac 友好，Windows 开发者请勿介意。&lt;/p&gt;
+&lt;p&gt;在一个有多人参与过的项目中，不知道其他人有没有和我一样会去想：当前这个项目有多少行代码是我写的，有多少行代码是其他人写的？&lt;/p&gt;
+&lt;h1 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h1&gt;&lt;p&gt;我们知道，&lt;code&gt;git blame&lt;/code&gt; 的命令可以查看一个文件的每一行代码的最终修改者，如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://githang.com/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://githang.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>读《高效15法则》</title>
@@ -381,9 +403,9 @@
       <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
-    
       <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="CodeStyle" scheme="http://githang.com/tags/CodeStyle/"/>
     
@@ -454,26 +476,6 @@
       <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
       <category term="Gradle" scheme="http://githang.com/tags/Gradle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于第一工场的设想</title>
-    <link href="http://githang.com/2018/04/08/First-Technical-Works/"/>
-    <id>http://githang.com/2018/04/08/First-Technical-Works/</id>
-    <published>2018-04-08T15:21:29.000Z</published>
-    <updated>2018-04-08T15:42:37.988Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;上周突发奇想，写了篇关于研发团队第一工场的设想。但写到一半，又觉得是在胡说八道——或者说过于理想化，于是又不想发了，故又对文章拍照记录。今晚又觉得这种天马行空对我而言较为难得，因此便把记录图片发上来。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="杂文" scheme="http://githang.com/tags/%E6%9D%82%E6%96%87/"/>
     
   </entry>
   
