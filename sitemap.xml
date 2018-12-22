@@ -2,9 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://githang.com/2018/12/22/hexo%20new%20post%20path/</loc>
+    
+    <lastmod>2018-12-22T09:03:36.237Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.060Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/10/08/Miss/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.059Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/09/16/OkHttp3-LogInterceptor/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.059Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/09/18/Mask-Layer/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.058Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/09/24/LoadMoreLayout/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.056Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.056Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/10/03/Development-Unreasonableness/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/11/09/CoordinatorLayout-In-depth-understanding/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.054Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</loc>
+    
+    <lastmod>2018-12-22T08:36:35.054Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/09/15/hello-world/</loc>
+    
+    <lastmod>2018-12-22T08:36:09.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/02/11/You-Are-Here/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.816Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.807Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/01/09/The-Design-of-HeyPermission/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.798Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/01/05/Summary-of-2017/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.786Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/03/11/Solidified-Thinking/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.769Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/02/03/Sms-Captcha/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.752Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/12/16/Scientific-Internet-Access/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.734Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.701Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/12/Micro-Knowledge-1/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.676Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/10/Micro-Knowledge-0/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.666Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/11/21/Mac-Preferences/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.656Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.646Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.636Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.618Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/02/15/Huizhou-West-Lake-Tour/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.599Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://githang.com/2018/12/21/Git-Contribution-Statistics/</loc>
     
-    <lastmod>2018-12-21T03:25:16.050Z</lastmod>
+    <lastmod>2018-12-22T03:18:59.589Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/04/08/First-Technical-Works/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/18/Filling/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/11/30/Dinny/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.559Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/03/07/Bug-of-AndroidStudio-Cache/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.538Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/06/22/BadgeDrawable/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2017/12/30/Auto-Jump/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/12/10/AndroidManifest-Permissions/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.494Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/</loc>
+    
+    <lastmod>2018-12-22T03:18:59.481Z</lastmod>
     
   </url>
   
@@ -12,293 +306,6 @@
     <loc>http://githang.com/resume/index.html</loc>
     
     <lastmod>2018-12-20T09:32:13.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</loc>
-    
-    <lastmod>2018-12-18T07:50:04.067Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</loc>
-    
-    <lastmod>2018-12-16T15:41:47.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/12/16/Scientific-Internet-Access/</loc>
-    
-    <lastmod>2018-12-15T23:21:22.332Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</loc>
-    
-    <lastmod>2018-12-11T06:04:04.122Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/12/10/AndroidManifest-Permissions/</loc>
-    
-    <lastmod>2018-12-10T08:10:21.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/11/21/Mac-Preferences/</loc>
-    
-    <lastmod>2018-12-10T02:30:17.166Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/02/11/You-Are-Here/</loc>
-    
-    <lastmod>2018-11-30T03:19:29.240Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/11/30/Dinny/</loc>
-    
-    <lastmod>2018-11-30T03:03:24.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</loc>
-    
-    <lastmod>2018-11-14T01:54:57.185Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</loc>
-    
-    <lastmod>2018-09-05T06:31:25.743Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</loc>
-    
-    <lastmod>2018-08-22T01:55:45.242Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/18/Filling/</loc>
-    
-    <lastmod>2018-08-20T13:34:37.562Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</loc>
-    
-    <lastmod>2018-08-17T03:40:27.838Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/12/Micro-Knowledge-1/</loc>
-    
-    <lastmod>2018-08-15T02:16:56.811Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/10/Micro-Knowledge-0/</loc>
-    
-    <lastmod>2018-08-11T07:21:37.568Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/</loc>
-    
-    <lastmod>2018-08-07T03:00:48.404Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/</loc>
-    
-    <lastmod>2018-08-06T14:21:32.153Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/06/22/BadgeDrawable/</loc>
-    
-    <lastmod>2018-07-28T00:15:47.435Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</loc>
-    
-    <lastmod>2018-05-15T12:06:44.459Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/04/11/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library/</loc>
-    
-    <lastmod>2018-04-11T23:37:25.037Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/04/08/First-Technical-Works/</loc>
-    
-    <lastmod>2018-04-08T15:42:37.988Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/03/11/Solidified-Thinking/</loc>
-    
-    <lastmod>2018-03-11T14:47:58.778Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/03/07/Bug-of-AndroidStudio-Cache/</loc>
-    
-    <lastmod>2018-03-08T02:03:03.580Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/02/15/Huizhou-West-Lake-Tour/</loc>
-    
-    <lastmod>2018-02-17T02:15:06.343Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/02/03/Sms-Captcha/</loc>
-    
-    <lastmod>2018-02-04T00:32:36.907Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/01/05/Summary-of-2017/</loc>
-    
-    <lastmod>2018-01-17T11:19:02.278Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2018/01/09/The-Design-of-HeyPermission/</loc>
-    
-    <lastmod>2018-01-13T01:39:06.698Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/12/30/Auto-Jump/</loc>
-    
-    <lastmod>2018-01-05T03:43:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/</loc>
-    
-    <lastmod>2017-12-26T15:10:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</loc>
-    
-    <lastmod>2017-12-09T13:59:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</loc>
-    
-    <lastmod>2017-11-25T13:01:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/</loc>
-    
-    <lastmod>2017-11-18T11:39:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/11/09/CoordinatorLayout-In-depth-understanding/</loc>
-    
-    <lastmod>2017-11-17T09:19:52.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</loc>
-    
-    <lastmod>2017-11-17T03:45:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</loc>
-    
-    <lastmod>2017-10-25T08:33:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/10/08/Miss/</loc>
-    
-    <lastmod>2017-10-20T04:53:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/10/03/Development-Unreasonableness/</loc>
-    
-    <lastmod>2017-10-03T01:34:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/09/24/LoadMoreLayout/</loc>
-    
-    <lastmod>2017-09-24T14:28:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/09/18/Mask-Layer/</loc>
-    
-    <lastmod>2017-09-18T14:04:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/09/16/OkHttp3-LogInterceptor/</loc>
-    
-    <lastmod>2017-09-16T03:32:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://githang.com/2017/09/15/hello-world/</loc>
-    
-    <lastmod>2017-09-15T14:48:26.000Z</lastmod>
     
   </url>
   
