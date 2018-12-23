@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-12-22T15:56:12.188Z</updated>
+  <updated>2018-12-23T02:01:50.971Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>如何在Hexo中对文章md文件分类</title>
-    <link href="http://githang.com/2018/12/22/hexo%20new%20post%20path/"/>
-    <id>http://githang.com/2018/12/22/hexo new post path/</id>
+    <link href="http://githang.com/2018/12/22/hexo-new-post-path/"/>
+    <id>http://githang.com/2018/12/22/hexo-new-post-path/</id>
     <published>2018-12-22T04:57:21.000Z</published>
-    <updated>2018-12-22T15:56:12.188Z</updated>
+    <updated>2018-12-23T02:01:50.971Z</updated>
     
     <summary type="html">
     
