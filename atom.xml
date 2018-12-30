@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2018-12-23T02:01:50.971Z</updated>
+  <updated>2018-12-30T19:57:09.914Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我为什么放弃在项目中使用Data Binding</title>
+    <link href="http://githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/"/>
+    <id>http://githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</id>
+    <published>2018-12-25T05:30:30.000Z</published>
+    <updated>2018-12-30T19:57:09.914Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我是怎么开始去使用它的&quot;&gt;&lt;a href=&quot;#我是怎么开始去使用它的&quot; class=&quot;headerlink&quot; title=&quot;我是怎么开始去使用它的&quot;&gt;&lt;/a&gt;我是怎么开始去使用它的&lt;/h1&gt;&lt;h2 id=&quot;开始使用它的原因&quot;&gt;&lt;a href=&quot;#开始使用它的原因&quot; class=&quot;headerlink&quot; title=&quot;开始使用它的原因&quot;&gt;&lt;/a&gt;开始使用它的原因&lt;/h2&gt;&lt;p&gt;Data Binding出现也有几年了，一直没有去用它的主要原因是它的写法让我觉得会把业务逻辑与界面过度耦合在一起。但前段时间还是试用了一下。&lt;/p&gt;
+&lt;p&gt;会想去用它一共有四个原因。&lt;br&gt;一是说到底没有用过，感觉如果与他人讨论到它难免有空谈的心虚感，&lt;strong&gt;毕竟一项技术是好是坏还是使用过后再去评论比较有底气&lt;/strong&gt;。&lt;br&gt;二是想先引入Data Binding，再在项目中结合它尝试MVVM模式，毕竟Data Binding的使用方式看起来与MVVM相当的切合。
+    
+    </summary>
+    
+      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+    
+      <category term="DataBinding" scheme="http://githang.com/tags/DataBinding/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在Hexo中对文章md文件分类</title>
@@ -42,7 +65,7 @@
     <link href="http://githang.com/2018/12/21/Git-Contribution-Statistics/"/>
     <id>http://githang.com/2018/12/21/Git-Contribution-Statistics/</id>
     <published>2018-12-21T02:03:01.000Z</published>
-    <updated>2018-12-22T03:18:59.589Z</updated>
+    <updated>2018-12-21T02:03:01.000Z</updated>
     
     <summary type="html">
     
@@ -64,7 +87,7 @@
     <link href="http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/"/>
     <id>http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</id>
     <published>2018-12-18T06:59:07.000Z</published>
-    <updated>2018-12-22T03:18:59.716Z</updated>
+    <updated>2018-12-18T06:59:07.000Z</updated>
     
     <summary type="html">
     
@@ -85,7 +108,7 @@
     <link href="http://githang.com/2018/12/16/Scientific-Internet-Access/"/>
     <id>http://githang.com/2018/12/16/Scientific-Internet-Access/</id>
     <published>2018-12-15T16:11:14.000Z</published>
-    <updated>2018-12-22T03:18:59.734Z</updated>
+    <updated>2018-12-15T16:11:14.000Z</updated>
     
     <summary type="html">
     
@@ -107,7 +130,7 @@
     <link href="http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/"/>
     <id>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</id>
     <published>2018-12-11T02:08:40.000Z</published>
-    <updated>2018-12-22T03:18:59.636Z</updated>
+    <updated>2018-12-11T02:08:40.000Z</updated>
     
     <summary type="html">
     
@@ -128,7 +151,7 @@
     <link href="http://githang.com/2018/12/10/AndroidManifest-Permissions/"/>
     <id>http://githang.com/2018/12/10/AndroidManifest-Permissions/</id>
     <published>2018-12-10T03:42:23.000Z</published>
-    <updated>2018-12-22T03:18:59.494Z</updated>
+    <updated>2018-12-10T03:42:23.000Z</updated>
     
     <summary type="html">
     
@@ -153,7 +176,7 @@
     <link href="http://githang.com/2018/11/30/Dinny/"/>
     <id>http://githang.com/2018/11/30/Dinny/</id>
     <published>2018-11-30T01:34:13.000Z</published>
-    <updated>2018-12-22T03:18:59.559Z</updated>
+    <updated>2018-11-30T01:34:13.000Z</updated>
     
     <summary type="html">
     
@@ -177,7 +200,7 @@
     <link href="http://githang.com/2018/11/21/Mac-Preferences/"/>
     <id>http://githang.com/2018/11/21/Mac-Preferences/</id>
     <published>2018-11-21T14:21:11.000Z</published>
-    <updated>2018-12-22T03:18:59.656Z</updated>
+    <updated>2018-11-21T14:21:11.000Z</updated>
     
     <summary type="html">
     
@@ -197,7 +220,7 @@
     <link href="http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/"/>
     <id>http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</id>
     <published>2018-11-13T05:51:43.000Z</published>
-    <updated>2018-12-22T03:18:59.701Z</updated>
+    <updated>2018-11-13T05:51:43.000Z</updated>
     
     <summary type="html">
     
@@ -216,7 +239,7 @@
     <link href="http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/"/>
     <id>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</id>
     <published>2018-09-05T06:10:52.000Z</published>
-    <updated>2018-12-22T03:18:59.548Z</updated>
+    <updated>2018-09-05T06:10:52.000Z</updated>
     
     <summary type="html">
     
@@ -237,7 +260,7 @@
     <link href="http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/"/>
     <id>http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</id>
     <published>2018-08-21T06:52:03.000Z</published>
-    <updated>2018-12-22T03:18:59.609Z</updated>
+    <updated>2018-08-21T06:52:03.000Z</updated>
     
     <summary type="html">
     
@@ -262,7 +285,7 @@
     <link href="http://githang.com/2018/08/18/Filling/"/>
     <id>http://githang.com/2018/08/18/Filling/</id>
     <published>2018-08-18T06:46:07.000Z</published>
-    <updated>2018-12-22T03:18:59.569Z</updated>
+    <updated>2018-08-18T06:46:07.000Z</updated>
     
     <summary type="html">
     
@@ -289,7 +312,7 @@
     <link href="http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
     <id>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
     <published>2018-08-15T15:42:50.000Z</published>
-    <updated>2018-12-22T03:18:59.618Z</updated>
+    <updated>2018-08-15T15:42:50.000Z</updated>
     
     <summary type="html">
     
@@ -311,7 +334,7 @@
     <link href="http://githang.com/2018/08/12/Micro-Knowledge-1/"/>
     <id>http://githang.com/2018/08/12/Micro-Knowledge-1/</id>
     <published>2018-08-11T16:51:35.000Z</published>
-    <updated>2018-12-22T03:18:59.676Z</updated>
+    <updated>2018-08-11T16:51:35.000Z</updated>
     
     <summary type="html">
     
@@ -333,7 +356,7 @@
     <link href="http://githang.com/2018/08/10/Micro-Knowledge-0/"/>
     <id>http://githang.com/2018/08/10/Micro-Knowledge-0/</id>
     <published>2018-08-10T14:14:25.000Z</published>
-    <updated>2018-12-22T03:18:59.666Z</updated>
+    <updated>2018-08-10T14:14:25.000Z</updated>
     
     <summary type="html">
     
@@ -357,7 +380,7 @@
     <link href="http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/"/>
     <id>http://githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</id>
     <published>2018-08-09T07:22:57.000Z</published>
-    <updated>2018-12-22T03:18:59.627Z</updated>
+    <updated>2018-08-09T07:22:57.000Z</updated>
     
     <summary type="html">
     
@@ -382,7 +405,7 @@
     <link href="http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/"/>
     <id>http://githang.com/2018/08/06/Kotlin-Java-Interop-Guide/</id>
     <published>2018-08-06T14:06:22.000Z</published>
-    <updated>2018-12-22T03:18:59.646Z</updated>
+    <updated>2018-08-06T14:06:22.000Z</updated>
     
     <summary type="html">
     
@@ -408,7 +431,7 @@
     <link href="http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/"/>
     <id>http://githang.com/2018/08/06/Android-Kotlin-Style-Guides/</id>
     <published>2018-08-06T01:45:47.000Z</published>
-    <updated>2018-12-22T03:18:59.481Z</updated>
+    <updated>2018-08-06T01:45:47.000Z</updated>
     
     <summary type="html">
     
@@ -437,7 +460,7 @@
     <link href="http://githang.com/2018/06/22/BadgeDrawable/"/>
     <id>http://githang.com/2018/06/22/BadgeDrawable/</id>
     <published>2018-06-22T06:24:27.000Z</published>
-    <updated>2018-12-22T03:18:59.525Z</updated>
+    <updated>2018-06-22T06:24:27.000Z</updated>
     
     <summary type="html">
     
@@ -454,27 +477,6 @@
       <category term="drawable" scheme="http://githang.com/tags/drawable/"/>
     
       <category term="角标" scheme="http://githang.com/tags/%E8%A7%92%E6%A0%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Phabricator 添加对 Kotlin 的语法高亮</title>
-    <link href="http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/"/>
-    <id>http://githang.com/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/</id>
-    <published>2018-05-15T03:44:26.000Z</published>
-    <updated>2018-12-22T03:18:59.689Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一直难以忍受在做 Code Review 时，Phabricator 无法对 kotlin 代码进行高亮显示，直到今天项目的阶段性开发终于告一段落进入测试，于是着手处理该问题。&lt;/p&gt;
-&lt;p&gt;Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我就配置为使用 pygments。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Phabricator" scheme="http://githang.com/tags/Phabricator/"/>
     
   </entry>
   
