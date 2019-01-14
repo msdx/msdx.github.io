@@ -1,1 +1,1 @@
-http://githang.com/2019/01/04/how-to-write-elegant-code/
+http://githang.com/2019/01/11/kotlin-0/

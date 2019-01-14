@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://githang.com">
-  <title>Archives: 2018/6 | 疯狂的键盘</title>
+  <title>Kotlin，走起 [0]=开篇 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android研发工程师，左撇子。">
-<meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://githang.com/archives/2018/06/index.html">
+  <meta name="description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
+<meta name="keywords" content="Kotlin,Kotlin走起">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin，走起 [0]=开篇">
+<meta property="og:url" content="http://githang.com/2019/01/11/kotlin-0/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Android研发工程师，左撇子。">
+<meta property="og:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-14T14:14:32.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的键盘">
-<meta name="twitter:description" content="Android研发工程师，左撇子。">
+<meta name="twitter:title" content="Kotlin，走起 [0]=开篇">
+<meta name="twitter:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -204,75 +205,307 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-kotlin-0" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/22/BadgeDrawable/" class="archive-article-date">
-  	<time datetime="2018-06-22T06:24:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/22/BadgeDrawable/">使用 Drawable 实现图标角标</a>
+    <h1 class="article-title" itemprop="name">
+      Kotlin，走起 [0]=开篇
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2019/01/11/kotlin-0/" class="archive-article-date">
+  	<time datetime="2019-01-11T09:21:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-11</time>
+</a>
+        <!-- word count start -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">2.1k字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">7分</span>
+      </span>
+    </span>
+</div>
+
           
+        <!-- word count end -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……<br>关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。<br>阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。<br>下面进入正题。<br><a id="more"></a></p>
+<h2 id="为什么我推荐使用Kotlin？"><a href="#为什么我推荐使用Kotlin？" class="headerlink" title="为什么我推荐使用Kotlin？"></a>为什么我推荐使用Kotlin？</h2><h3 id="JVM-语言"><a href="#JVM-语言" class="headerlink" title="JVM 语言"></a>JVM 语言</h3><p>首先，Kotlin可以编译为字节码运行在JVM（在Android中是Dalvik/ART）上，因此它可以与Java之间很好地互相调用。这样带来的好处是你不用担心Kotlin的库不完善，因为你可以直接使用Java中各种成熟的第三方库，同时也使得Kotlin与Java之间的混编很轻松。这是它的天然优势。</p>
+<h3 id="语法简练"><a href="#语法简练" class="headerlink" title="语法简练"></a>语法简练</h3><p>其次，Kotlin的语法非常简练。举个例子，它的构造方法的写法。假设我们想定义一个Person类，它从服务端返回的JSON解析，所以所有成员变量都是不可变的。我们来看Java的写法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> String name;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> age, <span class="keyword">int</span> name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再对比一下Kotlin的写法：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>(<span class="keyword">val</span> age: <span class="built_in">Int</span>, <span class="keyword">val</span> name: String)</span><br></pre></td></tr></table></figure>
+<p>再看看其他的例子，比如空指针检查，Java代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (park == <span class="keyword">null</span> || park.code == <span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Kotlin：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">park?.code ?: <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<p>一些集合操作：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list.sorted() <span class="comment">// 返回排序后的结果</span></span><br><span class="line">    .sortedBy &#123;...&#125; <span class="comment">// 按指定条件排序</span></span><br><span class="line">    .map &#123;...&#125; <span class="comment">// 转换为另一种类型的列表</span></span><br><span class="line">    .groupBy &#123;...&#125; <span class="comment">// 分组</span></span><br></pre></td></tr></table></figure>
+<p>还有强大的自动类型推断，没有<code>new</code>关键字，简洁的<code>when</code>语句，可省略的分号等等。</p>
+<h3 id="空安全"><a href="#空安全" class="headerlink" title="空安全"></a>空安全</h3><p>Kotlin在声明变量或函数类型的时候，需要声明是否可空（类型后面加一个问号表示为可空）。当你把null或可能为空的值赋给一个非空类型的变量时，就会编译失败。而当你使用可能为空的变量时，就必须在调用它的函数或成员变量前进行空检查。空检查有两种，一种是使用<code>?</code>，如果为空，则返回<code>null</code>，不为空才调用后面的变量或函数，如前面例的空指针检查的例子。一种是使用<code>!!</code>，进行非空断言，如果这时候为空，则会抛出异常。</p>
+<h3 id="扩展函数"><a href="#扩展函数" class="headerlink" title="扩展函数"></a>扩展函数</h3><p>举个例子，我们需要一个将dp转为px的方法，如果是用Java你可以会定义一个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScreenUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">float</span> <span class="title">dpToPx</span><span class="params">(<span class="keyword">int</span> dp)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后调用的时候是：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="keyword">float</span> width = ScreenUtil.dpToPx(<span class="number">12</span>);</span><br></pre></td></tr></table></figure>
+<p>使用Kotlin，你可以定义一个扩展函数：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="built_in">Float</span>.<span class="title">dpToPx</span><span class="params">()</span></span> = <span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<p>然后你在使用的时候就可以是：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> width = <span class="number">12</span>f.dpToPx()</span><br></pre></td></tr></table></figure>
+<p>是不是特别的酷？</p>
+<p>还有其他特性，比如Lambda表达式，内联函数，协程，操作符重载，类型检查和转换，类型别名等等，就不多介绍了。</p>
+<h2 id="使用Kotlin有什么坑？"><a href="#使用Kotlin有什么坑？" class="headerlink" title="使用Kotlin有什么坑？"></a>使用Kotlin有什么坑？</h2><h3 id="Kotlin-的缺陷？"><a href="#Kotlin-的缺陷？" class="headerlink" title="Kotlin 的缺陷？"></a>Kotlin 的缺陷？</h3><p>我在项目中使用Kotlin大概也有一年了，就Kotlin本身的缺陷而言，几乎没有。<br>当然也不是说完全没有，目前我一共遇到两个问题，但都不是影响项目开发的问题。这两个问题如下：</p>
+<p>第一个问题是，父类定义了一个可以在外部访问，但只能在内部修改的成员变量（见下面代码），如果在子类中访问，那么可能导致混淆时出错。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">var</span> selectedOption: T? = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">set</span></span><br></pre></td></tr></table></figure>
+<p>混淆时会产生如下警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">can&apos;t find referenced method &apos;void setSelectedOption(java.lang.Object)&apos; in program class 子类名称</span><br></pre></td></tr></table></figure>
+<p>这个问题也有其他人提出过，见<a href="https://youtrack.jetbrains.com/issue/KT-22624" target="_blank" rel="noopener">jetbrains官网</a></p>
+<p>第二个问题是，无法定义一个成员变量，使得它可以被外部修改但只能被内部访问。比如类似下面的代码：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> index: <span class="built_in">Int</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">set</span></span><br></pre></td></tr></table></figure>
+<p>或者是：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> index: <span class="built_in">Int</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">get</span></span><br></pre></td></tr></table></figure>
+<p>它们都是无法编译通过的。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>目前来看，Kotlin没有什么影响开发的缺陷，但是在使用时还是需要注意和避免一些问题。常见的情况如下：</p>
+<p>重写Java类的方法时，原来可能为空的参数的类型应声明为可空类型。比如我们的<code>onActivityResult(int, int, Intent)</code>方法，可能重写时IDE帮我们生成的代码如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onActivityResult</span><span class="params">(requestCode: <span class="type">Int</span>, resultCode: <span class="type">Int</span>, <span class="keyword">data</span>: <span class="type">Intent</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的<code>data</code>参数被声明为非空类型，在生成的字节码中，会对它进行非空断言，也就是如果这时候的传过来的<code>data</code>参数为空，即使你的函数里面没有使用到它，仍然会导致异常。所以应该把它的类型声明为可空类型<code>Intent?</code>。</p>
+<p>另外要注意的就是，Kotlin有一些Java所没有的关键字，但也取消了一些关键字，所以如果想让Kotlin的代码能较好地与Java代码互相调用，应在命名上尽量避免这些关键字。如果是Java中使用到了Kotlin的关键字，那么在Kotlin中加上反引号<code>`</code>就可以解决。比如<code>`in`</code>。但如果Kotlin中使用了Java的关键字，那么在Java当中就不好处理了，比如你非得定义一个变量叫做<code>new</code>……</p>
+<p>其他一些与Java之间互相调用要注意的事情，可以参考我之前编译的《<a href="http://www.githang.com/2018/08/06/Kotlin-Java-Interop-Guide/" target="_blank" rel="noopener">Kotlin Java 互通指南</a>》。</p>
+<h2 id="上手Kotlin难不难？"><a href="#上手Kotlin难不难？" class="headerlink" title="上手Kotlin难不难？"></a>上手Kotlin难不难？</h2><p>对于原来使用Java的人员，Kotlin的学习坡度可谓是相当的低。如果这里的上手指的是可以马上在项目当中使用它开发且不会比使用Java增加更多的时间成本的话，那以我身边的同事来看，上手所花费的时间是半小时到几天不等。</p>
+<p>为什么上手会这么轻松？<br>我觉得主要原因如下：</p>
+<p>一是Kotlin可以和Java一样被编译成字节码，所以不用担心编译之后是否有兼容问题或其他问题，并且有前面提到的它与Java的相互调用及混编的优势，所以即使有些地方你不知道用Kotlin怎么写，你还可以用Java来实现，所以可以说没有后顾之忧。</p>
+<p>二是在原来使用Java的Android项目中引入Kotlin非常轻松。在Gradle项目中，只需引入Kotlin插件及它的一个库就可以了用Kotlin来写代码了，就像引入一个第三方库一样简单。</p>
+<p>三是JetBrains所出的IDEA及基于它的Android Studio对Kotlin的支持非常完美，它的Kotlin插件还提供了将Java代码转为Kotlin的功能。所以，即便你有些代码不知道用Kotlin怎么写，没关系，写成Java代码，再用IDE转为Kotlin代码就可以了。</p>
+<p>四是Kotlin本身的语法糖及其所带来的便利性，使得它的开发效率比Java要高上许多，即使偶尔需要查一下语法或写法，所花费的时间也可以被开发上的高效率轻易抵消，并且高效的开发可以让你节省下来更多的时间。</p>
+<h2 id="现有的Android项目从Java转向Kotlin有什么坑？"><a href="#现有的Android项目从Java转向Kotlin有什么坑？" class="headerlink" title="现有的Android项目从Java转向Kotlin有什么坑？"></a>现有的Android项目从Java转向Kotlin有什么坑？</h2><p>没有坑。</p>
+<p>如前面所说，就像使用一个第三方库一样简单，不需要解决什么编译问题，并且Android Studio对它的支持非常完善，提供了将Java代码转为Kotlin代码的功能。</p>
+<p>引入Kotlin会需要引入它的一个库，目前最新的1.3.11版本，也就1M左右。如果你项目中开启了混淆，则实际增加的大小会小很多。相比起一些第三方组件，这不是你需要担心的问题。</p>
+<p>Kotlin的编译及增量编译都非常的快，和Java差不多，有些时候甚至比Java还快，所以编译时间也大可放心。</p>
+<p>Kotlin的文档非常完善，学习起来相当方便，即便你在使用时有问题，在google上都可以轻松找到答案。</p>
+<p>如果你还有其他疑虑，欢迎留言。如果没有问题，那下面我们就——Kotlin，走起吧。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我的娃的奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">drawable</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">角标</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Kotlin走起</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+        			<a href="/categories/Kotlin//" class="article-tag-list-link color2">Kotlin</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://githang.com/2019/01/11/kotlin-0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/01/04/how-to-write-elegant-code/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何编写优雅的代码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="kotlin-0"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytUGGJnM",
+        conf: "prod_6c1f7b60fcca107acfc5827835578770"
+    });
+</script>
+
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Kotlin，走起 [0]=开篇",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+
+  
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4684296714025694",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -309,8 +542,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

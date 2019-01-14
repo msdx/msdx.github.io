@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="我对优雅的代码的理解是：遵守规范，逻辑清晰，严谨可靠，化繁为简。本文分享我对写代码的一些思考。  代码首先是写给人看的，其次才是计算机顺便能够运行在讨论关于如何编写优雅代码的观点之前，先抛出个问题，希望我们对这一点能够达成共识： 为什么要编写优雅的代码？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-10T16:06:51.165Z">
+<meta property="og:updated_time" content="2019-01-11T03:03:07.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何编写优雅的代码">
 <meta name="twitter:description" content="我对优雅的代码的理解是：遵守规范，逻辑清晰，严谨可靠，化繁为简。本文分享我对写代码的一些思考。  代码首先是写给人看的，其次才是计算机顺便能够运行在讨论关于如何编写优雅代码的观点之前，先抛出个问题，希望我们对这一点能够达成共识： 为什么要编写优雅的代码？">
@@ -284,7 +284,7 @@ var _hmt = _hmt || [];
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">when</span> (type) &#123;</span><br><span class="line">    WECHAT -&gt; textView.setText(R.string.wechat)</span><br><span class="line">    ALIPAY -&gt; textView.setText(R.string.alipay)</span><br><span class="line">    UNION_PAY -&gt; textView.setText(R.string.union_pay)</span><br><span class="line">    WALLET -&gt; textView.setText(R.string.wallet)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>看起来似乎没问题，但如果某天，产品说要增加一个公交卡支付。这下不好了，没有升级的用户，在列表里面会看到原本应该显示公交卡的支付方式，在上下滚动时，有时显示微信，有时显示支付宝。所以说，程序员生存法则有很重要的一条：不要相信产品经理，不要相信产品经理，不要相信产品经理。但更重要的是，你代码上就要更严谨。想一下，如果有其他类型怎么办？添加一个else的分支，就不会有这个问题了。</p>
 <p>再举一个例子，比如一个值，是通过多种不同的条件来决定的，则应考虑把value声明为<code>final</code>类型。这样有什么好处呢？首先，它能够避免在一些条件里漏掉赋值，没有赋值的话编译器会报错。其次，它能够避免在复杂的if块里重复赋值，因为实际上可能if块里不会只有赋值一个操作，还有其他操作和比较复杂的逻辑。第三，它使得你所有的if及else分支能够覆盖所有条件，避免没有考虑到的情况。<br>我们在方法里只会赋值一次的变量，也应该声明为<code>final</code>，这样在用的时候就会很放心，清楚它的值不会被修改。<br>我们的成员变量，如果不需要被修改，也应该声明为<code>final</code>，从根源上确保它的不可变。<br>我们的参数值，比如需要传的值在某个范围内的，就应该用<code>@IntRange</code>注解声明它的范围。<br>我们的参数值，通常不应该在方法里被重新赋值，也就是参数也应该是<code>final</code>的。这一点kotlin就做得很好，在kotlin中函数的参数是不可再被赋值的。</p>
-<p>我这里就不多举例了。写代码时要注意必须保证代码的严谨性，如果不够严谨，那么总有一天这个bug会被触发。墨菲定律，在软件开发上总是很有效。</p>
+<p>我这里就不多举例了。写代码时要注意必须保证代码的严谨性，如果不够严谨，那么总有一天这个bug会被触发。墨菲定律，在软件开发上总是奏效。</p>
 
       
 
@@ -409,6 +409,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/01/11/kotlin-0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Kotlin，走起 [0]=开篇
+        
+      </div>
+    </a>
   
   
     <a href="/2019/01/01/summary-of-2018/" id="article-nav-older" class="article-nav-link-wrap">
@@ -612,10 +621,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
               </li>
              
@@ -625,6 +630,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,6 +653,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
               </li>
              
@@ -653,10 +678,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -688,19 +709,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -712,11 +733,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -724,7 +741,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -736,23 +765,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
               </li>
             
             <div class="clearfix"></div>
