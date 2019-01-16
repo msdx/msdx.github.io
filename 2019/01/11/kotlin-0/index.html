@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-14T14:14:32.008Z">
+<meta property="og:updated_time" content="2019-01-15T04:04:20.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin，走起 [0]=开篇">
 <meta name="twitter:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
@@ -227,7 +227,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.1k字</span>
+        <span class="post-count">2.2k字</span>
       </span>
     </span>
 
@@ -236,7 +236,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">7分</span>
+        <span class="post-count">8分</span>
       </span>
     </span>
 </div>
@@ -277,7 +277,8 @@ var _hmt = _hmt || [];
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">var</span> selectedOption: T? = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">set</span></span><br></pre></td></tr></table></figure>
 <p>混淆时会产生如下警告：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">can&apos;t find referenced method &apos;void setSelectedOption(java.lang.Object)&apos; in program class 子类名称</span><br></pre></td></tr></table></figure>
-<p>这个问题也有其他人提出过，见<a href="https://youtrack.jetbrains.com/issue/KT-22624" target="_blank" rel="noopener">jetbrains官网</a></p>
+<p>这个问题也有其他人提出过，见<a href="https://youtrack.jetbrains.com/issue/KT-22624" target="_blank" rel="noopener">jetbrains官网</a><br>如果你需要这样写，可以使用幕后字段，如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> _selectedOption: T? = <span class="literal">null</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">val</span> selectedOption <span class="keyword">get</span>() = _selectedOption</span><br></pre></td></tr></table></figure>
 <p>第二个问题是，无法定义一个成员变量，使得它可以被外部修改但只能被内部访问。比如类似下面的代码：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> index: <span class="built_in">Int</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">set</span></span><br></pre></td></tr></table></figure>
 <p>或者是：</p>
@@ -296,10 +297,11 @@ var _hmt = _hmt || [];
 <p>三是JetBrains所出的IDEA及基于它的Android Studio对Kotlin的支持非常完美，它的Kotlin插件还提供了将Java代码转为Kotlin的功能。所以，即便你有些代码不知道用Kotlin怎么写，没关系，写成Java代码，再用IDE转为Kotlin代码就可以了。</p>
 <p>四是Kotlin本身的语法糖及其所带来的便利性，使得它的开发效率比Java要高上许多，即使偶尔需要查一下语法或写法，所花费的时间也可以被开发上的高效率轻易抵消，并且高效的开发可以让你节省下来更多的时间。</p>
 <h2 id="现有的Android项目从Java转向Kotlin有什么坑？"><a href="#现有的Android项目从Java转向Kotlin有什么坑？" class="headerlink" title="现有的Android项目从Java转向Kotlin有什么坑？"></a>现有的Android项目从Java转向Kotlin有什么坑？</h2><p>没有坑。</p>
-<p>如前面所说，就像使用一个第三方库一样简单，不需要解决什么编译问题，并且Android Studio对它的支持非常完善，提供了将Java代码转为Kotlin代码的功能。</p>
-<p>引入Kotlin会需要引入它的一个库，目前最新的1.3.11版本，也就1M左右。如果你项目中开启了混淆，则实际增加的大小会小很多。相比起一些第三方组件，这不是你需要担心的问题。</p>
-<p>Kotlin的编译及增量编译都非常的快，和Java差不多，有些时候甚至比Java还快，所以编译时间也大可放心。</p>
-<p>Kotlin的文档非常完善，学习起来相当方便，即便你在使用时有问题，在google上都可以轻松找到答案。</p>
+<p>要解决配置问题？如前面所说，就像使用一个第三方库一样简单，不需要解决什么编译问题，并且Android Studio对它的支持非常完善，提供了将Java代码转为Kotlin代码的功能。</p>
+<p>会导致APK变大很多？引入Kotlin会需要引入它的一个库，目前最新的1.3.11版本，也就1M左右。如果你项目中开启了混淆，则实际增加的大小会小很多。相比起一些第三方组件，这不是你需要担心的问题。</p>
+<p>影响编译速度？Kotlin的编译及增量编译都非常的快，和Java差不多，有些时候甚至比Java还快，所以编译时间也大可放心。</p>
+<p>学习资料充足么？Kotlin的文档非常完善，学习起来相当方便，即便你在使用时有问题，在google上都可以轻松找到答案。</p>
+<p>怕以后不好找其他人维护这个Kotlin项目？相信我，熟悉Java的人，只要去学，几天就能使用它来开发项目。所以不用担心找不到会Kotlin的人，真找不到，找会Java的，让他学习几天不就完了吗？</p>
 <p>如果你还有其他疑虑，欢迎留言。如果没有问题，那下面我们就——Kotlin，走起吧。</p>
 
       
@@ -429,6 +431,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/01/16/Jenkinsfile-pipeline/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Jenkinsfile的pipeline配置
+        
+      </div>
+    </a>
   
   
     <a href="/2019/01/04/how-to-write-elegant-code/" id="article-nav-older" class="article-nav-link-wrap">
@@ -648,10 +659,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
@@ -660,11 +667,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -673,14 +688,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -712,6 +719,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
               </li>
              
@@ -728,19 +743,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -756,10 +767,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
              
@@ -768,15 +775,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
               </li>
             
             <div class="clearfix"></div>
