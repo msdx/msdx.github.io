@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-15T04:04:20.569Z">
+<meta property="og:updated_time" content="2019-01-17T08:30:56.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin，走起 [0]=开篇">
 <meta name="twitter:description" content="Kotlin，是由JetBrains开发的一种在Java虚拟机上运行的静态类型编程语言……关于Kotlin的背景，看到这篇文章的你想必在其他地方已多次看到介绍，这里就不赘述了。阅前须知：本系列文章需要一定的Java基础知识，并且所举的例子可能会包含些Android上的代码，比较适合之前使用Java从事Android开发的朋友。下面进入正题。">
@@ -227,7 +227,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">2.2k字</span>
+        <span class="post-count">2.5k字</span>
       </span>
     </span>
 
@@ -236,7 +236,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">8分</span>
+        <span class="post-count">9分</span>
       </span>
     </span>
 </div>
@@ -297,12 +297,21 @@ var _hmt = _hmt || [];
 <p>三是JetBrains所出的IDEA及基于它的Android Studio对Kotlin的支持非常完美，它的Kotlin插件还提供了将Java代码转为Kotlin的功能。所以，即便你有些代码不知道用Kotlin怎么写，没关系，写成Java代码，再用IDE转为Kotlin代码就可以了。</p>
 <p>四是Kotlin本身的语法糖及其所带来的便利性，使得它的开发效率比Java要高上许多，即使偶尔需要查一下语法或写法，所花费的时间也可以被开发上的高效率轻易抵消，并且高效的开发可以让你节省下来更多的时间。</p>
 <h2 id="现有的Android项目从Java转向Kotlin有什么坑？"><a href="#现有的Android项目从Java转向Kotlin有什么坑？" class="headerlink" title="现有的Android项目从Java转向Kotlin有什么坑？"></a>现有的Android项目从Java转向Kotlin有什么坑？</h2><p>没有坑。</p>
-<p>要解决配置问题？如前面所说，就像使用一个第三方库一样简单，不需要解决什么编译问题，并且Android Studio对它的支持非常完善，提供了将Java代码转为Kotlin代码的功能。</p>
+<p>要解决配置问题？如前面所说，就像使用一个第三方库一样简单，只需要添加几行配置，不需要解决什么编译问题，并且IDE对它的支持非常完善，提供了将Java代码转为Kotlin代码的功能。</p>
 <p>会导致APK变大很多？引入Kotlin会需要引入它的一个库，目前最新的1.3.11版本，也就1M左右。如果你项目中开启了混淆，则实际增加的大小会小很多。相比起一些第三方组件，这不是你需要担心的问题。</p>
 <p>影响编译速度？Kotlin的编译及增量编译都非常的快，和Java差不多，有些时候甚至比Java还快，所以编译时间也大可放心。</p>
 <p>学习资料充足么？Kotlin的文档非常完善，学习起来相当方便，即便你在使用时有问题，在google上都可以轻松找到答案。</p>
 <p>怕以后不好找其他人维护这个Kotlin项目？相信我，熟悉Java的人，只要去学，几天就能使用它来开发项目。所以不用担心找不到会Kotlin的人，真找不到，找会Java的，让他学习几天不就完了吗？</p>
-<p>如果你还有其他疑虑，欢迎留言。如果没有问题，那下面我们就——Kotlin，走起吧。</p>
+<h2 id="Android项目引入Kotlin需要添加什么配置？"><a href="#Android项目引入Kotlin需要添加什么配置？" class="headerlink" title="Android项目引入Kotlin需要添加什么配置？"></a>Android项目引入Kotlin需要添加什么配置？</h2><p>一共需要两步。注意下面的版本号，应根据你的情况需要进行更新。</p>
+<p><strong>第一步，应用插件。</strong>在根项目的build.gradle中的<code>buildscript</code>增加kotlin版本的变量，并且在其下的<code>dependencies</code>中添加kotlin的gradle插件依赖：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    ext.kotlin_version = <span class="string">'1.2.71'</span> <span class="comment">// 声明kotlin版本，它将在下面及app中的kotlin依赖库声明中用到</span></span><br><span class="line">    <span class="comment">// repositories 声明，略</span></span><br><span class="line">    dependencies &#123;</span><br><span class="line">        <span class="comment">// 你原来的插件声明，略</span></span><br><span class="line">        classpath <span class="string">"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"</span> <span class="comment">// 要添加的插件依赖声明</span></span><br><span class="line">        classpath <span class="string">"org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"</span> <span class="comment">// kotlin android 扩展插件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在你的app模块的build.gradle中，添加以下声明：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'kotlin-android'</span></span><br><span class="line">apply <span class="string">plugin:</span> <span class="string">'kotlin-android-extensions'</span></span><br></pre></td></tr></table></figure>
+<p><code>kotlin-android-extensions</code>顾名思义，是在Android上的一个扩展插件，它可以帮助我们用更少的代码来开发Android。</p>
+<p><strong>第二步，添加依赖声明。</strong>在app的dependencies中添加以下依赖：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// kotlin standard library</span></span><br><span class="line">implementation <span class="string">"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"</span></span><br><span class="line"><span class="comment">// android kotlin extensions</span></span><br><span class="line">implementation <span class="string">"androidx.core:core-ktx:0.3"</span></span><br></pre></td></tr></table></figure>
+<p>然后就可以愉快地开始用kotlin开发了。</p>
+<p>如果你还有其他疑问，欢迎留言。如果没有问题，那下面我们就——Kotlin，走起吧。</p>
 
       
 
