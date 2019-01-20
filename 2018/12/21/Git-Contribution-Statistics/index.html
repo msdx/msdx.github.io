@@ -263,7 +263,7 @@ var _hmt = _hmt || [];
 <h2 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h2><p>上面的命令，在 Mac 上使用 <code>grep -P</code> 参数并没有效果，所以我调整为分别使用 <code>-e</code> 指定包含的文件名，最终脚本如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for file in `git ls-files |grep -e "\.xml" -e "\.java" -e "\.md" -e "\.gradle" -e "\.kt"`; do git blame -c $file |perl -pe 's/^[^\(]+\(\s*+([^\s]+)\s.+/\1/g'; done |sort| uniq -c |sort -rn</span><br></pre></td></tr></table></figure>
 <h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>上面是自己想的办法。但如果在 Ubuntu 使用 <code>man git blame</code> 查看过 <code>git blame</code> 的帮助文档的话，会发现官方文档上提供了另一种查看统计每个作者贡献行数的方法，如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> count the number of lines attributed to each author</span></span><br><span class="line">git blame --line-porcelain file |</span><br><span class="line">sed -n 's/^author //p' |</span><br><span class="line">sort | uniq -c | sort -rn</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> count the number of lines attributed to each author</span><br><span class="line">git blame --line-porcelain file |</span><br><span class="line">sed -n 's/^author //p' |</span><br><span class="line">sort | uniq -c | sort -rn</span><br></pre></td></tr></table></figure>
 <p>所以我们把上面脚本中的循环体内容换成这里的方式，就不用写那么复杂的过滤作者正则表达式了。</p>
 <h2 id="Ubuntu-1"><a href="#Ubuntu-1" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><p>Ubuntu 下命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for file in `git ls-fles |grep -P "(\.xml)|(\.java)|(\.md)|(\.gradle)|(\.kt)"`; do git blame --line-porcelain $file |sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br></pre></td></tr></table></figure>
@@ -272,10 +272,10 @@ var _hmt = _hmt || [];
 <h1 id="同一作者不同名称的问题"><a href="#同一作者不同名称的问题" class="headerlink" title="同一作者不同名称的问题"></a>同一作者不同名称的问题</h1><p>你可能会发现一个问题，这两种统计都依赖于提交时的作者信息，如果在不同维护时期设置的作者及邮件不同，那么就会统计成不同的人出来。比如前面的 <code>msdx</code> 和 <code>huanghaohang</code> 都是我一个人。那么应该如何统计成一个人呢？<br>方法很简单，在根目录下增加一个 <code>.mailmap</code> 的文件，里面的内容是作者名称及邮件的对应关系，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">黄浩杭	&lt;huanghaohang@parkingwang.com&gt;</span><br><span class="line">黄浩杭	&lt;645079761@qq.com&gt;</span><br></pre></td></tr></table></figure>
 <p>再统计，就按配置的作者名称显示出来了：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">48823 黄浩杭</span><br><span class="line"><span class="meta">#</span><span class="bash"> ...下面略</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">48823 黄浩杭</span><br><span class="line"><span class="meta">#</span> ...下面略</span><br></pre></td></tr></table></figure>
 <h1 id="输出统计耗时"><a href="#输出统计耗时" class="headerlink" title="输出统计耗时"></a>输出统计耗时</h1><p>上面统计的命令，可能运行的时间会比较长，所以可以把它放到一个脚本文件，然后添加执行权限并把脚本所在位置添加到 <code>path</code> 变量中，然后执行这个脚本文件，在后面加上 <code>&amp;</code> 使它在后台执行。<br>另外，我们可以加上耗时统计，获取统计前后的秒数，计算它们之差得出耗时秒数。这里获取秒数，在 Ubuntu 和 Mac 上方法不同，最终脚本如下：</p>
-<h2 id="Ubuntu-最终脚本"><a href="#Ubuntu-最终脚本" class="headerlink" title="Ubuntu 最终脚本"></a>Ubuntu 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">start=`date +%s.%N`</span><br><span class="line"></span><br><span class="line">for file in `git ls-fles |grep -P "(\.xml)|(\.java)|(\.md)|(\.gradle)|(\.kt)"`; do git blame --line-porcelain $file |sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%N`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
-<h2 id="Mac-最终脚本"><a href="#Mac-最终脚本" class="headerlink" title="Mac 最终脚本"></a>Mac 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">start=`date +%s.%S`</span><br><span class="line"></span><br><span class="line">for file in `git ls-files |grep -e "\.xml" -e "\.java" -e "\.md" -e "\.gradle" -e "\.kt"`; do git blame --line-porcelain $file|sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%S`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
+<h2 id="Ubuntu-最终脚本"><a href="#Ubuntu-最终脚本" class="headerlink" title="Ubuntu 最终脚本"></a>Ubuntu 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"></span><br><span class="line">start=`date +%s.%N`</span><br><span class="line"></span><br><span class="line">for file in `git ls-fles |grep -P "(\.xml)|(\.java)|(\.md)|(\.gradle)|(\.kt)"`; do git blame --line-porcelain $file |sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%N`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
+<h2 id="Mac-最终脚本"><a href="#Mac-最终脚本" class="headerlink" title="Mac 最终脚本"></a>Mac 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"></span><br><span class="line">start=`date +%s.%S`</span><br><span class="line"></span><br><span class="line">for file in `git ls-files |grep -e "\.xml" -e "\.java" -e "\.md" -e "\.gradle" -e "\.kt"`; do git blame --line-porcelain $file|sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%S`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
 
       
 
@@ -600,6 +600,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
@@ -612,11 +620,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,7 +628,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -636,7 +640,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,11 +672,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">drawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,15 +696,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Activity</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -696,19 +724,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -720,14 +736,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
               </li>
              
@@ -736,7 +744,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -744,19 +756,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -1,1 +1,1 @@
-http://githang.com/2019/01/16/Jenkinsfile-pipeline/
+http://githang.com/2019/01/18/interview-thinking-depth/

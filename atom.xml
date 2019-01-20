@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://githang.com/"/>
-  <updated>2019-01-16T06:48:14.752Z</updated>
+  <updated>2019-01-19T17:26:01.604Z</updated>
   <id>http://githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试随想</title>
+    <link href="http://githang.com/2019/01/18/interview-thinking-depth/"/>
+    <id>http://githang.com/2019/01/18/interview-thinking-depth/</id>
+    <published>2019-01-18T15:39:37.000Z</published>
+    <updated>2019-01-19T17:26:01.604Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天在我的QQ群里，谈到了昨天面试的事情，引发了我后续的一些思考，所以写此文章。文中内容仅代表我此刻观点，也许并不成熟，浅薄之见权当抛砖引玉。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="面试" scheme="http://githang.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkinsfile的pipeline配置</title>
@@ -34,9 +54,9 @@
     
       <category term="Jenkins" scheme="http://githang.com/tags/Jenkins/"/>
     
-      <category term="Pipeline" scheme="http://githang.com/tags/Pipeline/"/>
-    
       <category term="Jenkinsfile" scheme="http://githang.com/tags/Jenkinsfile/"/>
+    
+      <category term="Pipeline" scheme="http://githang.com/tags/Pipeline/"/>
     
   </entry>
   
@@ -443,30 +463,6 @@
     
     
       <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微知识#0 layoutInflater.inflate 方法的 ViewGroup 参数</title>
-    <link href="http://githang.com/2018/08/10/Micro-Knowledge-0/"/>
-    <id>http://githang.com/2018/08/10/Micro-Knowledge-0/</id>
-    <published>2018-08-10T14:14:25.000Z</published>
-    <updated>2018-08-10T14:14:25.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;LayoutInflater&lt;/code&gt; 常用的两个方法：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; View &lt;span class=&quot;title&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(@LayoutRes &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; resource, @Nullable ViewGroup root)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; View &lt;span class=&quot;title&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(@LayoutRes &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; resource, @Nullable ViewGroup root, &lt;span class=&quot;keyword&quot;&gt;boolean&lt;/span&gt; attachToRoot)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;第一个方法的调用如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; View &lt;span class=&quot;title&quot;&gt;inflate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(@LayoutRes &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; resource, @Nullable ViewGroup root)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; inflate(resource, root, root != &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;而在其实现中，第二个参数 &lt;code&gt;ViewGroup&lt;/code&gt; 类型的 &lt;code&gt;root&lt;/code&gt; 是否为空，会决定在从布局文件创建 &lt;code&gt;View&lt;/code&gt; 的时候，是否生成根元素的布局参数（即以 &lt;code&gt;layout_&lt;/code&gt; 开头的属性），关键代码如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="微知识" scheme="http://githang.com/categories/%E5%BE%AE%E7%9F%A5%E8%AF%86/"/>
-    
-    
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
     
   </entry>
   
