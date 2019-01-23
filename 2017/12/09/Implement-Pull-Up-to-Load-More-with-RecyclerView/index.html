@@ -9,7 +9,7 @@
   <title>实现 RecyclerView 上拉加载及自动加载 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="之前在《一步步打造自己的通用上拉加载布局》（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。">
-<meta name="keywords" content="Android,RecyclerView,上拉加载">
+<meta name="keywords" content="Android,上拉加载,RecyclerView">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实现 RecyclerView 上拉加载及自动加载">
 <meta property="og:url" content="http://www.githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/index.html">
@@ -110,6 +110,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/杂文/">杂文</a></li>
 	        
+				<li><a href="/categories/工具/">工具</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -174,6 +176,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -194,13 +198,15 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -258,8 +264,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前在<a href="http://githang.com/2017/09/24/LoadMoreLayout/">《一步步打造自己的通用上拉加载布局》</a>（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。<br><a id="more"></a></p>
-<p>在之前的<a href="http://githang.com/2017/09/24/LoadMoreLayout/">《一步步打造自己的通用上拉加载布局》</a>已经提到，下拉刷新是将获取到的数据替换掉原有的数据，而上拉加载则是将获取到的数据插入到原来数据的末尾与底部提示加载的 View（如FooterView）之间，它们的展现方式的不同，使得上拉出来用于提示加载的 View，对于列表类视图如 <code>ListView</code> 或 <code>RecyclerView</code> 而言，适合作为它们的 FooterView 而不适合封装到我们的上拉布局中。因此，我们需要继承 <code>LoadMoreLayout</code> 并实现对于 <code>RecyclerView</code> 的扩展。</p>
+        <p>之前在<a href="http://githang.com/2017/09/24/LoadMoreLayout/" target="_blank" rel="noopener">《一步步打造自己的通用上拉加载布局》</a>（如果没有看过，建议先看下这一篇）写到如何实现一个通用的上拉加载布局，本文将基于此进行扩展，实现 RecyclerView 的上拉加载及自动加载。<br><a id="more"></a></p>
+<p>在之前的<a href="http://githang.com/2017/09/24/LoadMoreLayout/" target="_blank" rel="noopener">《一步步打造自己的通用上拉加载布局》</a>已经提到，下拉刷新是将获取到的数据替换掉原有的数据，而上拉加载则是将获取到的数据插入到原来数据的末尾与底部提示加载的 View（如FooterView）之间，它们的展现方式的不同，使得上拉出来用于提示加载的 View，对于列表类视图如 <code>ListView</code> 或 <code>RecyclerView</code> 而言，适合作为它们的 FooterView 而不适合封装到我们的上拉布局中。因此，我们需要继承 <code>LoadMoreLayout</code> 并实现对于 <code>RecyclerView</code> 的扩展。</p>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>由于在 <code>LoadMoreLayout</code> 中已经把上拉的逻辑都封装好，因此这里主要是对 <code>RecyclerView</code> 的 <code>FooterView</code> 及自动加载的封装。在这里，对于带 <code>FooterView</code> 的 Adapter，我是通过包装原有的 Adapter 来实现，这样在使用的时候就不需要把原来的 Adapter 改成我们的上拉加载中的 Adapter，以减少对代码的侵入。这个 Adapter 代码如下。这个类代码可不必细看，它是上拉加载的副产品，不是主要逻辑，于这里贴出只是交底。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Copyright (c) 2017. Xi'an iRain IOT Technology service CO., Ltd (ShenZhen). All Rights Reserved.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> com.githang.recycleradapter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.support.v7.widget.RecyclerView;</span><br><span class="line"><span class="keyword">import</span> android.view.ViewGroup;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Geek_Soledad (msdx.android@qq.com)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2017-05-03 0.1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">HiRecyclerAdapter</span> <span class="keyword">extends</span> <span class="title">RecyclerView</span>.<span class="title">Adapter</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 由于RecyclerView的灵活性，可能会出现不同的Adapter的嵌套，而因此可能导致viewType重复。</span></span><br><span class="line"><span class="comment">     * 因此在这里尝试为每个Adapter定义一个区间，而避免它们的重复问题。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_SECTION = <span class="number">2</span> &lt;&lt; <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从2&lt;&lt;20开始，留足够的type值给content使用。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> HEADER_OFFSET = TYPE_SECTION &lt;&lt; <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> FOOTER_OFFSET = HEADER_OFFSET + TYPE_SECTION;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mHeaderCount;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mContentCount;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> mFooterCount;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> RecyclerView.Adapter mWrapperAdapter;</span><br><span class="line">    <span class="keyword">private</span> RecyclerView.AdapterDataObserver mDataObserver;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HiRecyclerAdapter</span><span class="params">(RecyclerView.Adapter wrapperAdapter)</span> </span>&#123;</span><br><span class="line">        mWrapperAdapter = wrapperAdapter;</span><br><span class="line">        mDataObserver = <span class="keyword">new</span> RecyclerView.AdapterDataObserver() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onChanged</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                notifyDataSetChanged();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemRangeChanged</span><span class="params">(<span class="keyword">int</span> positionStart, <span class="keyword">int</span> itemCount)</span> </span>&#123;</span><br><span class="line">                notifyItemRangeChanged(positionStart + mHeaderCount, itemCount);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemRangeChanged</span><span class="params">(<span class="keyword">int</span> positionStart, <span class="keyword">int</span> itemCount, Object payload)</span> </span>&#123;</span><br><span class="line">                notifyItemRangeChanged(positionStart + mHeaderCount, itemCount, payload);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemRangeInserted</span><span class="params">(<span class="keyword">int</span> positionStart, <span class="keyword">int</span> itemCount)</span> </span>&#123;</span><br><span class="line">                notifyItemRangeInserted(positionStart + mHeaderCount, itemCount);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemRangeRemoved</span><span class="params">(<span class="keyword">int</span> positionStart, <span class="keyword">int</span> itemCount)</span> </span>&#123;</span><br><span class="line">                notifyItemRangeRemoved(positionStart + mHeaderCount, itemCount);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onItemRangeMoved</span><span class="params">(<span class="keyword">int</span> fromPosition, <span class="keyword">int</span> toPosition, <span class="keyword">int</span> itemCount)</span> </span>&#123;</span><br><span class="line">                notifyItemMoved(fromPosition + mHeaderCount, toPosition + mHeaderCount);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        mWrapperAdapter.registerAdapterDataObserver(mDataObserver);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> RecyclerView.<span class="function">Adapter <span class="title">getWrapperAdapter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mWrapperAdapter;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getContentPosition</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> position - mHeaderCount;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> RecyclerView.<span class="function">ViewHolder <span class="title">onCreateViewHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (viewType &gt;= HEADER_OFFSET &amp;&amp; viewType &lt; HEADER_OFFSET + TYPE_SECTION) &#123;</span><br><span class="line">            <span class="keyword">return</span> onCreateHeaderHolder(parent, viewType - HEADER_OFFSET);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (viewType &gt;= FOOTER_OFFSET &amp;&amp; viewType &lt; FOOTER_OFFSET + TYPE_SECTION) &#123;</span><br><span class="line">            <span class="keyword">return</span> onCreateFooterHolder(parent, viewType - FOOTER_OFFSET);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> mWrapperAdapter.onCreateViewHolder(parent, viewType);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Called when RecyclerView needs a new header &#123;<span class="doctag">@link</span> RecyclerView.ViewHolder&#125; of the given type to</span></span><br><span class="line"><span class="comment">     * represent an item.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> parent   The ViewGroup into which the new View will be added after it is bound to</span></span><br><span class="line"><span class="comment">     *                 an adapter position.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> viewType The view type of the new View.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> A new ViewHolder that holds a View of the given view type.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">abstract</span> RecyclerView.<span class="function">ViewHolder <span class="title">onCreateHeaderHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Called when RecyclerView needs a new footer &#123;<span class="doctag">@link</span> RecyclerView.ViewHolder&#125; of the given type to</span></span><br><span class="line"><span class="comment">     * represent an item.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> parent   The ViewGroup into which the new View will be added after it is bound to</span></span><br><span class="line"><span class="comment">     *                 an adapter position.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> viewType The view type of the new View.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> A new ViewHolder that holds a View of the given view type.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">abstract</span> RecyclerView.<span class="function">ViewHolder <span class="title">onCreateFooterHolder</span><span class="params">(ViewGroup parent, <span class="keyword">int</span> viewType)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">onBindViewHolder</span><span class="params">(RecyclerView.ViewHolder holder, <span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (position &lt; mHeaderCount) &#123;</span><br><span class="line">            onBindHeaderHolder(holder, position);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (position &lt; mHeaderCount + mContentCount) &#123;</span><br><span class="line">            mWrapperAdapter.onBindViewHolder(holder, position - mHeaderCount);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            onBindFooterHolder(holder, position - mHeaderCount - mContentCount);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Called by RecyclerView to display the header at the specified position. This method should</span></span><br><span class="line"><span class="comment">     * update the contents of the &#123;<span class="doctag">@link</span> RecyclerView.ViewHolder#itemView&#125; to reflect the header</span></span><br><span class="line"><span class="comment">     * item at the given position.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> holder   The ViewHolder which should be updated to represent the contents of the</span></span><br><span class="line"><span class="comment">     *                 item at the given position in the data set.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> position The position of the item within the adapter's data set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">onBindHeaderHolder</span><span class="params">(RecyclerView.ViewHolder holder, <span class="keyword">int</span> position)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Called by RecyclerView to display the footer at the specified position. This method should</span></span><br><span class="line"><span class="comment">     * update the contents of the &#123;<span class="doctag">@link</span> RecyclerView.ViewHolder#itemView&#125; to reflect the footer</span></span><br><span class="line"><span class="comment">     * item at the given position.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> holder   The ViewHolder which should be updated to represent the contents of the</span></span><br><span class="line"><span class="comment">     *                 item at the given position in the data set.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> position The position of the item within the adapter's data set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">onBindFooterHolder</span><span class="params">(RecyclerView.ViewHolder holder, <span class="keyword">int</span> position)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getHeaderCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">getContentCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mWrapperAdapter.getItemCount();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getFooterCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">getItemCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        mHeaderCount = getHeaderCount();</span><br><span class="line">        mContentCount = mWrapperAdapter.getItemCount();</span><br><span class="line">        mFooterCount = getFooterCount();</span><br><span class="line">        <span class="keyword">return</span> mHeaderCount + mContentCount + mFooterCount;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">getItemViewType</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (position &lt; mHeaderCount) &#123;</span><br><span class="line">            <span class="keyword">return</span> validateViewType(getHeaderViewType(position)) + HEADER_OFFSET;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (position &lt; mHeaderCount + mContentCount) &#123;</span><br><span class="line">            <span class="keyword">return</span> validateViewType(mWrapperAdapter.getItemViewType(position - mHeaderCount));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> validateViewType(getFooterViewType(position - mHeaderCount - mContentCount))</span><br><span class="line">                    + FOOTER_OFFSET;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">validateViewType</span><span class="params">(<span class="keyword">int</span> viewType)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (viewType &lt; <span class="number">0</span> || viewType &gt;= TYPE_SECTION) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"viewType must be between 0 and "</span> + TYPE_SECTION);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> viewType;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">int</span> <span class="title">getHeaderViewType</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">int</span> <span class="title">getFooterViewType</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyFooterInsert</span><span class="params">(<span class="keyword">int</span> positionStart)</span> </span>&#123;</span><br><span class="line">        notifyItemInserted(mHeaderCount + mContentCount + positionStart);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">notifyFooterRemoved</span><span class="params">(<span class="keyword">int</span> positionStart)</span> </span>&#123;</span><br><span class="line">        notifyItemRemoved(mHeaderCount + mContentCount + positionStart);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>接下来，继承自这个 Adapter，实现对 FooterView 添加，代码如下：</p>
@@ -344,11 +350,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RecyclerView</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上拉加载</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">上拉加载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">RecyclerView</a>
         		</li>
       		
 		</ul>
@@ -360,7 +366,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
+				<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -607,15 +613,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -623,11 +621,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -635,7 +629,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,7 +661,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -663,14 +685,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
               </li>
              
@@ -679,19 +693,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">drawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -707,19 +713,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -731,7 +729,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -739,19 +749,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -759,7 +757,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -771,11 +777,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
               </li>
             
             <div class="clearfix"></div>

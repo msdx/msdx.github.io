@@ -17,7 +17,7 @@
 <meta property="og:description" content="我之前的博客《Jenkins 多分支构建》及《Jenkins 多分支构建中的邮件配置》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为node，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用try-catch处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://upyun.githang.com/2019/01/16/15476064448560.jpg">
-<meta property="og:updated_time" content="2019-01-16T06:48:14.752Z">
+<meta property="og:updated_time" content="2019-01-23T07:32:10.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkinsfile的pipeline配置">
 <meta name="twitter:description" content="我之前的博客《Jenkins 多分支构建》及《Jenkins 多分支构建中的邮件配置》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为node，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用try-catch处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在">
@@ -110,6 +110,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/杂文/">杂文</a></li>
 	        
+				<li><a href="/categories/工具/">工具</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -174,6 +176,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -194,13 +198,15 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -258,7 +264,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我之前的博客《<a href="http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/" target="_blank" rel="noopener">Jenkins 多分支构建</a>》及《<a href="http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/" target="_blank" rel="noopener">Jenkins 多分支构建中的邮件配置</a>》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为<code>node</code>，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用<code>try-catch</code>处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在Jenkinsfile里却没有体现出来，所以当发现构建较慢时也不利于定位问题所在的步骤。本篇文章将完全处理这些问题。<br><a id="more"></a></p>
+        <p>我之前的博客《<a href="http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/">Jenkins 多分支构建</a>》及《<a href="http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/">Jenkins 多分支构建中的邮件配置</a>》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为<code>node</code>，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用<code>try-catch</code>处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在Jenkinsfile里却没有体现出来，所以当发现构建较慢时也不利于定位问题所在的步骤。本篇文章将完全处理这些问题。<br><a id="more"></a></p>
 <h2 id="简单的stage声明"><a href="#简单的stage声明" class="headerlink" title="简单的stage声明"></a>简单的stage声明</h2><p>我们还是以之前的代码为例，这里为了专注于具体的配置，我简化一下构建命令及省略掉发邮件的代码，如下：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">node &#123;</span><br><span class="line">    checkout scm</span><br><span class="line">    echo <span class="string">"current branch: $BRANCH_NAME"</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (BRANCH_NAME.startsWith(<span class="string">"release/"</span>)) &#123;</span><br><span class="line">            sh <span class="string">"./gradlew clean -Ppublish assemble"</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sh <span class="string">"./gradlew clean assembleTest"</span></span><br><span class="line">        &#125;</span><br><span class="line">        currentBuild.result = <span class="string">'SUCCESS'</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (any) &#123;</span><br><span class="line">        currentBuild.result = <span class="string">'FAILURE'</span></span><br><span class="line">        <span class="keyword">throw</span> any</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (currentBuild.result == <span class="string">'FAILURE'</span>) &#123;</span><br><span class="line">            <span class="comment">// send e-mail</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果说，要把这个流程划分为多个阶段，那还是挺简单的，在<code>node</code>下增加<code>stage</code>节点就可以了，如下：</p>
@@ -367,7 +373,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Jenkins//" class="article-tag-list-link color3">Jenkins</a>
+				<a href="/categories/工具/" class="article-tag-list-link color3">工具</a>
         		</li>
       		
 		</ul>
@@ -614,15 +620,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -630,11 +628,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -642,7 +636,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -658,7 +668,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -670,14 +692,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
               </li>
              
@@ -686,19 +700,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">drawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -714,19 +720,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -738,7 +736,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -746,19 +756,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -766,7 +764,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -778,11 +784,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
               </li>
             
             <div class="clearfix"></div>

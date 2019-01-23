@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-01-20T16:02:22.073Z</updated>
+  <updated>2019-01-23T10:13:27.079Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jenkins之自动进行360加固</title>
+    <link href="http://www.githang.com/2019/01/23/jenkins-enhanced/"/>
+    <id>http://www.githang.com/2019/01/23/jenkins-enhanced/</id>
+    <published>2019-01-23T07:31:05.000Z</published>
+    <updated>2019-01-23T10:13:27.079Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;项目中使用到了360加固与阿里的热修复方案，以前是人工去操作加固或生成补丁包，比较浪费开发人员的时间，并且在我的电脑上每次命令行执行完全量编译都会卡很久。前段时间项目不紧，所以抽时间完成了在Jenkins流水线上进行360加固与生成热修复补丁的步骤。本文主要介绍实现Jenkins上进行自动加固的过程。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
+    
+      <category term="360加固" scheme="http://www.githang.com/tags/360%E5%8A%A0%E5%9B%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>面试随想</title>
@@ -41,15 +63,15 @@
     <link href="http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/"/>
     <id>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</id>
     <published>2019-01-16T01:47:08.000Z</published>
-    <updated>2019-01-16T06:48:14.752Z</updated>
+    <updated>2019-01-23T07:32:10.812Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;我之前的博客《&lt;a href=&quot;http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Jenkins 多分支构建&lt;/a&gt;》及《&lt;a href=&quot;http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Jenkins 多分支构建中的邮件配置&lt;/a&gt;》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为&lt;code&gt;node&lt;/code&gt;，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用&lt;code&gt;try-catch&lt;/code&gt;处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在Jenkinsfile里却没有体现出来，所以当发现构建较慢时也不利于定位问题所在的步骤。本篇文章将完全处理这些问题。&lt;br&gt;
+      &lt;p&gt;我之前的博客《&lt;a href=&quot;http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/&quot;&gt;Jenkins 多分支构建&lt;/a&gt;》及《&lt;a href=&quot;http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/&quot;&gt;Jenkins 多分支构建中的邮件配置&lt;/a&gt;》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为&lt;code&gt;node&lt;/code&gt;，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用&lt;code&gt;try-catch&lt;/code&gt;处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在Jenkinsfile里却没有体现出来，所以当发现构建较慢时也不利于定位问题所在的步骤。本篇文章将完全处理这些问题。&lt;br&gt;
     
     </summary>
     
-      <category term="Jenkins" scheme="http://www.githang.com/categories/Jenkins/"/>
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
@@ -180,7 +202,7 @@
     <link href="http://www.githang.com/2018/12/21/Git-Contribution-Statistics/"/>
     <id>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</id>
     <published>2018-12-21T02:03:01.000Z</published>
-    <updated>2018-12-21T02:03:01.000Z</updated>
+    <updated>2019-01-23T07:32:56.752Z</updated>
     
     <summary type="html">
     
@@ -190,7 +212,7 @@
     
     </summary>
     
-      <category term="Git" scheme="http://www.githang.com/categories/Git/"/>
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
@@ -339,7 +361,7 @@
     <link href="http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/"/>
     <id>http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</id>
     <published>2018-11-13T05:51:43.000Z</published>
-    <updated>2018-11-13T05:51:43.000Z</updated>
+    <updated>2019-01-23T07:33:29.841Z</updated>
     
     <summary type="html">
     
@@ -347,6 +369,8 @@
 &lt;p&gt;我把在使用ProGuard时经常遇到的问题分为两类，分别是导致构建失败的编译时问题，以及构建通过但运行时崩溃或结果不正确的运行时问题。大多数人所遇到的大多数问题，都可以在下面的内容中找到对应的解决套路。&lt;br&gt;在开始讲这两类问题前，先明确一点：我们所说的添加混淆规则，不是指加入了才会混淆相关的类，相反，事实上，当你启用混淆之后，添加的一些诸如&lt;code&gt;-keep xxxx&lt;/code&gt;的规则才是起着不混淆的作用。&lt;br&gt;下面开始讲这两类问题。&lt;br&gt;
     
     </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="ProGuard" scheme="http://www.githang.com/tags/ProGuard/"/>
@@ -358,7 +382,7 @@
     <link href="http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/"/>
     <id>http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</id>
     <published>2018-09-05T06:10:52.000Z</published>
-    <updated>2018-09-05T06:10:52.000Z</updated>
+    <updated>2019-01-23T07:33:35.808Z</updated>
     
     <summary type="html">
     
@@ -367,7 +391,7 @@
     
     </summary>
     
-      <category term="Nexus" scheme="http://www.githang.com/categories/Nexus/"/>
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="nexus" scheme="http://www.githang.com/tags/nexus/"/>
@@ -431,7 +455,7 @@
     <link href="http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
     <id>http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
     <published>2018-08-15T15:42:50.000Z</published>
-    <updated>2018-08-15T15:42:50.000Z</updated>
+    <updated>2019-01-23T07:33:48.605Z</updated>
     
     <summary type="html">
     
@@ -439,34 +463,12 @@
     
     </summary>
     
-      <category term="Jenkins" scheme="http://www.githang.com/categories/Jenkins/"/>
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
       <category term="email" scheme="http://www.githang.com/tags/email/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解</title>
-    <link href="http://www.githang.com/2018/08/12/Micro-Knowledge-1/"/>
-    <id>http://www.githang.com/2018/08/12/Micro-Knowledge-1/</id>
-    <published>2018-08-11T16:51:35.000Z</published>
-    <updated>2018-08-11T16:51:35.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这是关于 Java 静态方法和静态变量的一段代码：&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TestStatic&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; otherField = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;final&lt;/span&gt; BigInteger BIG_INTEGER = BigInteger.ONE;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;call method&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;我们把它转换成 Kotlin 代码，会得到这样的结果：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="微知识" scheme="http://www.githang.com/categories/%E5%BE%AE%E7%9F%A5%E8%AF%86/"/>
-    
-    
-      <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
   </entry>
   
