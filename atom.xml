@@ -5,9 +5,9 @@
   <subtitle>浩码农的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://githang.com/"/>
+  <link href="http://www.githang.com/"/>
   <updated>2019-01-20T16:02:22.073Z</updated>
-  <id>http://githang.com/</id>
+  <id>http://www.githang.com/</id>
   
   <author>
     <name>浩码农</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>面试随想</title>
-    <link href="http://githang.com/2019/01/18/interview-thinking-depth/"/>
-    <id>http://githang.com/2019/01/18/interview-thinking-depth/</id>
+    <link href="http://www.githang.com/2019/01/18/interview-thinking-depth/"/>
+    <id>http://www.githang.com/2019/01/18/interview-thinking-depth/</id>
     <published>2019-01-18T15:39:37.000Z</published>
     <updated>2019-01-20T16:02:22.073Z</updated>
     
@@ -29,17 +29,17 @@
     
     </summary>
     
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="面试" scheme="http://githang.com/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://www.githang.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Jenkinsfile的pipeline配置</title>
-    <link href="http://githang.com/2019/01/16/Jenkinsfile-pipeline/"/>
-    <id>http://githang.com/2019/01/16/Jenkinsfile-pipeline/</id>
+    <link href="http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/"/>
+    <id>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</id>
     <published>2019-01-16T01:47:08.000Z</published>
     <updated>2019-01-16T06:48:14.752Z</updated>
     
@@ -49,21 +49,21 @@
     
     </summary>
     
-      <category term="Jenkins" scheme="http://githang.com/categories/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.githang.com/categories/Jenkins/"/>
     
     
-      <category term="Jenkins" scheme="http://githang.com/tags/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Jenkinsfile" scheme="http://githang.com/tags/Jenkinsfile/"/>
+      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
-      <category term="Pipeline" scheme="http://githang.com/tags/Pipeline/"/>
+      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
     
   </entry>
   
   <entry>
     <title>Kotlin，走起 [0]=开篇</title>
-    <link href="http://githang.com/2019/01/11/kotlin-0/"/>
-    <id>http://githang.com/2019/01/11/kotlin-0/</id>
+    <link href="http://www.githang.com/2019/01/11/kotlin-0/"/>
+    <id>http://www.githang.com/2019/01/11/kotlin-0/</id>
     <published>2019-01-11T09:21:34.000Z</published>
     <updated>2019-01-23T02:07:17.321Z</updated>
     
@@ -73,19 +73,19 @@
     
     </summary>
     
-      <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
+      <category term="Kotlin" scheme="http://www.githang.com/categories/Kotlin/"/>
     
     
-      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
-      <category term="Kotlin走起" scheme="http://githang.com/tags/Kotlin%E8%B5%B0%E8%B5%B7/"/>
+      <category term="Kotlin走起" scheme="http://www.githang.com/tags/Kotlin%E8%B5%B0%E8%B5%B7/"/>
     
   </entry>
   
   <entry>
     <title>如何编写优雅的代码</title>
-    <link href="http://githang.com/2019/01/04/how-to-write-elegant-code/"/>
-    <id>http://githang.com/2019/01/04/how-to-write-elegant-code/</id>
+    <link href="http://www.githang.com/2019/01/04/how-to-write-elegant-code/"/>
+    <id>http://www.githang.com/2019/01/04/how-to-write-elegant-code/</id>
     <published>2019-01-04T09:04:05.000Z</published>
     <updated>2019-01-11T03:03:07.127Z</updated>
     
@@ -99,17 +99,17 @@
     
     </summary>
     
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="代码" scheme="http://githang.com/tags/%E4%BB%A3%E7%A0%81/"/>
+      <category term="代码" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title>2018年总结</title>
-    <link href="http://githang.com/2019/01/01/summary-of-2018/"/>
-    <id>http://githang.com/2019/01/01/summary-of-2018/</id>
+    <link href="http://www.githang.com/2019/01/01/summary-of-2018/"/>
+    <id>http://www.githang.com/2019/01/01/summary-of-2018/</id>
     <published>2019-01-01T04:17:11.000Z</published>
     <updated>2019-01-01T09:56:27.484Z</updated>
     
@@ -126,15 +126,15 @@
     
     </summary>
     
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
   </entry>
   
   <entry>
     <title>我为什么放弃在项目中使用Data Binding</title>
-    <link href="http://githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/"/>
-    <id>http://githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</id>
+    <link href="http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/"/>
+    <id>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</id>
     <published>2018-12-25T05:30:30.000Z</published>
     <updated>2018-12-30T19:57:09.914Z</updated>
     
@@ -145,19 +145,19 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="DataBinding" scheme="http://githang.com/tags/DataBinding/"/>
+      <category term="DataBinding" scheme="http://www.githang.com/tags/DataBinding/"/>
     
   </entry>
   
   <entry>
     <title>如何在Hexo中对文章md文件分类</title>
-    <link href="http://githang.com/2018/12/22/hexo-new-post-path/"/>
-    <id>http://githang.com/2018/12/22/hexo-new-post-path/</id>
+    <link href="http://www.githang.com/2018/12/22/hexo-new-post-path/"/>
+    <id>http://www.githang.com/2018/12/22/hexo-new-post-path/</id>
     <published>2018-12-22T04:57:21.000Z</published>
     <updated>2018-12-23T02:01:50.971Z</updated>
     
@@ -168,17 +168,17 @@
     
     </summary>
     
-      <category term="工具" scheme="http://githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="hexo" scheme="http://githang.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>统计项目中的代码有多少行是你贡献的</title>
-    <link href="http://githang.com/2018/12/21/Git-Contribution-Statistics/"/>
-    <id>http://githang.com/2018/12/21/Git-Contribution-Statistics/</id>
+    <link href="http://www.githang.com/2018/12/21/Git-Contribution-Statistics/"/>
+    <id>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</id>
     <published>2018-12-21T02:03:01.000Z</published>
     <updated>2018-12-21T02:03:01.000Z</updated>
     
@@ -190,17 +190,17 @@
     
     </summary>
     
-      <category term="Git" scheme="http://githang.com/categories/Git/"/>
+      <category term="Git" scheme="http://www.githang.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="http://githang.com/tags/Git/"/>
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>读《高效15法则》</title>
-    <link href="http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/"/>
-    <id>http://githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</id>
+    <link href="http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/"/>
+    <id>http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</id>
     <published>2018-12-18T06:59:07.000Z</published>
     <updated>2018-12-18T06:59:07.000Z</updated>
     
@@ -211,17 +211,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="读书" scheme="http://githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>Scientific Internet Access</title>
-    <link href="http://githang.com/2018/12/16/Scientific-Internet-Access/"/>
-    <id>http://githang.com/2018/12/16/Scientific-Internet-Access/</id>
+    <link href="http://www.githang.com/2018/12/16/Scientific-Internet-Access/"/>
+    <id>http://www.githang.com/2018/12/16/Scientific-Internet-Access/</id>
     <published>2018-12-15T16:11:14.000Z</published>
     <updated>2018-12-15T16:11:14.000Z</updated>
     
@@ -236,14 +236,14 @@
     </summary>
     
     
-      <category term="科学上网" scheme="http://githang.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+      <category term="科学上网" scheme="http://www.githang.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>Kotlin泛型上界与扩展函数</title>
-    <link href="http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/"/>
-    <id>http://githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</id>
+    <link href="http://www.githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/"/>
+    <id>http://www.githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</id>
     <published>2018-12-11T02:08:40.000Z</published>
     <updated>2018-12-11T02:08:40.000Z</updated>
     
@@ -254,17 +254,17 @@
     
     </summary>
     
-      <category term="Kotlin" scheme="http://githang.com/categories/Kotlin/"/>
+      <category term="Kotlin" scheme="http://www.githang.com/categories/Kotlin/"/>
     
     
-      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
   </entry>
   
   <entry>
     <title>AndroidManifest 权限</title>
-    <link href="http://githang.com/2018/12/10/AndroidManifest-Permissions/"/>
-    <id>http://githang.com/2018/12/10/AndroidManifest-Permissions/</id>
+    <link href="http://www.githang.com/2018/12/10/AndroidManifest-Permissions/"/>
+    <id>http://www.githang.com/2018/12/10/AndroidManifest-Permissions/</id>
     <published>2018-12-10T03:42:23.000Z</published>
     <updated>2018-12-10T03:42:23.000Z</updated>
     
@@ -279,17 +279,17 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Dinny —— Android 界面跳转协议化</title>
-    <link href="http://githang.com/2018/11/30/Dinny/"/>
-    <id>http://githang.com/2018/11/30/Dinny/</id>
+    <link href="http://www.githang.com/2018/11/30/Dinny/"/>
+    <id>http://www.githang.com/2018/11/30/Dinny/</id>
     <published>2018-11-30T01:34:13.000Z</published>
     <updated>2018-11-30T01:34:13.000Z</updated>
     
@@ -301,19 +301,19 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="Activity" scheme="http://githang.com/tags/Activity/"/>
+      <category term="Activity" scheme="http://www.githang.com/tags/Activity/"/>
     
   </entry>
   
   <entry>
     <title>我的 Mac 配置</title>
-    <link href="http://githang.com/2018/11/21/Mac-Preferences/"/>
-    <id>http://githang.com/2018/11/21/Mac-Preferences/</id>
+    <link href="http://www.githang.com/2018/11/21/Mac-Preferences/"/>
+    <id>http://www.githang.com/2018/11/21/Mac-Preferences/</id>
     <published>2018-11-21T14:21:11.000Z</published>
     <updated>2019-01-23T02:05:02.807Z</updated>
     
@@ -327,17 +327,17 @@
     
     </summary>
     
-      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="配置" scheme="http://githang.com/tags/%E9%85%8D%E7%BD%AE/"/>
+      <category term="配置" scheme="http://www.githang.com/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>ProGuard常见问题及解决套路</title>
-    <link href="http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/"/>
-    <id>http://githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</id>
+    <link href="http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/"/>
+    <id>http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</id>
     <published>2018-11-13T05:51:43.000Z</published>
     <updated>2018-11-13T05:51:43.000Z</updated>
     
@@ -349,14 +349,14 @@
     </summary>
     
     
-      <category term="ProGuard" scheme="http://githang.com/tags/ProGuard/"/>
+      <category term="ProGuard" scheme="http://www.githang.com/tags/ProGuard/"/>
     
   </entry>
   
   <entry>
     <title>修改 Sonatype Nexus2 的 baseUrl</title>
-    <link href="http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/"/>
-    <id>http://githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</id>
+    <link href="http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/"/>
+    <id>http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</id>
     <published>2018-09-05T06:10:52.000Z</published>
     <updated>2018-09-05T06:10:52.000Z</updated>
     
@@ -367,17 +367,17 @@
     
     </summary>
     
-      <category term="Nexus" scheme="http://githang.com/categories/Nexus/"/>
+      <category term="Nexus" scheme="http://www.githang.com/categories/Nexus/"/>
     
     
-      <category term="nexus" scheme="http://githang.com/tags/nexus/"/>
+      <category term="nexus" scheme="http://www.githang.com/tags/nexus/"/>
     
   </entry>
   
   <entry>
     <title>在 drawable 资源中使用属性引用的兼容问题</title>
-    <link href="http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/"/>
-    <id>http://githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</id>
+    <link href="http://www.githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/"/>
+    <id>http://www.githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</id>
     <published>2018-08-21T06:52:03.000Z</published>
     <updated>2018-08-21T06:52:03.000Z</updated>
     
@@ -388,21 +388,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://githang.com/categories/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://githang.com/tags/Android/"/>
+      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
-      <category term="颜色属性" scheme="http://githang.com/tags/%E9%A2%9C%E8%89%B2%E5%B1%9E%E6%80%A7/"/>
+      <category term="颜色属性" scheme="http://www.githang.com/tags/%E9%A2%9C%E8%89%B2%E5%B1%9E%E6%80%A7/"/>
     
-      <category term="兼容性" scheme="http://githang.com/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
+      <category term="兼容性" scheme="http://www.githang.com/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
     
   </entry>
   
   <entry>
     <title>感慨</title>
-    <link href="http://githang.com/2018/08/18/Filling/"/>
-    <id>http://githang.com/2018/08/18/Filling/</id>
+    <link href="http://www.githang.com/2018/08/18/Filling/"/>
+    <id>http://www.githang.com/2018/08/18/Filling/</id>
     <published>2018-08-18T06:46:07.000Z</published>
     <updated>2018-08-18T06:46:07.000Z</updated>
     
@@ -419,17 +419,17 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="随笔" scheme="http://githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Jenkins 多分支构建中的邮件配置</title>
-    <link href="http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
-    <id>http://githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
+    <link href="http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
+    <id>http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
     <published>2018-08-15T15:42:50.000Z</published>
     <updated>2018-08-15T15:42:50.000Z</updated>
     
@@ -439,19 +439,19 @@
     
     </summary>
     
-      <category term="Jenkins" scheme="http://githang.com/categories/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.githang.com/categories/Jenkins/"/>
     
     
-      <category term="Jenkins" scheme="http://githang.com/tags/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="email" scheme="http://githang.com/tags/email/"/>
+      <category term="email" scheme="http://www.githang.com/tags/email/"/>
     
   </entry>
   
   <entry>
     <title>微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解</title>
-    <link href="http://githang.com/2018/08/12/Micro-Knowledge-1/"/>
-    <id>http://githang.com/2018/08/12/Micro-Knowledge-1/</id>
+    <link href="http://www.githang.com/2018/08/12/Micro-Knowledge-1/"/>
+    <id>http://www.githang.com/2018/08/12/Micro-Knowledge-1/</id>
     <published>2018-08-11T16:51:35.000Z</published>
     <updated>2018-08-11T16:51:35.000Z</updated>
     
@@ -463,10 +463,10 @@
     
     </summary>
     
-      <category term="微知识" scheme="http://githang.com/categories/%E5%BE%AE%E7%9F%A5%E8%AF%86/"/>
+      <category term="微知识" scheme="http://www.githang.com/categories/%E5%BE%AE%E7%9F%A5%E8%AF%86/"/>
     
     
-      <category term="Kotlin" scheme="http://githang.com/tags/Kotlin/"/>
+      <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
   </entry>
   
