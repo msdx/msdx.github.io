@@ -106,6 +106,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -168,6 +170,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -188,11 +192,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -278,6 +284,19 @@ var _hmt = _hmt || [];
 <h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><p>上面提到，<code>sed</code>和<code>mv</code>会导致文件的创建时间改变，所以需要先分类再修改。尽管这样，当看到所有文件的创建时间都变成一样了之后，对于有强迫症的我还是觉得看着别扭。好在发现，<code>touch</code>命令也可以用于修改文件的创建时间。所以前面的操作可以优化一下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章内容，添加permalink</span></span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">" $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章的创建时间为Front-matter中的时间</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; echo $d ; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将timestamp创建时间修改为2017年1月1日，然后参考2018年文章归类方法，这里略</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 完成归类之后删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最后如果想再恢复文章的创建时间，再执行第三步命令</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; echo $d ; done;</span><br></pre></td></tr></table></figure>
 <p>以上是个人探究这个问题的结果。如有更优方案，欢迎交流指教。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -456,27 +475,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "如何在Hexo中对文章md文件分类",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -767,6 +765,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

@@ -113,6 +113,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -175,6 +177,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -195,11 +199,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -282,6 +288,19 @@ var _hmt = _hmt || [];
 <h1 id="Design-library-对CoordinatorLayout-的支持"><a href="#Design-library-对CoordinatorLayout-的支持" class="headerlink" title="Design library 对CoordinatorLayout 的支持"></a>Design library 对CoordinatorLayout 的支持</h1><p>在Design library中，提供了大量的material design 组件，其中一些组件可以和CoordinatorLayout配合使用，以快速实现交互。除了前面提到的Snackbar, FloatingActionButton之外，还有CollapsingToolbarLayout，AppBarLayout这些布局。除了这些布局，design library也实现了一些behavior，可以被直接使用，比如<code>appbar_scrolling_view_behavior</code>，还有前面使用到的<code>bottom_sheet_behavior</code>。这些例子网上较多，这里就不赘述了。</p>
 <p>下一篇将对CoordinatorLayout的源码一探究竟，以分析和理解它的实现原理。</p>
 <p>本文内容所涉及的完整代码见：<a href="https://github.com/msdx/CoordinatorLayout-Sample" target="_blank" rel="noopener">https://github.com/msdx/CoordinatorLayout-Sample</a></p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -464,27 +483,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "CoordinatorLayout之初步认识",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -775,6 +773,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

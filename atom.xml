@@ -65,7 +65,7 @@
     <link href="http://githang.com/2019/01/11/kotlin-0/"/>
     <id>http://githang.com/2019/01/11/kotlin-0/</id>
     <published>2019-01-11T09:21:34.000Z</published>
-    <updated>2019-01-17T08:30:56.047Z</updated>
+    <updated>2019-01-23T02:07:17.321Z</updated>
     
     <summary type="html">
     
@@ -315,7 +315,7 @@
     <link href="http://githang.com/2018/11/21/Mac-Preferences/"/>
     <id>http://githang.com/2018/11/21/Mac-Preferences/</id>
     <published>2018-11-21T14:21:11.000Z</published>
-    <updated>2019-01-14T13:05:46.602Z</updated>
+    <updated>2019-01-23T02:05:02.807Z</updated>
     
     <summary type="html">
     
@@ -327,6 +327,10 @@
     
     </summary>
     
+      <category term="杂文" scheme="http://githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="配置" scheme="http://githang.com/tags/%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   

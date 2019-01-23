@@ -111,6 +111,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -173,6 +175,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -193,11 +197,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -260,6 +266,19 @@ var _hmt = _hmt || [];
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">node &#123;</span><br><span class="line">    checkout scm</span><br><span class="line">    echo <span class="string">"current branch: $BRANCH_NAME"</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (BRANCH_NAME.startsWith(<span class="string">"release/"</span>)) &#123;</span><br><span class="line">            sh <span class="string">"./gradlew clean -Ppublish assemble -PLOCAL_USERNAME=$LOCAL_USERNAME -PLOCAL_PASSWORD=$LOCAL_PASSWORD"</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sh <span class="string">"./gradlew clean assembleTest -PLOCAL_USERNAME=$LOCAL_USERNAME -PLOCAL_PASSWORD=$LOCAL_PASSWORD"</span></span><br><span class="line">        &#125;</span><br><span class="line">        currentBuild.result = <span class="string">'SUCCESS'</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (any) &#123;</span><br><span class="line">        currentBuild.result = <span class="string">'FAILURE'</span></span><br><span class="line">        <span class="keyword">throw</span> any</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (currentBuild.result == <span class="string">'FAILURE'</span>) &#123;</span><br><span class="line">            emailext(</span><br><span class="line"><span class="symbol">                subject:</span> <span class="string">"Jenkins build is $&#123;currentBuild.result&#125;: $&#123;env.JOB_NAME&#125; #$&#123;env.BUILD_NUMBER&#125;"</span>,</span><br><span class="line"><span class="symbol">                mimeType:</span> <span class="string">"text/html"</span>,</span><br><span class="line"><span class="symbol">                body:</span> <span class="string">"""&lt;p&gt;Jenkins build is $&#123;currentBuild.result&#125;: $&#123;env.JOB_NAME&#125; #$&#123;env.BUILD_NUMBER&#125;:&lt;/p&gt;</span></span><br><span class="line"><span class="string">                         &lt;p&gt;Check console output at &lt;a href="$&#123;env.BUILD_URL&#125;console"&gt;$&#123;env.JOB_NAME&#125; #$&#123;env.BUILD_NUMBER&#125;&lt;/a&gt;&lt;/p&gt;"""</span>,</span><br><span class="line"><span class="symbol">                recipientProviders:</span> [[<span class="string">$class:</span> <span class="string">'CulpritsRecipientProvider'</span>],</span><br><span class="line">                                     [<span class="string">$class:</span> <span class="string">'DevelopersRecipientProvider'</span>],</span><br><span class="line">                                     [<span class="string">$class:</span> <span class="string">'RequesterRecipientProvider'</span>]]</span><br><span class="line">            )</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>除此之外，由于这里使用的是 Jenkins 的 <code>Email Extension Plugin</code> 插件，所以还得去系统设置里配置这个插件的发件人相关配置。<br>在 Jenkins 的主界面，进入系统管理，系统设置，然后找到 <code>Extended E-mail Notification</code>，添加与邮件通知类似的配置，如下：<br><img src="http://upyun.githang.com/2018/08/17/15344768166654.jpg" alt=""></p>
 <p>以上是所有的相关配置，最后验证我们的配置结果。<br>提交一下会编译失败的代码，收到邮件如下：<br><img src="http://upyun.githang.com/2018/08/17/15344770095924.jpg" alt=""><br>打开邮件里的链接即可直接查看控制台里的输出，至此大功告成。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -442,27 +461,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "Jenkins 多分支构建中的邮件配置",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -753,6 +751,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

@@ -106,6 +106,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -168,6 +170,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -188,11 +192,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -259,6 +265,19 @@ var _hmt = _hmt || [];
 <p>我一般不会在面试当中去问一些AMS之类的问题。首先，如前面所说，这样的知识，在公司实际的应用开发中，不会用到。其次，这种看起来面试必问的问题，可能会有些人去背答案，所以即便对方能答出来了你也不清楚他是真的水平到了那个程度还是仅仅背过，毕竟水平到了一定层次去深究源码了解一个知识点，和直接囫囵吞枣地背诵一个知识点，这之间的区别是不言而喻的。当然，如果是应聘高级、资深工程师的话，我想这样的问题就是必须得掌握的了吧。</p>
 <p>说到背面试题，我想起了几年前的一次面试。那时面试别人的经验更贫匮，我如之前一样提了一个Handler的机制的问题，结果对方不假思索地就把关键点都答了出来，Handler, Looper, MessageQueue，像念经一般。我听着他讲，总感觉哪里不对，但他的答案听来又十分完美。于是我问了一个我觉得不难的延伸问题：如果我想让主线程，向子线程发送一个消息让子线程去执行，应该怎么做呢？结果一个把Handler原理讲得那么清晰的人就这样被问住了。然后我明白了，这是背过的。<br>后来在面试过程中，我发现，一些基础而具体的问题反而更能表现一个人的水平是否合格。基础答得好的，水平都差不到哪里去，而且入职后水平提升也很快。所以在面试中，我总是更多地问一些基础而具体的问题。除非简历或交谈中有涉及到更深或更广的内容，我才会进一步深入以触探对方的知识深度。</p>
 <p>话说回来，周五的时候，有人问我关于Handler的问题，这让我想到关于Handler的另一种问法，不知道是否有其他人问过：请以设计的角度，谈谈你对Handler的理解。或者说，讲讲Handler为什么要这样实现。又或者是，如果是你，对于这样的需求，你会如何去实现。<br>对此，你的答案是什么呢？</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -428,27 +447,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "面试随想",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -739,6 +737,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

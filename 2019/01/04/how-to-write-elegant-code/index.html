@@ -106,6 +106,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -168,6 +170,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -188,11 +192,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -287,6 +293,19 @@ var _hmt = _hmt || [];
 <p>看起来似乎没问题，但如果某天，产品说要增加一个公交卡支付。这下不好了，没有升级的用户，在列表里面会看到原本应该显示公交卡的支付方式，在上下滚动时，有时显示微信，有时显示支付宝。所以说，程序员生存法则有很重要的一条：不要相信产品经理，不要相信产品经理，不要相信产品经理。但更重要的是，你代码上就要更严谨。想一下，如果有其他类型怎么办？添加一个else的分支，就不会有这个问题了。</p>
 <p>再举一个例子，比如一个值，是通过多种不同的条件来决定的，则应考虑把value声明为<code>final</code>类型。这样有什么好处呢？首先，它能够避免在一些条件里漏掉赋值，没有赋值的话编译器会报错。其次，它能够避免在复杂的if块里重复赋值，因为实际上可能if块里不会只有赋值一个操作，还有其他操作和比较复杂的逻辑。第三，它使得你所有的if及else分支能够覆盖所有条件，避免没有考虑到的情况。<br>我们在方法里只会赋值一次的变量，也应该声明为<code>final</code>，这样在用的时候就会很放心，清楚它的值不会被修改。<br>我们的成员变量，如果不需要被修改，也应该声明为<code>final</code>，从根源上确保它的不可变。<br>我们的参数值，比如需要传的值在某个范围内的，就应该用<code>@IntRange</code>注解声明它的范围。<br>我们的参数值，通常不应该在方法里被重新赋值，也就是参数也应该是<code>final</code>的。这一点kotlin就做得很好，在kotlin中函数的参数是不可再被赋值的。</p>
 <p>我这里就不多举例了。写代码时要注意必须保证代码的严谨性，如果不够严谨，那么总有一天这个bug会被触发。墨菲定律，在软件开发上总是奏效。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -465,27 +484,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "如何编写优雅的代码",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -776,6 +774,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

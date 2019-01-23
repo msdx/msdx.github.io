@@ -106,6 +106,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -168,6 +170,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -188,11 +192,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -288,6 +294,19 @@ var _hmt = _hmt || [];
 <p>这是一个很大的问题。<br>原来xml只负责布局，现在也要负责业务UI逻辑，逻辑与布局耦合在一起了。而xml又负责得不彻底，复杂一点的还得交由Java/Kotlin去实现，它只能负责一部分，也就是逻辑将两边拆，各自实现一部分，这是低内聚。这样的话就会降低代码的阅读性，增加项目的维护难度。这是促使我放弃的最大原因，除此之外，还有其他几个原因，后面谈。<br>我之所以使用Data Binding，是我认为，这样的技术，或者说这样的工具，应当是能够提高开发效率的。既然能提高开发效率，那就应该去尝试。然而它带来的低内聚高耦合，会使得项目代码反而变得复杂，<strong>这种复杂不是实现难度上的复杂，而是实现上的混乱导致的复杂。而这种复杂性最终是会束缚到开发效率的，因为只有保持开发上的简单，才能够保持开发上的效率。</strong>Data Binding能够使得简单业务的代码变得更简单，但是它也可能使复杂业务的代码变得更复杂，从它的特性上看，它违背了高内聚低耦合的原则，而从它的实现上看，它也没能绕过这个问题。</p>
 <h1 id="总结一下放弃的理由"><a href="#总结一下放弃的理由" class="headerlink" title="总结一下放弃的理由"></a>总结一下放弃的理由</h1><p>最后总结一下经过这些使用后让我放弃Data Binding的理由。</p>
 <p><strong>一、xml代码耦合度增加，业务逻辑内聚性降低。</strong>不利于项目质量的持续发展。<br><strong>二、经常需要手动点击编译，影响开发体验。</strong>在布局里新增的Data Binding变量，在Java/Kotlin中要使用的时候需要先点击编译等待完成，否则可能引用不到对应的<code>BR</code>类或该类里的变量。另外，已经删除的变量，如果不执行清理，在<code>BR</code>类里也依然存在，无法如<code>R</code>类一样更新及时。<br><strong>三、失去了Kotlin语法糖的优势。</strong>Kotlin扩展函数的特点可以使得代码尽可能的简洁直观易于阅读，而在xml中目前只支持Java语法而不支持Kotlin，所以也失去了使用Kotlin作为开发语言所带来的优势。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -470,27 +489,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "我为什么放弃在项目中使用Data Binding",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -781,6 +779,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

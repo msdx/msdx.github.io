@@ -111,6 +111,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -173,6 +175,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -193,11 +197,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -301,6 +307,19 @@ var _hmt = _hmt || [];
 <p>压抑着心中的万分激动，有着打破沙锅问到底精神的我，对此问题仍不放弃思考。<br>所以，究竟是什么原因呢？<br>我看了一下 .iml 文件，没什么异常。那就再看.idea 目录。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find .idea -type f |xargs grep "hichart"</span><br></pre></td></tr></table></figure>
 <p>结果如下：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png" alt="2018-03-07 19-00-12屏幕截图"><br>原来是在 .idea/libraries 里会记录每一个第三方库的 classes, javadoc 以及 sources 所对应的路径。其中 classes 对应的正是前面所提到的 transforms-1 里的目录，同样也正如前面所说，其中包含的路径是有 hash 值的，更新了依赖之后，hash 值不同，新的缓存路径也就不同了，而这里还是用的原来被删的那个路径，找不到对应的文件当然编辑器里就提示 <code>cannot resolve symbol</code> 了。所以正确而直接的解决方案应该是删除 <code>.idea/libraries/</code> 里对应该第三方库的 xml 文件让它重新生成，或者是直接修改该 xml 文件的内容，改为更新依赖之后的路径。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -483,27 +502,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "深踩 AndroidStudio 缓存的坑",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -794,6 +792,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>

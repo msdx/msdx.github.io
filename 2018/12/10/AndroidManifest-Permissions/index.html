@@ -106,6 +106,8 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/categories/Android/">Android</a></li>
 	        
+				<li><a href="/categories/杂文/">杂文</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
@@ -168,6 +170,8 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -188,11 +192,13 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Android/">Android</a></li>
+					<li style="width: 25%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/categories/杂文/">杂文</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -260,6 +266,19 @@ var _hmt = _hmt || [];
 <h1 id="android-permission-READ-LOGS"><a href="#android-permission-READ-LOGS" class="headerlink" title="android.permission.READ_LOGS"></a>android.permission.READ_LOGS</h1><p>这个权限允许一个应用程序读取低级别的系统日志文件。但从 api 16 起，不再允许第三方程序使用，因为考虑到这些日志文件有可能包含用户的一些隐私信息。</p>
 <h1 id="android-permission-BATTERY-STATS"><a href="#android-permission-BATTERY-STATS" class="headerlink" title="android.permission.BATTERY_STATS"></a>android.permission.BATTERY_STATS</h1><p>允许一个应用程序收集电池统计信息。<br>从 android 4.4（api 19）起不再允许第三方程序这一权限，保护级别从 “dangerous” 移到了 “signature|system”（见 <a href="https://android.googlesource.com/platform/frameworks/base.git/+/3714141d287c965ea3451831dd5167f63f8db87b" target="_blank" rel="noopener">https://android.googlesource.com/platform/frameworks/base.git/+/3714141d287c965ea3451831dd5167f63f8db87b</a> ）。</p>
 <h1 id="android-permission-WRITE-SETTINGS"><a href="#android-permission-WRITE-SETTINGS" class="headerlink" title="android.permission.WRITE_SETTINGS"></a>android.permission.WRITE_SETTINGS</h1><p>允许一个应用读写系统设置。<br>如果 app 的 target API 大于等于23，那么 app 用户必须通过权限管理界面来授权 app 这一权限。app 通过发送一个 action 为 <code>Settings.ACTION_MANAGE_WRITE_SETTINGS</code> 的 intent 来请求用户授权，并通过调用 <code>Settings.System.canWrite()</code> 来检查是否有这个权限。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
 
       
 
@@ -438,27 +457,6 @@ var _hmt = _hmt || [];
   
 
   
-
-  
-  <div id="gitment-ctn"></div> 
-<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
--->
-
-<link rel="stylesheet" href="/gitment/style/default.css">
-<script src="/gitment/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "AndroidManifest 权限",
-  owner: 'msdx',
-  repo: 'blog-comments',
-  oauth: {
-    client_id: '86dd63ff5497d3a9d07b',
-    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -749,6 +747,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
             
             <div class="clearfix"></div>
