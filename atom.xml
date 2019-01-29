@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-01-23T10:13:27.079Z</updated>
+  <updated>2019-01-29T06:41:11.720Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Jenkins之自动生成热修复补丁</title>
+    <link href="http://www.githang.com/2019/01/29/jenkins-hotfix-patch/"/>
+    <id>http://www.githang.com/2019/01/29/jenkins-hotfix-patch/</id>
+    <published>2019-01-29T02:48:03.000Z</published>
+    <updated>2019-01-29T06:41:11.720Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇博客是《&lt;a href=&quot;https://www.githang.com/2019/01/23/jenkins-enhanced/&quot;&gt;Jenkins之自动进行360加固&lt;/a&gt;》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
+    
+      <category term="热修复" scheme="http://www.githang.com/tags/%E7%83%AD%E4%BF%AE%E5%A4%8D/"/>
+    
+      <category term="Sophix" scheme="http://www.githang.com/tags/Sophix/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jenkins之自动进行360加固</title>
     <link href="http://www.githang.com/2019/01/23/jenkins-enhanced/"/>
     <id>http://www.githang.com/2019/01/23/jenkins-enhanced/</id>
     <published>2019-01-23T07:31:05.000Z</published>
-    <updated>2019-01-23T10:13:27.079Z</updated>
+    <updated>2019-01-23T23:44:03.608Z</updated>
     
     <summary type="html">
     
@@ -83,11 +107,11 @@
   </entry>
   
   <entry>
-    <title>Kotlin，走起 [0]=开篇</title>
+    <title>从Java角度学Kotlin[0]=开篇</title>
     <link href="http://www.githang.com/2019/01/11/kotlin-0/"/>
     <id>http://www.githang.com/2019/01/11/kotlin-0/</id>
     <published>2019-01-11T09:21:34.000Z</published>
-    <updated>2019-01-23T02:07:17.321Z</updated>
+    <updated>2019-01-25T06:24:31.371Z</updated>
     
     <summary type="html">
     
@@ -447,28 +471,6 @@
     
     
       <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jenkins 多分支构建中的邮件配置</title>
-    <link href="http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/"/>
-    <id>http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</id>
-    <published>2018-08-15T15:42:50.000Z</published>
-    <updated>2019-01-23T07:33:48.605Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前的《Jenkins 多分支构建》解决了多分支项目的构建问题，但是却漏了一个问题，那就是邮件通知。&lt;br&gt;作为开发，我们的主要精力是集中在开发实现上，所以也不能每次推完代码之后都去等着看构建结果，我们需要在构建失败的时候，Jenkins 能够通知我们去处理，所以邮件配置是不可少的。&lt;br&gt;在简单的 Freestyle 项目中，我们可以进行如下配置：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
-    
-      <category term="email" scheme="http://www.githang.com/tags/email/"/>
     
   </entry>
   
