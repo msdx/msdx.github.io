@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-01-29T08:32:33.098Z</updated>
+  <updated>2019-01-30T01:52:04.709Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>背包、队列和栈</title>
+    <link href="http://www.githang.com/2019/01/30/bag-queue-stack/"/>
+    <id>http://www.githang.com/2019/01/30/bag-queue-stack/</id>
+    <published>2019-01-30T01:30:38.000Z</published>
+    <updated>2019-01-30T01:52:04.709Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文内容为《算法》第4版学习笔记。&lt;/p&gt;
+&lt;h2 id=&quot;背包&quot;&gt;&lt;a href=&quot;#背包&quot; class=&quot;headerlink&quot; title=&quot;背包&quot;&gt;&lt;/a&gt;背包&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;背包&lt;/strong&gt;是一种不支持从中删除元素的集合数据类型——它的目的就是帮助用例收集元素并迭代遍历所有收集到的元素（用例也可以检查背包是否为空或者获取背包中元素的数量）。迭代的顺序不确定且与用例无关。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="算法" scheme="http://www.githang.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://www.githang.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Jenkins之自动生成Sophix热修复补丁</title>
@@ -100,9 +121,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
-    
       <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
+    
+      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
   </entry>
   
@@ -444,33 +465,6 @@
       <category term="颜色属性" scheme="http://www.githang.com/tags/%E9%A2%9C%E8%89%B2%E5%B1%9E%E6%80%A7/"/>
     
       <category term="兼容性" scheme="http://www.githang.com/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>感慨</title>
-    <link href="http://www.githang.com/2018/08/18/Filling/"/>
-    <id>http://www.githang.com/2018/08/18/Filling/</id>
-    <published>2018-08-18T06:46:07.000Z</published>
-    <updated>2018-08-18T06:46:07.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;我们以不同的方式在同一个地方共同地努力，却因为起跑线的不同而得到不同的结果。&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
