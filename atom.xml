@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-01-30T01:52:04.709Z</updated>
+  <updated>2019-03-27T16:11:06.372Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>码农故事1——受惠寄居遇驴友 维艰窘境见人心</title>
+    <link href="http://www.githang.com/2019/03/28/coder-story-1/"/>
+    <id>http://www.githang.com/2019/03/28/coder-story-1/</id>
+    <published>2019-03-27T16:10:14.000Z</published>
+    <updated>2019-03-27T16:11:06.372Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;　　入行六年，按一万小时计算，于所涉及领域不说精通，但也算得上是小有心得了。近半年来，领略多门语言设计，又泛读些许杂书，贯通了以往不少不解知识，而初窥所学本质。本该继续深研，但或许是爱一行做一行，做一行而恨一行吧，一个多月以来的经历，让我领悟了不少
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>背包、队列和栈</title>
@@ -440,31 +463,6 @@
     
     
       <category term="nexus" scheme="http://www.githang.com/tags/nexus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 drawable 资源中使用属性引用的兼容问题</title>
-    <link href="http://www.githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/"/>
-    <id>http://www.githang.com/2018/08/21/Incompatibility-Problem-About-Attribute-Reference-In-Drawable/</id>
-    <published>2018-08-21T06:52:03.000Z</published>
-    <updated>2018-08-21T06:52:03.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近在 Buly 崩溃分析里看到一个之前没见过的异常，异常信息为 &lt;code&gt;Can&amp;#39;t convert to color: type=0x2&lt;/code&gt;。详细日志如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;java.lang.RuntimeException:Unable to start activity ComponentInfo&amp;#123;com.parkingwang.iop/com.parkingwang.iop.home.HomeActivity&amp;#125;: android.view.InflateException: Binary XML file line #79: Error inflating class TextView&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2366)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;......&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;java.lang.UnsupportedOperationException:Can&amp;apos;t convert to color: type=0x2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.content.res.TypedArray.getColor(TypedArray.java:327)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.graphics.drawable.GradientDrawable.inflate(GradientDrawable.java:970)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.graphics.drawable.Drawable.createFromXmlInner(Drawable.java:937)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.graphics.drawable.Drawable.createFromXml(Drawable.java:877)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.content.res.Resources.loadDrawable(Resources.java:2206)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.content.res.TypedArray.getDrawable(TypedArray.java:602)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.widget.TextView.&amp;lt;init&amp;gt;(TextView.java:854)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;android.support.v7.widget.AppCompatTextView.&amp;lt;init&amp;gt;(TbsSdkJava)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
-    
-      <category term="颜色属性" scheme="http://www.githang.com/tags/%E9%A2%9C%E8%89%B2%E5%B1%9E%E6%80%A7/"/>
-    
-      <category term="兼容性" scheme="http://www.githang.com/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
     
   </entry>
   
