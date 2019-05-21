@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-08T14:03:18.948Z</updated>
+  <updated>2019-05-21T09:16:28.996Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>yilia 主题添加来必力评论系统</title>
+    <link href="http://www.githang.com/2019/05/21/hexo-yilia-livere/"/>
+    <id>http://www.githang.com/2019/05/21/hexo-yilia-livere/</id>
+    <published>2019-05-21T08:56:56.000Z</published>
+    <updated>2019-05-21T09:16:28.996Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-主题配置添加来必力&quot;&gt;&lt;a href=&quot;#1-主题配置添加来必力&quot; class=&quot;headerlink&quot; title=&quot;1. 主题配置添加来必力&quot;&gt;&lt;/a&gt;1. 主题配置添加来必力&lt;/h2&gt;&lt;p&gt;修改 hexo 博客目录的 &lt;code&gt;theme/yilia&lt;/code&gt; 中的 &lt;code&gt;_config.uml&lt;/code&gt; 文件，增加如下配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# livere 来必力。将 false 改为自己的uid则启用该评论系统。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;livere_uid:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
+    
+  </entry>
   
   <entry>
     <title>码农故事2——岁前落脚得安定 年后求职寻转机</title>
@@ -160,9 +183,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
-    
       <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
+    
+      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
   </entry>
   
@@ -437,27 +460,6 @@
     
     
       <category term="配置" scheme="http://www.githang.com/tags/%E9%85%8D%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ProGuard常见问题及解决套路</title>
-    <link href="http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/"/>
-    <id>http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</id>
-    <published>2018-11-13T05:51:43.000Z</published>
-    <updated>2019-01-23T07:33:29.841Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ProGuard是一个压缩、优化和混淆Java字节码的工具，非常好用。本篇文章总结一下许多人在使用ProGuard时经常遇到的问题。&lt;/p&gt;
-&lt;p&gt;我把在使用ProGuard时经常遇到的问题分为两类，分别是导致构建失败的编译时问题，以及构建通过但运行时崩溃或结果不正确的运行时问题。大多数人所遇到的大多数问题，都可以在下面的内容中找到对应的解决套路。&lt;br&gt;在开始讲这两类问题前，先明确一点：我们所说的添加混淆规则，不是指加入了才会混淆相关的类，相反，事实上，当你启用混淆之后，添加的一些诸如&lt;code&gt;-keep xxxx&lt;/code&gt;的规则才是起着不混淆的作用。&lt;br&gt;下面开始讲这两类问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="ProGuard" scheme="http://www.githang.com/tags/ProGuard/"/>
     
   </entry>
   
