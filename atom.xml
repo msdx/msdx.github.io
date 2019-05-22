@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-22T04:01:47.905Z</updated>
+  <updated>2019-05-22T05:50:22.863Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo yilia 添加 Vuukle 评论系统</title>
+    <link href="http://www.githang.com/2019/06/19/hexo-yilia-vuukle/"/>
+    <id>http://www.githang.com/2019/06/19/hexo-yilia-vuukle/</id>
+    <published>2019-06-19T05:22:34.000Z</published>
+    <updated>2019-05-22T05:50:22.863Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注册并获取-API-key&quot;&gt;&lt;a href=&quot;#注册并获取-API-key&quot; class=&quot;headerlink&quot; title=&quot;注册并获取 API key&quot;&gt;&lt;/a&gt;注册并获取 API key&lt;/h2&gt;&lt;p&gt;先到 &lt;a href=&quot;https://vuukle.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://vuukle.com/&lt;/a&gt; 上注册为 publisher。然后参考其&lt;a href=&quot;https://docs.vuukle.com/how-to-embed-vuukle-2.0-via-js/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;获取自己的 API key。&lt;/p&gt;
+&lt;h2 id=&quot;修改-yilia-主题&quot;&gt;&lt;a href=&quot;#修改-yilia-主题&quot; class=&quot;headerlink&quot; title=&quot;修改 yilia 主题&quot;&gt;&lt;/a&gt;修改 yilia 主题&lt;/h2&gt;&lt;p&gt;接下来步骤还是如前面的博客，如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo yilia 添加 intensedebate 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/</id>
-    <published>2019-05-22T03:18:16.000Z</published>
-    <updated>2019-05-22T04:01:47.905Z</updated>
+    <link href="http://www.githang.com/2019/06/12/hexo-yilia-intensedebate/"/>
+    <id>http://www.githang.com/2019/06/12/hexo-yilia-intensedebate/</id>
+    <published>2019-06-12T03:18:16.000Z</published>
+    <updated>2019-05-22T05:48:10.324Z</updated>
     
     <summary type="html">
     
@@ -41,10 +64,10 @@
   
   <entry>
     <title>Hexo yilia 主题添加 valine 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-valine/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-valine/</id>
-    <published>2019-05-22T02:50:39.000Z</published>
-    <updated>2019-05-22T03:59:32.247Z</updated>
+    <link href="http://www.githang.com/2019/06/05/hexo-yilia-valine/"/>
+    <id>http://www.githang.com/2019/06/05/hexo-yilia-valine/</id>
+    <published>2019-06-05T02:50:39.000Z</published>
+    <updated>2019-05-22T05:17:31.204Z</updated>
     
     <summary type="html">
     
@@ -69,10 +92,10 @@
   
   <entry>
     <title>Hexo yilia 主题添加 widgetpack 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/</id>
-    <published>2019-05-21T16:29:52.000Z</published>
-    <updated>2019-05-22T03:01:22.586Z</updated>
+    <link href="http://www.githang.com/2019/05/29/hexo-yilia-widgetpack/"/>
+    <id>http://www.githang.com/2019/05/29/hexo-yilia-widgetpack/</id>
+    <published>2019-05-28T16:29:52.000Z</published>
+    <updated>2019-05-22T05:16:40.267Z</updated>
     
     <summary type="html">
     
@@ -258,9 +281,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
-    
       <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
+    
+      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
     
   </entry>
   
@@ -441,27 +464,6 @@
     
     
       <category term="科学上网" scheme="http://www.githang.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Kotlin泛型上界与扩展函数</title>
-    <link href="http://www.githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/"/>
-    <id>http://www.githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</id>
-    <published>2018-12-11T02:08:40.000Z</published>
-    <updated>2018-12-11T02:08:40.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;泛型场景&quot;&gt;&lt;a href=&quot;#泛型场景&quot; class=&quot;headerlink&quot; title=&quot;泛型场景&quot;&gt;&lt;/a&gt;泛型场景&lt;/h1&gt;&lt;p&gt;先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。&lt;br&gt;比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。&lt;/p&gt;
-&lt;h2 id=&quot;泛型递归和链式调用&quot;&gt;&lt;a href=&quot;#泛型递归和链式调用&quot; class=&quot;headerlink&quot; title=&quot;泛型递归和链式调用&quot;&gt;&lt;/a&gt;泛型递归和链式调用&lt;/h2&gt;&lt;p&gt;为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Kotlin" scheme="http://www.githang.com/categories/Kotlin/"/>
-    
-    
-      <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
   </entry>
   
