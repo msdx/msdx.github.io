@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-22T03:04:02.200Z</updated>
+  <updated>2019-05-22T04:01:47.905Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo yilia 添加 intensedebate 评论系统</title>
+    <link href="http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/"/>
+    <id>http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/</id>
+    <published>2019-05-22T03:18:16.000Z</published>
+    <updated>2019-05-22T04:01:47.905Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;注册并获取代码&quot;&gt;&lt;a href=&quot;#注册并获取代码&quot; class=&quot;headerlink&quot; title=&quot;注册并获取代码&quot;&gt;&lt;/a&gt;注册并获取代码&lt;/h2&gt;&lt;p&gt;首先到 &lt;a href=&quot;https://intensedebate.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://intensedebate.com/&lt;/a&gt; 注册账号。&lt;/p&gt;
+&lt;p&gt;然后登录进去，在主面板点击右侧的 &lt;code&gt;Install IntenseDebate&lt;/code&gt;，如下：&lt;br&gt;&lt;img src=&quot;http://upyun.githang.com/2019/05/22/15584958113348.jpg!w1000&quot; alt=&quot;主面板&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo yilia 主题添加 valine 评论系统</title>
     <link href="http://www.githang.com/2019/05/22/hexo-yilia-valine/"/>
     <id>http://www.githang.com/2019/05/22/hexo-yilia-valine/</id>
     <published>2019-05-22T02:50:39.000Z</published>
-    <updated>2019-05-22T03:04:02.200Z</updated>
+    <updated>2019-05-22T03:59:32.247Z</updated>
     
     <summary type="html">
     
@@ -35,6 +58,12 @@
     
     </summary>
     
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
     
   </entry>
   
@@ -433,31 +462,6 @@
     
     
       <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidManifest 权限</title>
-    <link href="http://www.githang.com/2018/12/10/AndroidManifest-Permissions/"/>
-    <id>http://www.githang.com/2018/12/10/AndroidManifest-Permissions/</id>
-    <published>2018-12-10T03:42:23.000Z</published>
-    <updated>2018-12-10T03:42:23.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在开发中，android lint 工具会提示以下几个权限只允许系统应用使用：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;android.permission.READ_LOGS&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;android.permission.BATTERY_STATS&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;android.permission.WRITE_SETTINGS&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
   </entry>
   
