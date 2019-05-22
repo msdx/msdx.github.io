@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>yilia 主题添加 widgetpack 评论系统 | 疯狂的键盘</title>
+  <title>Hexo yilia 主题添加 widgetpack 评论系统 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="修改方法与上篇相同，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
+  <meta name="description" content="修改方法与上篇相似，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
 <meta name="keywords" content="hexo,yilia">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yilia 主题添加 widgetpack 评论系统">
+<meta property="og:title" content="Hexo yilia 主题添加 widgetpack 评论系统">
 <meta property="og:url" content="http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="修改方法与上篇相同，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
+<meta property="og:description" content="修改方法与上篇相似，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-21T16:39:29.716Z">
+<meta property="og:updated_time" content="2019-05-22T03:01:22.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yilia 主题添加 widgetpack 评论系统">
-<meta name="twitter:description" content="修改方法与上篇相同，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
+<meta name="twitter:title" content="Hexo yilia 主题添加 widgetpack 评论系统">
+<meta name="twitter:description" content="修改方法与上篇相似，如下： 1. 主题配置添加 widgetpack修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 12# widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。widgetpack: false">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -226,7 +226,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      yilia 主题添加 widgetpack 评论系统
+      Hexo yilia 主题添加 widgetpack 评论系统
     </h1>
   
 
@@ -262,11 +262,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>修改方法与上篇相同，如下：</p>
+        <p>修改方法与上篇相似，如下：</p>
 <h2 id="1-主题配置添加-widgetpack"><a href="#1-主题配置添加-widgetpack" class="headerlink" title="1. 主题配置添加 widgetpack"></a>1. 主题配置添加 widgetpack</h2><p>修改 hexo 博客目录的 <code>theme/yilia</code> 中的 <code>_config.yml</code> 文件，增加如下配置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># widgetpack。将 false 改为 widgetpack 上的 id 则启用该评论系统。</span></span><br><span class="line"><span class="attr">widgetpack:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="2-新增widgetpack代码文件"><a href="#2-新增widgetpack代码文件" class="headerlink" title="2. 新增widgetpack代码文件"></a>2. 新增widgetpack代码文件</h2><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>widgetpack.ejs</code>文件，内容如下：</p>
+<h2 id="2-新增-widgetpack-代码文件"><a href="#2-新增-widgetpack-代码文件" class="headerlink" title="2. 新增 widgetpack 代码文件"></a>2. 新增 widgetpack 代码文件</h2><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>widgetpack.ejs</code>文件，内容如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wpac-comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">wpac_init = window.wpac_init || [];</span></span><br><span class="line"><span class="xml">wpac_init.push(&#123;widget: 'Comment', id: <span class="tag">&lt;<span class="name">%=theme.widgetpack%</span>&gt;</span>&#125;);</span></span><br><span class="line"><span class="undefined">(function() &#123;</span></span><br><span class="line"><span class="undefined">    if ('WIDGETPACK_LOADED' in window) return;</span></span><br><span class="line"><span class="undefined">    WIDGETPACK_LOADED = true;</span></span><br><span class="line"><span class="undefined">    var mc = document.createElement('script');</span></span><br><span class="line"><span class="undefined">    mc.type = 'text/javascript';</span></span><br><span class="line"><span class="undefined">    mc.async = true;</span></span><br><span class="line"><span class="undefined">    mc.src = 'https://embed.widgetpack.com/widget.js';</span></span><br><span class="line"><span class="undefined">    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);</span></span><br><span class="line"><span class="undefined">&#125;)();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://widgetpack.com"</span> <span class="attr">class</span>=<span class="string">"wpac-cr"</span>&gt;</span>Comments System WIDGET PACK<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="3-修改-article-ejs"><a href="#3-修改-article-ejs" class="headerlink" title="3. 修改 article.ejs"></a>3. 修改 article.ejs</h2><p>修改 yilia 中的 <code>layout/_partial/article.ejs</code> 文件，在 <code>&lt;% if (!index &amp;&amp; post.comments){ %&gt;</code> 后的任意一个评论代码前或后插入如下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%if</span> (<span class="attr">theme.widgetpack</span>) &#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">widgetpack</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
@@ -414,9 +414,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2019/05/22/hexo-yilia-valine/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo yilia 主题添加 valine 评论系统
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/05/21/hexo-yilia-livere/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">yilia 主题添加来必力评论系统</div>
+      <div class="article-nav-title">Hexo yilia 主题添加来必力评论系统</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -730,14 +739,6 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
@@ -746,15 +747,19 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开源</a>
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -762,67 +767,15 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OkHttp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+                <a href="javascript:void(0)" class="js-tag color3">开源</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+                <a href="javascript:void(0)" class="js-tag color2">OkHttp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -830,7 +783,19 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -846,15 +811,11 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -866,23 +827,15 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+                <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -890,7 +843,19 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -898,11 +863,19 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -914,11 +887,47 @@ wpac_init.push({widget: 'Comment', id: 18631});
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
               </li>
             
             <div class="clearfix"></div>

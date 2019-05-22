@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>Archives: 2017 | 疯狂的键盘</title>
+  <title>Hexo yilia 主题添加 valine 评论系统 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Android研发工程师，左撇子，崇尚小即是美，如无必要勿增实体。">
+  <meta name="description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
 <meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://www.githang.com/archives/2017/page/2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo yilia 主题添加 valine 评论系统">
+<meta property="og:url" content="http://www.githang.com/2019/05/22/hexo-yilia-valine/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Android研发工程师，左撇子，崇尚小即是美，如无必要勿增实体。">
+<meta property="og:description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-22T03:04:02.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的键盘">
-<meta name="twitter:description" content="Android研发工程师，左撇子，崇尚小即是美，如无必要勿增实体。">
+<meta name="twitter:title" content="Hexo yilia 主题添加 valine 评论系统">
+<meta name="twitter:description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -218,220 +219,384 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo-yilia-valine" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo yilia 主题添加 valine 评论系统
+    </h1>
+  
+
+        
+        <a href="/2019/05/22/hexo-yilia-valine/" class="archive-article-date">
+  	<time datetime="2019-05-22T02:50:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-22</time>
+</a>
+        <!-- word count start -->
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">467字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
+          
+        <!-- word count end -->
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：</p>
+<ul>
+<li><a href="https://zhx2994.github.io/2018/10/16/Hexo-yilia%E4%B8%BB%E9%A2%98-%E6%B7%BB%E5%8A%A0valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">《Hexo yilia主题 添加valine评论系统》</a></li>
+<li><a href="https://deserts.io/diy-a-comment-system/" target="_blank" rel="noopener">《Valine: 独立博客评论系统》</a></li>
+</ul>
+<h2 id="1-主题配置文件添加-valine-相关配置"><a href="#1-主题配置文件添加-valine-相关配置" class="headerlink" title="1. 主题配置文件添加 valine 相关配置"></a>1. 主题配置文件添加 valine 相关配置</h2><p>修改 hexo 博客目录的 <code>theme/yilia</code> 中的 <code>_config.yml</code> 文件，增加如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8、Valine</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr"> appid:</span> <span class="comment">#Leancloud应用的appId</span></span><br><span class="line"><span class="attr"> appkey:</span> <span class="comment">#Leancloud应用的appKey</span></span><br><span class="line"><span class="attr"> verify:</span> <span class="literal">false</span> <span class="comment">#验证码</span></span><br><span class="line"><span class="attr"> notify:</span> <span class="literal">true</span> <span class="comment">#评论回复提醒</span></span><br><span class="line"><span class="attr"> placeholder:</span> <span class="string">有话要说？</span> <span class="comment">#评论框占位符</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2-新增-valine代码文件"><a href="#2-新增-valine代码文件" class="headerlink" title="2. 新增 valine代码文件"></a>2. 新增 valine代码文件</h2><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>valine.ejs</code>文件，内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"valine_comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--载入js，在&lt;/body&gt;之前插入即可--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Leancloud 操作库:--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Valine 的核心代码库--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">  var notify = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.notify</span> %&gt;</span>' == true ? true : false;</span></span><br><span class="line"><span class="xml">  var verify = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.verify</span> %&gt;</span>' == true ? true : false;</span></span><br><span class="line"><span class="undefined">  new Valine(&#123;</span></span><br><span class="line"><span class="undefined">      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)</span></span><br><span class="line"><span class="undefined">      av: AV,</span></span><br><span class="line"><span class="undefined">      el: '.valine_comment',</span></span><br><span class="line"><span class="undefined">      emoticon_url: 'https://cloud.panjunwen.com/alu',</span></span><br><span class="line"><span class="undefined">      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],</span></span><br><span class="line"><span class="xml">      app_id: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.appid</span> %&gt;</span>',</span></span><br><span class="line"><span class="xml">      app_key: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.appkey</span> %&gt;</span>',</span></span><br><span class="line"><span class="xml">      placeholder: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.placeholder</span> %&gt;</span>'</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-修改-article-ejs"><a href="#3-修改-article-ejs" class="headerlink" title="3. 修改 article.ejs"></a>3. 修改 article.ejs</h2><p>修改 yilia 中的 <code>layout/_partial/article.ejs</code> 文件，在 <code>&lt;% if (!index &amp;&amp; post.comments){ %&gt;</code> 后的任意一个评论代码前或后插入如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.valine</span> &amp;&amp; <span class="attr">theme.valine.appid</span> &amp;&amp; <span class="attr">theme.valine.appkey</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">valine</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>如上三步，修改完成。如果要启用，修改主题的 <code>_config.yml</code> 文件，将 leancloud 上创建的应用的 appid 和 appkey 配置上即可，注意冒号之后有空格。</p>
+
+      
+
+      
+        <!-- Copyright -->
+<div>
+  <hr>
+  <font size="2" color="999999">
+  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br>
+  本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
+  </font>
+</div>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>我的娃的奶粉钱就看你们的打赏啦<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/" class="archive-article-date">
-  	<time datetime="2017-09-21T05:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/">ViewPager与CoordinatorLayout一起使用的一个Bug</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CoordinatorLayout</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/05/22/hexo-yilia-valine/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-				<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/18/Mask-Layer/" class="archive-article-date">
-  	<time datetime="2017-09-18T13:54:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-18</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/22/hexo-yilia-widgetpack/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo yilia 主题添加 widgetpack 评论系统</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  <div id="comment-tabs-div" class="comment-tabs-div">
+
+    <ul id="comment-tab-list" class="comment-tabs">
+
+      
+      <li class="comment-tab-active">valine</li>
+      
+
+      
+      <li class="">widgetpack</li>
+      
+
+      
+      <li class="">畅言</li>
+      
+
+      
+      <li>来必力</li>
+      
+
+      
+      <li>Disqus</li>
+      
+    </ul>
+ 
+    
+    <div class="comment-content comment-content-show">
+      <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'true' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV, 
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      app_id: 'gIFaPh0tJO7OEtT6XF5fKEel-gzGzoHsz',
+      app_key: 'ywkCbkvRxDTYdByDhIdVdH2x',
+      placeholder: '有话要说？'
+    });
+</script>
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+      <div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id: 18631});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Comments System WIDGET PACK</a>
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+      <div id="SOHUCS" sid="hexo-yilia-valine"></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytUGGJnM",
+        conf: "prod_6c1f7b60fcca107acfc5827835578770"
+    });
+</script>
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+      <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NDI3Ny8yMDgwOQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+      <section id="comments">
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'https-www-githang-com'; // required: replace example with your forum shortname
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/Mask-Layer/">蒙层</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-				<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </section>
+    </div>
+    
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    <script type="text/javascript">
+        // JS实现选项卡切换
+        var tabList = document.getElementById("comment-tab-list");
+        var aLis = tabList.getElementsByTagName("li");
+        var tDiv = document.getElementById("comment-tabs-div");
+        var contents = tDiv.getElementsByClassName("comment-content");
+
+        function selectTab(index) {
+            for(var j = 0; j < aLis.length; j++) {
+                if (index == j) {
+                    aLis[j].className = "comment-tab-active";
+                } else {
+                    aLis[j].className = '';
+                }
+            }
+            for(var j = 0; j < contents.length; j++) {
+                if (index == j) {
+                    contents[index].className = "comment-content comment-content-show";
+                } else {
+                    contents[j].className = "comment-content comment-content-hide";
+                }
+            }
+        }
+
+        for(var i = 0; i < aLis.length; i++) {
+            aLis[i].index = i;
+            aLis[i].onclick = function() {
+                selectTab(this.index);
+            };
+        }
+
+        selectTab(0);
+    </script>
+
   </div>
-</article>
-  
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/16/OkHttp3-LogInterceptor/" class="archive-article-date">
-  	<time datetime="2017-09-16T01:51:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/16/OkHttp3-LogInterceptor/">让okhttp3优雅地打印日志</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开源</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">OkHttp</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-				<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/hello-world/">你好，Hexo</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4684296714025694",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -468,8 +633,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
