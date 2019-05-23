@@ -6,25 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>Hexo yilia 添加 intensedebate 评论系统 | 疯狂的键盘</title>
+  <title>Hexo yilia 添加 Vuukle 评论系统 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注册并获取代码首先到 https://intensedebate.com/ 注册账号。 然后登录进去，在主面板点击右侧的 Install IntenseDebate，如下：">
+  <meta name="description" content="注册并获取 API key先到 https://vuukle.com/ 上注册为 publisher。然后参考其文档获取自己的 API key。 修改 yilia 主题接下来步骤还是如前面的博客，如下：">
 <meta name="keywords" content="hexo,yilia">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo yilia 添加 intensedebate 评论系统">
-<meta property="og:url" content="http://www.githang.com/2019/06/12/hexo-yilia-intensedebate/index.html">
+<meta property="og:title" content="Hexo yilia 添加 Vuukle 评论系统">
+<meta property="og:url" content="http://www.githang.com/2019/06/12/hexo-yilia-vuukle/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="注册并获取代码首先到 https://intensedebate.com/ 注册账号。 然后登录进去，在主面板点击右侧的 Install IntenseDebate，如下：">
+<meta property="og:description" content="注册并获取 API key先到 https://vuukle.com/ 上注册为 publisher。然后参考其文档获取自己的 API key。 修改 yilia 主题接下来步骤还是如前面的博客，如下：">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://upyun.githang.com/2019/05/22/15584958113348.jpg!w1000">
-<meta property="og:image" content="http://upyun.githang.com/2019/05/22/15584959695496.jpg!w1000">
-<meta property="og:image" content="http://upyun.githang.com/2019/05/22/15584960114667.jpg!w1000">
-<meta property="og:image" content="http://upyun.githang.com/2019/05/22/15584964083039.jpg!w1000">
-<meta property="og:updated_time" content="2019-05-22T05:48:10.324Z">
+<meta property="og:updated_time" content="2019-05-23T12:36:21.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo yilia 添加 intensedebate 评论系统">
-<meta name="twitter:description" content="注册并获取代码首先到 https://intensedebate.com/ 注册账号。 然后登录进去，在主面板点击右侧的 Install IntenseDebate，如下：">
-<meta name="twitter:image" content="http://upyun.githang.com/2019/05/22/15584958113348.jpg!w1000">
+<meta name="twitter:title" content="Hexo yilia 添加 Vuukle 评论系统">
+<meta name="twitter:description" content="注册并获取 API key先到 https://vuukle.com/ 上注册为 publisher。然后参考其文档获取自己的 API key。 修改 yilia 主题接下来步骤还是如前面的博客，如下：">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -224,20 +219,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-yilia-intensedebate" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-hexo-yilia-vuukle" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo yilia 添加 intensedebate 评论系统
+      Hexo yilia 添加 Vuukle 评论系统
     </h1>
   
 
         
-        <a href="/2019/06/12/hexo-yilia-intensedebate/" class="archive-article-date">
-  	<time datetime="2019-06-12T03:18:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-12</time>
+        <a href="/2019/06/12/hexo-yilia-vuukle/" class="archive-article-date">
+  	<time datetime="2019-06-12T05:22:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-12</time>
 </a>
         <!-- word count start -->
         
@@ -246,7 +241,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">375字</span>
+        <span class="post-count">358字</span>
       </span>
     </span>
 
@@ -267,18 +262,21 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="注册并获取代码"><a href="#注册并获取代码" class="headerlink" title="注册并获取代码"></a>注册并获取代码</h2><p>首先到 <a href="https://intensedebate.com/" target="_blank" rel="noopener">https://intensedebate.com/</a> 注册账号。</p>
-<p>然后登录进去，在主面板点击右侧的 <code>Install IntenseDebate</code>，如下：<br><img src="http://upyun.githang.com/2019/05/22/15584958113348.jpg!w1000" alt="主面板"><br><a id="more"></a><br>接下来按步骤，输入自己博客地址，点下一步，如下：<br><img src="http://upyun.githang.com/2019/05/22/15584959695496.jpg!w1000" alt="指定博客地址"></p>
-<p>然后点击最下面的 <code>Generic Install</code>，如下：<br><img src="http://upyun.githang.com/2019/05/22/15584960114667.jpg!w1000" alt="选择平台"></p>
-<p>接下来到安装的界面，在这里可以获取评论代码。左边有两个文本区域，上面的是评论功能，下面的是评论数。点击第一个文本框，可以复制所需的代码。<br><img src="http://upyun.githang.com/2019/05/22/15584964083039.jpg!w1000" alt=""></p>
-<h2 id="修改-yilia-主题代码"><a href="#修改-yilia-主题代码" class="headerlink" title="修改 yilia 主题代码"></a>修改 yilia 主题代码</h2><p>为解耦，如同前面相关文章，主题代码修改步骤如下：</p>
-<h3 id="1-主题配置文件添加-IntenseDebate-相关配置"><a href="#1-主题配置文件添加-IntenseDebate-相关配置" class="headerlink" title="1. 主题配置文件添加 IntenseDebate 相关配置"></a>1. 主题配置文件添加 IntenseDebate 相关配置</h3><p>修改 hexo 博客目录的 <code>theme/yilia</code> 中的 <code>_config.yml</code> 文件，增加如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#9、IntenseDebate</span></span><br><span class="line"><span class="attr">intensedebate:</span> <span class="comment">#这里值为前面复制的代码的 idcomments_acct</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-新增-intensedebate-代码文件"><a href="#2-新增-intensedebate-代码文件" class="headerlink" title="2. 新增 intensedebate 代码文件"></a>2. 新增 intensedebate 代码文件</h3><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>intensedebate.ejs</code>文件，内容如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">var idcomments_acct = '<span class="tag">&lt;<span class="name">%=theme.intensedebate%</span>&gt;</span>';</span></span><br><span class="line"><span class="undefined">var idcomments_post_id;</span></span><br><span class="line"><span class="undefined">var idcomments_post_url;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"IDCommentsPostTitle"</span> <span class="attr">style</span>=<span class="string">"display:none"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">'text/javascript'</span> <span class="attr">src</span>=<span class="string">'https://www.intensedebate.com/js/genericCommentWrapperV2.js'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="注册并获取-API-key"><a href="#注册并获取-API-key" class="headerlink" title="注册并获取 API key"></a>注册并获取 API key</h2><p>先到 <a href="https://vuukle.com/" target="_blank" rel="noopener">https://vuukle.com/</a> 上注册为 publisher。然后参考其<a href="https://docs.vuukle.com/how-to-embed-vuukle-2.0-via-js/" target="_blank" rel="noopener">文档</a>获取自己的 API key。</p>
+<h2 id="修改-yilia-主题"><a href="#修改-yilia-主题" class="headerlink" title="修改 yilia 主题"></a>修改 yilia 主题</h2><p>接下来步骤还是如前面的博客，如下：<br><a id="more"></a></p>
+<h3 id="1-主题配置文件添加-vuukle"><a href="#1-主题配置文件添加-vuukle" class="headerlink" title="1. 主题配置文件添加 vuukle"></a>1. 主题配置文件添加 vuukle</h3><p>修改 hexo 博客目录的 <code>theme/yilia</code> 中的 <code>_config.yml</code> 文件，增加如下配置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#10、Vuukle</span></span><br><span class="line"><span class="attr">vuukle:</span> <span class="comment">#vuukle API key</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-新增-vuukle-代码文件"><a href="#2-新增-vuukle-代码文件" class="headerlink" title="2. 新增 vuukle 代码文件"></a>2. 新增 vuukle 代码文件</h3><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>vuukle.ejs</code>文件，内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'vuukle-comments'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var VUUKLE_CONFIG = &#123;</span></span><br><span class="line"><span class="xml">        apiKey: "<span class="tag">&lt;<span class="name">%=theme.vuukle%</span>&gt;</span>",</span></span><br><span class="line"><span class="xml">        articleId: "<span class="tag">&lt;<span class="name">%=url%</span>&gt;</span>",</span></span><br><span class="line"><span class="undefined">  &#125;;</span></span><br><span class="line"><span class="undefined">  // ⛔️ DON'T EDIT BELOW THIS LINE</span></span><br><span class="line"><span class="undefined">  (function() &#123;</span></span><br><span class="line"><span class="undefined">         var d = document,</span></span><br><span class="line"><span class="undefined">                s = d.createElement('script');</span></span><br><span class="line"><span class="undefined">         s.src = 'https://cdn.vuukle.com/platform.js';</span></span><br><span class="line"><span class="undefined">        (d.head || d.body).appendChild(s);</span></span><br><span class="line"><span class="undefined">  &#125;)();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上面添加的 <code>div</code> 是评论控件，除此之外，该站点还提供了其他控件，可自行添加：</p>
+<ul>
+<li><code>&lt;div id=&#39;vuukle-emote&#39;&gt;&lt;/div&gt;</code> 感想表情控件</li>
+<li><code>&lt;div id=&#39;vuukle-newsfeed&#39;&gt;&lt;/div&gt;</code> 新闻推送控件</li>
+<li><code>&lt;div class=&#39;vuukle-powerbar&#39;&gt;&lt;/div&gt;</code> 社交分享控件</li>
+</ul>
 <h3 id="3-修改-article-ejs"><a href="#3-修改-article-ejs" class="headerlink" title="3. 修改 article.ejs"></a>3. 修改 article.ejs</h3><p>修改 yilia 中的 <code>layout/_partial/article.ejs</code> 文件，在 <code>&lt;% if (!index &amp;&amp; post.comments){ %&gt;</code> 后的任意一个评论代码前或后插入如下代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.intensedebate</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">intensedebate</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如上，修改完成。如果要启用，修改主题的 <code>_config.yml</code> 文件，将 intensedebate 配置上即可，注意冒号之后有空格。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.vuukle</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">vuukle</span>', &#123;</span></span><br><span class="line"><span class="tag">      <span class="attr">url:</span> <span class="attr">url_for</span>(<span class="attr">post.path</span>)</span></span><br><span class="line"><span class="tag">    &#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如上，修改完成。如果要启用，修改主题的 <code>_config.yml</code> 文件，将 API<br> key 配置上即可，注意冒号之后有空格。</p>
 
       
 
@@ -407,7 +405,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/06/12/hexo-yilia-intensedebate/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/06/12/hexo-yilia-vuukle/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -421,18 +419,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/06/19/hexo-yilia-vuukle/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo yilia 添加 Vuukle 评论系统
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/05/hexo-yilia-valine/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo yilia 主题添加 valine 评论系统</div>
+    <a href="/2019/06/05/hexo-yilia-intensedebate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo yilia 添加 intensedebate 评论系统</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -540,7 +529,7 @@ wpac_init.push({widget: 'Comment', id: 18631});
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="hexo-yilia-intensedebate"></div> 
+      <div id="SOHUCS" sid="hexo-yilia-vuukle"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -615,7 +604,7 @@ var idcomments_post_url;
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
-  	articleId: "/2019/06/12/hexo-yilia-intensedebate/",
+  	articleId: "/2019/06/12/hexo-yilia-vuukle/",
   };
   // ⛔️ DON'T EDIT BELOW THIS LINE
   (function() {
