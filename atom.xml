@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-23T12:36:21.355Z</updated>
+  <updated>2019-05-28T13:35:33.614Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo 向以前的文章添加id</title>
+    <link href="http://www.githang.com/2019/06/19/add-post-id-to-existing-articles/"/>
+    <id>http://www.githang.com/2019/06/19/add-post-id-to-existing-articles/</id>
+    <published>2019-06-19T13:17:49.000Z</published>
+    <updated>2019-05-28T13:35:33.614Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 &lt;code&gt;hexo-incremental-id&lt;/code&gt; 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加 id。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="id" scheme="http://www.githang.com/tags/id/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo yilia 添加 Vuukle 评论系统</title>
     <link href="http://www.githang.com/2019/06/12/hexo-yilia-vuukle/"/>
     <id>http://www.githang.com/2019/06/12/hexo-yilia-vuukle/</id>
     <published>2019-06-12T05:22:34.000Z</published>
-    <updated>2019-05-23T12:36:21.355Z</updated>
+    <updated>2019-05-28T13:14:12.490Z</updated>
     
     <summary type="html">
     
@@ -44,7 +66,7 @@
     <link href="http://www.githang.com/2019/06/05/hexo-yilia-intensedebate/"/>
     <id>http://www.githang.com/2019/06/05/hexo-yilia-intensedebate/</id>
     <published>2019-06-05T03:18:16.000Z</published>
-    <updated>2019-05-23T12:36:15.947Z</updated>
+    <updated>2019-05-28T13:14:12.473Z</updated>
     
     <summary type="html">
     
@@ -67,7 +89,7 @@
     <link href="http://www.githang.com/2019/05/29/hexo-yilia-valine/"/>
     <id>http://www.githang.com/2019/05/29/hexo-yilia-valine/</id>
     <published>2019-05-29T02:50:39.000Z</published>
-    <updated>2019-05-23T12:36:08.099Z</updated>
+    <updated>2019-05-28T13:14:12.460Z</updated>
     
     <summary type="html">
     
@@ -95,7 +117,7 @@
     <link href="http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/"/>
     <id>http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/</id>
     <published>2019-05-21T16:29:52.000Z</published>
-    <updated>2019-05-23T12:35:58.746Z</updated>
+    <updated>2019-05-28T13:14:12.447Z</updated>
     
     <summary type="html">
     
@@ -119,7 +141,7 @@
     <link href="http://www.githang.com/2019/05/21/hexo-yilia-livere/"/>
     <id>http://www.githang.com/2019/05/21/hexo-yilia-livere/</id>
     <published>2019-05-21T08:56:56.000Z</published>
-    <updated>2019-05-22T02:59:11.152Z</updated>
+    <updated>2019-05-28T13:14:12.435Z</updated>
     
     <summary type="html">
     
@@ -142,7 +164,7 @@
     <link href="http://www.githang.com/2019/05/08/coder-stories-2/"/>
     <id>http://www.githang.com/2019/05/08/coder-stories-2/</id>
     <published>2019-05-08T11:26:24.000Z</published>
-    <updated>2019-05-08T14:03:18.948Z</updated>
+    <updated>2019-05-28T13:14:12.423Z</updated>
     
     <summary type="html">
     
@@ -160,7 +182,7 @@
     <link href="http://www.githang.com/2019/03/28/coder-stories-1/"/>
     <id>http://www.githang.com/2019/03/28/coder-stories-1/</id>
     <published>2019-03-27T16:10:14.000Z</published>
-    <updated>2019-05-08T11:27:55.850Z</updated>
+    <updated>2019-05-28T13:14:12.411Z</updated>
     
     <summary type="html">
     
@@ -181,7 +203,7 @@
     <link href="http://www.githang.com/2019/01/30/bag-queue-stack/"/>
     <id>http://www.githang.com/2019/01/30/bag-queue-stack/</id>
     <published>2019-01-30T01:30:38.000Z</published>
-    <updated>2019-01-30T01:52:04.709Z</updated>
+    <updated>2019-05-28T13:14:12.400Z</updated>
     
     <summary type="html">
     
@@ -202,7 +224,7 @@
     <link href="http://www.githang.com/2019/01/29/jenkins-hotfix-patch/"/>
     <id>http://www.githang.com/2019/01/29/jenkins-hotfix-patch/</id>
     <published>2019-01-29T02:48:03.000Z</published>
-    <updated>2019-01-29T08:32:33.098Z</updated>
+    <updated>2019-05-28T13:14:12.379Z</updated>
     
     <summary type="html">
     
@@ -226,7 +248,7 @@
     <link href="http://www.githang.com/2019/01/23/jenkins-enhanced/"/>
     <id>http://www.githang.com/2019/01/23/jenkins-enhanced/</id>
     <published>2019-01-23T07:31:05.000Z</published>
-    <updated>2019-01-23T23:44:03.608Z</updated>
+    <updated>2019-05-28T13:14:12.363Z</updated>
     
     <summary type="html">
     
@@ -248,7 +270,7 @@
     <link href="http://www.githang.com/2019/01/18/interview-thinking-depth/"/>
     <id>http://www.githang.com/2019/01/18/interview-thinking-depth/</id>
     <published>2019-01-18T15:39:37.000Z</published>
-    <updated>2019-01-20T16:02:22.073Z</updated>
+    <updated>2019-05-28T13:14:12.346Z</updated>
     
     <summary type="html">
     
@@ -268,7 +290,7 @@
     <link href="http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/"/>
     <id>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</id>
     <published>2019-01-16T01:47:08.000Z</published>
-    <updated>2019-01-23T07:32:10.812Z</updated>
+    <updated>2019-05-28T13:14:12.330Z</updated>
     
     <summary type="html">
     
@@ -292,7 +314,7 @@
     <link href="http://www.githang.com/2019/01/11/kotlin-0/"/>
     <id>http://www.githang.com/2019/01/11/kotlin-0/</id>
     <published>2019-01-11T09:21:34.000Z</published>
-    <updated>2019-01-25T06:24:31.371Z</updated>
+    <updated>2019-05-28T13:14:12.317Z</updated>
     
     <summary type="html">
     
@@ -314,7 +336,7 @@
     <link href="http://www.githang.com/2019/01/04/how-to-write-elegant-code/"/>
     <id>http://www.githang.com/2019/01/04/how-to-write-elegant-code/</id>
     <published>2019-01-04T09:04:05.000Z</published>
-    <updated>2019-01-11T03:03:07.127Z</updated>
+    <updated>2019-05-28T13:14:12.304Z</updated>
     
     <summary type="html">
     
@@ -338,7 +360,7 @@
     <link href="http://www.githang.com/2019/01/01/summary-of-2018/"/>
     <id>http://www.githang.com/2019/01/01/summary-of-2018/</id>
     <published>2019-01-01T04:17:11.000Z</published>
-    <updated>2019-01-01T09:56:27.484Z</updated>
+    <updated>2019-05-28T13:14:12.284Z</updated>
     
     <summary type="html">
     
@@ -363,7 +385,7 @@
     <link href="http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/"/>
     <id>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</id>
     <published>2018-12-25T05:30:30.000Z</published>
-    <updated>2018-12-30T19:57:09.914Z</updated>
+    <updated>2019-05-28T13:12:33.861Z</updated>
     
     <summary type="html">
     
@@ -386,7 +408,7 @@
     <link href="http://www.githang.com/2018/12/22/hexo-new-post-path/"/>
     <id>http://www.githang.com/2018/12/22/hexo-new-post-path/</id>
     <published>2018-12-22T04:57:21.000Z</published>
-    <updated>2018-12-23T02:01:50.971Z</updated>
+    <updated>2019-05-28T13:12:33.848Z</updated>
     
     <summary type="html">
     
@@ -407,7 +429,7 @@
     <link href="http://www.githang.com/2018/12/21/Git-Contribution-Statistics/"/>
     <id>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</id>
     <published>2018-12-21T02:03:01.000Z</published>
-    <updated>2019-01-23T07:32:56.752Z</updated>
+    <updated>2019-05-28T13:12:33.836Z</updated>
     
     <summary type="html">
     
@@ -429,7 +451,7 @@
     <link href="http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/"/>
     <id>http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</id>
     <published>2018-12-18T06:59:07.000Z</published>
-    <updated>2018-12-18T06:59:07.000Z</updated>
+    <updated>2019-05-28T13:12:33.824Z</updated>
     
     <summary type="html">
     
@@ -442,28 +464,6 @@
     
     
       <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scientific Internet Access</title>
-    <link href="http://www.githang.com/2018/12/16/Scientific-Internet-Access/"/>
-    <id>http://www.githang.com/2018/12/16/Scientific-Internet-Access/</id>
-    <published>2018-12-15T16:11:14.000Z</published>
-    <updated>2019-02-12T02:09:59.208Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;系统&quot;&gt;&lt;a href=&quot;#系统&quot; class=&quot;headerlink&quot; title=&quot;系统&quot;&gt;&lt;/a&gt;系统&lt;/h1&gt;&lt;p&gt;在 bwh 上。&lt;/p&gt;
-&lt;p&gt;使用的是 Centos 6 x86_64 devel。&lt;/p&gt;
-&lt;p&gt;Ubuntu 16.04 在安装 python-pip 时，可能出现需要交互的界面，导致一直没有结果。而交互式 shell 在浏览器上又用不了（本机 Ubuntu, Firefox 和 Chrome 都试了）。&lt;/p&gt;
-&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;h2 id=&quot;安装-pip&quot;&gt;&lt;a href=&quot;#安装-pip&quot; class=&quot;headerlink&quot; title=&quot;安装 pip&quot;&gt;&lt;/a&gt;安装 pip&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install python-setuptools -y &amp;amp;&amp;amp; easy_install pip&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;因使用不了交互式 shell，所以需要加 &lt;code&gt;-y&lt;/code&gt; 参数，确认安装。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="科学上网" scheme="http://www.githang.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   

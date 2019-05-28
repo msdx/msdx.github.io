@@ -2,219 +2,296 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.githang.com/2017/10/08/Miss/</loc>
+    <loc>http://www.githang.com/2019/06/19/add-post-id-to-existing-articles/</loc>
     
-    <lastmod>2021-05-10T00:23:53.000Z</lastmod>
+    <lastmod>2019-05-28T13:35:33.614Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/06/12/hexo-yilia-vuukle/</loc>
     
-    <lastmod>2019-05-23T12:36:21.355Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.490Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/06/05/hexo-yilia-intensedebate/</loc>
     
-    <lastmod>2019-05-23T12:36:15.947Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.473Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/05/29/hexo-yilia-valine/</loc>
     
-    <lastmod>2019-05-23T12:36:08.099Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.460Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/05/22/hexo-yilia-widgetpack/</loc>
     
-    <lastmod>2019-05-23T12:35:58.746Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.447Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/05/21/hexo-yilia-livere/</loc>
     
-    <lastmod>2019-05-22T02:59:11.152Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.435Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/05/08/coder-stories-2/</loc>
     
-    <lastmod>2019-05-08T14:03:18.948Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.423Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/03/28/coder-stories-1/</loc>
     
-    <lastmod>2019-05-08T11:27:55.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/resume/index.html</loc>
-    
-    <lastmod>2019-03-21T09:21:04.137Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/12/16/Scientific-Internet-Access/</loc>
-    
-    <lastmod>2019-02-12T02:09:59.208Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.411Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/30/bag-queue-stack/</loc>
     
-    <lastmod>2019-01-30T01:52:04.709Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.400Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/29/jenkins-hotfix-patch/</loc>
     
-    <lastmod>2019-01-29T08:32:33.098Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2019/01/11/kotlin-0/</loc>
-    
-    <lastmod>2019-01-25T06:24:31.371Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.379Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/23/jenkins-enhanced/</loc>
     
-    <lastmod>2019-01-23T23:44:03.608Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</loc>
-    
-    <lastmod>2019-01-23T07:34:35.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</loc>
-    
-    <lastmod>2019-01-23T07:33:48.605Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</loc>
-    
-    <lastmod>2019-01-23T07:33:35.808Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</loc>
-    
-    <lastmod>2019-01-23T07:33:29.841Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</loc>
-    
-    <lastmod>2019-01-23T07:32:56.752Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</loc>
-    
-    <lastmod>2019-01-23T07:32:10.812Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/11/21/Mac-Preferences/</loc>
-    
-    <lastmod>2019-01-23T02:05:02.807Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.363Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/18/interview-thinking-depth/</loc>
     
-    <lastmod>2019-01-20T16:02:22.073Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.346Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.githang.com/2017/09/15/hello-world/</loc>
+    <loc>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</loc>
     
-    <lastmod>2019-01-17T03:56:44.108Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.330Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2019/01/11/kotlin-0/</loc>
+    
+    <lastmod>2019-05-28T13:14:12.317Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/04/how-to-write-elegant-code/</loc>
     
-    <lastmod>2019-01-11T03:03:07.127Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.304Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/01/01/summary-of-2018/</loc>
     
-    <lastmod>2019-01-01T09:56:27.484Z</lastmod>
+    <lastmod>2019-05-28T13:14:12.284Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</loc>
     
-    <lastmod>2018-12-30T19:57:09.914Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.861Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/12/22/hexo-new-post-path/</loc>
     
-    <lastmod>2018-12-23T02:01:50.971Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</loc>
+    
+    <lastmod>2019-05-28T13:12:33.836Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</loc>
     
-    <lastmod>2018-12-18T06:59:07.000Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.824Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/12/16/Scientific-Internet-Access/</loc>
+    
+    <lastmod>2019-05-28T13:12:33.810Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/12/11/Kotlin-Generic-Upper-Bound-And-Extension-Function/</loc>
     
-    <lastmod>2018-12-11T02:08:40.000Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.798Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/12/10/AndroidManifest-Permissions/</loc>
     
-    <lastmod>2018-12-10T03:42:23.000Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.786Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2018/11/30/Dinny/</loc>
     
-    <lastmod>2018-11-30T01:34:13.000Z</lastmod>
+    <lastmod>2019-05-28T13:12:33.771Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/11/21/Mac-Preferences/</loc>
+    
+    <lastmod>2019-05-28T13:12:33.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/resume/index.html</loc>
+    
+    <lastmod>2019-05-28T13:10:24.825Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/12/30/Auto-Jump/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.444Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.431Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.419Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.400Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/11/09/CoordinatorLayout-In-depth-understanding/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.374Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/10/08/Miss/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.344Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/10/03/Development-Unreasonableness/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.325Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/09/24/LoadMoreLayout/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.299Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.281Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/09/18/Mask-Layer/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.260Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.234Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2017/09/15/hello-world/</loc>
+    
+    <lastmod>2019-05-28T13:04:59.210Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/11/13/ProGuard-Common-Problems-And-Solutions/</loc>
+    
+    <lastmod>2018-11-13T05:51:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/09/05/Change-Sonatype-Nexus2-Base-Url/</loc>
+    
+    <lastmod>2018-09-05T06:10:52.000Z</lastmod>
     
   </url>
   
@@ -233,6 +310,13 @@
   </url>
   
   <url>
+    <loc>http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/</loc>
+    
+    <lastmod>2018-08-15T15:42:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2018/08/12/Micro-Knowledge-1/</loc>
     
     <lastmod>2018-08-11T16:51:35.000Z</lastmod>
@@ -243,6 +327,13 @@
     <loc>http://www.githang.com/2018/08/10/Micro-Knowledge-0/</loc>
     
     <lastmod>2018-08-10T14:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/</loc>
+    
+    <lastmod>2018-08-09T07:22:57.000Z</lastmod>
     
   </url>
   
@@ -334,90 +425,6 @@
     <loc>http://www.githang.com/2018/01/05/Summary-of-2017/</loc>
     
     <lastmod>2018-01-05T03:52:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/12/30/Auto-Jump/</loc>
-    
-    <lastmod>2017-12-30T12:56:22.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/12/26/Life-is-Cheaper-Than-Paper/</loc>
-    
-    <lastmod>2017-12-26T14:28:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/12/09/Implement-Pull-Up-to-Load-More-with-RecyclerView/</loc>
-    
-    <lastmod>2017-12-09T02:06:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/11/25/Retrofit-shows-file-upload-progress-and-bug-record/</loc>
-    
-    <lastmod>2017-11-25T10:51:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/11/09/CoordinatorLayout-In-depth-understanding/</loc>
-    
-    <lastmod>2017-11-09T14:25:33.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/11/04/A-preliminary-understanding-of-CoordinatorLayout/</loc>
-    
-    <lastmod>2017-11-04T05:30:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/10/27/Dream-Juvenile-does-not-make-trouble/</loc>
-    
-    <lastmod>2017-10-27T14:15:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/10/03/Development-Unreasonableness/</loc>
-    
-    <lastmod>2017-10-03T01:32:37.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/09/24/LoadMoreLayout/</loc>
-    
-    <lastmod>2017-09-24T11:10:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/09/21/CoordinatorLayout-ViewPager-Bug/</loc>
-    
-    <lastmod>2017-09-21T05:01:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/09/18/Mask-Layer/</loc>
-    
-    <lastmod>2017-09-18T13:54:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2017/09/16/OkHttp3-LogInterceptor/</loc>
-    
-    <lastmod>2017-09-16T01:51:52.000Z</lastmod>
     
   </url>
   
