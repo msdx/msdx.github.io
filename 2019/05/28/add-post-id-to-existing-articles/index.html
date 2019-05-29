@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>Hexo yilia 主题添加 valine 评论系统 | 疯狂的键盘</title>
+  <title>Hexo 向以前的文章添加id | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
-<meta name="keywords" content="hexo,yilia">
+  <meta name="description" content="Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 hexo-incremental-id 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加">
+<meta name="keywords" content="hexo,id">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo yilia 主题添加 valine 评论系统">
-<meta property="og:url" content="http://www.githang.com/2019/05/29/hexo-yilia-valine/index.html">
+<meta property="og:title" content="Hexo 向以前的文章添加id">
+<meta property="og:url" content="http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
+<meta property="og:description" content="Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 hexo-incremental-id 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-28T13:14:12.460Z">
+<meta property="og:updated_time" content="2019-05-29T00:43:30.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo yilia 主题添加 valine 评论系统">
-<meta name="twitter:description" content="本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：  《Hexo yilia主题 添加valine评论系统》 《Valine: 独立博客评论系统》  1. 主题配置文件添加 valine 相关配置修改 hexo 博客目录的 theme/yilia 中的 _config.yml 文件，增加如下配置： 1234567#8、Valineval">
+<meta name="twitter:title" content="Hexo 向以前的文章添加id">
+<meta name="twitter:description" content="Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 hexo-incremental-id 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -223,20 +223,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-yilia-valine" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-add-post-id-to-existing-articles" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo yilia 主题添加 valine 评论系统
+      Hexo 向以前的文章添加id
     </h1>
   
 
         
-        <a href="/2019/05/29/hexo-yilia-valine/" class="archive-article-date">
-  	<time datetime="2019-05-29T02:50:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-29</time>
+        <a href="/2019/05/28/add-post-id-to-existing-articles/" class="archive-article-date">
+  	<time datetime="2019-05-28T13:17:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
 </a>
         <div style="margin-top:10px;">
           <!-- word count start -->
@@ -245,7 +245,7 @@ var _hmt = _hmt || [];
   <span class="post-meta-item-icon">
     <i class="fa fa-keyboard-o"></i>
     <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">467字</span>
+    <span class="post-count">369字</span>
   </span>
 </span>
 
@@ -254,7 +254,7 @@ var _hmt = _hmt || [];
   <span class="post-meta-item-icon">
     <i class="fa fa-hourglass-half"></i>
     <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">2分</span>
+    <span class="post-count">1分</span>
   </span>
 </span>
 
@@ -262,7 +262,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="58" class="pageViews">0</span>°
+            <span id="60" class="pageViews">0</span>°
           
         </div>
         
@@ -270,20 +270,14 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：</p>
-<ul>
-<li><a href="https://zhx2994.github.io/2018/10/16/Hexo-yilia%E4%B8%BB%E9%A2%98-%E6%B7%BB%E5%8A%A0valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">《Hexo yilia主题 添加valine评论系统》</a></li>
-<li><a href="https://deserts.io/diy-a-comment-system/" target="_blank" rel="noopener">《Valine: 独立博客评论系统》</a></li>
-</ul>
-<h2 id="1-主题配置文件添加-valine-相关配置"><a href="#1-主题配置文件添加-valine-相关配置" class="headerlink" title="1. 主题配置文件添加 valine 相关配置"></a>1. 主题配置文件添加 valine 相关配置</h2><p>修改 hexo 博客目录的 <code>theme/yilia</code> 中的 <code>_config.yml</code> 文件，增加如下配置：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8、Valine</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr"> appid:</span> <span class="comment">#Leancloud应用的appId</span></span><br><span class="line"><span class="attr"> appkey:</span> <span class="comment">#Leancloud应用的appKey</span></span><br><span class="line"><span class="attr"> verify:</span> <span class="literal">false</span> <span class="comment">#验证码</span></span><br><span class="line"><span class="attr"> notify:</span> <span class="literal">true</span> <span class="comment">#评论回复提醒</span></span><br><span class="line"><span class="attr"> placeholder:</span> <span class="string">有话要说？</span> <span class="comment">#评论框占位符</span></span><br></pre></td></tr></table></figure>
+        <p>Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 <code>hexo-incremental-id</code> 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加 id。</p>
 <a id="more"></a>
-<h2 id="2-新增-valine-代码文件"><a href="#2-新增-valine-代码文件" class="headerlink" title="2. 新增 valine 代码文件"></a>2. 新增 valine 代码文件</h2><p>在 yilia 中的 <code>layout/_partial/post</code> 下新增 <code>valine.ejs</code>文件，内容如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"valine_comment"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--载入js，在&lt;/body&gt;之前插入即可--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Leancloud 操作库:--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--Valine 的核心代码库--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//unpkg.com/valine/dist/Valine.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">  var notify = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.notify</span> %&gt;</span>' == true ? true : false;</span></span><br><span class="line"><span class="xml">  var verify = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.verify</span> %&gt;</span>' == true ? true : false;</span></span><br><span class="line"><span class="undefined">  new Valine(&#123;</span></span><br><span class="line"><span class="undefined">      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)</span></span><br><span class="line"><span class="undefined">      av: AV,</span></span><br><span class="line"><span class="undefined">      el: '.valine_comment',</span></span><br><span class="line"><span class="undefined">      emoticon_url: 'https://cloud.panjunwen.com/alu',</span></span><br><span class="line"><span class="undefined">      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],</span></span><br><span class="line"><span class="xml">      app_id: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.appid</span> %&gt;</span>',</span></span><br><span class="line"><span class="xml">      app_key: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.appkey</span> %&gt;</span>',</span></span><br><span class="line"><span class="xml">      placeholder: '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.valine.placeholder</span> %&gt;</span>'</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-修改-article-ejs"><a href="#3-修改-article-ejs" class="headerlink" title="3. 修改 article.ejs"></a>3. 修改 article.ejs</h2><p>修改 yilia 中的 <code>layout/_partial/article.ejs</code> 文件，在 <code>&lt;% if (!index &amp;&amp; post.comments){ %&gt;</code> 后的任意一个评论代码前或后插入如下代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.valine</span> &amp;&amp; <span class="attr">theme.valine.appid</span> &amp;&amp; <span class="attr">theme.valine.appkey</span>)&#123; %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">valine</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>如上三步，修改完成。如果要启用，修改主题的 <code>_config.yml</code> 文件，将 leancloud 上创建的应用的 appid 和 appkey 配置上即可，注意冒号之后有空格。</p>
+<p>思路很简单，写一个 shell 脚本，把文章按时间顺序列出来，然后调用这个脚本为文章添加 id，并把 id 更新到脚本中。脚本如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!env sh</span><br><span class="line">id=0</span><br><span class="line">function addPostId()</span><br><span class="line">&#123;</span><br><span class="line">  source /Users/huanghaohang/Documents/blog/hexo-blog/newpost</span><br><span class="line">  let id++</span><br><span class="line">  echo $1</span><br><span class="line">  sed -i "" "/permalink.*/ a\</span><br><span class="line">id: $id</span><br><span class="line">" $1</span><br><span class="line">  sed -i "" "1,/id=.*/s/id=.*/id=$id/" /Users/huanghaohang/Documents/blog/hexo-blog/newpost</span><br><span class="line">  return 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后 <code>source</code> 一下这个脚本，加载我们所定义的 <code>addPostId</code> 函数。接下来在文章源目录运行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for file in `ls -tr `; do head -n 10 $file |grep "id: [0-9]\+" || addPostId $file;  done;</span><br></pre></td></tr></table></figure>
+<p>简要解释一下， <code>ls -tr</code> 是按从旧到新的时间顺序列出文件，然后判断前 10 行中是否有 <code>id: 数字</code> 这一项，如果没有，就调用 <code>addPostId</code> 函数添加 <code>id</code>。</p>
+<p>添加完成之后，再安装 <code>hexo-incremental-id</code> 插件，之后创建新文章时都会有 id 了。</p>
 
       
 
@@ -345,7 +339,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">id</a>
         		</li>
       		
 		</ul>
@@ -412,7 +406,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/05/29/hexo-yilia-valine/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -426,18 +420,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/06/05/hexo-yilia-intensedebate/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo yilia 添加 intensedebate 评论系统
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/05/22/hexo-yilia-widgetpack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo yilia 主题添加 widgetpack 评论系统</div>
+    <a href="/2019/05/22/hexo-yilia-vuukle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo yilia 添加 Vuukle 评论系统</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -521,7 +506,7 @@ wpac_init.push({widget: 'Comment', id: 18631});
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="hexo-yilia-valine"></div> 
+      <div id="SOHUCS" sid="add-post-id-to-existing-articles"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -596,7 +581,7 @@ var idcomments_post_url;
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
-  	articleId: "/2019/05/29/hexo-yilia-valine/",
+  	articleId: "/2019/05/28/add-post-id-to-existing-articles/",
   };
   // ⛔️ DON'T EDIT BELOW THIS LINE
   (function() {
