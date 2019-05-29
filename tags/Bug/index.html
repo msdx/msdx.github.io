@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>Tag: Bug | 疯狂的键盘</title>
+  <title>Tag: bug | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Android研发工程师，左撇子，崇尚小即是美，如无必要勿增实体。">
 <meta name="keywords" content="Android,Gradle,程序员,浩码农,代码,开源">
 <meta property="og:type" content="website">
 <meta property="og:title" content="疯狂的键盘">
-<meta property="og:url" content="http://www.githang.com/tags/Bug/index.html">
+<meta property="og:url" content="http://www.githang.com/tags/bug/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="Android研发工程师，左撇子，崇尚小即是美，如无必要勿增实体。">
 <meta property="og:locale" content="default">
@@ -231,7 +231,7 @@ var _hmt = _hmt || [];
       
       <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+          <a href="/archives/2018" class="archive-year">2018</a>
         </div>
         <div class="archives">
     
@@ -239,14 +239,14 @@ var _hmt = _hmt || [];
   <div class="archive-article-inner">
     <header class="archive-article-header">
       	<div class="article-meta">
-	      	<a href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/" class="archive-article-date">
-  	<time datetime="2017-09-21T05:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+	      	<a href="/2018/03/07/Bug-of-AndroidStudio-Cache/" class="archive-article-date">
+  	<time datetime="2018-03-07T09:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-07</time>
 </a>
         </div>
     	 
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/21/CoordinatorLayout-ViewPager-Bug/">ViewPager与CoordinatorLayout一起使用的一个Bug</a>
+      <a class="archive-article-title" href="/2018/03/07/Bug-of-AndroidStudio-Cache/">深踩 AndroidStudio 缓存的坑</a>
     </h1>
   
 
@@ -257,15 +257,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">CoordinatorLayout</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Bug</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AndroidStudio</a>
         		</li>
       		
 		</ul>
@@ -339,19 +335,19 @@ if(true){
     var pageViewsLength = $(".pageViews").length;
     var isIndex = $(".pageViews").length > 1 ?true:false;
     function showTime() {
-        var Counter = AV.Object.extend("Counter");
+        var Pageview = AV.Object.extend("Pageview");
         if(isIndex){
             $(".pageViews").each(function(){
-                showPageViewsNum($(this),Counter);
+                showPageViewsNum($(this), Pageview);
             });
         }else{
             addPageViewsNum($(".pageViews"));
         }
     }
     //仅显示阅读量
-    function showPageViewsNum(ele,Counter){
+    function showPageViewsNum(ele, Pageview){
         var id = ele.attr('id').trim();
-        var query = new AV.Query("Counter");
+        var query = new AV.Query("Pageview");
         query.equalTo("post_id", id);
         query.descending('createdAt');
         query.limit(1);
@@ -364,35 +360,35 @@ if(true){
     //追加并显示阅读量
     function addPageViewsNum(ele){
         var id = ele.attr('id').trim();
-        var query = new AV.Query("Counter");
+        var query = new AV.Query("Pageview");
         query.equalTo("post_id", id);
         query.descending('createdAt');
         query.limit(1);
         query.find().then(function (results) {
             if (results.length == 0) {
-               saveNewCounter(id);
+               saveNewPageview(id);
                return;
             } 
-            var counter = results[0];
-            var count = counter.get("count");
+            var pageview = results[0];
+            var count = pageview.get("count");
             count++;
-            counter.set("count", count);
-            counter.save().then(function (counter) {
+            pageview.set("count", count);
+            pageview.save().then(function (pageview) {
                 $(document.getElementById(id)).text(count);
             })
         }, function (error) {
-            saveNewCounter(id);
+            saveNewPageview(id);
         })
     }
 
-    function saveNewCounter(id) {
-       var Counter = AV.Object.extend("Counter");
-       var query = new Counter;
+    function saveNewPageview(id) {
+       var Pageview = AV.Object.extend("Pageview");
+       var query = new Pageview;
        query.save({
            post_id: id,
            count: 1
-       }).then(function (counter) {
-           $(document.getElementById(id)).text(counter.count);
+       }).then(function (pageview) {
+           $(document.getElementById(id)).text(pageview.count);
        }, function (error) {
        });
 
@@ -824,6 +820,20 @@ if(true){
             </button>
 
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
             </button>
 
             <div class="pswp__caption">

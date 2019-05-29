@@ -716,19 +716,19 @@ if(true){
     var pageViewsLength = $(".pageViews").length;
     var isIndex = $(".pageViews").length > 1 ?true:false;
     function showTime() {
-        var Counter = AV.Object.extend("Counter");
+        var Pageview = AV.Object.extend("Pageview");
         if(isIndex){
             $(".pageViews").each(function(){
-                showPageViewsNum($(this),Counter);
+                showPageViewsNum($(this), Pageview);
             });
         }else{
             addPageViewsNum($(".pageViews"));
         }
     }
     //仅显示阅读量
-    function showPageViewsNum(ele,Counter){
+    function showPageViewsNum(ele, Pageview){
         var id = ele.attr('id').trim();
-        var query = new AV.Query("Counter");
+        var query = new AV.Query("Pageview");
         query.equalTo("post_id", id);
         query.descending('createdAt');
         query.limit(1);
@@ -741,35 +741,35 @@ if(true){
     //追加并显示阅读量
     function addPageViewsNum(ele){
         var id = ele.attr('id').trim();
-        var query = new AV.Query("Counter");
+        var query = new AV.Query("Pageview");
         query.equalTo("post_id", id);
         query.descending('createdAt');
         query.limit(1);
         query.find().then(function (results) {
             if (results.length == 0) {
-               saveNewCounter(id);
+               saveNewPageview(id);
                return;
             } 
-            var counter = results[0];
-            var count = counter.get("count");
+            var pageview = results[0];
+            var count = pageview.get("count");
             count++;
-            counter.set("count", count);
-            counter.save().then(function (counter) {
+            pageview.set("count", count);
+            pageview.save().then(function (pageview) {
                 $(document.getElementById(id)).text(count);
             })
         }, function (error) {
-            saveNewCounter(id);
+            saveNewPageview(id);
         })
     }
 
-    function saveNewCounter(id) {
-       var Counter = AV.Object.extend("Counter");
-       var query = new Counter;
+    function saveNewPageview(id) {
+       var Pageview = AV.Object.extend("Pageview");
+       var query = new Pageview;
        query.save({
            post_id: id,
            count: 1
-       }).then(function (counter) {
-           $(document.getElementById(id)).text(counter.count);
+       }).then(function (pageview) {
+           $(document.getElementById(id)).text(pageview.count);
        }, function (error) {
        });
 
