@@ -263,7 +263,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="30" class="pageViews">0</span>°
+            <span id="30" class="pageViews" data-flag-title="微知识#1 Kotlin 的 @JvmStatic 和 @JvmField 注解">0</span>°
           
         </div>
         
@@ -381,7 +381,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="29" class="pageViews">0</span>°
+            <span id="29" class="pageViews" data-flag-title="微知识#0 layoutInflater.inflate 方法的 ViewGroup 参数">0</span>°
           
         </div>
         
@@ -501,7 +501,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="28" class="pageViews">0</span>°
+            <span id="28" class="pageViews" data-flag-title="Jenkins 多分支构建">0</span>°
           
         </div>
         
@@ -626,7 +626,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="27" class="pageViews">0</span>°
+            <span id="27" class="pageViews" data-flag-title="Kotlin Java 互通指南">0</span>°
           
         </div>
         
@@ -750,7 +750,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="26" class="pageViews">0</span>°
+            <span id="26" class="pageViews" data-flag-title="Android Kotlin 风格指南">0</span>°
           
         </div>
         
@@ -879,7 +879,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="25" class="pageViews">0</span>°
+            <span id="25" class="pageViews" data-flag-title="使用 Drawable 实现图标角标">0</span>°
           
         </div>
         
@@ -1002,7 +1002,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="24" class="pageViews">0</span>°
+            <span id="24" class="pageViews" data-flag-title="Phabricator 添加对 Kotlin 的语法高亮">0</span>°
           
         </div>
         
@@ -1119,7 +1119,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="23" class="pageViews">0</span>°
+            <span id="23" class="pageViews" data-flag-title="皮肤包项目的 Gradle 脚本演化">0</span>°
           
         </div>
         
@@ -1239,7 +1239,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="22" class="pageViews">0</span>°
+            <span id="22" class="pageViews" data-flag-title="关于第一工场的设想">0</span>°
           
         </div>
         
@@ -1355,7 +1355,7 @@ var _hmt = _hmt || [];
           <!-- word count end -->
           
             &nbsp; | &nbsp;
-            <span id="21" class="pageViews">0</span>°
+            <span id="21" class="pageViews" data-flag-title="被固化的思维">0</span>°
           
         </div>
         
@@ -1496,32 +1496,35 @@ if(true){
     //追加并显示阅读量
     function addPageViewsNum(ele){
         var id = ele.attr('id').trim();
+        var title = ele.attr('data-flag-title').trim();
         var query = new AV.Query("Pageview");
         query.equalTo("post_id", id);
         query.descending('createdAt');
         query.limit(1);
         query.find().then(function (results) {
             if (results.length == 0) {
-               saveNewPageview(id);
+               saveNewPageview(id, title);
                return;
             } 
             var pageview = results[0];
             var count = pageview.get("count");
             count++;
             pageview.set("count", count);
+            pageview.set("title", title);
             pageview.save().then(function (pageview) {
                 $(document.getElementById(id)).text(count);
             })
         }, function (error) {
-            saveNewPageview(id);
+            saveNewPageview(id, title);
         })
     }
 
-    function saveNewPageview(id) {
+    function saveNewPageview(id, title) {
        var Pageview = AV.Object.extend("Pageview");
        var query = new Pageview;
        query.save({
            post_id: id,
+           title: title,
            count: 1
        }).then(function (pageview) {
            $(document.getElementById(id)).text(pageview.count);
@@ -1611,15 +1614,15 @@ if(true){
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1631,10 +1634,6 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
               </li>
              
@@ -1643,11 +1642,15 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1660,6 +1663,14 @@ if(true){
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1687,35 +1698,7 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1727,7 +1710,19 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Jenkins</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1736,6 +1731,14 @@ if(true){
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1751,11 +1754,11 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1763,11 +1766,11 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1775,19 +1778,19 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">id</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
