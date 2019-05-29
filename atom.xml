@@ -303,9 +303,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
-    
       <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
+    
+      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
   </entry>
   
