@@ -294,9 +294,9 @@ var _hmt = _hmt || [];
 <p>在mac下，需要换行，如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i "" "/title.*/ a\ </span><br><span class="line">xxx</span><br><span class="line">" $file</span><br></pre></td></tr></table></figure>
 <p>上面的<code>a\</code>，反斜杠后要加一个空格，最后的双引号也是要换一行的。<br>另外要注意的是，<code>sed</code>会修改文章的创建时间，所以我们需要先分类，再修改。以整理2018年的文章为例，完整命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入2018文件夹</span></span><br><span class="line">cd 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章内容，添加permalink</span></span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">" $file; done;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 回到_post</span></span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 进入_post目录</span><br><span class="line">cd source/_post</span><br><span class="line"><span class="meta">#</span> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span> 创建2018文件夹</span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span> 将2018年的文章移到2018文件夹下</span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"><span class="meta">#</span> 删除刚才创建的用于过滤的文件</span><br><span class="line">rm timestamp</span><br><span class="line"><span class="meta">#</span> 进入2018文件夹</span><br><span class="line">cd 2018</span><br><span class="line"><span class="meta">#</span> 修改文章内容，添加permalink</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">" $file; done;</span><br><span class="line"><span class="meta">#</span> 回到_post</span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
 <h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><p>上面提到，<code>sed</code>和<code>mv</code>会导致文件的创建时间改变，所以需要先分类再修改。尽管这样，当看到所有文件的创建时间都变成一样了之后，对于有强迫症的我还是觉得看着别扭。好在发现，<code>touch</code>命令也可以用于修改文件的创建时间。所以前面的操作可以优化一下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章内容，添加permalink</span></span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">" $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章的创建时间为Front-matter中的时间</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将timestamp创建时间修改为2017年1月1日，然后参考2018年文章归类方法，这里略</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 完成归类之后删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最后如果想再恢复文章的创建时间，再执行第三步命令</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file ; done;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 进入_post目录</span><br><span class="line">cd source/_post</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改文章内容，添加permalink</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">id: 44</span><br><span class="line">id: 43</span><br><span class="line">" $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改文章的创建时间为Front-matter中的时间</span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span> 创建2018文件夹</span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span> 将2018年的文章移到2018文件夹下</span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 将timestamp创建时间修改为2017年1月1日，然后参考2018年文章归类方法，这里略</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 完成归类之后删除刚才创建的用于过滤的文件</span><br><span class="line">rm timestamp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 最后如果想再恢复文章的创建时间，再执行第三步命令</span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file ; done;</span><br></pre></td></tr></table></figure>
 <p>以上是个人探究这个问题的结果。如有更优方案，欢迎交流指教。</p>
 
       
@@ -881,75 +881,11 @@ if(true){
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">OkHttp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">drawable</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -961,11 +897,31 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Activity</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -974,14 +930,6 @@ if(true){
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">惠州</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1001,11 +949,15 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1017,6 +969,18 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
@@ -1025,11 +989,11 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1045,11 +1009,47 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">monkey</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">上拉加载</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">RecyclerView</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">id</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color3">开源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">OkHttp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Retrofit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,7 +1057,15 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">阅读量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.githang.com/resume/index.html</loc>
+    <loc>http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/</loc>
     
-    <lastmod>2019-05-29T02:21:43.473Z</lastmod>
+    <lastmod>2019-05-30T13:27:27.789Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/</loc>
     
-    <lastmod>2019-05-29T02:19:06.436Z</lastmod>
+    <lastmod>2019-05-30T12:03:34.773Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/resume/index.html</loc>
+    
+    <lastmod>2019-05-29T02:21:43.473Z</lastmod>
     
   </url>
   

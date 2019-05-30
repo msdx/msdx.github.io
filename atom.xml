@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-29T02:19:06.436Z</updated>
+  <updated>2019-05-30T13:27:27.789Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo yilia 基于 leancloud 实现文章阅读量统计</title>
+    <link href="http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/"/>
+    <id>http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/</id>
+    <published>2019-05-30T11:56:22.000Z</published>
+    <updated>2019-05-30T13:27:27.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。&lt;br&gt;前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
+    
+      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
+    
+      <category term="阅读量" scheme="http://www.githang.com/tags/%E9%98%85%E8%AF%BB%E9%87%8F/"/>
+    
+      <category term="leancloud" scheme="http://www.githang.com/tags/leancloud/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo 向以前的文章添加id</title>
     <link href="http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/"/>
     <id>http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/</id>
     <published>2019-05-28T13:17:49.000Z</published>
-    <updated>2019-05-29T02:19:06.436Z</updated>
+    <updated>2019-05-30T12:03:34.773Z</updated>
     
     <summary type="html">
     
@@ -443,27 +469,6 @@
     
     
       <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读《高效15法则》</title>
-    <link href="http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/"/>
-    <id>http://www.githang.com/2018/12/18/Read-15-Secrets-Successful-People-Know-About-Time-Management/</id>
-    <published>2018-12-18T06:59:07.000Z</published>
-    <updated>2019-05-28T13:12:33.824Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;《高效15法则》是我大概五个月前读的一本讲时间管理的书。如果你也有和我一样困惑于掌控自己的时间精力时，建议也看一看有关时间管理或精力管理的书，其中《高效15法则》这本书是我觉得讲得还很不错的。&lt;/p&gt;
-&lt;p&gt;15条法则总结如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
