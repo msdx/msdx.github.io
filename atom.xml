@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-05-30T13:27:27.789Z</updated>
+  <updated>2019-06-01T02:45:53.024Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>再踏上北京</title>
+    <link href="http://www.githang.com/2019/05/31/set-foot-in-Beijing-again/"/>
+    <id>http://www.githang.com/2019/05/31/set-foot-in-Beijing-again/</id>
+    <published>2019-05-31T15:36:28.000Z</published>
+    <updated>2019-06-01T02:45:53.024Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;放在几个月前，我决计想不到我会这么快就再次来到北京。五个月前在写总结的话，还想着何时回家里看看。我想了一下，上次回北京，已经是七年前了。而上次长居，不是度寒暑假，是十四年前。&lt;/p&gt;
+&lt;p&gt;放在几个月前，我也决计想不到我会以这种职场身份来到北京——无业游民。半年前，我还设想过接下来一年，自己的职业规划，自己应该如何提升，应该再学习哪些语言、哪些技术、哪些理论知识，再看哪些书，做哪些事。而现在，那些都已不重要了，更确切地说是多数已经不再需要了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo yilia 基于 leancloud 实现文章阅读量统计</title>
     <link href="http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/"/>
     <id>http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/</id>
     <published>2019-05-30T11:56:22.000Z</published>
-    <updated>2019-05-30T13:27:27.789Z</updated>
+    <updated>2019-05-31T06:53:11.064Z</updated>
     
     <summary type="html">
     
@@ -329,9 +350,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
-    
       <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
+    
+      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
     
   </entry>
   
@@ -447,28 +468,6 @@
     
     
       <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计项目中的代码有多少行是你贡献的</title>
-    <link href="http://www.githang.com/2018/12/21/Git-Contribution-Statistics/"/>
-    <id>http://www.githang.com/2018/12/21/Git-Contribution-Statistics/</id>
-    <published>2018-12-21T02:03:01.000Z</published>
-    <updated>2019-05-28T13:12:33.836Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本篇内容仅对 Linux/Mac 友好，Windows 开发者请勿介意。&lt;/p&gt;
-&lt;p&gt;在一个有多人参与过的项目中，不知道其他人有没有和我一样会去想：当前这个项目有多少行代码是我写的，有多少行代码是其他人写的？&lt;/p&gt;
-&lt;h1 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h1&gt;&lt;p&gt;我们知道，&lt;code&gt;git blame&lt;/code&gt; 的命令可以查看一个文件的每一行代码的最终修改者，如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
