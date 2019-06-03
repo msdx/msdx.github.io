@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-06-02T04:19:57.574Z</updated>
+  <updated>2019-06-03T16:13:02.654Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WPS 和宏</title>
+    <link href="http://www.githang.com/2019/06/03/wps-and-macro/"/>
+    <id>http://www.githang.com/2019/06/03/wps-and-macro/</id>
+    <published>2019-06-03T14:54:49.000Z</published>
+    <updated>2019-06-03T16:13:02.654Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我个人认为，如果非要在 Excel 上评出一个最伟大的功能创新的话，那就是宏了。尽管在一些人眼中，宏就是病毒，是危险，是不能触碰的东西。&lt;br&gt;Excel 本身其他的功能已经足够强大和高效了，但是宏却使它更进一步——它能够对原本没有的功能进行定制化的扩展。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="宏" scheme="http://www.githang.com/tags/%E5%AE%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>再踏上北京</title>
@@ -350,9 +370,9 @@
     
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
-      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
-    
       <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
+    
+      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
   </entry>
   
@@ -447,27 +467,6 @@
       <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
     
       <category term="DataBinding" scheme="http://www.githang.com/tags/DataBinding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在Hexo中对文章md文件分类</title>
-    <link href="http://www.githang.com/2018/12/22/hexo-new-post-path/"/>
-    <id>http://www.githang.com/2018/12/22/hexo-new-post-path/</id>
-    <published>2018-12-22T04:57:21.000Z</published>
-    <updated>2019-05-28T13:12:33.848Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。&lt;/p&gt;
-&lt;h1 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h1&gt;&lt;p&gt;在默认配置下，我们使用&lt;code&gt;hexo new post [title]&lt;/code&gt;会在&lt;code&gt;source/_post/&lt;/code&gt;目录下生成对应的markdown文件，而使用&lt;code&gt;hexo g&lt;/code&gt;生成的html文件路径是&lt;code&gt;:year/:month/:day/:title.html&lt;/code&gt;。当我们写的博客越来越多的时候，会发现，所有文章都是在&lt;code&gt;source/_post/&lt;/code&gt;下，查找起来会不大方便，而希望对它进行一个分类，但是在生成的文章链接上保持不变。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
     
   </entry>
   
