@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.githang.com/resume/index.html</loc>
+    
+    <lastmod>2019-06-05T07:25:13.123Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2019/06/03/wps-and-macro/</loc>
     
     <lastmod>2019-06-03T16:13:02.654Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/</loc>
     
     <lastmod>2019-05-30T12:03:34.773Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/resume/index.html</loc>
-    
-    <lastmod>2019-05-29T02:21:43.473Z</lastmod>
     
   </url>
   
