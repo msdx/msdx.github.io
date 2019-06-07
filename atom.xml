@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-06-03T16:13:02.654Z</updated>
+  <updated>2019-06-07T02:22:14.996Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 下使用 GPG 加密邮件</title>
+    <link href="http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/"/>
+    <id>http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/</id>
+    <published>2019-06-06T15:42:31.000Z</published>
+    <updated>2019-06-07T02:22:14.996Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;GPG-Suite&quot;&gt;&lt;a href=&quot;#GPG-Suite&quot; class=&quot;headerlink&quot; title=&quot;GPG Suite&quot;&gt;&lt;/a&gt;GPG Suite&lt;/h2&gt;&lt;p&gt;到 &lt;a href=&quot;http://www.gpgtools.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.gpgtools.org/&lt;/a&gt; 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GPG Keychain&lt;/code&gt; 可以添加和管理自己的私钥及公钥。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GPGMail&lt;/code&gt; Mac 上的官方邮件客户端上的 GPG 插件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
+    
+      <category term="加密" scheme="http://www.githang.com/tags/%E5%8A%A0%E5%AF%86/"/>
+    
+      <category term="Thunderbird" scheme="http://www.githang.com/tags/Thunderbird/"/>
+    
+      <category term="Enigmail" scheme="http://www.githang.com/tags/Enigmail/"/>
+    
+      <category term="安全" scheme="http://www.githang.com/tags/%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>WPS 和宏</title>
@@ -444,29 +477,6 @@
     
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>我为什么放弃在项目中使用Data Binding</title>
-    <link href="http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/"/>
-    <id>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</id>
-    <published>2018-12-25T05:30:30.000Z</published>
-    <updated>2019-05-28T13:12:33.861Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;我是怎么开始去使用它的&quot;&gt;&lt;a href=&quot;#我是怎么开始去使用它的&quot; class=&quot;headerlink&quot; title=&quot;我是怎么开始去使用它的&quot;&gt;&lt;/a&gt;我是怎么开始去使用它的&lt;/h1&gt;&lt;h2 id=&quot;开始使用它的原因&quot;&gt;&lt;a href=&quot;#开始使用它的原因&quot; class=&quot;headerlink&quot; title=&quot;开始使用它的原因&quot;&gt;&lt;/a&gt;开始使用它的原因&lt;/h2&gt;&lt;p&gt;Data Binding出现也有几年了，一直没有去用它的主要原因是它的写法让我觉得会把业务逻辑与界面过度耦合在一起。但前段时间还是试用了一下。&lt;/p&gt;
-&lt;p&gt;会想去用它一共有四个原因。&lt;br&gt;一是说到底没有用过，感觉如果与他人讨论到它难免有空谈的心虚感，&lt;strong&gt;毕竟一项技术是好是坏还是使用过后再去评论比较有底气&lt;/strong&gt;。&lt;br&gt;二是想先引入Data Binding，再在项目中结合它尝试MVVM模式，毕竟Data Binding的使用方式看起来与MVVM相当的切合。
-    
-    </summary>
-    
-      <category term="Android" scheme="http://www.githang.com/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://www.githang.com/tags/Android/"/>
-    
-      <category term="DataBinding" scheme="http://www.githang.com/tags/DataBinding/"/>
     
   </entry>
   
