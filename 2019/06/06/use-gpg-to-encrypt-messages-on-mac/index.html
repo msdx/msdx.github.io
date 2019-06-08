@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Mac 下使用 GPG 加密邮件 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。">
+  <meta name="description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
 <meta name="keywords" content="GPG,加密,Thunderbird,Enigmail,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 下使用 GPG 加密邮件">
 <meta property="og:url" content="http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。">
+<meta property="og:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598732322482.jpg">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598738649324.jpg">
-<meta property="og:updated_time" content="2019-06-07T02:22:14.996Z">
+<meta property="og:updated_time" content="2019-06-07T05:57:33.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 下使用 GPG 加密邮件">
-<meta name="twitter:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。">
+<meta name="twitter:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
 <meta name="twitter:image" content="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -249,7 +249,7 @@ var _hmt = _hmt || [];
   <span class="post-meta-item-icon">
     <i class="fa fa-keyboard-o"></i>
     <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">618字</span>
+    <span class="post-count">617字</span>
   </span>
 </span>
 
@@ -279,7 +279,7 @@ var _hmt = _hmt || [];
 <li><code>GPG Keychain</code> 可以添加和管理自己的私钥及公钥。</li>
 <li><code>GPGMail</code> Mac 上的官方邮件客户端上的 GPG 插件。</li>
 </ul>
-<p>GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。<br><a id="more"></a><br>我们发邮件的时候，可以选中正文，然后右键，服务，然后使用 OpenGPG 对其加密，如下图：<br><img src="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000" alt="Mail 右键菜单"><br>但是这样未免太麻烦，而且也无法对标题进行加密，而 GPG Mail 则解决了这个问题。<br>点击左上角邮件菜单，偏好设置，再点击通用面板中的管理插件，把 <code>GPGMailLoader.mailbundle</code> 勾上，点击“应用并重启邮件”。这时候重新打开新的编写新邮件的窗口，会发现多了一个 OpenGPG 按钮，可选择对邮件加密的方式。详细使用可自行探索。</p>
+<p>GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。<br><a id="more"></a><br>我们发邮件的时候，可以选中正文，然后右键，服务，然后使用 OpenGPG 对其加密，如下图：<br><img src="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000" alt="Mail 右键菜单"><br>但是这样未免太麻烦，而且也无法对标题进行加密，而 GPG Mail 则解决了这个问题。<br>点击左上角邮件菜单，偏好设置，再点击通用面板中的管理插件，把 <code>GPGMailLoader.mailbundle</code> 勾上，点击“应用并重启邮件”。这时候重新打开新的编写新邮件的窗口，会发现多了一个 OpenGPG 按钮，可选择对邮件加密的方式。详细使用可自行探索。</p>
 <p>但是，当前最新的 2018.5 的版本，这个插件是收费的，只有 30 天的试用期。而上一个据说还是免费的版本 2018.3，在启用插件之后，Mac 的官方邮件客户端会打不开并崩溃。</p>
 <h2 id="Thunderbird-Enigmail"><a href="#Thunderbird-Enigmail" class="headerlink" title="Thunderbird + Enigmail"></a>Thunderbird + Enigmail</h2><p>Thunderbird + Enigmail 插件是一个很好的替代方案。<br>Thunderbird 是我在 Ubuntu 上用得比较顺手的邮件客户端，Enigmail 是其上的一个 OpenGPG 邮件加解密插件。<br>但是，安装了 Thunderbird 之后，在要安装 Enigmail 插件前，还需安装另一个软件 Pinentry，否则会发现 Enigmail 插件装不上——装了之后界面不显示出来，一重启它就又没了。<br>命令行下执行：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install pinentry-mac</span><br><span class="line">echo "pinentry-program /usr/local/bin/pinentry-mac" &gt;&gt; ~/.gnupg/gpg-agent.conf</span><br></pre></td></tr></table></figure>
@@ -444,6 +444,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/06/07/sign-git-commit-with-gpg/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用 GPG 对 Git commit 进行签名
+        
+      </div>
+    </a>
   
   
     <a href="/2019/06/03/wps-and-macro/" id="article-nav-older" class="article-nav-link-wrap">
@@ -893,11 +902,15 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">梦</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">梦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -909,15 +922,11 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -933,18 +942,6 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
               </li>
              
@@ -953,11 +950,19 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -977,15 +982,7 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -997,47 +994,19 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1049,11 +1018,51 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">id</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1069,11 +1078,23 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1105,15 +1126,7 @@ if(true){
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+                <a href="javascript:void(0)" class="js-tag color3">签名</a>
               </li>
             
             <div class="clearfix"></div>

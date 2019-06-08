@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-06-07T02:22:14.996Z</updated>
+  <updated>2019-06-08T07:53:20.198Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用 GPG 对 Git commit 进行签名</title>
+    <link href="http://www.githang.com/2019/06/07/sign-git-commit-with-gpg/"/>
+    <id>http://www.githang.com/2019/06/07/sign-git-commit-with-gpg/</id>
+    <published>2019-06-07T14:17:48.000Z</published>
+    <updated>2019-06-08T07:53:20.198Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在了解到 github 及码云对 GPG 签名的支持后，我十分推荐对 git 的提交进行 GPG签名。&lt;/p&gt;
+&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;熟悉 git 的人会知道 &lt;code&gt;git blame&lt;/code&gt; 这个命令，可以用于查看某一行代码是由谁改动的，它大有用处，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;之前写过的&lt;a href=&quot;https://www.githang.com/2018/12/21/Git-Contribution-Statistics/&quot;&gt;《统计项目中的代码有多少行是你贡献的》&lt;/a&gt;就是基于这个命令来实现的。&lt;/li&gt;
+&lt;li&gt;当项目有 bug 时，可以通过这个命令追查是由谁引入的。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
+    
+      <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
+    
+      <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac 下使用 GPG 加密邮件</title>
     <link href="http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/"/>
     <id>http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/</id>
     <published>2019-06-06T15:42:31.000Z</published>
-    <updated>2019-06-07T02:22:14.996Z</updated>
+    <updated>2019-06-07T05:57:33.923Z</updated>
     
     <summary type="html">
     
@@ -30,7 +59,7 @@
 &lt;li&gt;&lt;code&gt;GPG Keychain&lt;/code&gt; 可以添加和管理自己的私钥及公钥。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;GPGMail&lt;/code&gt; Mac 上的官方邮件客户端上的 GPG 插件。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPG Mail。&lt;br&gt;
+&lt;p&gt;GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。&lt;br&gt;
     
     </summary>
     
@@ -452,31 +481,6 @@
     
     
       <category term="代码" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2018年总结</title>
-    <link href="http://www.githang.com/2019/01/01/summary-of-2018/"/>
-    <id>http://www.githang.com/2019/01/01/summary-of-2018/</id>
-    <published>2019-01-01T04:17:11.000Z</published>
-    <updated>2019-05-28T13:14:12.284Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;没有完成的计划&quot;&gt;&lt;a href=&quot;#没有完成的计划&quot; class=&quot;headerlink&quot; title=&quot;没有完成的计划&quot;&gt;&lt;/a&gt;没有完成的计划&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;编程语言学习。依然没有完成2018年所设想的2017年所计划的在2016年没有完成的2015年所定下的学习Python的目标。另外，Kotlin语言用起来总体感觉很爽，如果说有什么不爽的地方，那大概是在写反射代码的时候了。&lt;/li&gt;
-&lt;li&gt;运动。由于生病的原因，不但2018年没能成功继续运动，接下来的半年也无法进行运动，很遗憾。希望能早点恢复之前状态。&lt;/li&gt;
-&lt;li&gt;交流语言学习。粤语学习依旧半途而废。&lt;/li&gt;
-&lt;li&gt;电话。还得多多自我督促。&lt;/li&gt;
-&lt;li&gt;回家。经济压力之大，竟连出远门的钱也似乎腾不出了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;接下来是新篇。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
     
   </entry>
   
