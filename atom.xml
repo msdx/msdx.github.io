@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-06-08T07:53:20.198Z</updated>
+  <updated>2019-06-14T13:12:25.715Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记飞北京前后</title>
+    <link href="http://www.githang.com/2019/06/14/before-and-after-flying-to-beijing/"/>
+    <id>http://www.githang.com/2019/06/14/before-and-after-flying-to-beijing/</id>
+    <published>2019-06-13T16:13:15.000Z</published>
+    <updated>2019-06-14T13:12:25.715Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;深圳&quot;&gt;&lt;a href=&quot;#深圳&quot; class=&quot;headerlink&quot; title=&quot;深圳&quot;&gt;&lt;/a&gt;深圳&lt;/h2&gt;&lt;p&gt;我提着行李下楼正走到路边，没想到滴滴司机已经取消了订单，于是只好再叫，等到上车，已是离预想的晚了十几分钟。不料刚上大路，就是一连串的泥土车在前面，又遇上堵车。&lt;br&gt;司机不急不缓地开着，慢慢跟在前面的运土车之后走走停停。我也不慌不忙，四处乱看，注意到司机的右手在盘着一串佛珠，挂档杆上还挂着好几串。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 GPG 对 Git commit 进行签名</title>
@@ -457,30 +477,6 @@
       <category term="Kotlin" scheme="http://www.githang.com/tags/Kotlin/"/>
     
       <category term="Kotlin走起" scheme="http://www.githang.com/tags/Kotlin%E8%B5%B0%E8%B5%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何编写优雅的代码</title>
-    <link href="http://www.githang.com/2019/01/04/how-to-write-elegant-code/"/>
-    <id>http://www.githang.com/2019/01/04/how-to-write-elegant-code/</id>
-    <published>2019-01-04T09:04:05.000Z</published>
-    <updated>2019-05-28T13:14:12.304Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我对优雅的代码的理解是：遵守规范，逻辑清晰，严谨可靠，化繁为简。本文分享我对写代码的一些思考。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;代码首先是写给人看的，其次才是计算机顺便能够运行&quot;&gt;&lt;a href=&quot;#代码首先是写给人看的，其次才是计算机顺便能够运行&quot; class=&quot;headerlink&quot; title=&quot;代码首先是写给人看的，其次才是计算机顺便能够运行&quot;&gt;&lt;/a&gt;代码首先是写给人看的，其次才是计算机顺便能够运行&lt;/h2&gt;&lt;p&gt;在讨论关于如何编写优雅代码的观点之前，先抛出个问题，希望我们对这一点能够达成共识：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;为什么要编写优雅的代码？&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="代码" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
