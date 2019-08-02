@@ -324,6 +324,16 @@ var _hmt = _hmt || [];
 <p>再举一个例子，比如一个值，是通过多种不同的条件来决定的，则应考虑把value声明为<code>final</code>类型。这样有什么好处呢？首先，它能够避免在一些条件里漏掉赋值，没有赋值的话编译器会报错。其次，它能够避免在复杂的if块里重复赋值，因为实际上可能if块里不会只有赋值一个操作，还有其他操作和比较复杂的逻辑。第三，它使得你所有的if及else分支能够覆盖所有条件，避免没有考虑到的情况。<br>我们在方法里只会赋值一次的变量，也应该声明为<code>final</code>，这样在用的时候就会很放心，清楚它的值不会被修改。<br>我们的成员变量，如果不需要被修改，也应该声明为<code>final</code>，从根源上确保它的不可变。<br>我们的参数值，比如需要传的值在某个范围内的，就应该用<code>@IntRange</code>注解声明它的范围。<br>我们的参数值，通常不应该在方法里被重新赋值，也就是参数也应该是<code>final</code>的。这一点kotlin就做得很好，在kotlin中函数的参数是不可再被赋值的。</p>
 <p>我这里就不多举例了。写代码时要注意必须保证代码的严谨性，如果不够严谨，那么总有一天这个bug会被触发。墨菲定律，在软件开发上总是奏效。</p>
 
+        
+<!-- Google Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Google Ad -->
+
+
       
 
       

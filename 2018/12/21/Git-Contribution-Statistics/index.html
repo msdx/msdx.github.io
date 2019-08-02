@@ -315,6 +315,16 @@ var _hmt = _hmt || [];
 <h2 id="Ubuntu-最终脚本"><a href="#Ubuntu-最终脚本" class="headerlink" title="Ubuntu 最终脚本"></a>Ubuntu 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">start=`date +%s.%N`</span><br><span class="line"></span><br><span class="line">for file in `git ls-fles |grep -P "(\.xml)|(\.java)|(\.md)|(\.gradle)|(\.kt)"`; do git blame --line-porcelain $file |sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%N`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
 <h2 id="Mac-最终脚本"><a href="#Mac-最终脚本" class="headerlink" title="Mac 最终脚本"></a>Mac 最终脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">start=`date +%s.%S`</span><br><span class="line"></span><br><span class="line">for file in `git ls-files |grep -e "\.xml" -e "\.java" -e "\.md" -e "\.gradle" -e "\.kt"`; do git blame --line-porcelain $file|sed -n 's/^author //p'; done |sort |uniq -c |sort -rn</span><br><span class="line"></span><br><span class="line">end=`date +%s.%S`</span><br><span class="line">echo 统计共耗时`echo "$end - $start" |bc -l`秒</span><br></pre></td></tr></table></figure>
 
+        
+<!-- Google Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Google Ad -->
+
+
       
 
       

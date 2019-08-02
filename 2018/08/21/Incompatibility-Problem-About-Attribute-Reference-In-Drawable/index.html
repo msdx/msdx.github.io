@@ -302,6 +302,16 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">Caused by: org.xmlpull.v1.XmlPullParserException: Binary XML file </span><br><span class="line">line #8: &lt;item&gt; tag requires a &apos;drawable&apos; attribute or child tag </span><br><span class="line">defining a drawable</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.LayerDrawable.inflate(LayerDrawable.java:161)</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.Drawable.createFromXmlInner(Drawable.java:901)</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.Drawable.createFromXml(Drawable.java:837)</span><br><span class="line">        at android.content.res.Resources.loadDrawable(Resources.java:2182)</span><br><span class="line">        at android.content.res.TypedArray.getDrawable(TypedArray.java:601)</span><br></pre></td></tr></table></figure>
 <p>关于这类问题的讨论见 <a href="https://issuetracker.google.com/issues/36941443" target="_blank" rel="noopener">https://issuetracker.google.com/issues/36941443</a> ，也就是，<strong>5.0 之前在 xml 定义的 drawable 中，是不支持通过属性引用的方式来指定 color 或 drawable 资源的，这个特性在 5.0 开始才被实现。</strong></p>
 
+        
+<!-- Google Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Google Ad -->
+
+
       
 
       

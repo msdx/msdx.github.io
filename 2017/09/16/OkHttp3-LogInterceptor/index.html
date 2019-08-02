@@ -301,6 +301,16 @@ var _hmt = _hmt || [];
 <h2 id="混淆规则"><a href="#混淆规则" class="headerlink" title="混淆规则"></a>混淆规则</h2><p>okhttp3-loginterceptor由于使用反射来调用前面所提到的json解析库，而本身并没有对它们声明依赖。所以需要添加以下的混淆规则：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-dontwarn com.parkingwang.okhttp3.LogInterceptor.formatter.*</span><br></pre></td></tr></table></figure></p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>okhttp3-loginterceptor是我基于需要的功能，参考okhttp3-logging-interceptor的代码而封装的一个库。<br>首先，我们与服务器的数据交互使用json方式比较多，在开发或调试时需要更能直观地查看json数据，所以我封装了格式化输出json数据的功能。<br>其次，在应用中，经常是多个请求同时进行。通过日志中的线程名来判断哪一行是属于哪个响应，对应于哪个请求相当不便，所以我在每一行添加了一个前缀，也是为了更直观地查看日志。<br>我设想的是让它只做最需要的事，所以没添加也没打算添加其他一些日志库的酷炫输出日志格式的功能。</p>
 
+        
+<!-- Google Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Google Ad -->
+
+
       
 
       

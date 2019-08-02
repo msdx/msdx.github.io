@@ -338,6 +338,16 @@ var _hmt = _hmt || [];
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find .idea -type f |xargs grep "hichart"</span><br></pre></td></tr></table></figure>
 <p>结果如下：<br><img src="http://upyun.githang.com/2018/03/07/2018-03-07 19-00-12屏幕截图.png" alt="2018-03-07 19-00-12屏幕截图"><br>原来是在 .idea/libraries 里会记录每一个第三方库的 classes, javadoc 以及 sources 所对应的路径。其中 classes 对应的正是前面所提到的 transforms-1 里的目录，同样也正如前面所说，其中包含的路径是有 hash 值的，更新了依赖之后，hash 值不同，新的缓存路径也就不同了，而这里还是用的原来被删的那个路径，找不到对应的文件当然编辑器里就提示 <code>cannot resolve symbol</code> 了。所以正确而直接的解决方案应该是删除 <code>.idea/libraries/</code> 里对应该第三方库的 xml 文件让它重新生成，或者是直接修改该 xml 文件的内容，改为更新依赖之后的路径。</p>
 
+        
+<!-- Google Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- End Google Ad -->
+
+
       
 
       
