@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-06-23T15:11:40.003Z</updated>
+  <updated>2019-08-07T12:21:48.524Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>aiXcoder</title>
+    <link href="http://www.githang.com/2019/08/07/aixcoder/"/>
+    <id>http://www.githang.com/2019/08/07/aixcoder/</id>
+    <published>2019-08-07T12:20:00.000Z</published>
+    <updated>2019-08-07T12:21:48.524Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;aiXcoder 邀请码：&lt;/p&gt;
+&lt;p&gt;软件开发进入AI时代了，你有自己的「AI编程同伴」了吗？ 凭我的「aiXcoder智能编程助手」专业版  邀请码【R7Z3】登录&lt;a href=&quot;https://aixcoder.com下载安装，即可获得专业版免费使用权限！&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://aixcoder.com下载安装，即可获得专业版免费使用权限！&lt;/a&gt;  赶快训练自己的「AI编程同伴」吧～～&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="aiXcoder" scheme="http://www.githang.com/tags/aiXcoder/"/>
+    
+  </entry>
   
   <entry>
     <title>负能量</title>
@@ -80,11 +101,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
+    
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -454,30 +475,6 @@
     
     
       <category term="面试" scheme="http://www.githang.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jenkinsfile的pipeline配置</title>
-    <link href="http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/"/>
-    <id>http://www.githang.com/2019/01/16/Jenkinsfile-pipeline/</id>
-    <published>2019-01-16T01:47:08.000Z</published>
-    <updated>2019-05-28T13:14:12.330Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我之前的博客《&lt;a href=&quot;http://www.githang.com/2018/08/09/Jenkins-Multibranch-Pipeline/&quot;&gt;Jenkins 多分支构建&lt;/a&gt;》及《&lt;a href=&quot;http://www.githang.com/2018/08/15/Jenkins-Multibranch-Pipeline-Email/&quot;&gt;Jenkins 多分支构建中的邮件配置&lt;/a&gt;》探索了在多分支构建中Jenkinsfile的配置。然而在我的配置中，根节点为&lt;code&gt;node&lt;/code&gt;，但里面却没有使用Jenkinsfile的DSL去声明构建的流程，而是通过groovy代码去实现整个的构建逻辑，用&lt;code&gt;try-catch&lt;/code&gt;处理构建失败的问题，看起来很混乱。并且，整个构建本来有拉取并检出代码、构建、发布这几个阶段，但是在Jenkinsfile里却没有体现出来，所以当发现构建较慢时也不利于定位问题所在的步骤。本篇文章将完全处理这些问题。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
-    
-      <category term="Pipeline" scheme="http://www.githang.com/tags/Pipeline/"/>
-    
-      <category term="Jenkinsfile" scheme="http://www.githang.com/tags/Jenkinsfile/"/>
     
   </entry>
   
