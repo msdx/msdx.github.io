@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.githang.com/2018/12/22/hexo-new-post-path/</loc>
+    
+    <lastmod>2019-08-14T14:07:46.335Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2019/08/07/aixcoder/</loc>
     
-    <lastmod>2019-08-07T12:21:48.524Z</lastmod>
+    <lastmod>2019-08-07T14:04:41.361Z</lastmod>
     
   </url>
   
@@ -194,13 +201,6 @@
     <loc>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</loc>
     
     <lastmod>2019-05-28T13:12:33.861Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/2018/12/22/hexo-new-post-path/</loc>
-    
-    <lastmod>2019-05-28T13:12:33.848Z</lastmod>
     
   </url>
   
