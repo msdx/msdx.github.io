@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-08-07T14:04:41.361Z</updated>
+  <updated>2019-08-15T12:32:05.470Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac sed 插入或替换为多行文本</title>
+    <link href="http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/"/>
+    <id>http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/</id>
+    <published>2019-08-15T11:29:15.000Z</published>
+    <updated>2019-08-15T12:32:05.470Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前在处理 hexo 文章路径时（《&lt;a href=&quot;https://www.githang.com/2018/12/22/hexo-new-post-path/&quot;&gt;如何在Hexo中对文章md文件分类&lt;/a&gt;》）用过 &lt;code&gt;sed&lt;/code&gt; 来插入内容，命令如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sed -i &quot;&quot; &quot;/title.*/ a\ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&quot; $file&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sed: 1: &quot;s#&amp;lt;/head&amp;gt;# i\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script  ...&quot;: unescaped newline inside substitute pattern&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="sed" scheme="http://www.githang.com/tags/sed/"/>
+    
+  </entry>
   
   <entry>
     <title>aiXcoder</title>
@@ -455,26 +478,6 @@
       <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
     
       <category term="360加固" scheme="http://www.githang.com/tags/360%E5%8A%A0%E5%9B%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面试随想</title>
-    <link href="http://www.githang.com/2019/01/18/interview-thinking-depth/"/>
-    <id>http://www.githang.com/2019/01/18/interview-thinking-depth/</id>
-    <published>2019-01-18T15:39:37.000Z</published>
-    <updated>2019-05-28T13:14:12.346Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;周四在我的QQ群里，谈到了昨天面试的事情，引发了我后续的一些思考，所以写此文章。文中内容仅代表我此刻观点，也许并不成熟，浅薄之见权当抛砖引玉。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="面试" scheme="http://www.githang.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
