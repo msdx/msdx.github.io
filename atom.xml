@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-08-15T12:32:05.470Z</updated>
+  <updated>2019-10-28T14:59:52.898Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>谈物质生活</title>
+    <link href="http://www.githang.com/2019/10/27/talk-about-the-material-life/"/>
+    <id>http://www.githang.com/2019/10/27/talk-about-the-material-life/</id>
+    <published>2019-10-27T14:01:11.000Z</published>
+    <updated>2019-10-28T14:59:52.898Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一年前，我对许多事情都会想同一个问题，本质是什么？&lt;br&gt;那时是以程序员的思维来思考的。&lt;br&gt;而这段时间，有时会想，物质生活到底是什么？那么多人共同选择的追求，是否真值得去追求？&lt;br&gt;现在我依然想不透这个问题，但是我想，它大概和写代码是一样的。我认同优秀的程序员会去追求优雅的代码，并且从从业经验来看，确实也是值得的。那么同比类推，对更高物质生活的追求，大概也是值得的。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随想" scheme="http://www.githang.com/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="生活" scheme="http://www.githang.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac sed 插入或替换为多行文本</title>
     <link href="http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/"/>
     <id>http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/</id>
     <published>2019-08-15T11:29:15.000Z</published>
-    <updated>2019-08-15T12:32:05.470Z</updated>
+    <updated>2019-08-16T16:32:38.132Z</updated>
     
     <summary type="html">
     
@@ -124,11 +146,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
+    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
-    
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -456,28 +478,6 @@
       <category term="热修复" scheme="http://www.githang.com/tags/%E7%83%AD%E4%BF%AE%E5%A4%8D/"/>
     
       <category term="Sophix" scheme="http://www.githang.com/tags/Sophix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jenkins之自动进行360加固</title>
-    <link href="http://www.githang.com/2019/01/23/jenkins-enhanced/"/>
-    <id>http://www.githang.com/2019/01/23/jenkins-enhanced/</id>
-    <published>2019-01-23T07:31:05.000Z</published>
-    <updated>2019-05-28T13:14:12.363Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;项目中使用到了360加固与阿里的热修复方案，以前是人工去操作加固或生成补丁包，比较浪费开发人员的时间，并且在我的电脑上每次命令行执行完全量编译都会卡很久。前段时间项目不紧，所以抽时间完成了在Jenkins流水线上进行360加固与生成热修复补丁的步骤。本文主要介绍实现Jenkins上进行自动加固的过程。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
-    
-      <category term="360加固" scheme="http://www.githang.com/tags/360%E5%8A%A0%E5%9B%BA/"/>
     
   </entry>
   
