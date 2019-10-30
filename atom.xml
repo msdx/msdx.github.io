@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-10-28T14:59:52.898Z</updated>
+  <updated>2019-10-30T11:23:03.423Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>简言#0</title>
+    <link href="http://www.githang.com/2019/10/29/jian-yan-0/"/>
+    <id>http://www.githang.com/2019/10/29/jian-yan-0/</id>
+    <published>2019-10-29T13:55:03.000Z</published>
+    <updated>2019-10-30T11:23:03.423Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;现在的我，感到彻底无措，因为已经没有一件事情是我所能掌控得了的了。&lt;/li&gt;
+&lt;li&gt;大家都不真正各自了解，又如何比得清谁好谁坏？&lt;/li&gt;
+&lt;li&gt;没房没车没积蓄没关系。没结婚这么想很正常，到婚后，有孩子后，一层层压力后，想法就会不一样了。&lt;/li&gt;
+&lt;li&gt;世间千万种活法，可是我也不明白，怎么就觉得生活能过，就是太难。&lt;/li&gt;
+&lt;li&gt;深圳除了几百万的房，剩下的大概就是几千万和上亿的了。&lt;/li&gt;
+&lt;li&gt;生活让人求死不能也没办法，毕竟不是一个人，身后还连着家庭。&lt;/li&gt;
+&lt;li&gt;除了国企，外企，台企，上市公司，让小民企、创业公司试试，能做到四五个月带薪产假的都是良心企业。
+    
+    </summary>
+    
+      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="简言" scheme="http://www.githang.com/tags/%E7%AE%80%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>谈物质生活</title>
     <link href="http://www.githang.com/2019/10/27/talk-about-the-material-life/"/>
     <id>http://www.githang.com/2019/10/27/talk-about-the-material-life/</id>
     <published>2019-10-27T14:01:11.000Z</published>
-    <updated>2019-10-28T14:59:52.898Z</updated>
+    <updated>2019-10-29T13:43:01.386Z</updated>
     
     <summary type="html">
     
@@ -146,11 +173,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
+    
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -454,30 +481,6 @@
     
     
       <category term="算法" scheme="http://www.githang.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jenkins之自动生成Sophix热修复补丁</title>
-    <link href="http://www.githang.com/2019/01/29/jenkins-hotfix-patch/"/>
-    <id>http://www.githang.com/2019/01/29/jenkins-hotfix-patch/</id>
-    <published>2019-01-29T02:48:03.000Z</published>
-    <updated>2019-05-28T13:14:12.379Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本篇博客是《&lt;a href=&quot;https://www.githang.com/2019/01/23/jenkins-enhanced/&quot;&gt;Jenkins之自动进行360加固&lt;/a&gt;》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Jenkins" scheme="http://www.githang.com/tags/Jenkins/"/>
-    
-      <category term="热修复" scheme="http://www.githang.com/tags/%E7%83%AD%E4%BF%AE%E5%A4%8D/"/>
-    
-      <category term="Sophix" scheme="http://www.githang.com/tags/Sophix/"/>
     
   </entry>
   
