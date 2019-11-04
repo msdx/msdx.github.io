@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-10-30T11:23:03.423Z</updated>
+  <updated>2019-11-04T17:07:56.659Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一个故事1</title>
+    <link href="http://www.githang.com/2019/10/30/one-story-1/"/>
+    <id>http://www.githang.com/2019/10/30/one-story-1/</id>
+    <published>2019-10-30T13:27:22.000Z</published>
+    <updated>2019-11-04T17:07:56.659Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;我满脑子在搜寻着这些记忆，却仍然串不起来一个故事，既然如此，那就编点儿吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;林易扬只觉得自己像是个土包子，尽管事实上可以把这个“像”去掉。在站起来的那一刻，他就觉得自己错了，但是他还是站着不动——更确切地说是没有大动，他还在努力地想把腿站得更直。&lt;br&gt;这是他在入学后第一次被老师叫起来回答问题。他紧张得直接就从原座上站起来了，而忽视了都市学校的桌椅与自己以前所用的桌椅之间的不同。那是每人一张的有靠背的凳面还透着人体工程学的学生凳子，而不是自己以前学校的那种窄窄的能坐两三人的条凳。而他的座位空间显然并不宽敞，坐着时尚且前胸微贴桌沿，所以直直地站起来时就不可避免的前桌顶前椅，后椅挤后桌了。
+    
+    </summary>
+    
+      <category term="小说" scheme="http://www.githang.com/categories/%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+      <category term="一个故事" scheme="http://www.githang.com/tags/%E4%B8%80%E4%B8%AA%E6%95%85%E4%BA%8B/"/>
+    
+      <category term="小说" scheme="http://www.githang.com/tags/%E5%B0%8F%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>简言#0</title>
     <link href="http://www.githang.com/2019/10/29/jian-yan-0/"/>
     <id>http://www.githang.com/2019/10/29/jian-yan-0/</id>
     <published>2019-10-29T13:55:03.000Z</published>
-    <updated>2019-10-30T11:23:03.423Z</updated>
+    <updated>2019-11-04T17:07:51.213Z</updated>
     
     <summary type="html">
     
@@ -460,27 +485,6 @@
     
       <category term="码农故事" scheme="http://www.githang.com/categories/%E7%A0%81%E5%86%9C%E6%95%85%E4%BA%8B/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>背包、队列和栈</title>
-    <link href="http://www.githang.com/2019/01/30/bag-queue-stack/"/>
-    <id>http://www.githang.com/2019/01/30/bag-queue-stack/</id>
-    <published>2019-01-30T01:30:38.000Z</published>
-    <updated>2019-05-28T13:14:12.400Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文内容为《算法》第4版学习笔记。&lt;/p&gt;
-&lt;h2 id=&quot;背包&quot;&gt;&lt;a href=&quot;#背包&quot; class=&quot;headerlink&quot; title=&quot;背包&quot;&gt;&lt;/a&gt;背包&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;背包&lt;/strong&gt;是一种不支持从中删除元素的集合数据类型——它的目的就是帮助用例收集元素并迭代遍历所有收集到的元素（用例也可以检查背包是否为空或者获取背包中元素的数量）。迭代的顺序不确定且与用例无关。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="http://www.githang.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://www.githang.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
