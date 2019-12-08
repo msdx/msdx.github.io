@@ -39,6 +39,35 @@
   </entry>
   
   <entry>
+    <title>十五句#2</title>
+    <link href="http://www.githang.com/2019/12/04/fifteen-sentences-2/"/>
+    <id>http://www.githang.com/2019/12/04/fifteen-sentences-2/</id>
+    <published>2019-12-04T15:54:38.000Z</published>
+    <updated>2019-12-07T15:30:00.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;“休息并不是浪费时间，恰恰相反，高质量的休息才是我们新的推动力和创造力的最佳来源。”——《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;“如果我们接到一项任务就马上着手对其进行处理，这项任务所耗费的时间就会缩短许多。”——《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
+    
+  </entry>
+  
+  <entry>
     <title>十五句#1</title>
     <link href="http://www.githang.com/2019/11/26/fifteen-sentences-1/"/>
     <id>http://www.githang.com/2019/11/26/fifteen-sentences-1/</id>
@@ -457,34 +486,6 @@
     
       &lt;h2 id=&quot;注册并获取代码&quot;&gt;&lt;a href=&quot;#注册并获取代码&quot; class=&quot;headerlink&quot; title=&quot;注册并获取代码&quot;&gt;&lt;/a&gt;注册并获取代码&lt;/h2&gt;&lt;p&gt;首先到 &lt;a href=&quot;https://intensedebate.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://intensedebate.com/&lt;/a&gt; 注册账号。&lt;/p&gt;
 &lt;p&gt;然后登录进去，在主面板点击右侧的 &lt;code&gt;Install IntenseDebate&lt;/code&gt;，如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo yilia 主题添加 valine 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-valine/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-valine/</id>
-    <published>2019-05-22T02:50:39.000Z</published>
-    <updated>2019-05-29T00:42:28.001Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文仅讨论在 yila 中所增加或修改的代码，有关 leancloud 的申请及配置，请参考我所参考的两篇博文：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://zhx2994.github.io/2018/10/16/Hexo-yilia%E4%B8%BB%E9%A2%98-%E6%B7%BB%E5%8A%A0valine%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Hexo yilia主题 添加valine评论系统》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://deserts.io/diy-a-comment-system/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Valine: 独立博客评论系统》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;1-主题配置文件添加-valine-相关配置&quot;&gt;&lt;a href=&quot;#1-主题配置文件添加-valine-相关配置&quot; class=&quot;headerlink&quot; title=&quot;1. 主题配置文件添加 valine 相关配置&quot;&gt;&lt;/a&gt;1. 主题配置文件添加 valine 相关配置&lt;/h2&gt;&lt;p&gt;修改 hexo 博客目录的 &lt;code&gt;theme/yilia&lt;/code&gt; 中的 &lt;code&gt;_config.yml&lt;/code&gt; 文件，增加如下配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight yml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#8、Valine&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;valine:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt; appid:&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#Leancloud应用的appId&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt; appkey:&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#Leancloud应用的appKey&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt; verify:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#验证码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt; notify:&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#评论回复提醒&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt; placeholder:&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;有话要说？&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;#评论框占位符&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
