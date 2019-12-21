@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-12-05T14:24:58.025Z</updated>
+  <updated>2019-12-21T11:57:32.706Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>十五句#2</title>
+    <link href="http://www.githang.com/2019/12/21/fifteen-sentences-2/"/>
+    <id>http://www.githang.com/2019/12/21/fifteen-sentences-2/</id>
+    <published>2019-12-21T11:56:38.000Z</published>
+    <updated>2019-12-21T11:57:32.706Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;“休息并不是浪费时间，恰恰相反，高质量的休息才是我们新的推动力和创造力的最佳来源。”——《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;“如果我们接到一项任务就马上着手对其进行处理，这项任务所耗费的时间就会缩短许多。”——《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;“许多问题是不能拖延的。时间拖得越长，由此衍生出来的问题就会越多，解决总体问题的难度也会不断增长，这就无形中增加了我们的工作量。”——《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;“成功的关键并不是为日程表上的事务安排先后次序，而是用具有优先权的事情来安排日程表。”——我蒂芬·柯维。摘自《把时间留给最重要的事》&lt;/li&gt;
+&lt;li&gt;“处理事情的优先原则：先重要后紧急！”——《把时间留给最重要的事》
+    
+    </summary>
+    
+      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>我是如何进行 Code Review 的</title>
@@ -35,35 +60,6 @@
       <category term="Code Review" scheme="http://www.githang.com/tags/Code-Review/"/>
     
       <category term="代码规范" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十五句#2</title>
-    <link href="http://www.githang.com/2019/12/04/fifteen-sentences-2/"/>
-    <id>http://www.githang.com/2019/12/04/fifteen-sentences-2/</id>
-    <published>2019-12-04T15:54:38.000Z</published>
-    <updated>2019-12-07T15:30:00.339Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;“休息并不是浪费时间，恰恰相反，高质量的休息才是我们新的推动力和创造力的最佳来源。”——《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;“如果我们接到一项任务就马上着手对其进行处理，这项任务所耗费的时间就会缩短许多。”——《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
-    
-    
-      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
     
   </entry>
   
