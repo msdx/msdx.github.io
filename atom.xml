@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-12-25T15:37:34.970Z</updated>
+  <updated>2019-12-26T14:41:45.181Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读《一课经济学》有感</title>
+    <link href="http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/"/>
+    <id>http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/</id>
+    <published>2019-12-25T15:35:48.000Z</published>
+    <updated>2019-12-26T14:41:45.181Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一个面包店的橱窗被人给砸了，当店主冲出来时，肇事者跑了，只剩下围观的人。那些人互相议论，宽慰店主人说，玻璃虽然破了，但这也有好的一面，想想看，这下对面玻璃店就又有生意了。玻璃店赚到了钱，又会去买别的东西，别的商家同样有了收益，又进一步去更多的商家消费。这样一说，破了的橱窗经济刺激了经济，带来了更多的经济增长。如此下去，得到的理论便是，砸橱窗的人，不但不是坏人，反而是促进了社区的繁荣的贵人。这便是破窗谬论。&lt;br&gt;但若是这个谬论成立，那一个地区如果想要经济增长，何必等到有人来砸烂橱窗，找人去打砸就好了嘛。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>十五句#2</title>
@@ -459,29 +481,6 @@
     
       &lt;h2 id=&quot;注册并获取-API-key&quot;&gt;&lt;a href=&quot;#注册并获取-API-key&quot; class=&quot;headerlink&quot; title=&quot;注册并获取 API key&quot;&gt;&lt;/a&gt;注册并获取 API key&lt;/h2&gt;&lt;p&gt;先到 &lt;a href=&quot;https://vuukle.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://vuukle.com/&lt;/a&gt; 上注册为 publisher。然后参考其&lt;a href=&quot;https://docs.vuukle.com/how-to-embed-vuukle-2.0-via-js/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;获取自己的 API key。&lt;/p&gt;
 &lt;h2 id=&quot;修改-yilia-主题&quot;&gt;&lt;a href=&quot;#修改-yilia-主题&quot; class=&quot;headerlink&quot; title=&quot;修改 yilia 主题&quot;&gt;&lt;/a&gt;修改 yilia 主题&lt;/h2&gt;&lt;p&gt;接下来步骤还是如前面的博客，如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo yilia 添加 intensedebate 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-intensedebate/</id>
-    <published>2019-05-22T03:18:16.000Z</published>
-    <updated>2019-06-24T00:12:53.887Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;注册并获取代码&quot;&gt;&lt;a href=&quot;#注册并获取代码&quot; class=&quot;headerlink&quot; title=&quot;注册并获取代码&quot;&gt;&lt;/a&gt;注册并获取代码&lt;/h2&gt;&lt;p&gt;首先到 &lt;a href=&quot;https://intensedebate.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://intensedebate.com/&lt;/a&gt; 注册账号。&lt;/p&gt;
-&lt;p&gt;然后登录进去，在主面板点击右侧的 &lt;code&gt;Install IntenseDebate&lt;/code&gt;，如下：&lt;br&gt;
     
     </summary>
     
