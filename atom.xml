@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2019-12-26T14:41:45.181Z</updated>
+  <updated>2020-01-03T15:17:37.417Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>十五言#3</title>
+    <link href="http://www.githang.com/2019/12/29/fifteen-paragraphs-3/"/>
+    <id>http://www.githang.com/2019/12/29/fifteen-paragraphs-3/</id>
+    <published>2019-12-29T15:20:49.000Z</published>
+    <updated>2020-01-03T15:17:37.417Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;code&gt;是供求关系首先确定了成交价，而成交价转而确定了各种生产要素的成本，进而影响这些生产要素在不同生产用途之间的分配，而不是相反，不是生产要素先有了与生俱来的成本或原价，再汇总并加上“合理的利润率”成为最终售价。&lt;/code&gt;——《经济学通识》&lt;/li&gt;
+&lt;li&gt;以前一直认为是成本决定价格，而近一年所看到的，恰恰相反。价格影响供需，因此在竞争中，售价会反向作用于生产，使成本压低，去创造更大的价格优势以获取更大的利益。&lt;/li&gt;
+&lt;li&gt;一个东西，并不应该通过进价加上自己认为的合理的10%的利润来确定它的售价，而是要看到，买它的人认为它能值多少钱，市场上它值多少钱。同一个东西，在广东最多能卖三百元，在东北能卖到五百元，这两百元不是全来自地域导致的成本差异，起决定性作用的是两个地方买卖双方之间的信息不对称性上的差异。一种商品，在市场上价格越透明利润越低，也是同理。&lt;/li&gt;
+&lt;li&gt;《水浒传》的是非正邪是很让我疑惑的。比如祝家庄，店里的鸡被偷了，店被要投靠梁山泊的人烧了，人也被他们打了，而梁山泊的好汉下山讨伐他们，却又似乎帅出有名而名正言顺。&lt;/li&gt;
+&lt;li&gt;那些不管免费还是收费的抢票软件，是否真的帮助了人们？以前我大概是认同的，但是现在不这么想了。它们可能提高了没有使用抢票软件的人买到票的概率，对这些人而言它们可能是起正面作用的。但是出票总数是不会增加的，它们并没有增加人们的总体出行机会，它们只是把一些机会从一部分人身上剥夺，再给另外一些人，它们实现的只是一种不公平的重分配，它们对于整个春运，或者说全民买票潮，并没有起到一丝真正有用的帮助。你可能会想，它们帮助了与黄牛党竞争的普通人，帮助更多的人以原价买到了回家的票。然而事实是，这些黄牛党的存在正是价格与供需之间的失衡导致。一方面，那些因为无法从抢票软件中得到帮助的人，他们同样失去了更多的机会，另一方面，抢票的难度系数增大，也会抬高这个非官方的交易市场里的价格，使那些从黄牛党上买票的人付出更大的代价。也就是，抢票软件不止剥夺了这些无法从抢票软件上受益的人的机会，还额外地增加了他们的成本，而这种不公平往往不被人们看到，或者根本被视而不见。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>读《一课经济学》有感</title>
     <link href="http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/"/>
     <id>http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/</id>
     <published>2019-12-25T15:35:48.000Z</published>
-    <updated>2019-12-26T14:41:45.181Z</updated>
+    <updated>2019-12-26T14:44:20.616Z</updated>
     
     <summary type="html">
     
@@ -32,18 +57,20 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
       <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
-      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+      <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
-    <title>十五句#2</title>
-    <link href="http://www.githang.com/2019/12/21/fifteen-sentences-2/"/>
-    <id>http://www.githang.com/2019/12/21/fifteen-sentences-2/</id>
+    <title>十五言#2</title>
+    <link href="http://www.githang.com/2019/12/21/fifteen-paragraphs-2/"/>
+    <id>http://www.githang.com/2019/12/21/fifteen-paragraphs-2/</id>
     <published>2019-12-21T11:56:38.000Z</published>
-    <updated>2019-12-25T15:37:34.970Z</updated>
+    <updated>2020-01-01T12:39:01.410Z</updated>
     
     <summary type="html">
     
@@ -59,7 +86,7 @@
       <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
+      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
     
   </entry>
   
@@ -86,11 +113,11 @@
   </entry>
   
   <entry>
-    <title>十五句#1</title>
-    <link href="http://www.githang.com/2019/11/26/fifteen-sentences-1/"/>
-    <id>http://www.githang.com/2019/11/26/fifteen-sentences-1/</id>
+    <title>十五言#1</title>
+    <link href="http://www.githang.com/2019/11/26/fifteen-paragraphs-1/"/>
+    <id>http://www.githang.com/2019/11/26/fifteen-paragraphs-1/</id>
     <published>2019-11-26T15:42:15.000Z</published>
-    <updated>2019-12-24T12:01:46.739Z</updated>
+    <updated>2020-01-01T12:38:40.237Z</updated>
     
     <summary type="html">
     
@@ -106,7 +133,7 @@
       <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
+      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
     
   </entry>
   
@@ -184,11 +211,11 @@
   </entry>
   
   <entry>
-    <title>十五句#0</title>
-    <link href="http://www.githang.com/2019/10/29/fifteen-sentences/"/>
-    <id>http://www.githang.com/2019/10/29/fifteen-sentences/</id>
+    <title>十五言#0</title>
+    <link href="http://www.githang.com/2019/10/29/fifteen-paragraphs/"/>
+    <id>http://www.githang.com/2019/10/29/fifteen-paragraphs/</id>
     <published>2019-10-29T13:55:03.000Z</published>
-    <updated>2019-10-29T13:55:03.000Z</updated>
+    <updated>2020-01-01T12:38:27.078Z</updated>
     
     <summary type="html">
     
@@ -206,7 +233,7 @@
       <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="十五句" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E5%8F%A5/"/>
+      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
     
   </entry>
   
@@ -340,11 +367,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
+    
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -467,29 +494,6 @@
       <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
     
       <category term="id" scheme="http://www.githang.com/tags/id/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo yilia 添加 Vuukle 评论系统</title>
-    <link href="http://www.githang.com/2019/05/22/hexo-yilia-vuukle/"/>
-    <id>http://www.githang.com/2019/05/22/hexo-yilia-vuukle/</id>
-    <published>2019-05-22T05:22:34.000Z</published>
-    <updated>2019-05-29T00:43:23.039Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;注册并获取-API-key&quot;&gt;&lt;a href=&quot;#注册并获取-API-key&quot; class=&quot;headerlink&quot; title=&quot;注册并获取 API key&quot;&gt;&lt;/a&gt;注册并获取 API key&lt;/h2&gt;&lt;p&gt;先到 &lt;a href=&quot;https://vuukle.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://vuukle.com/&lt;/a&gt; 上注册为 publisher。然后参考其&lt;a href=&quot;https://docs.vuukle.com/how-to-embed-vuukle-2.0-via-js/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;获取自己的 API key。&lt;/p&gt;
-&lt;h2 id=&quot;修改-yilia-主题&quot;&gt;&lt;a href=&quot;#修改-yilia-主题&quot; class=&quot;headerlink&quot; title=&quot;修改 yilia 主题&quot;&gt;&lt;/a&gt;修改 yilia 主题&lt;/h2&gt;&lt;p&gt;接下来步骤还是如前面的博客，如下：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
     
   </entry>
   
