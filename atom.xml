@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2020-01-03T15:17:37.417Z</updated>
+  <updated>2020-01-10T15:08:40.939Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2019 年总结</title>
+    <link href="http://www.githang.com/2020/01/10/summary-of-2019/"/>
+    <id>http://www.githang.com/2020/01/10/summary-of-2019/</id>
+    <published>2020-01-10T13:52:31.000Z</published>
+    <updated>2020-01-10T15:08:40.939Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一次的年终总结，注定将和前几年的不同，毕竟从这一年起，我连职业也与前几年不同了，转了行，现在我也不知道自己的职业究竟算是什么，或者，不能说是职业了。&lt;/p&gt;
+&lt;p&gt;2019年，是我过去的三十年里又一个重大的转折点，甚至可能说是变化最大的一年。在以往的日子里，我大抵遵循着一个可以预见未来日子的轨迹生活着，而从这一年起，一系列的事态变化与各方压力，也让我突然地停止了程序员的生活，转向另一个我远离许久的世界。&lt;br&gt;2019年，注定是我格外难忘的一年。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="年终总结" scheme="http://www.githang.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>十五言#3</title>
     <link href="http://www.githang.com/2019/12/29/fifteen-paragraphs-3/"/>
     <id>http://www.githang.com/2019/12/29/fifteen-paragraphs-3/</id>
     <published>2019-12-29T15:20:49.000Z</published>
-    <updated>2020-01-03T15:17:37.417Z</updated>
+    <updated>2020-01-05T13:06:26.697Z</updated>
     
     <summary type="html">
     
@@ -57,9 +78,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
-    
       <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
@@ -367,11 +388,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
+    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
-    
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -472,28 +493,6 @@
       <category term="阅读量" scheme="http://www.githang.com/tags/%E9%98%85%E8%AF%BB%E9%87%8F/"/>
     
       <category term="leancloud" scheme="http://www.githang.com/tags/leancloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 向以前的文章添加id</title>
-    <link href="http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/"/>
-    <id>http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/</id>
-    <published>2019-05-28T13:17:49.000Z</published>
-    <updated>2019-05-30T12:03:34.773Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hexo 博客的一些功能，比如评论，阅读数等，可能需要文章的唯一标识。Hexo 默认下没有 id，在之前，一般是用 url 作为这个标识。但是 url 是可能被改变的，所以就想增加一个 id 字段。使用 &lt;code&gt;hexo-incremental-id&lt;/code&gt; 插件可以解决这个问题，但是这个插件为以前的文章添加 id 时不是按时间顺序的，有些微强迫症的我难免不大愿意，于是就想自己解决，为以前的文章按其时间顺序添加 id。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-      <category term="id" scheme="http://www.githang.com/tags/id/"/>
     
   </entry>
   
