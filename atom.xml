@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2020-05-30T13:43:46.132Z</updated>
+  <updated>2020-05-30T14:09:21.114Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,31 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为什么我貌似消失了几个月</title>
+    <link href="http://www.githang.com/2020/05/30/why%20do%20I%20seem%20to%20disappear%20for%20months/"/>
+    <id>http://www.githang.com/2020/05/30/why do I seem to disappear for months/</id>
+    <published>2020-05-30T13:46:16.000Z</published>
+    <updated>2020-05-30T14:09:21.114Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;说一下自己最近的一些状况。&lt;/p&gt;
+&lt;p&gt;这次回广东过年，我和我哥两个人，轮流着驾驶，从北京开车回了广东。有关开车的路上经历，以后若有闲致再另写一篇，这里先略过不述。&lt;/p&gt;
+&lt;p&gt;我肯定是带着电脑回去的，但是在深圳的时候，想到老家也没有网络，现在又不做研发了，而目前工作用的又是 windows 系统，mac 带回老家想必也不大可能会去打开，于是在回老家时就把电脑给留在深圳了。&lt;br&gt;结果未想到，甫回老家，就开始传新冠肺炎的事情，疫情严峻，我们也延长了留在老家的时间。之后为减少不必要的接触，更是直接从老家开回北京，而没有在深圳停留，所以就导致了我的电脑一直放在深圳那里没有带过来，因此也就一直没有更新博客了。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>技术解决不了社会问题</title>
     <link href="http://www.githang.com/2020/01/14/technology%20cannot%20solve%20social%20problems/"/>
     <id>http://www.githang.com/2020/01/14/technology cannot solve social problems/</id>
     <published>2020-01-14T14:09:16.000Z</published>
-    <updated>2020-05-30T13:43:46.132Z</updated>
+    <updated>2020-05-30T13:51:43.952Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;我大概是看了《一课经济学》之后才改变自己对抢票软件的看法的。&lt;br&gt;在以前，我对抢票软件持支持态度，甚至想参与它的开发，但现在我却开始怀疑，它的出现究竟是给人们带来了好处还是增加了社会上的不公？我们以为有些技术的运用给人们带来了方便，但真的是么？&lt;/p&gt;
-&lt;p&gt;一直简单地以
-        
-      
+      &lt;p&gt;我大概是看了《一课经济学》之后才改变自己对抢票软件的看法的。&lt;br&gt;在以前，我对抢票软件持支持态度，甚至想参与它的开发，但现在我却开始怀疑，它的出现究竟是给人们带来了好处还是增加了社会上的不公？我们以为有些技术的运用给人们带来了方便，但真的是么？
     
     </summary>
     
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
-    
       <category term="技术" scheme="http://www.githang.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
     
   </entry>
   
@@ -107,9 +122,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
       <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
@@ -417,11 +432,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
+    
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -475,27 +490,6 @@
     
     
       <category term="宏" scheme="http://www.githang.com/tags/%E5%AE%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>再踏上北京</title>
-    <link href="http://www.githang.com/2019/05/31/set-foot-in-Beijing-again/"/>
-    <id>http://www.githang.com/2019/05/31/set-foot-in-Beijing-again/</id>
-    <published>2019-05-31T15:36:28.000Z</published>
-    <updated>2019-06-02T04:19:57.574Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;放在几个月前，我决计想不到我会这么快就再次来到北京。五个月前在写总结的话，还想着何时回家里看看。我想了一下，上次回北京，已经是七年前了。而上次长居，不是度寒暑假，是十四年前。&lt;/p&gt;
-&lt;p&gt;放在几个月前，我也决计想不到我会以这种职场身份来到北京——无业游民。半年前，我还设想过接下来一年，自己的职业规划，自己应该如何提升，应该再学习哪些语言、哪些技术、哪些理论知识，再看哪些书，做哪些事。而现在，那些都已不重要了，更确切地说是多数已经不再需要了。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
