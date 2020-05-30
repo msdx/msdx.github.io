@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2020-01-10T15:08:40.939Z</updated>
+  <updated>2020-05-30T13:43:46.132Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>技术解决不了社会问题</title>
+    <link href="http://www.githang.com/2020/01/14/technology%20cannot%20solve%20social%20problems/"/>
+    <id>http://www.githang.com/2020/01/14/technology cannot solve social problems/</id>
+    <published>2020-01-14T14:09:16.000Z</published>
+    <updated>2020-05-30T13:43:46.132Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我大概是看了《一课经济学》之后才改变自己对抢票软件的看法的。&lt;br&gt;在以前，我对抢票软件持支持态度，甚至想参与它的开发，但现在我却开始怀疑，它的出现究竟是给人们带来了好处还是增加了社会上的不公？我们以为有些技术的运用给人们带来了方便，但真的是么？&lt;/p&gt;
+&lt;p&gt;一直简单地以
+        
+      
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
+    
+      <category term="技术" scheme="http://www.githang.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2019 年总结</title>
     <link href="http://www.githang.com/2020/01/10/summary-of-2019/"/>
     <id>http://www.githang.com/2020/01/10/summary-of-2019/</id>
     <published>2020-01-10T13:52:31.000Z</published>
-    <updated>2020-01-10T15:08:40.939Z</updated>
+    <updated>2020-01-11T13:41:09.313Z</updated>
     
     <summary type="html">
     
@@ -467,32 +496,6 @@
     
     
       <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo yilia 基于 leancloud 实现文章阅读量统计</title>
-    <link href="http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/"/>
-    <id>http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/</id>
-    <published>2019-05-30T11:56:22.000Z</published>
-    <updated>2019-05-31T06:53:11.064Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。&lt;br&gt;前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="hexo" scheme="http://www.githang.com/tags/hexo/"/>
-    
-      <category term="yilia" scheme="http://www.githang.com/tags/yilia/"/>
-    
-      <category term="阅读量" scheme="http://www.githang.com/tags/%E9%98%85%E8%AF%BB%E9%87%8F/"/>
-    
-      <category term="leancloud" scheme="http://www.githang.com/tags/leancloud/"/>
     
   </entry>
   
