@@ -573,6 +573,14 @@ var _hmt = _hmt || [];
       placeholder: '有话要说？'
     });
 </script>
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder", data.hitokoto + "——" + data.from_who + "《" + data.from + "》" + "\n\n请不要忘记填上你的昵称和邮箱喔！");
+    })
+    .catch(console.error)
+</script>
 
     </div>
     
@@ -589,7 +597,7 @@ wpac_init.push({widget: 'Comment', id: 18631});
     var mc = document.createElement('script');
     mc.type = 'text/javascript';
     mc.async = true;
-    mc.src = 'https://embed.widgetpack.com/widget.js';
+    mc.src = 'https://cdn.widgetpack.com/widget.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
 })();
 </script>
