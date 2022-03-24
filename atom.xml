@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2020-12-10T12:32:19.257Z</updated>
+  <updated>2022-03-24T15:01:11.521Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>北上之路的坎坷</title>
+    <link href="http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/"/>
+    <id>http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/</id>
+    <published>2022-02-24T14:00:42.000Z</published>
+    <updated>2022-03-24T15:01:11.521Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　说几句题外话，不知不觉已有一年多没写博客了。自转行已来，生活轨迹大转变，心态也大转态，更主要的是对时间精力的掌握已不再从容。每每想着晚上静来心来写点东西，但等晚上到来，要么有其他事抢占先机，要么已经倦怠不想动，于是就连这台笔记本都许多没有翻开了。&lt;/p&gt;
+&lt;p&gt;　　回到主题。&lt;br&gt;　　在过完年后，计划着正月十五左右带着橙子和桔子北上。但却因为中间犯的几个错误，结果既打乱了安排，又耽搁了时间，也白浪费了不少钱。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>为什么我貌似消失了几个月</title>
@@ -122,9 +139,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
-    
       <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
@@ -432,11 +449,11 @@
       <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
+      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
+    
       <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
     
       <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
-    
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
     
   </entry>
   
@@ -470,26 +487,6 @@
       <category term="Enigmail" scheme="http://www.githang.com/tags/Enigmail/"/>
     
       <category term="安全" scheme="http://www.githang.com/tags/%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WPS 和宏</title>
-    <link href="http://www.githang.com/2019/06/03/wps-and-macro/"/>
-    <id>http://www.githang.com/2019/06/03/wps-and-macro/</id>
-    <published>2019-06-03T14:54:49.000Z</published>
-    <updated>2019-06-03T16:13:02.654Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我个人认为，如果非要在 Excel 上评出一个最伟大的功能创新的话，那就是宏了。尽管在一些人眼中，宏就是病毒，是危险，是不能触碰的东西。&lt;br&gt;Excel 本身其他的功能已经足够强大和高效了，但是宏却使它更进一步——它能够对原本没有的功能进行定制化的扩展。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="宏" scheme="http://www.githang.com/tags/%E5%AE%8F/"/>
     
   </entry>
   
