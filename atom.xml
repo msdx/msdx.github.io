@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-03-05T13:36:28.674Z</updated>
+  <updated>2024-03-16T13:35:41.747Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记春节云南旅游之大理</title>
+    <link href="http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/"/>
+    <id>http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/</id>
+    <published>2024-03-15T12:59:04.000Z</published>
+    <updated>2024-03-16T13:35:41.747Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以前只以为旅游就是到一个计划的憧憬的地方，去看看，吃吃，玩玩，拍拍照。但这样下来，除了留些一些照片和回忆，好像再没有别的了。&lt;br&gt;近年来，有所感，心想，旅游既是到了一个陌生的地方，那么便应该去了解当地的文化特点，接触当地的风俗风情，感受当地的人文生活，否则一趟下来，只赢得几张照片，却多挣了来回奔波劳累，日后回想起来，岂不难免有些失落？&lt;/p&gt;
+&lt;h2 id=&quot;DAY-3&quot;&gt;&lt;a href=&quot;#DAY-3&quot; class=&quot;headerlink&quot; title=&quot;DAY 3&quot;&gt;&lt;/a&gt;DAY 3&lt;/h2&gt;&lt;p&gt;我们在第三天的上午，吃完早餐，收拾完行李，就打车去了汽车北站，坐大巴去大理。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="旅游" scheme="http://www.githang.com/tags/%E6%97%85%E6%B8%B8/"/>
+    
+      <category term="云南" scheme="http://www.githang.com/tags/%E4%BA%91%E5%8D%97/"/>
+    
+      <category term="芒市" scheme="http://www.githang.com/tags/%E8%8A%92%E5%B8%82/"/>
+    
+      <category term="大理" scheme="http://www.githang.com/tags/%E5%A4%A7%E7%90%86/"/>
+    
+      <category term="丽江" scheme="http://www.githang.com/tags/%E4%B8%BD%E6%B1%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>记春节云南旅游之芒市</title>
@@ -454,35 +483,6 @@
     
     
       <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 GPG 对 Git commit 进行签名</title>
-    <link href="http://www.githang.com/2019/06/07/sign-git-commit-with-gpg/"/>
-    <id>http://www.githang.com/2019/06/07/sign-git-commit-with-gpg/</id>
-    <published>2019-06-07T14:17:48.000Z</published>
-    <updated>2019-06-08T07:53:20.198Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在了解到 github 及码云对 GPG 签名的支持后，我十分推荐对 git 的提交进行 GPG签名。&lt;/p&gt;
-&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;熟悉 git 的人会知道 &lt;code&gt;git blame&lt;/code&gt; 这个命令，可以用于查看某一行代码是由谁改动的，它大有用处，比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;之前写过的&lt;a href=&quot;https://www.githang.com/2018/12/21/Git-Contribution-Statistics/&quot;&gt;《统计项目中的代码有多少行是你贡献的》&lt;/a&gt;就是基于这个命令来实现的。&lt;/li&gt;
-&lt;li&gt;当项目有 bug 时，可以通过这个命令追查是由谁引入的。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Git" scheme="http://www.githang.com/tags/Git/"/>
-    
-      <category term="GPG" scheme="http://www.githang.com/tags/GPG/"/>
-    
-      <category term="签名" scheme="http://www.githang.com/tags/%E7%AD%BE%E5%90%8D/"/>
     
   </entry>
   
