@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-03-16T13:35:41.747Z</updated>
+  <updated>2024-03-18T14:46:13.740Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移除 valine 并使用不蒜子代替基于 leancloud 的页面统计</title>
+    <link href="http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/"/>
+    <id>http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/</id>
+    <published>2024-03-18T13:21:28.000Z</published>
+    <updated>2024-03-18T14:46:13.740Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常牌不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会有的访客的体验。
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="leancloud" scheme="http://www.githang.com/tags/leancloud/"/>
+    
+      <category term="不蒜子统计" scheme="http://www.githang.com/tags/%E4%B8%8D%E8%92%9C%E5%AD%90%E7%BB%9F%E8%AE%A1/"/>
+    
+      <category term="valine" scheme="http://www.githang.com/tags/valine/"/>
+    
+  </entry>
   
   <entry>
     <title>记春节云南旅游之大理</title>
@@ -129,9 +153,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
-    
       <category term="技术" scheme="http://www.githang.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="杂文" scheme="http://www.githang.com/tags/%E6%9D%82%E6%96%87/"/>
     
   </entry>
   
@@ -197,9 +221,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
       <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
@@ -463,26 +487,6 @@
       <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="负能量" scheme="http://www.githang.com/tags/%E8%B4%9F%E8%83%BD%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记飞北京前后</title>
-    <link href="http://www.githang.com/2019/06/14/before-and-after-flying-to-beijing/"/>
-    <id>http://www.githang.com/2019/06/14/before-and-after-flying-to-beijing/</id>
-    <published>2019-06-13T16:13:15.000Z</published>
-    <updated>2019-06-14T13:12:25.715Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;深圳&quot;&gt;&lt;a href=&quot;#深圳&quot; class=&quot;headerlink&quot; title=&quot;深圳&quot;&gt;&lt;/a&gt;深圳&lt;/h2&gt;&lt;p&gt;我提着行李下楼正走到路边，没想到滴滴司机已经取消了订单，于是只好再叫，等到上车，已是离预想的晚了十几分钟。不料刚上大路，就是一连串的泥土车在前面，又遇上堵车。&lt;br&gt;司机不急不缓地开着，慢慢跟在前面的运土车之后走走停停。我也不慌不忙，四处乱看，注意到司机的右手在盘着一串佛珠，挂档杆上还挂着好几串。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
