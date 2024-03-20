@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-03-18T14:46:13.740Z</updated>
+  <updated>2024-03-20T14:30:21.852Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/"/>
     <id>http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/</id>
     <published>2024-03-18T13:21:28.000Z</published>
-    <updated>2024-03-18T14:46:13.740Z</updated>
+    <updated>2024-03-20T14:30:21.852Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常牌不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会有的访客的体验。
+      &lt;p&gt;由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常处于不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会有的访客的体验。
     
     </summary>
     
