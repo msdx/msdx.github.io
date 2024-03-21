@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Windows中实现右键把电子书通过邮件发到kindle | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下： 1. 使用bat添加右键功能打开资源管理器，在地址中输">
+  <meta name="description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
 <meta name="keywords" content="bat,powershell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows中实现右键把电子书通过邮件发到kindle">
 <meta property="og:url" content="http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下： 1. 使用bat添加右键功能打开资源管理器，在地址中输">
+<meta property="og:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2024-03-21T13:09:28.413Z">
+<meta property="og:updated_time" content="2024-03-21T13:10:30.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows中实现右键把电子书通过邮件发到kindle">
-<meta name="twitter:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下： 1. 使用bat添加右键功能打开资源管理器，在地址中输">
+<meta name="twitter:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -296,7 +296,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。</p>
-<p>不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：</p>
+<p>不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：<a id="more"></a></p>
 <h1 id="1-使用bat添加右键功能"><a href="#1-使用bat添加右键功能" class="headerlink" title="1. 使用bat添加右键功能"></a>1. 使用bat添加右键功能</h1><p>打开资源管理器，在地址中输入<code>%APPDATA%\Microsoft\Windows\SendTo</code>，按回车。然后在该目录，新键文件，命名为<code>SendToKindle.bat</code>。内容如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set "PowerShellScriptPath=C:\path\to\SendToEmail.ps1"</span><br><span class="line">set "EmailAccount=your_email@example.com"</span><br><span class="line">set "EmailPassword=your_email_password"</span><br><span class="line">set "DestinationEmail=destination_email@example.com"</span><br><span class="line"></span><br><span class="line">powershell.exe -ExecutionPolicy Bypass -File "%PowerShellScriptPath%" "%EmailAccount%" "%EmailPassword%" "%DestinationEmail%" %*</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 <p>注意：最后加<code>pause</code>是为了能在出错失败时可以看到错误信息。<br>上述批处理文件中使用了一些占位符，需要根据实际情况替换它们：</p>
