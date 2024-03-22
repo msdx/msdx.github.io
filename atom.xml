@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-03-21T13:10:30.956Z</updated>
+  <updated>2024-03-22T13:47:50.245Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一封信</title>
+    <link href="http://www.githang.com/2024/03/22/The-letter-1/"/>
+    <id>http://www.githang.com/2024/03/22/The-letter-1/</id>
+    <published>2024-03-22T13:36:59.000Z</published>
+    <updated>2024-03-22T13:47:50.245Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　钢笔稿纸的书信往来，曾是少不更事时所憧憬的一种私密交流的方式，却因时代的变幻与科技的迭代，成为了一种未成为经验的记忆往事。诚然，现今的各种即时通讯的工具拉近了两人之间的距离感，也让相隔千里犹如当面见聊一样。但是碎片化的交流，也减少了人的深度思考。交流成为了聊天，多了些戏谑，少了些倾心。看着是方便了两人的通信，但随时随地都可交谈的方式，也让人在发言时少了些深思熟虑，话题绕于热点，而言语浮于表面。许多时候的观点，更像是转述所看到的人云亦云。所以，我会在想，这究竟是减少了空间的距离，还是增加了心与心之间的落差？
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="书信" scheme="http://www.githang.com/tags/%E4%B9%A6%E4%BF%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows中实现右键把电子书通过邮件发到kindle</title>
@@ -466,27 +488,6 @@
     
     
       <category term="sed" scheme="http://www.githang.com/tags/sed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>aiXcoder</title>
-    <link href="http://www.githang.com/2019/08/07/aixcoder/"/>
-    <id>http://www.githang.com/2019/08/07/aixcoder/</id>
-    <published>2019-08-07T12:20:00.000Z</published>
-    <updated>2019-08-07T14:04:41.361Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;aiXcoder 邀请码：&lt;/p&gt;
-&lt;p&gt;软件开发进入AI时代了，你有自己的「AI编程同伴」了吗？ 凭我的「aiXcoder智能编程助手」专业版  邀请码【R7Z3】登录&lt;a href=&quot;https://aixcoder.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://aixcoder.com&lt;/a&gt; 下载安装，即可获得专业版免费使用权限！  赶快训练自己的「AI编程同伴」吧～～&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="aiXcoder" scheme="http://www.githang.com/tags/aiXcoder/"/>
     
   </entry>
   
