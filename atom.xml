@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-07-31T15:29:20.858Z</updated>
+  <updated>2024-07-31T17:28:27.349Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记春节云南旅游之大理</title>
+    <link href="http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/"/>
+    <id>http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/</id>
+    <published>2024-07-31T15:31:18.000Z</published>
+    <updated>2024-07-31T17:28:27.349Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时隔4个多月才继续写云南游记的第三篇，也不知道这几个月究竟忙成或忙失了些什么。今时再写，也许也已没有了往时心境，但无论如何，总要完成当时计划。&lt;/p&gt;
+&lt;h2 id=&quot;DAY-5&quot;&gt;&lt;a href=&quot;#DAY-5&quot; class=&quot;headerlink&quot; title=&quot;DAY 5&quot;&gt;&lt;/a&gt;DAY 5&lt;/h2&gt;&lt;p&gt;从大理古城坐大巴直接到丽江古城。从车站出来，高德上查看离丽江古城不到1公里，走路与打车时间相当，一家三口也都还有兴致，便一路按导航而来。最终看到“丽江古城”几个字，心情还是相当兴奋与喜悦的，于是字前留照，虽然还不明白这四个字后面着跟的“5596”是何意。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="旅游" scheme="http://www.githang.com/tags/%E6%97%85%E6%B8%B8/"/>
+    
+      <category term="云南" scheme="http://www.githang.com/tags/%E4%BA%91%E5%8D%97/"/>
+    
+      <category term="芒市" scheme="http://www.githang.com/tags/%E8%8A%92%E5%B8%82/"/>
+    
+      <category term="大理" scheme="http://www.githang.com/tags/%E5%A4%A7%E7%90%86/"/>
+    
+      <category term="丽江" scheme="http://www.githang.com/tags/%E4%B8%BD%E6%B1%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>第一封信</title>
@@ -90,7 +119,7 @@
     <link href="http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/"/>
     <id>http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/</id>
     <published>2024-03-15T12:59:04.000Z</published>
-    <updated>2024-03-16T13:35:41.747Z</updated>
+    <updated>2024-07-31T15:32:41.732Z</updated>
     
     <summary type="html">
     
@@ -465,29 +494,6 @@
       <category term="随想" scheme="http://www.githang.com/tags/%E9%9A%8F%E6%83%B3/"/>
     
       <category term="生活" scheme="http://www.githang.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac sed 插入或替换为多行文本</title>
-    <link href="http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/"/>
-    <id>http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/</id>
-    <published>2019-08-15T11:29:15.000Z</published>
-    <updated>2019-08-16T16:32:38.132Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前在处理 hexo 文章路径时（《&lt;a href=&quot;https://www.githang.com/2018/12/22/hexo-new-post-path/&quot;&gt;如何在Hexo中对文章md文件分类&lt;/a&gt;》）用过 &lt;code&gt;sed&lt;/code&gt; 来插入内容，命令如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sed -i &quot;&quot; &quot;/title.*/ a\ &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;xxx&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&quot; $file&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sed: 1: &quot;s#&amp;lt;/head&amp;gt;# i\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script  ...&quot;: unescaped newline inside substitute pattern&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="工具" scheme="http://www.githang.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="sed" scheme="http://www.githang.com/tags/sed/"/>
     
   </entry>
   
