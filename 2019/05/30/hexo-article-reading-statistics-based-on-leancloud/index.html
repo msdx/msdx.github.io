@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Hexo yilia 基于 leancloud 实现文章阅读量统计 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。">
-<meta name="keywords" content="hexo,yilia,阅读量,leancloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo yilia 基于 leancloud 实现文章阅读量统计">
 <meta property="og:url" content="http://www.githang.com/2019/05/30/hexo-article-reading-statistics-based-on-leancloud/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。">
-<meta property="og:locale" content="default">
+<meta property="og:locale">
 <meta property="og:image" content="http://upyun.githang.com/2019/05/30/15592223978852.jpg!w1000">
 <meta property="og:image" content="http://upyun.githang.com/2019/05/30/15592224378641.jpg!w1000">
-<meta property="og:updated_time" content="2019-05-31T06:53:11.064Z">
+<meta property="article:published_time" content="2019-05-30T11:56:22.000Z">
+<meta property="article:modified_time" content="2019-05-30T11:56:22.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="yilia">
+<meta property="article:tag" content="阅读量">
+<meta property="article:tag" content="leancloud">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo yilia 基于 leancloud 实现文章阅读量统计">
-<meta name="twitter:description" content="总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。">
 <meta name="twitter:image" content="http://upyun.githang.com/2019/05/30/15592223978852.jpg!w1000">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -98,8 +101,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -112,10 +115,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -123,11 +124,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -168,7 +169,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -190,10 +195,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -229,11 +232,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -250,7 +253,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-article-reading-statistics-based-on-leancloud" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-hexo-article-reading-statistics-based-on-leancloud" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -268,24 +271,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">1.3k字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">5分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -298,29 +283,36 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。<br>前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。<br><a id="more"></a></p>
+        <p>总想明确地知道自己文章点击量如何，所以就想为博客增加文章阅读量统计。起初想用不蒜子实现，但是它无法在目录页面看到每篇博客阅读量。有看到其他人基于 leancloud 实现，遂参考实现。<br>前面已有介绍使用 valine 作为评论系统的文章，这里也不赘述有关 leancloud 的注册及应用创建等前置步骤，开门见山，只谈代码修改及一些注意事项。</p>
+<span id="more"></span>
+
 <h2 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改 _config.yml"></a>修改 <code>_config.yml</code></h2><p>修改 yilia 主题下的 <code>_config.yml</code> 文件，增加判断是否启用访问统计的配置项，以及 leancloud 的 api_id 及 api_key。由于我博客中也使用了基于 leancloud 的 valine，不能同时使用两个 api_id 及 api_key，所以我把 valine 中的 leancloud 配置项抽取出来。该文件最后增加内容如下：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># leancloud visitors</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#添加一下js插件的 CDN地址</span></span><br><span class="line"><span class="attr">js_cdn:</span></span><br><span class="line"><span class="attr">  jquery:</span> <span class="attr">https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js</span></span><br><span class="line">  <span class="string">av</span> <span class="string">:</span> <span class="string">//cdn1.lncld.net/static/js/2.5.0/av-min.js</span></span><br><span class="line"><span class="comment"># 评论及阅读数都用到</span></span><br><span class="line"><span class="attr">leancloud:</span></span><br><span class="line"><span class="attr"> app_id:</span>  <span class="comment">#Leancloud应用的appId</span></span><br><span class="line"><span class="attr"> app_key:</span> <span class="comment">#Leancloud应用的appKey</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># leancloud visitors</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#添加一下js插件的 CDN地址</span></span><br><span class="line"><span class="attr">js_cdn:</span></span><br><span class="line">  <span class="attr">jquery:</span> <span class="string">https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js</span></span><br><span class="line">  <span class="attr">av :</span> <span class="string">//cdn1.lncld.net/static/js/2.5.0/av-min.js</span></span><br><span class="line"><span class="comment"># 评论及阅读数都用到</span></span><br><span class="line"><span class="attr">leancloud:</span></span><br><span class="line"> <span class="attr">app_id:</span>  <span class="comment">#Leancloud应用的appId</span></span><br><span class="line"> <span class="attr">app_key:</span> <span class="comment">#Leancloud应用的appKey</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意，如果之前已经添加过 valine，上面 leancloud 的配置项可使用 valine 的 leancloud api_id 及 api_key。</strong></p>
 <h2 id="修改-article-ejs"><a href="#修改-article-ejs" class="headerlink" title="修改 article.ejs"></a>修改 <code>article.ejs</code></h2><p>修改 <code>article.ejs</code> 文件（在主题的 <code>layout/_partial</code> 目录下），在标题旁或下面你觉得合适的地方加入显示阅读量的代码。我之前在标题下加入过阅读时长，所以这次就加在它旁边。代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- word count end --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.leancloud_visitors.enable</span> &amp;&amp; !<span class="attr">post.no_visitors</span>) &#123; %&gt;</span></span><br><span class="line">  &amp;nbsp; | &amp;nbsp;</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"&lt;%= post.id %&gt;"</span> <span class="attr">class</span>=<span class="string">"pageViews"</span> <span class="attr">data-flag-title</span>=<span class="string">"&lt;%= post.title %&gt;"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span>°</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- word count end --&gt;</span></span><br><span class="line">&lt;% if (theme.leancloud_visitors.enable &amp;&amp; !post.no_visitors) &#123; %&gt;</span><br><span class="line">  <span class="symbol">&amp;nbsp;</span> | <span class="symbol">&amp;nbsp;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;&lt;%= post.id %&gt;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;pageViews&quot;</span> <span class="attr">data-flag-title</span>=<span class="string">&quot;&lt;%= post.title %&gt;&quot;</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span>°</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>这里第二次注意，由于目录页有多篇文章，所以在 <code>&lt;span&gt;</code> 中需要可以标识不同文章的属性值。</strong>我这里代码是基于我所参考的文章的，所以属性用的 <code>id</code>，值的话可以用 <code>post.url</code> 变量。由于我给文章加了 <code>id</code>（《<a href="https://www.githang.com/2019/05/28/add-post-id-to-existing-articles/">Hexo 向以前的文章添加id</a>》），所以使用 <code>post.id</code>。另外，为了方便在 <code>leancloud</code> 上直观地看到文章的访问情况，所以我又增加了一个属性，把标题传入。<br>还有，如果之前添加过 valine，而现在把它的 <code>app_id</code> 及 <code>app_key</code> 抽取出来的话，需要对应改 valine 的相关代码配置。</p>
 <h2 id="修改-footer-ejs"><a href="#修改-footer-ejs" class="headerlink" title="修改 footer.ejs"></a>修改 <code>footer.ejs</code></h2><p>修改 <code>footer.ejs</code>（在主题的 <code>layout/_partial</code> 目录下），在 <code>&lt;/footer&gt;</code> 标签前，加入如下代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.leancloud_visitors.enable</span>)&#123; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 文章阅读数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">lc_visitors</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.leancloud_visitors.enable)&#123; %&gt;</span><br><span class="line"><span class="comment">&lt;!-- 文章阅读数 --&gt;</span></span><br><span class="line">&lt;%- partial(&#x27;post/lc_visitors&#x27;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <p>这里的 <code>lc_visitors</code> 在下一步创建，它实现获取及更新文章阅读数的逻辑。</p>
 <h2 id="增加-lc-visitors-ejs"><a href="#增加-lc-visitors-ejs" class="headerlink" title="增加 lc_visitors.ejs"></a>增加 <code>lc_visitors.ejs</code></h2><p>在主题的 <code>layout/_partial/post</code> 目录下，新增加文件 <code>lc_visitors.ejs</code>，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;%- theme.js_cdn.jquery %&gt;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;%- theme.js_cdn.av %&gt;"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml">if(<span class="tag">&lt;<span class="name">%-</span> <span class="attr">theme.leancloud_visitors.enable</span> %&gt;</span>)&#123;</span></span><br><span class="line"><span class="xml">    var leancloud_app_id  = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.leancloud.appid</span> %&gt;</span>';</span></span><br><span class="line"><span class="xml">    var leancloud_app_key = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.leancloud.appkey</span> %&gt;</span>';</span></span><br><span class="line"><span class="undefined">    AV.init(&#123;</span></span><br><span class="line"><span class="undefined">        appId: leancloud_app_id,</span></span><br><span class="line"><span class="undefined">        appKey: leancloud_app_key</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    var pageViewsLength = $(".pageViews").length;</span></span><br><span class="line"><span class="undefined">    var isIndex = $(".pageViews").length &gt; 1 ?true:false;</span></span><br><span class="line"><span class="undefined">    function showTime() &#123;</span></span><br><span class="line"><span class="undefined">        var Pageview = AV.Object.extend("Pageview");</span></span><br><span class="line"><span class="undefined">        if(isIndex)&#123;</span></span><br><span class="line"><span class="undefined">            $(".pageViews").each(function()&#123;</span></span><br><span class="line"><span class="undefined">                showPageViewsNum($(this), Pageview);</span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined">        &#125;else&#123;</span></span><br><span class="line"><span class="undefined">            addPageViewsNum($(".pageViews"));</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    //仅显示阅读量</span></span><br><span class="line"><span class="undefined">    function showPageViewsNum(ele, Pageview)&#123;</span></span><br><span class="line"><span class="undefined">        var id = ele.attr('id').trim();</span></span><br><span class="line"><span class="undefined">        var query = new AV.Query("Pageview");</span></span><br><span class="line"><span class="undefined">        query.equalTo("post_id", id);</span></span><br><span class="line"><span class="undefined">        query.descending('createdAt');</span></span><br><span class="line"><span class="undefined">        query.limit(1);</span></span><br><span class="line"><span class="undefined">        query.find().then(function (results) &#123;</span></span><br><span class="line"><span class="undefined">            $(document.getElementById(id)).text(results &amp;&amp; results.length &gt; 0?  results[0].get("count") : '0');</span></span><br><span class="line"><span class="undefined">        &#125;, function (error) &#123;</span></span><br><span class="line"><span class="undefined">             $(document.getElementById(id)).text('0');</span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    //追加并显示阅读量</span></span><br><span class="line"><span class="undefined">    function addPageViewsNum(ele)&#123;</span></span><br><span class="line"><span class="undefined">        var id = ele.attr('id').trim();</span></span><br><span class="line"><span class="undefined">        var title = ele.attr('data-flag-title').trim();</span></span><br><span class="line"><span class="undefined">        var query = new AV.Query("Pageview");</span></span><br><span class="line"><span class="undefined">        query.equalTo("post_id", id);</span></span><br><span class="line"><span class="undefined">        query.descending('createdAt');</span></span><br><span class="line"><span class="undefined">        query.limit(1);</span></span><br><span class="line"><span class="undefined">        query.find().then(function (results) &#123;</span></span><br><span class="line"><span class="undefined">            if (results.length == 0) &#123;</span></span><br><span class="line"><span class="undefined">               saveNewPageview(id, title);</span></span><br><span class="line"><span class="undefined">               return;</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">            var pageview = results[0];</span></span><br><span class="line"><span class="undefined">            var count = pageview.get("count");</span></span><br><span class="line"><span class="undefined">            count++;</span></span><br><span class="line"><span class="undefined">            pageview.set("count", count);</span></span><br><span class="line"><span class="undefined">            pageview.set("title", title);</span></span><br><span class="line"><span class="undefined">            pageview.save().then(function (pageview) &#123;</span></span><br><span class="line"><span class="undefined">                $(document.getElementById(id)).text(count);</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">        &#125;, function (error) &#123;</span></span><br><span class="line"><span class="undefined">            saveNewPageview(id, title);</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    function saveNewPageview(id, title) &#123;</span></span><br><span class="line"><span class="undefined">       var Pageview = AV.Object.extend("Pageview");</span></span><br><span class="line"><span class="undefined">       var query = new Pageview;</span></span><br><span class="line"><span class="undefined">       query.save(&#123;</span></span><br><span class="line"><span class="undefined">           post_id: id,</span></span><br><span class="line"><span class="undefined">           title: title,</span></span><br><span class="line"><span class="undefined">           count: 1</span></span><br><span class="line"><span class="undefined">       &#125;).then(function (pageview) &#123;</span></span><br><span class="line"><span class="undefined">           $(document.getElementById(id)).text(pageview.count);</span></span><br><span class="line"><span class="undefined">       &#125;, function (error) &#123;</span></span><br><span class="line"><span class="undefined">       &#125;);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    if(pageViewsLength)&#123; //此处判断等于 1 在执行 可去除循环</span></span><br><span class="line"><span class="undefined">        showTime();</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>我这里的代码是基于所参考的文章来修改的。原文章的思路是，每次访问就增加一条该文章的记录，然后请求包含该文章的记录数，就是文章的总阅读数。比起我即将要改的方案，它的好处是在高并发下也不会丢失访问量。<br>我考虑到我的博客访问量不大（事实如此= =！），又希望能直观地看出文章的访问情况，对表进行了修改，增加访问计数及标题两列。然后当进入文章时，如果没有该文章的记录，则写入新的记录，否则把原来记录的计数加1。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;&lt;%- theme.js_cdn.jquery %&gt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;&lt;%- theme.js_cdn.av %&gt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">if</span>(&lt;%- theme.<span class="property">leancloud_visitors</span>.<span class="property">enable</span> %&gt;)&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> leancloud_app_id  = <span class="string">&#x27;&lt;%= theme.leancloud.appid %&gt;&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> leancloud_app_key = <span class="string">&#x27;&lt;%= theme.leancloud.appkey %&gt;&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable constant_">AV</span>.<span class="title function_">init</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">appId</span>: leancloud_app_id,</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">appKey</span>: leancloud_app_key</span></span><br><span class="line"><span class="language-javascript">    &#125;);</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> pageViewsLength = $(<span class="string">&quot;.pageViews&quot;</span>).<span class="property">length</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> isIndex = $(<span class="string">&quot;.pageViews&quot;</span>).<span class="property">length</span> &gt; <span class="number">1</span> ?<span class="attr">true</span>:<span class="literal">false</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">showTime</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> <span class="title class_">Pageview</span> = <span class="variable constant_">AV</span>.<span class="property">Object</span>.<span class="title function_">extend</span>(<span class="string">&quot;Pageview&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">if</span>(isIndex)&#123;</span></span><br><span class="line"><span class="language-javascript">            $(<span class="string">&quot;.pageViews&quot;</span>).<span class="title function_">each</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">                <span class="title function_">showPageViewsNum</span>($(<span class="variable language_">this</span>), <span class="title class_">Pageview</span>);</span></span><br><span class="line"><span class="language-javascript">            &#125;);</span></span><br><span class="line"><span class="language-javascript">        &#125;<span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">addPageViewsNum</span>($(<span class="string">&quot;.pageViews&quot;</span>));</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//仅显示阅读量</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">showPageViewsNum</span>(<span class="params">ele, Pageview</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> id = ele.<span class="title function_">attr</span>(<span class="string">&#x27;id&#x27;</span>).<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> query = <span class="keyword">new</span> <span class="variable constant_">AV</span>.<span class="title class_">Query</span>(<span class="string">&quot;Pageview&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">equalTo</span>(<span class="string">&quot;post_id&quot;</span>, id);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">descending</span>(<span class="string">&#x27;createdAt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">limit</span>(<span class="number">1</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">find</span>().<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">results</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            $(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id)).<span class="title function_">text</span>(results &amp;&amp; results.<span class="property">length</span> &gt; <span class="number">0</span>?  results[<span class="number">0</span>].<span class="title function_">get</span>(<span class="string">&quot;count&quot;</span>) : <span class="string">&#x27;0&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;, <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">             $(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id)).<span class="title function_">text</span>(<span class="string">&#x27;0&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        &#125;);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//追加并显示阅读量</span></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">addPageViewsNum</span>(<span class="params">ele</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> id = ele.<span class="title function_">attr</span>(<span class="string">&#x27;id&#x27;</span>).<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> title = ele.<span class="title function_">attr</span>(<span class="string">&#x27;data-flag-title&#x27;</span>).<span class="title function_">trim</span>();</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> query = <span class="keyword">new</span> <span class="variable constant_">AV</span>.<span class="title class_">Query</span>(<span class="string">&quot;Pageview&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">equalTo</span>(<span class="string">&quot;post_id&quot;</span>, id);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">descending</span>(<span class="string">&#x27;createdAt&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">limit</span>(<span class="number">1</span>);</span></span><br><span class="line"><span class="language-javascript">        query.<span class="title function_">find</span>().<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">results</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">if</span> (results.<span class="property">length</span> == <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">               <span class="title function_">saveNewPageview</span>(id, title);</span></span><br><span class="line"><span class="language-javascript">               <span class="keyword">return</span>;</span></span><br><span class="line"><span class="language-javascript">            &#125;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">var</span> pageview = results[<span class="number">0</span>];</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">var</span> count = pageview.<span class="title function_">get</span>(<span class="string">&quot;count&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">            count++;</span></span><br><span class="line"><span class="language-javascript">            pageview.<span class="title function_">set</span>(<span class="string">&quot;count&quot;</span>, count);</span></span><br><span class="line"><span class="language-javascript">            pageview.<span class="title function_">set</span>(<span class="string">&quot;title&quot;</span>, title);</span></span><br><span class="line"><span class="language-javascript">            pageview.<span class="title function_">save</span>().<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">pageview</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">                $(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id)).<span class="title function_">text</span>(count);</span></span><br><span class="line"><span class="language-javascript">            &#125;)</span></span><br><span class="line"><span class="language-javascript">        &#125;, <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">saveNewPageview</span>(id, title);</span></span><br><span class="line"><span class="language-javascript">        &#125;)</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">saveNewPageview</span>(<span class="params">id, title</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">       <span class="keyword">var</span> <span class="title class_">Pageview</span> = <span class="variable constant_">AV</span>.<span class="property">Object</span>.<span class="title function_">extend</span>(<span class="string">&quot;Pageview&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">       <span class="keyword">var</span> query = <span class="keyword">new</span> <span class="title class_">Pageview</span>;</span></span><br><span class="line"><span class="language-javascript">       query.<span class="title function_">save</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">           <span class="attr">post_id</span>: id,</span></span><br><span class="line"><span class="language-javascript">           <span class="attr">title</span>: title,</span></span><br><span class="line"><span class="language-javascript">           <span class="attr">count</span>: <span class="number">1</span></span></span><br><span class="line"><span class="language-javascript">       &#125;).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">pageview</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">           $(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(id)).<span class="title function_">text</span>(pageview.<span class="property">count</span>);</span></span><br><span class="line"><span class="language-javascript">       &#125;, <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">       &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span>(pageViewsLength)&#123; <span class="comment">//此处判断等于 1 在执行 可去除循环</span></span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">showTime</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我这里的代码是基于所参考的文章来修改的。原文章的思路是，每次访问就增加一条该文章的记录，然后请求包含该文章的记录数，就是文章的总阅读数。比起我即将要改的方案，它的好处是在高并发下也不会丢失访问量。<br>我考虑到我的博客访问量不大（事实如此&#x3D; &#x3D;！），又希望能直观地看出文章的访问情况，对表进行了修改，增加访问计数及标题两列。然后当进入文章时，如果没有该文章的记录，则写入新的记录，否则把原来记录的计数加1。</p>
 <h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p>目录展示效果如下：<br><img src="http://upyun.githang.com/2019/05/30/15592223978852.jpg!w1000" alt="目录页面"></p>
 <p>leancloud 后台数据效果如下：<br><img src="http://upyun.githang.com/2019/05/30/15592224378641.jpg!w1000" alt="leancloud 后台"></p>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li>小叮当的肚兜《添加 hexo yilia 主题的文章阅读量》：<a href="https://www.cnblogs.com/stringfade/p/7738072.html" target="_blank" rel="noopener">https://www.cnblogs.com/stringfade/p/7738072.html</a></li>
+<li>小叮当的肚兜《添加 hexo yilia 主题的文章阅读量》：<a href="https://www.cnblogs.com/stringfade/p/7738072.html">https://www.cnblogs.com/stringfade/p/7738072.html</a></li>
 </ul>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -332,10 +324,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -540,15 +532,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="hexo-article-reading-statistics-based-on-leancloud"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="hexo-article-reading-statistics-based-on-leancloud" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -604,14 +596,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -708,7 +700,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -791,11 +783,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -811,19 +811,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -839,47 +831,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -887,51 +843,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -943,23 +859,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -991,38 +895,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1031,15 +903,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1051,7 +947,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1063,11 +971,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1087,11 +991,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1103,15 +1011,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1131,7 +1043,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1139,7 +1131,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

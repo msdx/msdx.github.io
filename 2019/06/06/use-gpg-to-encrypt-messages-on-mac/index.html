@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Mac 下使用 GPG 加密邮件 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
-<meta name="keywords" content="GPG,加密,Thunderbird,Enigmail,安全">
+  <meta name="description" content="GPG Suite到 http:&#x2F;&#x2F;www.gpgtools.org&#x2F; 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 下使用 GPG 加密邮件">
 <meta property="og:url" content="http://www.githang.com/2019/06/06/use-gpg-to-encrypt-messages-on-mac/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="GPG Suite到 http:&#x2F;&#x2F;www.gpgtools.org&#x2F; 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
+<meta property="og:locale">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598732322482.jpg">
 <meta property="og:image" content="http://upyun.githang.com/2019/06/07/15598738649324.jpg">
-<meta property="og:updated_time" content="2019-06-07T05:57:33.923Z">
+<meta property="article:published_time" content="2019-06-06T15:42:31.000Z">
+<meta property="article:modified_time" content="2019-06-06T15:42:31.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="GPG">
+<meta property="article:tag" content="加密">
+<meta property="article:tag" content="Thunderbird">
+<meta property="article:tag" content="Enigmail">
+<meta property="article:tag" content="安全">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 下使用 GPG 加密邮件">
-<meta name="twitter:description" content="GPG Suite到 http://www.gpgtools.org/ 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：  GPG Keychain 可以添加和管理自己的私钥及公钥。 GPGMail Mac 上的官方邮件客户端上的 GPG 插件。  GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。">
 <meta name="twitter:image" content="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -99,8 +103,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -113,10 +117,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -124,11 +126,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -169,7 +171,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -191,10 +197,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -230,11 +234,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -251,7 +255,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-use-gpg-to-encrypt-messages-on-mac" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-use-gpg-to-encrypt-messages-on-mac" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -269,24 +273,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">617字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">2分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -299,28 +285,36 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="GPG-Suite"><a href="#GPG-Suite" class="headerlink" title="GPG Suite"></a>GPG Suite</h2><p>到 <a href="http://www.gpgtools.org/" target="_blank" rel="noopener">http://www.gpgtools.org/</a> 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：</p>
+        <h2 id="GPG-Suite"><a href="#GPG-Suite" class="headerlink" title="GPG Suite"></a>GPG Suite</h2><p>到 <a href="http://www.gpgtools.org/">http://www.gpgtools.org/</a> 下载 GPG 套装，它包含了 GPG 相关的多个软件，其中：</p>
 <ul>
 <li><code>GPG Keychain</code> 可以添加和管理自己的私钥及公钥。</li>
 <li><code>GPGMail</code> Mac 上的官方邮件客户端上的 GPG 插件。</li>
 </ul>
-<p>GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。<br><a id="more"></a><br>我们发邮件的时候，可以选中正文，然后右键，服务，然后使用 OpenGPG 对其加密，如下图：<br><img src="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000" alt="Mail 右键菜单"><br>但是这样未免太麻烦，而且也无法对标题进行加密，而 GPG Mail 则解决了这个问题。<br>点击左上角邮件菜单，偏好设置，再点击通用面板中的管理插件，把 <code>GPGMailLoader.mailbundle</code> 勾上，点击“应用并重启邮件”。这时候重新打开新的编写新邮件的窗口，会发现多了一个 OpenGPG 按钮，可选择对邮件加密的方式。详细使用可自行探索。</p>
+<p>GPG Keychain 相关用法这里不赘述，可参考文末我所参考的博客，这里说一下 GPGMail。</p>
+<span id="more"></span>
+<p>我们发邮件的时候，可以选中正文，然后右键，服务，然后使用 OpenGPG 对其加密，如下图：<br><img src="http://upyun.githang.com/2019/06/07/15598724603854.jpg!w1000" alt="Mail 右键菜单"><br>但是这样未免太麻烦，而且也无法对标题进行加密，而 GPG Mail 则解决了这个问题。<br>点击左上角邮件菜单，偏好设置，再点击通用面板中的管理插件，把 <code>GPGMailLoader.mailbundle</code> 勾上，点击“应用并重启邮件”。这时候重新打开新的编写新邮件的窗口，会发现多了一个 OpenGPG 按钮，可选择对邮件加密的方式。详细使用可自行探索。</p>
 <p>但是，当前最新的 2018.5 的版本，这个插件是收费的，只有 30 天的试用期。而上一个据说还是免费的版本 2018.3，在启用插件之后，Mac 的官方邮件客户端会打不开并崩溃。</p>
 <h2 id="Thunderbird-Enigmail"><a href="#Thunderbird-Enigmail" class="headerlink" title="Thunderbird + Enigmail"></a>Thunderbird + Enigmail</h2><p>Thunderbird + Enigmail 插件是一个很好的替代方案。<br>Thunderbird 是我在 Ubuntu 上用得比较顺手的邮件客户端，Enigmail 是其上的一个 OpenGPG 邮件加解密插件。<br>但是，安装了 Thunderbird 之后，在要安装 Enigmail 插件前，还需安装另一个软件 Pinentry，否则会发现 Enigmail 插件装不上——装了之后界面不显示出来，一重启它就又没了。<br>命令行下执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install pinentry-mac</span><br><span class="line">echo "pinentry-program /usr/local/bin/pinentry-mac" &gt;&gt; ~/.gnupg/gpg-agent.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install pinentry-mac</span><br><span class="line">echo &quot;pinentry-program /usr/local/bin/pinentry-mac&quot; &gt;&gt; ~/.gnupg/gpg-agent.conf</span><br></pre></td></tr></table></figure>
+
 <p>接下来安装 Enigmail 插件。点击 Thunderbird 搜索框旁边的菜单按钮，点击附加组件上的附加组件。<br><img src="http://upyun.githang.com/2019/06/07/15598732322482.jpg" alt="Thunderbird 菜单"><br>然后在打开的新标签中，在扩展面板搜索 Enigmail 并安装。</p>
 <p>这时点击 Thunderbird 的新建消息，会发现多了加密和签名两个按钮，如下：<br><img src="http://upyun.githang.com/2019/06/07/15598738649324.jpg" alt="Thunderbird 新建消息"></p>
 <p>点击加密，使它变成勾选状态后，表示会对邮件进行加密。在点击发送后，如果电脑上有收件人的公钥，会使用它进行加密。</p>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li>小狼的世界<a href="https://www.cnblogs.com/cocowool/archive/2011/11/14/2249004.html" target="_blank" rel="noopener">《如何使用GunPGP加密Apple Mail的邮件》</a></li>
-<li>security in-a-box<a href="https://securityinabox.org/en/guide/thunderbird/mac/" target="_blank" rel="noopener">《THUNDERBIRD, ENIGMAIL AND OPENPGP FOR MAC OS X - SECURE EMAIL》</a></li>
-<li>時計坂一刻館三号室<a href="https://quchao.com/entry/faq-about-enigmail-for-thunderbird-on-macosx/" target="_blank" rel="noopener">《MacOS X 下配置 Enigmail for Thunderbird 的常见问题》</a></li>
+<li>小狼的世界<a href="https://www.cnblogs.com/cocowool/archive/2011/11/14/2249004.html">《如何使用GunPGP加密Apple Mail的邮件》</a></li>
+<li>security in-a-box<a href="https://securityinabox.org/en/guide/thunderbird/mac/">《THUNDERBIRD, ENIGMAIL AND OPENPGP FOR MAC OS X - SECURE EMAIL》</a></li>
+<li>時計坂一刻館三号室<a href="https://quchao.com/entry/faq-about-enigmail-for-thunderbird-on-macosx/">《MacOS X 下配置 Enigmail for Thunderbird 的常见问题》</a></li>
 </ul>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -332,10 +326,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -490,7 +484,7 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2019/06/03/wps-and-macro/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/wps-and-macro" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">WPS 和宏</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -544,15 +538,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="use-gpg-to-encrypt-messages-on-mac"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="use-gpg-to-encrypt-messages-on-mac" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -608,14 +602,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -712,7 +706,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -795,11 +789,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -815,19 +817,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -843,47 +837,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -891,51 +849,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -947,23 +865,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -995,38 +901,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1035,15 +909,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1055,7 +953,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1067,11 +977,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1091,11 +997,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1107,15 +1017,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1135,7 +1049,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1143,7 +1137,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

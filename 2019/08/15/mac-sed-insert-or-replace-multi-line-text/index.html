@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Mac sed 插入或替换为多行文本 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前在处理 hexo 文章路径时（《如何在Hexo中对文章md文件分类》）用过 sed 来插入内容，命令如下： 123sed -i &quot;&quot; &quot;/title.*/ a\ xxx&quot; $file 那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下： 12sed: 1: &quot;s#&amp;lt;/head&amp;gt;# i\&amp;lt;script  ...&quot;: unescaped newline inside s">
-<meta name="keywords" content="sed">
+  <meta name="description" content="之前在处理 hexo 文章路径时（《如何在Hexo中对文章md文件分类》）用过 sed 来插入内容，命令如下： 123sed -i &quot;&quot; &quot;&#x2F;title.*&#x2F; a\ xxx&quot; $file  那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下： 12sed: 1: &quot;s#&lt;&#x2F;head&gt;# i\&lt;script  ...&amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac sed 插入或替换为多行文本">
 <meta property="og:url" content="http://www.githang.com/2019/08/15/mac-sed-insert-or-replace-multi-line-text/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="之前在处理 hexo 文章路径时（《如何在Hexo中对文章md文件分类》）用过 sed 来插入内容，命令如下： 123sed -i &quot;&quot; &quot;/title.*/ a\ xxx&quot; $file 那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下： 12sed: 1: &quot;s#&amp;lt;/head&amp;gt;# i\&amp;lt;script  ...&quot;: unescaped newline inside s">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="之前在处理 hexo 文章路径时（《如何在Hexo中对文章md文件分类》）用过 sed 来插入内容，命令如下： 123sed -i &quot;&quot; &quot;&#x2F;title.*&#x2F; a\ xxx&quot; $file  那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下： 12sed: 1: &quot;s#&lt;&#x2F;head&gt;# i\&lt;script  ...&amp;qu">
+<meta property="og:locale">
 <meta property="og:image" content="https://uploadbeta.com/api/pictures/random/?cached">
-<meta property="og:updated_time" content="2019-08-16T16:32:38.132Z">
+<meta property="article:published_time" content="2019-08-15T11:29:15.000Z">
+<meta property="article:modified_time" content="2019-08-15T11:29:15.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="sed">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac sed 插入或替换为多行文本">
-<meta name="twitter:description" content="之前在处理 hexo 文章路径时（《如何在Hexo中对文章md文件分类》）用过 sed 来插入内容，命令如下： 123sed -i &quot;&quot; &quot;/title.*/ a\ xxx&quot; $file 那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下： 12sed: 1: &quot;s#&amp;lt;/head&amp;gt;# i\&amp;lt;script  ...&quot;: unescaped newline inside s">
 <meta name="twitter:image" content="https://uploadbeta.com/api/pictures/random/?cached">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -97,8 +97,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -111,10 +111,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -122,11 +120,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -167,7 +165,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -189,10 +191,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -228,11 +228,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -249,7 +249,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-mac-sed-insert-or-replace-multi-line-text" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-mac-sed-insert-or-replace-multi-line-text" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -267,24 +267,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">246字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">1分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -298,20 +280,28 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>之前在处理 hexo 文章路径时（《<a href="https://www.githang.com/2018/12/22/hexo-new-post-path/">如何在Hexo中对文章md文件分类</a>》）用过 <code>sed</code> 来插入内容，命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i "" "/title.*/ a\ </span><br><span class="line">xxx</span><br><span class="line">" $file</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;&quot; &quot;/title.*/ a\ </span><br><span class="line">xxx</span><br><span class="line">&quot; $file</span><br></pre></td></tr></table></figure>
+
 <p>那时以为如果插入多行文本亦可，不料使用时才知不然，会报错如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed: 1: "s#&lt;/head&gt;# i\</span><br><span class="line">&lt;script  ...": unescaped newline inside substitute pattern</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed: 1: &quot;s#&lt;/head&gt;# i\</span><br><span class="line">&lt;script  ...&quot;: unescaped newline inside substitute pattern</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
 <p>不知是否插入文本不能用 <code>s</code> 指定模式的分隔符，所以改变一下思路，用替换来实现。<br>但是尝试过把换行符换成 <code>\n</code>，但是运行之后会被处理为 <code>n</code>，用 <code>\\\n</code> 也不行。多番尝试及搜索，最后才发现需要用到 <code>$</code>，<code>\n</code> 也需要改为 <code>\\\n</code>，命令举例如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i '' $'s#&lt;/head&gt;#&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;\\\n&lt;script&gt;\\\n     (adsbygoogle = window.adsbygoogle || []).push(&#123;\\\n          google_ad_client: "ca-pub-4684296714025694",\\\n          enable_page_level_ads: true\\\n     &#125;);\\\n&lt;/script&gt;\\\n&lt;/head&gt;#' userguide.html</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;&#x27; $&#x27;s#&lt;/head&gt;#&lt;script async src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;\\\n&lt;script&gt;\\\n     (adsbygoogle = window.adsbygoogle || []).push(&#123;\\\n          google_ad_client: &quot;ca-pub-4684296714025694&quot;,\\\n          enable_page_level_ads: true\\\n     &#125;);\\\n&lt;/script&gt;\\\n&lt;/head&gt;#&#x27; userguide.html</span><br></pre></td></tr></table></figure>
 <p>也就是，在引号前加上 <code>$</code>，并且换行符使用 <code>\\\n</code>即可。</p>
 <hr>
-<p><img src="https://uploadbeta.com/api/pictures/random/?cached" alt=""></p>
+<p><img src="https://uploadbeta.com/api/pictures/random/?cached"></p>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -323,10 +313,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -519,15 +509,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="mac-sed-insert-or-replace-multi-line-text"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="mac-sed-insert-or-replace-multi-line-text" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -583,14 +573,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -687,7 +677,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -770,11 +760,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -790,19 +788,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -818,47 +808,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -866,51 +820,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -922,23 +836,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -970,38 +872,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1010,15 +880,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1030,7 +924,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1042,11 +948,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,11 +968,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1082,15 +988,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1110,7 +1020,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1118,7 +1108,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

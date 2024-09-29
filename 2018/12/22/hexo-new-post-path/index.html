@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>如何在Hexo中对文章md文件分类 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。 起因在默认配置下，我们使用hexo new post [title]会在source/_post/目录下生成对应的markdown文件，而使用hexo g生成的html文件路径是:year/:month/:day/:title.html。当我们写的博客越来越多的时候，会发现，所有文章都是在source/_pos">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。 起因在默认配置下，我们使用hexo new post [title]会在source&#x2F;_post&#x2F;目录下生成对应的markdown文件，而使用hexo g生成的html文件路径是:year&#x2F;:month&#x2F;:day&#x2F;:title.html。当我们写的博客越来越多的时候，会发现，所有文章都是在source&#x2F;_pos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何在Hexo中对文章md文件分类">
 <meta property="og:url" content="http://www.githang.com/2018/12/22/hexo-new-post-path/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。 起因在默认配置下，我们使用hexo new post [title]会在source/_post/目录下生成对应的markdown文件，而使用hexo g生成的html文件路径是:year/:month/:day/:title.html。当我们写的博客越来越多的时候，会发现，所有文章都是在source/_pos">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-14T14:07:46.335Z">
+<meta property="og:description" content="Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。 起因在默认配置下，我们使用hexo new post [title]会在source&#x2F;_post&#x2F;目录下生成对应的markdown文件，而使用hexo g生成的html文件路径是:year&#x2F;:month&#x2F;:day&#x2F;:title.html。当我们写的博客越来越多的时候，会发现，所有文章都是在source&#x2F;_pos">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-12-22T04:57:21.000Z">
+<meta property="article:modified_time" content="2018-12-22T04:57:21.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何在Hexo中对文章md文件分类">
-<meta name="twitter:description" content="Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。 起因在默认配置下，我们使用hexo new post [title]会在source/_post/目录下生成对应的markdown文件，而使用hexo g生成的html文件路径是:year/:month/:day/:title.html。当我们写的博客越来越多的时候，会发现，所有文章都是在source/_pos">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -95,8 +95,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -109,10 +109,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -120,11 +118,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -165,7 +163,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -187,10 +189,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -226,11 +226,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -247,7 +247,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-new-post-path" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-hexo-new-post-path" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -265,24 +265,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">1.4k字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">5分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -296,16 +278,18 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。</p>
-<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在默认配置下，我们使用<code>hexo new post [title]</code>会在<code>source/_post/</code>目录下生成对应的markdown文件，而使用<code>hexo g</code>生成的html文件路径是<code>:year/:month/:day/:title.html</code>。当我们写的博客越来越多的时候，会发现，所有文章都是在<code>source/_post/</code>下，查找起来会不大方便，而希望对它进行一个分类，但是在生成的文章链接上保持不变。<br><a id="more"></a><br>生成的文章名字及其对应永久链接，可以在<code>_config.yml</code>中配置，分别是<code>new_post_name: :title.md # File name of new posts</code>和<code>permalink: :year/:month/:day/:title/</code>这两项。我们把<code>new_post_name</code>的值改为<code>:year/:title.md</code>，让每次运行<code>hexo new post [title]</code>时新建的文件按年份存放，但是却发现生成的html文件的链接也变了，比如<code>source/_post/2018/test.md</code>对应的博客地址，原本应该是<code>2018/12/22/test/</code>，现在却变成了<code>2018/12/22/2018/test/</code>。也就是，配置中的<code>permalink</code>值里的<code>:title</code>，实际取的不是<strong>文件名称</strong>，而是相对于<code>source/_post</code>的<strong>相对路径</strong>（不含后缀）。<br>这可能是个Bug，因为在<code>permalink</code>和<code>new_post_name</code>中，用的是同一个变量<code>:title</code>，但是它们的值却是不同的。</p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在默认配置下，我们使用<code>hexo new post [title]</code>会在<code>source/_post/</code>目录下生成对应的markdown文件，而使用<code>hexo g</code>生成的html文件路径是<code>:year/:month/:day/:title.html</code>。当我们写的博客越来越多的时候，会发现，所有文章都是在<code>source/_post/</code>下，查找起来会不大方便，而希望对它进行一个分类，但是在生成的文章链接上保持不变。</p>
+<span id="more"></span>
+<p>生成的文章名字及其对应永久链接，可以在<code>_config.yml</code>中配置，分别是<code>new_post_name: :title.md # File name of new posts</code>和<code>permalink: :year/:month/:day/:title/</code>这两项。我们把<code>new_post_name</code>的值改为<code>:year/:title.md</code>，让每次运行<code>hexo new post [title]</code>时新建的文件按年份存放，但是却发现生成的html文件的链接也变了，比如<code>source/_post/2018/test.md</code>对应的博客地址，原本应该是<code>2018/12/22/test/</code>，现在却变成了<code>2018/12/22/2018/test/</code>。也就是，配置中的<code>permalink</code>值里的<code>:title</code>，实际取的不是<strong>文件名称</strong>，而是相对于<code>source/_post</code>的<strong>相对路径</strong>（不含后缀）。<br>这可能是个Bug，因为在<code>permalink</code>和<code>new_post_name</code>中，用的是同一个变量<code>:title</code>，但是它们的值却是不同的。</p>
 <h1 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h1><p>如果我们是按年月日归档，而链接保持不变，大可配置为如下：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:title</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
 <p>但是这样的分类太细了，别说一天写不了几篇，一个月我也不会写太多。我只想生成的文章按年份分文件夹，其他保持不变。所以在<code>_config.yml</code>中是要修改配置为如下的：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">new_post_name:</span> <span class="string">:year/:title</span></span><br></pre></td></tr></table></figure>
-<p>而文章的链接，一番搜索之后，发现可以在我们文章的markdown文件的<code>Front-matter</code>中添加<code>permalink</code>参数，来指定文章的链接（见 <a href="https://hexo.io/docs/permalinks.html#comment-2657776966" target="_blank" rel="noopener">https://hexo.io/docs/permalinks.html#comment-2657776966</a> ）。如果我们在<code>_config.yml</code>中的<code>permalink</code>配置为如下：</p>
+<p>而文章的链接，一番搜索之后，发现可以在我们文章的markdown文件的<code>Front-matter</code>中添加<code>permalink</code>参数，来指定文章的链接（见 <a href="https://hexo.io/docs/permalinks.html#comment-2657776966">https://hexo.io/docs/permalinks.html#comment-2657776966</a> ）。如果我们在<code>_config.yml</code>中的<code>permalink</code>配置为如下：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br></pre></td></tr></table></figure>
 <p>那最终生成的文章的链接就是<code>:year/:month/:day/:文章中的permalink/</code>。这完全就是我想要的！</p>
 <h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p>接下来，修改文章模版，增加 <code>permalink</code>一项就好了。文章的模版在<code>scaffolds/post.md</code>，内容修改如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">permalink: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">permalink: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>而我们使用<code>hexo new post [title]</code>创建文章的时候，应注意把标题里的空格换为<code>-</code>。</p>
 <h1 id="整理"><a href="#整理" class="headerlink" title="整理"></a>整理</h1><p>现在新建文章的路径我们是已经处理好了，那以前创建的文章是不是要一个个手动分类并打开添加<code>permalink</code>参数呢？<br>当然不用那么麻烦。作为终端控，这种事使用命令行来完成最好了。思路为：</p>
 <ol>
@@ -315,19 +299,26 @@ var _hmt = _hmt || [];
 <li>找出2017年的文章，按1-3步的方式处理……</li>
 </ol>
 <p>需要注意的是，mac下的<code>sed</code>命令在替换文件上与ubuntu上有所不同。比如我想在<code>title:</code>开头的这一行下面添加内容，ubuntu下的命令为</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i "/title:.* /a\\xxx" $file</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;/title:.* /a\\xxx&quot; $file</span><br></pre></td></tr></table></figure>
 <p>在mac下，需要换行，如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i "" "/title.*/ a\ </span><br><span class="line">xxx</span><br><span class="line">" $file</span><br></pre></td></tr></table></figure>
-<p>上面的<code>a\</code>，反斜杠后要加一个空格，最后的双引号也是要换一行的。<br>另外要注意的是，<code>sed</code>会修改文章的创建时间，所以我们需要先分类，再修改。以整理2018年的文章为例，完整命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"><span class="meta">#</span><span class="bash"> 删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入2018文件夹</span></span><br><span class="line">cd 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章内容，添加permalink</span></span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">" $file; done;</span><br><span class="line"><span class="meta">#</span><span class="bash"> 回到_post</span></span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i &quot;&quot; &quot;/title.*/ a\ </span><br><span class="line">xxx</span><br><span class="line">&quot; $file</span><br></pre></td></tr></table></figure>
+<p>上面的<code>a\ </code>，反斜杠后要加一个空格，最后的双引号也是要换一行的。<br>另外要注意的是，<code>sed</code>会修改文章的创建时间，所以我们需要先分类，再修改。以整理2018年的文章为例，完整命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入2018文件夹</span></span><br><span class="line">cd 2018</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改文章内容，添加permalink</span></span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n &#x27;s/\.md//p&#x27;`; sed -i &quot;&quot; &quot;/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">&quot; $file; done;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">回到_post</span></span><br><span class="line">cd ..</span><br></pre></td></tr></table></figure>
+
 <h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><p>上面提到，<code>sed</code>和<code>mv</code>会导致文件的创建时间改变，所以需要先分类再修改。尽管这样，当看到所有文件的创建时间都变成一样了之后，对于有强迫症的我还是觉得看着别扭。好在发现，<code>touch</code>命令也可以用于修改文件的创建时间。所以前面的操作可以优化一下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章内容，添加permalink</span></span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n 's/\.md//p'`; sed -i "" "/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">" $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 修改文章的创建时间为Front-matter中的时间</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file; done;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta">#</span><span class="bash"> 将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将timestamp创建时间修改为2017年1月1日，然后参考2018年文章归类方法，这里略</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 完成归类之后删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 最后如果想再恢复文章的创建时间，再执行第三步命令</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n 's/^date: //p' |sed -n 's/[- :]//pg' |sed -n 's/\([0-9]\&#123;2\&#125;\)$/\.\1/p'`; touch -t $d $file ; done;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入_post目录</span></span><br><span class="line">cd source/_post</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改文章内容，添加permalink</span></span><br><span class="line">for file in `ls`; do link=`echo $file|sed -n &#x27;s/\.md//p&#x27;`; sed -i &quot;&quot; &quot;/title.*/ a\ </span><br><span class="line">permalink: $link</span><br><span class="line">&quot; $file; done;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改文章的创建时间为Front-matter中的时间</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n &#x27;s/^date: //p&#x27; |sed -n &#x27;s/[- :]//pg&#x27; |sed -n &#x27;s/\([0-9]\&#123;2\&#125;\)$/\.\1/p&#x27;`; touch -t $d $file; done;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建一个2018年1月1日的文件，用于过滤出2018年的文章</span></span><br><span class="line">touch -t 201801010000 timestamp</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建2018文件夹</span></span><br><span class="line">mkdir 2018</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将2018年的文章移到2018文件夹下</span></span><br><span class="line">for file in `find . -type f -newer timestamp`; do mv $file 2018 ; done</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将timestamp创建时间修改为2017年1月1日，然后参考2018年文章归类方法，这里略</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">完成归类之后删除刚才创建的用于过滤的文件</span></span><br><span class="line">rm timestamp</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">最后如果想再恢复文章的创建时间，再执行第三步命令</span></span><br><span class="line">for file in `find . -type f`; do d=`head $file|sed -n &#x27;s/^date: //p&#x27; |sed -n &#x27;s/[- :]//pg&#x27; |sed -n &#x27;s/\([0-9]\&#123;2\&#125;\)$/\.\1/p&#x27;`; touch -t $d $file ; done;</span><br></pre></td></tr></table></figure>
+
 <p>以上是个人探究这个问题的结果。如有更优方案，欢迎交流指教。</p>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -339,10 +330,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -481,7 +472,7 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2018/12/21/Git-Contribution-Statistics/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Git-Contribution-Statistics" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">统计项目中的代码有多少行是你贡献的</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -535,15 +526,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="hexo-new-post-path"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="hexo-new-post-path" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -599,14 +590,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -703,7 +694,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -786,11 +777,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -806,19 +805,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -834,47 +825,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -882,51 +837,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -938,23 +853,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -986,38 +889,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1026,15 +897,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1046,7 +941,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1058,11 +965,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1082,11 +985,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1098,15 +1005,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1126,7 +1037,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1134,7 +1125,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

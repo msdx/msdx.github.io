@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Jenkins之自动生成Sophix热修复补丁 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本篇博客是《Jenkins之自动进行360加固》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。">
-<meta name="keywords" content="Jenkins,热修复,Sophix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins之自动生成Sophix热修复补丁">
 <meta property="og:url" content="http://www.githang.com/2019/01/29/jenkins-hotfix-patch/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="本篇博客是《Jenkins之自动进行360加固》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。">
-<meta property="og:locale" content="default">
+<meta property="og:locale">
 <meta property="og:image" content="http://upyun.githang.com/2019/01/29/WX20190129-111607@2x.png">
-<meta property="og:updated_time" content="2019-05-28T13:14:12.379Z">
+<meta property="article:published_time" content="2019-01-29T02:48:03.000Z">
+<meta property="article:modified_time" content="2019-01-29T02:48:03.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="Jenkins">
+<meta property="article:tag" content="热修复">
+<meta property="article:tag" content="Sophix">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jenkins之自动生成Sophix热修复补丁">
-<meta name="twitter:description" content="本篇博客是《Jenkins之自动进行360加固》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。">
 <meta name="twitter:image" content="http://upyun.githang.com/2019/01/29/WX20190129-111607@2x.png">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -97,8 +99,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -111,10 +113,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -122,11 +122,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -167,7 +167,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -189,10 +193,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -228,11 +230,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -249,7 +251,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jenkins-hotfix-patch" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-jenkins-hotfix-patch" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -267,24 +269,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">1.7k字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">6分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -298,7 +282,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇博客是《<a href="https://www.githang.com/2019/01/23/jenkins-enhanced/">Jenkins之自动进行360加固</a>》的后续。在分享完如何使用Jenkins实现自动加固后，本篇博客将继续分享使用Jenkins自动生成热修复补丁的实现过程。</p>
-<a id="more"></a>
+<span id="more"></span>
+
 <h2 id="背景及思路"><a href="#背景及思路" class="headerlink" title="背景及思路"></a>背景及思路</h2><p>项目使用git-flow分支模式，而热修复采用的是阿里的移动热修复Sophix方案，并且项目启用了混淆。因此，我的思路很简单：</p>
 <ol>
 <li>在构建正式环境的Apk之前，修改混淆规则<code>-applymapping...</code>，使其与对应版本的混淆符号映射一致。</li>
@@ -308,28 +293,36 @@ var _hmt = _hmt || [];
 </ol>
 <h2 id="应用混淆规则"><a href="#应用混淆规则" class="headerlink" title="应用混淆规则"></a>应用混淆规则</h2><h3 id="约定"><a href="#约定" class="headerlink" title="约定"></a>约定</h3><p>在之前的博客中，我们会把加固包对应的原apk及mapping文件发送出来。<strong>我们约定，在加固包上架之后，把apk及mapping文件提交到项目的<code>release</code>文件夹中，再打上tag。</strong>这样，当我们需要生成热修复补丁时，则可以方便地找到对应版本的原apk及mapping文件。</p>
 <p>我们再约定，在app模块的混淆规则文件<code>proguard-rules.pro</code>中，添加一条规则，但是默认情况下注释掉，只在需要生成补丁时才启用它：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#-applymapping ...</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#-applymapping ...</span><br></pre></td></tr></table></figure>
 <h3 id="Jenkins的配置"><a href="#Jenkins的配置" class="headerlink" title="Jenkins的配置"></a>Jenkins的配置</h3><p>接下来，修改Jenkins中的job配置，添加或勾选<code>Fetch tags</code>一项，确保在拉取代码时把tag也给拉取下来。如下：<br><img src="http://upyun.githang.com/2019/01/29/WX20190129-111607@2x.png" alt="WX20190129-111607@2x"></p>
 <h3 id="编写替换脚本"><a href="#编写替换脚本" class="headerlink" title="编写替换脚本"></a>编写替换脚本</h3><p>然后，编写脚本文件进行混淆规则的替换。考虑到热修复的相关文件可能会比较多，我在buildsystem下新建了一个文件夹<code>hotfix</code>，然后再在这个文件夹下添加修改混淆规则的脚本<code>apply-rules.sh</code>，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> `dirname <span class="variable">$0</span>`/../../</span><br><span class="line">projectDir=`<span class="built_in">pwd</span>`</span><br><span class="line"></span><br><span class="line">gitTag=`git describe --tags --abbrev=0 | sed <span class="string">"s/[^0-9\.].*//"</span>`</span><br><span class="line">ruleFile=<span class="string">"<span class="variable">$projectDir</span>/`find release -name "</span>mapping*<span class="variable">$gitTag</span>*.txt<span class="string">"`"</span></span><br><span class="line"></span><br><span class="line">unix=<span class="literal">false</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"`uname`"</span> <span class="keyword">in</span></span><br><span class="line">  Darwin* )</span><br><span class="line">    unix=<span class="literal">true</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sed 替换标识符说明： `#`会出现在规则文件中；`/`会出现在路径中；`@`会出现在Jenkins工作空间中。</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$unix</span>"</span> = <span class="string">"true"</span> ]; <span class="keyword">then</span></span><br><span class="line">  sed -i <span class="string">""</span> <span class="string">"s!.*applymapping.*!-applymapping <span class="variable">$ruleFile</span>!g"</span> <span class="variable">$projectDir</span>/app/proguard-rules.pro</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  sed -i <span class="string">"s!.*applymapping.*!-applymapping <span class="variable">$ruleFile</span>!g"</span> <span class="variable">$projectDir</span>/app/proguard-rules.pro</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> `<span class="built_in">dirname</span> <span class="variable">$0</span>`/../../</span><br><span class="line">projectDir=`<span class="built_in">pwd</span>`</span><br><span class="line"></span><br><span class="line">gitTag=`git describe --tags --abbrev=0 | sed <span class="string">&quot;s/[^0-9\.].*//&quot;</span>`</span><br><span class="line">ruleFile=<span class="string">&quot;<span class="variable">$projectDir</span>/`find release -name &quot;</span>mapping*<span class="variable">$gitTag</span>*.txt<span class="string">&quot;`&quot;</span></span><br><span class="line"></span><br><span class="line">unix=<span class="literal">false</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;`uname`&quot;</span> <span class="keyword">in</span></span><br><span class="line">  Darwin* )</span><br><span class="line">    unix=<span class="literal">true</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sed 替换标识符说明： `#`会出现在规则文件中；`/`会出现在路径中；`@`会出现在Jenkins工作空间中。</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$unix</span>&quot;</span> = <span class="string">&quot;true&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  sed -i <span class="string">&quot;&quot;</span> <span class="string">&quot;s!.*applymapping.*!-applymapping <span class="variable">$ruleFile</span>!g&quot;</span> <span class="variable">$projectDir</span>/app/proguard-rules.pro</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  sed -i <span class="string">&quot;s!.*applymapping.*!-applymapping <span class="variable">$ruleFile</span>!g&quot;</span> <span class="variable">$projectDir</span>/app/proguard-rules.pro</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <p>这里说明一下：<br>获取对应mapping文件的tag，原本用<code>git describe --tags --abbrev=0</code>就可以了。但是考虑到一个版本可能会有多次的补丁，因此在发布补丁时，我也会把对应的代码打上tag，名称为<code>原来版本名-hotfix-编号</code>，这样的话就会有这样的情况：原来的版本2.12，生成过一次补丁包有<code>2.12-hotfix-1</code>的tag，当需要再次生成补丁包时，对应的mapping文件的tag应该还是2.12，而前面的命令找到的tag会是2.12-hotfix-1，因此需要把其后缀给过滤掉。</p>
 <h3 id="Jenkinsfile增加应用规则阶段"><a href="#Jenkinsfile增加应用规则阶段" class="headerlink" title="Jenkinsfile增加应用规则阶段"></a>Jenkinsfile增加应用规则阶段</h3><p>找到tag之后，根据之前约定的名称，找到对应的mapping文件，然后修改混淆规则文件，这个步骤就完成了。这个阶段，应该在构建之前完成，对应的Jenkinsfile相关代码如下：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">stages &#123;</span><br><span class="line">    stage(<span class="string">'ProguardRule'</span>) &#123;</span><br><span class="line">        when &#123;</span><br><span class="line">            expression &#123; BRANCH_NAME ==~ <span class="regexp">/hotfix\/</span>.*/ &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        steps &#123;</span><br><span class="line">            sh <span class="string">"./buildsystem/hotfix/apply-rules.sh"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    stage(<span class="string">'Build'</span>) &#123;</span><br><span class="line">        <span class="comment">// ...略</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">stages &#123;</span><br><span class="line">    stage(<span class="string">&#x27;ProguardRule&#x27;</span>) &#123;</span><br><span class="line">        when &#123;</span><br><span class="line">            expression &#123; BRANCH_NAME ==~ <span class="regexp">/hotfix\/</span>.*/ &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        steps &#123;</span><br><span class="line">            sh <span class="string">&quot;./buildsystem/hotfix/apply-rules.sh&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    stage(<span class="string">&#x27;Build&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// ...略</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="生成热修复补丁"><a href="#生成热修复补丁" class="headerlink" title="生成热修复补丁"></a>生成热修复补丁</h2><h3 id="Jenkinsfile增加生成补丁阶段"><a href="#Jenkinsfile增加生成补丁阶段" class="headerlink" title="Jenkinsfile增加生成补丁阶段"></a>Jenkinsfile增加生成补丁阶段</h3><p>我们在Jenkinsfile的<code>build</code>阶段增加构建正式环境的apk。然后在<code>build</code>之后，新增一个<code>hotfix</code>阶段，在这里生成补丁并发送邮件，相关代码如下：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">stage(<span class="string">'Build'</span>) &#123;</span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">&#125;</span><br><span class="line">stage (<span class="string">'Hotfix'</span>) &#123;</span><br><span class="line">    when &#123;</span><br><span class="line">        expression &#123; BRANCH_NAME ==~ <span class="regexp">/hotfix\/</span>.*/ &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    steps &#123;</span><br><span class="line">        sh <span class="string">"buildsystem/hotfix/hotfix.sh"</span></span><br><span class="line">        emailext(</span><br><span class="line"><span class="symbol">                subject:</span> <span class="string">"IOP-Android补丁生成成功"</span>,</span><br><span class="line"><span class="symbol">                mimeType:</span> <span class="string">"text/html"</span>,</span><br><span class="line"><span class="symbol">                attachmentsPattern:</span> <span class="string">"build/patch/*"</span>,</span><br><span class="line"><span class="symbol">                body:</span> <span class="string">"详见附件"</span>,</span><br><span class="line"><span class="symbol">                recipientProviders:</span> [[<span class="string">$class:</span> <span class="string">'CulpritsRecipientProvider'</span>],</span><br><span class="line">                                 [<span class="string">$class:</span> <span class="string">'DevelopersRecipientProvider'</span>],</span><br><span class="line">                                 [<span class="string">$class:</span> <span class="string">'RequesterRecipientProvider'</span>]]</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="编写生成补丁的脚本"><a href="#编写生成补丁的脚本" class="headerlink" title="编写生成补丁的脚本"></a>编写生成补丁的脚本</h3><p>由于mac上的热修复补丁生成工具需要放在应用程序中才能正常使用，所以我没有把它集成进来，改为在具体的机器上预装好再调用。而对于linux及windows上的补丁生成工具，我把它们集成在一个项目中，放在github上：<a href="https://github.com/msdx/sophix-patch-tool" target="_blank" rel="noopener">https://github.com/msdx/sophix-patch-tool</a> 。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">stage(<span class="string">&#x27;Build&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">&#125;</span><br><span class="line">stage (<span class="string">&#x27;Hotfix&#x27;</span>) &#123;</span><br><span class="line">    when &#123;</span><br><span class="line">        expression &#123; BRANCH_NAME ==~ <span class="regexp">/hotfix\/</span>.*/ &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    steps &#123;</span><br><span class="line">        sh <span class="string">&quot;buildsystem/hotfix/hotfix.sh&quot;</span></span><br><span class="line">        emailext(</span><br><span class="line">                <span class="symbol">subject:</span> <span class="string">&quot;IOP-Android补丁生成成功&quot;</span>,</span><br><span class="line">                <span class="symbol">mimeType:</span> <span class="string">&quot;text/html&quot;</span>,</span><br><span class="line">                <span class="symbol">attachmentsPattern:</span> <span class="string">&quot;build/patch/*&quot;</span>,</span><br><span class="line">                <span class="symbol">body:</span> <span class="string">&quot;详见附件&quot;</span>,</span><br><span class="line">                <span class="symbol">recipientProviders:</span> [[<span class="attr">$class:</span> <span class="string">&#x27;CulpritsRecipientProvider&#x27;</span>],</span><br><span class="line">                                 [<span class="attr">$class:</span> <span class="string">&#x27;DevelopersRecipientProvider&#x27;</span>],</span><br><span class="line">                                 [<span class="attr">$class:</span> <span class="string">&#x27;RequesterRecipientProvider&#x27;</span>]]</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="编写生成补丁的脚本"><a href="#编写生成补丁的脚本" class="headerlink" title="编写生成补丁的脚本"></a>编写生成补丁的脚本</h3><p>由于mac上的热修复补丁生成工具需要放在应用程序中才能正常使用，所以我没有把它集成进来，改为在具体的机器上预装好再调用。而对于linux及windows上的补丁生成工具，我把它们集成在一个项目中，放在github上：<a href="https://github.com/msdx/sophix-patch-tool">https://github.com/msdx/sophix-patch-tool</a> 。</p>
 <p>接下来我们编写生成补丁的脚本。在这个脚本中，首先获取补丁工具上，我改为使用<code>git clone</code>及<code>git pull</code>来获取或更新，而不是像之前的360加固那样通过<code>wget</code>或<code>curl</code>来下载，以避开两个构建正好同时下载同一个文件到同一个地方可能出错的情况。<br>在命令行下调用补丁生成工具，需要指定一个配置文件，我把其命名为<code>profiles.json</code>，内容如下：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"AesKey"</span>: <span class="string">""</span>,</span><br><span class="line">  <span class="attr">"ClassFilterFilePath"</span>: <span class="string">"白名单地址"</span>,</span><br><span class="line">  <span class="attr">"KeyAlias"</span>: <span class="string">"配置为你的key alias"</span>,</span><br><span class="line">  <span class="attr">"KeyPassword"</span>: <span class="string">"配置为你的key password"</span>,</span><br><span class="line">  <span class="attr">"KeyStorePassword"</span>: <span class="string">"配置为你的store password"</span>,</span><br><span class="line">  <span class="attr">"KeyStorePath"</span>: <span class="string">"配置为你的密钥路径"</span>,</span><br><span class="line">  <span class="attr">"NewApkPath"</span>: <span class="string">"NEW_APK"</span>,</span><br><span class="line">  <span class="attr">"OldApkPath"</span>: <span class="string">"OLD_APK"</span>,</span><br><span class="line">  <span class="attr">"OutputDirPath"</span>: <span class="string">"OUTPUT"</span>,</span><br><span class="line">  <span class="attr">"isForceColdFix"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"isIgnoreRes"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"isIgnoreSo"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;AesKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;ClassFilterFilePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;白名单地址&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;KeyAlias&quot;</span><span class="punctuation">:</span> <span class="string">&quot;配置为你的key alias&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;KeyPassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;配置为你的key password&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;KeyStorePassword&quot;</span><span class="punctuation">:</span> <span class="string">&quot;配置为你的store password&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;KeyStorePath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;配置为你的密钥路径&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;NewApkPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;NEW_APK&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;OldApkPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;OLD_APK&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;OutputDirPath&quot;</span><span class="punctuation">:</span> <span class="string">&quot;OUTPUT&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;isForceColdFix&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;isIgnoreRes&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;isIgnoreSo&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>这里需要自行修改<code>ClassFilterFilePath</code>、<code>KeyAlias</code>、<code>KeyAlias</code>和<code>KeyStorePath</code>为具体的值。而<code>NewApkPath</code>、<code>OldApkPath</code>和<code>OutputDirPath</code>需要在外部指定，我则先填为固定的字符串，在生成补丁之前再替换为具体的值。<br>在生成补丁之后，需要发邮件出来，为使开发者清楚这个补丁的修改内容，还应输出从我们要打补丁的tag到当前的提交的所有修改信息。获取这些修改信息的命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --graph --pretty=format:<span class="string">'%h -%d (%ci) %s &lt;%aN&gt;'</span> --abbrev-commit <span class="variable">$gitTag</span>..HEAD</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --graph --pretty=format:<span class="string">&#x27;%h -%d (%ci) %s &lt;%aN&gt;&#x27;</span> --abbrev-commit <span class="variable">$gitTag</span>..HEAD</span><br></pre></td></tr></table></figure>
 <p>完整的脚本如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fetch</span></span>() &#123;</span><br><span class="line">  <span class="built_in">cd</span> ~/.android</span><br><span class="line">  <span class="built_in">local</span> gitUrl=<span class="string">"https://github.com/msdx/sophix-patch-tool.git"</span></span><br><span class="line">  <span class="built_in">local</span> dir=<span class="string">"sophix-patch-tool"</span></span><br><span class="line">  <span class="keyword">if</span> [ ! -d <span class="string">"<span class="variable">$dir</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">    git <span class="built_in">clone</span> <span class="variable">$gitUrl</span> &amp;&amp; <span class="built_in">cd</span> <span class="variable">$dir</span> || <span class="built_in">exit</span> 1</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">cd</span> <span class="variable">$dir</span> &amp;&amp; git pull <span class="variable">$gitUrl</span> || <span class="built_in">exit</span> 1</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">replaceConfig</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> origin=<span class="variable">$1</span></span><br><span class="line">  <span class="built_in">local</span> target=<span class="variable">$2</span></span><br><span class="line">  <span class="built_in">local</span> file=<span class="variable">$3</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [ <span class="string">"mac"</span> = <span class="string">"<span class="variable">$platform</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">    sed -i <span class="string">""</span> <span class="string">"s#<span class="variable">$origin</span>#<span class="variable">$target</span>#"</span> <span class="variable">$file</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    sed -i <span class="string">"s#<span class="variable">$origin</span>#<span class="variable">$target</span>#"</span> <span class="variable">$file</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> `dirname <span class="variable">$0</span>`/../../</span><br><span class="line">scriptDir=<span class="string">"`pwd`/`dirname <span class="variable">$0</span>`"</span></span><br><span class="line">projectDir=`<span class="built_in">pwd</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># download the program</span></span><br><span class="line">platform=<span class="string">""</span></span><br><span class="line">tool=<span class="string">""</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"`uname`"</span> <span class="keyword">in</span></span><br><span class="line">  CYGWIN* )</span><br><span class="line">    platform=<span class="string">"windows"</span></span><br><span class="line">    tool=<span class="string">"SophixPatchTool.exe"</span></span><br><span class="line">    ;;</span><br><span class="line">  MINGW* )</span><br><span class="line">    platform=<span class="string">"windows"</span></span><br><span class="line">    tool=<span class="string">"SophixPatchTool.exe"</span></span><br><span class="line">    ;;</span><br><span class="line">  Darwin* )</span><br><span class="line">    platform=<span class="string">"mac"</span></span><br><span class="line">    tool=<span class="string">"/Applications/SophixPatchTool.app/Contents/MacOS/SophixPatchTool"</span></span><br><span class="line">    ;;</span><br><span class="line">  Linux* )</span><br><span class="line">    platform=<span class="string">"linux"</span></span><br><span class="line">    tool=<span class="string">"SophixPatchTool"</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ ! -n <span class="string">"<span class="variable">$platform</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"The platform `uname` is not supported"</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">"mac"</span> != <span class="string">"<span class="variable">$platform</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">  fetch</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$projectDir</span></span><br><span class="line"></span><br><span class="line">gitTag=`git describe --tags --abbrev=0 | sed <span class="string">"s/[^0-9\.].*//"</span>`</span><br><span class="line">oldapk=<span class="variable">$projectDir</span>/`find release -name <span class="string">"*<span class="variable">$gitTag</span>*.apk"</span>`</span><br><span class="line">newapk=<span class="variable">$projectDir</span>/`find app/build/outputs/apk/Official/release -name <span class="string">"*<span class="variable">$gitTag</span>*.apk"</span>`</span><br><span class="line">output=<span class="string">"<span class="variable">$projectDir</span>/build/patch/"</span></span><br><span class="line">jsonFile=<span class="string">"<span class="variable">$scriptDir</span>/profiles.json"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$oldapk</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$newapk</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$output</span></span><br><span class="line">git checkout <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">"NEW_APK"</span> <span class="variable">$newapk</span> <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">"OLD_APK"</span> <span class="variable">$oldapk</span> <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">"OUTPUT"</span> <span class="variable">$output</span> <span class="variable">$jsonFile</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">"mac"</span> != <span class="string">"<span class="variable">$platform</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">cd</span> ~/.android/sophix-patch-tool/<span class="variable">$platform</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="variable">$tool</span> --profiles <span class="string">"<span class="variable">$scriptDir</span>/profiles.json"</span> \</span><br><span class="line">  &amp;&amp; <span class="built_in">cd</span> <span class="variable">$projectDir</span> \</span><br><span class="line">  &amp;&amp; git <span class="built_in">log</span> --graph --pretty=format:<span class="string">'%h -%d (%ci) %s &lt;%aN&gt;'</span> --abbrev-commit <span class="variable">$gitTag</span>..HEAD &gt; <span class="variable">$output</span>/git-info.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fetch</span></span>() &#123;</span><br><span class="line">  <span class="built_in">cd</span> ~/.android</span><br><span class="line">  <span class="built_in">local</span> gitUrl=<span class="string">&quot;https://github.com/msdx/sophix-patch-tool.git&quot;</span></span><br><span class="line">  <span class="built_in">local</span> <span class="built_in">dir</span>=<span class="string">&quot;sophix-patch-tool&quot;</span></span><br><span class="line">  <span class="keyword">if</span> [ ! -d <span class="string">&quot;<span class="variable">$dir</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    git <span class="built_in">clone</span> <span class="variable">$gitUrl</span> &amp;&amp; <span class="built_in">cd</span> <span class="variable">$dir</span> || <span class="built_in">exit</span> 1</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="built_in">cd</span> <span class="variable">$dir</span> &amp;&amp; git pull <span class="variable">$gitUrl</span> || <span class="built_in">exit</span> 1</span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">replaceConfig</span></span>() &#123;</span><br><span class="line">  <span class="built_in">local</span> origin=<span class="variable">$1</span></span><br><span class="line">  <span class="built_in">local</span> target=<span class="variable">$2</span></span><br><span class="line">  <span class="built_in">local</span> file=<span class="variable">$3</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> [ <span class="string">&quot;mac&quot;</span> = <span class="string">&quot;<span class="variable">$platform</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    sed -i <span class="string">&quot;&quot;</span> <span class="string">&quot;s#<span class="variable">$origin</span>#<span class="variable">$target</span>#&quot;</span> <span class="variable">$file</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    sed -i <span class="string">&quot;s#<span class="variable">$origin</span>#<span class="variable">$target</span>#&quot;</span> <span class="variable">$file</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> `<span class="built_in">dirname</span> <span class="variable">$0</span>`/../../</span><br><span class="line">scriptDir=<span class="string">&quot;`pwd`/`dirname <span class="variable">$0</span>`&quot;</span></span><br><span class="line">projectDir=`<span class="built_in">pwd</span>`</span><br><span class="line"></span><br><span class="line"><span class="comment"># download the program</span></span><br><span class="line">platform=<span class="string">&quot;&quot;</span></span><br><span class="line">tool=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;`uname`&quot;</span> <span class="keyword">in</span></span><br><span class="line">  CYGWIN* )</span><br><span class="line">    platform=<span class="string">&quot;windows&quot;</span></span><br><span class="line">    tool=<span class="string">&quot;SophixPatchTool.exe&quot;</span></span><br><span class="line">    ;;</span><br><span class="line">  MINGW* )</span><br><span class="line">    platform=<span class="string">&quot;windows&quot;</span></span><br><span class="line">    tool=<span class="string">&quot;SophixPatchTool.exe&quot;</span></span><br><span class="line">    ;;</span><br><span class="line">  Darwin* )</span><br><span class="line">    platform=<span class="string">&quot;mac&quot;</span></span><br><span class="line">    tool=<span class="string">&quot;/Applications/SophixPatchTool.app/Contents/MacOS/SophixPatchTool&quot;</span></span><br><span class="line">    ;;</span><br><span class="line">  Linux* )</span><br><span class="line">    platform=<span class="string">&quot;linux&quot;</span></span><br><span class="line">    tool=<span class="string">&quot;SophixPatchTool&quot;</span></span><br><span class="line">    ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ ! -n <span class="string">&quot;<span class="variable">$platform</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;The platform `uname` is not supported&quot;</span></span><br><span class="line">  <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;mac&quot;</span> != <span class="string">&quot;<span class="variable">$platform</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  fetch</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$projectDir</span></span><br><span class="line"></span><br><span class="line">gitTag=`git describe --tags --abbrev=0 | sed <span class="string">&quot;s/[^0-9\.].*//&quot;</span>`</span><br><span class="line">oldapk=<span class="variable">$projectDir</span>/`find release -name <span class="string">&quot;*<span class="variable">$gitTag</span>*.apk&quot;</span>`</span><br><span class="line">newapk=<span class="variable">$projectDir</span>/`find app/build/outputs/apk/Official/release -name <span class="string">&quot;*<span class="variable">$gitTag</span>*.apk&quot;</span>`</span><br><span class="line">output=<span class="string">&quot;<span class="variable">$projectDir</span>/build/patch/&quot;</span></span><br><span class="line">jsonFile=<span class="string">&quot;<span class="variable">$scriptDir</span>/profiles.json&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$oldapk</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$newapk</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$output</span></span><br><span class="line">git checkout <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">&quot;NEW_APK&quot;</span> <span class="variable">$newapk</span> <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">&quot;OLD_APK&quot;</span> <span class="variable">$oldapk</span> <span class="variable">$jsonFile</span></span><br><span class="line">replaceConfig <span class="string">&quot;OUTPUT&quot;</span> <span class="variable">$output</span> <span class="variable">$jsonFile</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;mac&quot;</span> != <span class="string">&quot;<span class="variable">$platform</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">cd</span> ~/.android/sophix-patch-tool/<span class="variable">$platform</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="variable">$tool</span> --profiles <span class="string">&quot;<span class="variable">$scriptDir</span>/profiles.json&quot;</span> \</span><br><span class="line">  &amp;&amp; <span class="built_in">cd</span> <span class="variable">$projectDir</span> \</span><br><span class="line">  &amp;&amp; git <span class="built_in">log</span> --graph --pretty=format:<span class="string">&#x27;%h -%d (%ci) %s &lt;%aN&gt;&#x27;</span> --abbrev-commit <span class="variable">$gitTag</span>..HEAD &gt; <span class="variable">$output</span>/git-info.txt</span><br></pre></td></tr></table></figure>
+
 <p>到这里整个过程就完成了。如配置无误，则当基于某个版本开<code>hotfix/</code>分支并提交时，Jenkins构建将会生成对应的补丁包并发送出来。</p>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -341,10 +334,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -519,7 +512,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景及思路"><span class="toc-number">1.</span> <span class="toc-text">背景及思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#应用混淆规则"><span class="toc-number">2.</span> <span class="toc-text">应用混淆规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#约定"><span class="toc-number">2.1.</span> <span class="toc-text">约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins的配置"><span class="toc-number">2.2.</span> <span class="toc-text">Jenkins的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写替换脚本"><span class="toc-number">2.3.</span> <span class="toc-text">编写替换脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile增加应用规则阶段"><span class="toc-number">2.4.</span> <span class="toc-text">Jenkinsfile增加应用规则阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成热修复补丁"><span class="toc-number">3.</span> <span class="toc-text">生成热修复补丁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile增加生成补丁阶段"><span class="toc-number">3.1.</span> <span class="toc-text">Jenkinsfile增加生成补丁阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编写生成补丁的脚本"><span class="toc-number">3.2.</span> <span class="toc-text">编写生成补丁的脚本</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%8F%8A%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">背景及思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%B7%B7%E6%B7%86%E8%A7%84%E5%88%99"><span class="toc-number">2.</span> <span class="toc-text">应用混淆规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%A6%E5%AE%9A"><span class="toc-number">2.1.</span> <span class="toc-text">约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">Jenkins的配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E6%9B%BF%E6%8D%A2%E8%84%9A%E6%9C%AC"><span class="toc-number">2.3.</span> <span class="toc-text">编写替换脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile%E5%A2%9E%E5%8A%A0%E5%BA%94%E7%94%A8%E8%A7%84%E5%88%99%E9%98%B6%E6%AE%B5"><span class="toc-number">2.4.</span> <span class="toc-text">Jenkinsfile增加应用规则阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E7%83%AD%E4%BF%AE%E5%A4%8D%E8%A1%A5%E4%B8%81"><span class="toc-number">3.</span> <span class="toc-text">生成热修复补丁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile%E5%A2%9E%E5%8A%A0%E7%94%9F%E6%88%90%E8%A1%A5%E4%B8%81%E9%98%B6%E6%AE%B5"><span class="toc-number">3.1.</span> <span class="toc-text">Jenkinsfile增加生成补丁阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E7%94%9F%E6%88%90%E8%A1%A5%E4%B8%81%E7%9A%84%E8%84%9A%E6%9C%AC"><span class="toc-number">3.2.</span> <span class="toc-text">编写生成补丁的脚本</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -558,15 +551,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="jenkins-hotfix-patch"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="jenkins-hotfix-patch" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -622,14 +615,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -726,7 +719,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -809,11 +802,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -829,19 +830,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -857,47 +850,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -905,51 +862,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -961,23 +878,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1009,38 +914,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1049,15 +922,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1069,7 +966,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1081,11 +990,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1105,11 +1010,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1121,15 +1030,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1149,7 +1062,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1157,7 +1150,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

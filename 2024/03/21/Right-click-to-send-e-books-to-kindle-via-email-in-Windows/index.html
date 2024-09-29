@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
   <title>Windows中实现右键把电子书通过邮件发到kindle | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
-<meta name="keywords" content="bat,powershell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows中实现右键把电子书通过邮件发到kindle">
 <meta property="og:url" content="http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
 <meta property="og:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2024-03-21T13:10:30.956Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-03-21T13:05:01.000Z">
+<meta property="article:modified_time" content="2024-03-21T13:05:01.000Z">
+<meta property="article:author" content="浩码农">
+<meta property="article:tag" content="bat">
+<meta property="article:tag" content="powershell">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows中实现右键把电子书通过邮件发到kindle">
-<meta name="twitter:description" content="这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。 不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
   
@@ -95,8 +96,8 @@ var _hmt = _hmt || [];
 <!-- End Alimama Ad -->
 
 
-</head>
-</html>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -109,10 +110,8 @@ var _hmt = _hmt || [];
 			<img src="/assets/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">浩码农</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">浩码农的博客</p>
 		
 
 		<nav class="header-menu">
@@ -120,11 +119,11 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/categories/Android/">Android</a></li>
 	        
-				<li><a href="/categories/杂文/">杂文</a></li>
+				<li><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 	        
-				<li><a href="/categories/工具/">工具</a></li>
+				<li><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/Message/">留言板</a></li>
 	        
@@ -165,7 +164,11 @@ var _hmt = _hmt || [];
                 <!-- require MetingJS -->
                 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
                 
-                <meting-js server="netease" type="song" id="64634" autoplay="true">
+                <meting-js
+                	server="netease"
+                	type="song"
+                	id="64634"
+			autoplay="true">
                 </meting-js>
 			<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=230 height=52 src="//music.163.com/outchain/player?type=2&id=551277612&auto=1&height=32"></iframe> -->
 		</div>
@@ -187,10 +190,8 @@ var _hmt = _hmt || [];
 				<img src="/assets/img/avatar.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">浩码农</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>浩码农的博客<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -226,11 +227,11 @@ var _hmt = _hmt || [];
 				
 					<li style="width: 20%"><a href="/categories/Android/">Android</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/杂文/">杂文</a></li>
+					<li style="width: 20%"><a href="/categories/%E6%9D%82%E6%96%87/">杂文</a></li>
 		        
-					<li style="width: 20%"><a href="/categories/工具/">工具</a></li>
+					<li style="width: 20%"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 20%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 20%"><a href="/Message/">留言板</a></li>
 		        
@@ -247,7 +248,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Right-click-to-send-e-books-to-kindle-via-email-in-Windows" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-Right-click-to-send-e-books-to-kindle-via-email-in-Windows" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -265,24 +266,6 @@ var _hmt = _hmt || [];
         <div style="margin-top:10px;">
           <!-- word count start -->
           
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">820字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">3分</span>
-  </span>
-</span>
-
-            
           <!-- word count end -->
           <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
           
@@ -296,27 +279,32 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>这篇博客我去年在 CSDN 博客上发表过，但当时 MBP 没带在身边，就没有在这个博客上更新。眼看再过两个多月，Kindle 就要停止邮箱推送服务上，赶紧趁着文章内容未过期在这里再发一次。</p>
-<p>不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：<a id="more"></a></p>
+<p>不使用第三方软件，通过Windows自带的函数，可以实现右键将电子书通过电子邮件发送到kindle邮箱，从而实现kindle电子书传送功能。实现过程如下：<span id="more"></span></p>
 <h1 id="1-使用bat添加右键功能"><a href="#1-使用bat添加右键功能" class="headerlink" title="1. 使用bat添加右键功能"></a>1. 使用bat添加右键功能</h1><p>打开资源管理器，在地址中输入<code>%APPDATA%\Microsoft\Windows\SendTo</code>，按回车。然后在该目录，新键文件，命名为<code>SendToKindle.bat</code>。内容如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set "PowerShellScriptPath=C:\path\to\SendToEmail.ps1"</span><br><span class="line">set "EmailAccount=your_email@example.com"</span><br><span class="line">set "EmailPassword=your_email_password"</span><br><span class="line">set "DestinationEmail=destination_email@example.com"</span><br><span class="line"></span><br><span class="line">powershell.exe -ExecutionPolicy Bypass -File "%PowerShellScriptPath%" "%EmailAccount%" "%EmailPassword%" "%DestinationEmail%" %*</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;PowerShellScriptPath=C:\path\to\SendToEmail.ps1&quot;</span><br><span class="line">set &quot;EmailAccount=your_email@example.com&quot;</span><br><span class="line">set &quot;EmailPassword=your_email_password&quot;</span><br><span class="line">set &quot;DestinationEmail=destination_email@example.com&quot;</span><br><span class="line"></span><br><span class="line">powershell.exe -ExecutionPolicy Bypass -File &quot;%PowerShellScriptPath%&quot; &quot;%EmailAccount%&quot; &quot;%EmailPassword%&quot; &quot;%DestinationEmail%&quot; %*</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 <p>注意：最后加<code>pause</code>是为了能在出错失败时可以看到错误信息。<br>上述批处理文件中使用了一些占位符，需要根据实际情况替换它们：</p>
 <ul>
 <li><code>C:\path\to\SendToEmail.ps1</code>: 替换为您的 PowerShell 脚本文件的路径。</li>
-<li><a href="mailto:`your_email@example.com" target="_blank" rel="noopener">`your_email@example.com</a>`: 替换为发送邮件的邮箱账号。</li>
+<li><code>your_email@example.com</code>: 替换为发送邮件的邮箱账号。</li>
 <li><code>your_email_password</code>: 替换为发送邮件的邮箱密码。</li>
-<li><a href="mailto:`destination_email@example.com" target="_blank" rel="noopener">`destination_email@example.com</a>`: 替换为目标邮箱地址。<br>批处理文件将通过 PowerShell 脚本来发送邮件，并将选中的文件作为附件发送。在调用 PowerShell 脚本时，使用 %* 表示将右键菜单中选中的文件作为参数传递给 PowerShell 脚本。</li>
+<li><code>destination_email@example.com</code>: 替换为目标邮箱地址。<br>批处理文件将通过 PowerShell 脚本来发送邮件，并将选中的文件作为附件发送。在调用 PowerShell 脚本时，使用 %* 表示将右键菜单中选中的文件作为参数传递给 PowerShell 脚本。</li>
 </ul>
 <h1 id="使用powershell实现邮件发送功能"><a href="#使用powershell实现邮件发送功能" class="headerlink" title="使用powershell实现邮件发送功能"></a>使用powershell实现邮件发送功能</h1><p>新建文件<code>SendToEmail.ps1</code>，代码如下：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">param</span> (</span><br><span class="line">    [string]<span class="variable">$EmailAccount</span>,</span><br><span class="line">    [string]<span class="variable">$EmailPassword</span>,</span><br><span class="line">    [string]<span class="variable">$DestinationEmail</span>,</span><br><span class="line">    [string]<span class="variable">$AttachmentFilePath</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入命名空间</span></span><br><span class="line"><span class="built_in">Add-Type</span> -AssemblyName System.Net</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成全局唯一的 Message-ID</span></span><br><span class="line"><span class="keyword">function</span> Generate-MessageID &#123;</span><br><span class="line">    <span class="keyword">return</span> [System.Guid]::NewGuid().ToString() + <span class="string">"@aliyun.com"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置发送邮件的参数</span></span><br><span class="line"><span class="variable">$SenderEmail</span> = <span class="variable">$EmailAccount</span></span><br><span class="line"><span class="variable">$RecipientEmail</span> = <span class="variable">$DestinationEmail</span></span><br><span class="line"><span class="variable">$Subject</span> = (<span class="built_in">Get-Item</span> <span class="variable">$AttachmentFilePath</span>).Name  <span class="comment"># 获取文件名作为邮件主题</span></span><br><span class="line"><span class="variable">$Attachment</span> = <span class="variable">$AttachmentFilePath</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建邮件对象</span></span><br><span class="line"><span class="variable">$mailMessage</span> = <span class="built_in">New-Object</span> System.Net.Mail.MailMessage</span><br><span class="line"><span class="variable">$mailMessage</span>.From = <span class="variable">$SenderEmail</span></span><br><span class="line"><span class="variable">$mailMessage</span>.To.Add(<span class="variable">$RecipientEmail</span>)</span><br><span class="line"><span class="variable">$mailMessage</span>.Subject = <span class="variable">$Subject</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 X-Mailer 字段</span></span><br><span class="line"><span class="variable">$mailMessage</span>.Headers.Add(<span class="string">"X-Mailer"</span>, <span class="string">"PowerShell Mailer"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 手动添加 Message-ID 字段</span></span><br><span class="line"><span class="variable">$mailMessage</span>.Headers.Add(<span class="string">"Message-ID"</span>, (Generate-MessageID))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加附件</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">Test-Path</span> <span class="variable">$Attachment</span>) &#123;</span><br><span class="line">    <span class="variable">$attachmentData</span> = <span class="built_in">New-Object</span> System.Net.Mail.Attachment(<span class="variable">$Attachment</span>)</span><br><span class="line">    <span class="variable">$mailMessage</span>.Attachments.Add(<span class="variable">$attachmentData</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置附件的 Content-Disposition 头信息，指定附件的显示名称</span></span><br><span class="line">    <span class="variable">$attachmentData</span>.ContentDisposition.FileName = <span class="variable">$Subject</span>  <span class="comment"># 替换为附件的显示名称</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置 SMTP 服务器</span></span><br><span class="line"><span class="variable">$smtpClient</span> = <span class="built_in">New-Object</span> System.Net.Mail.SmtpClient</span><br><span class="line"><span class="variable">$smtpClient</span>.Host = <span class="string">"smtp.aliyun.com"</span>  <span class="comment"># 替换为您的 SMTP 服务器地址</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Port = <span class="number">25</span>  <span class="comment"># 替换为您的 SMTP 服务器端口</span></span><br><span class="line"><span class="variable">$smtpClient</span>.EnableSsl = <span class="literal">$false</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Credentials = <span class="built_in">New-Object</span> System.Net.NetworkCredential(<span class="variable">$EmailAccount</span>, <span class="variable">$EmailPassword</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送邮件</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Send(<span class="variable">$mailMessage</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">param</span> (</span><br><span class="line">    [<span class="built_in">string</span>]<span class="variable">$EmailAccount</span>,</span><br><span class="line">    [<span class="built_in">string</span>]<span class="variable">$EmailPassword</span>,</span><br><span class="line">    [<span class="built_in">string</span>]<span class="variable">$DestinationEmail</span>,</span><br><span class="line">    [<span class="built_in">string</span>]<span class="variable">$AttachmentFilePath</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入命名空间</span></span><br><span class="line"><span class="built_in">Add-Type</span> <span class="literal">-AssemblyName</span> System.Net</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成全局唯一的 Message-ID</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Generate-MessageID</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> [<span class="type">System.Guid</span>]::NewGuid().ToString() + <span class="string">&quot;@aliyun.com&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置发送邮件的参数</span></span><br><span class="line"><span class="variable">$SenderEmail</span> = <span class="variable">$EmailAccount</span></span><br><span class="line"><span class="variable">$RecipientEmail</span> = <span class="variable">$DestinationEmail</span></span><br><span class="line"><span class="variable">$Subject</span> = (<span class="built_in">Get-Item</span> <span class="variable">$AttachmentFilePath</span>).Name  <span class="comment"># 获取文件名作为邮件主题</span></span><br><span class="line"><span class="variable">$Attachment</span> = <span class="variable">$AttachmentFilePath</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建邮件对象</span></span><br><span class="line"><span class="variable">$mailMessage</span> = <span class="built_in">New-Object</span> System.Net.Mail.MailMessage</span><br><span class="line"><span class="variable">$mailMessage</span>.From = <span class="variable">$SenderEmail</span></span><br><span class="line"><span class="variable">$mailMessage</span>.To.Add(<span class="variable">$RecipientEmail</span>)</span><br><span class="line"><span class="variable">$mailMessage</span>.Subject = <span class="variable">$Subject</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 X-Mailer 字段</span></span><br><span class="line"><span class="variable">$mailMessage</span>.Headers.Add(<span class="string">&quot;X-Mailer&quot;</span>, <span class="string">&quot;PowerShell Mailer&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 手动添加 Message-ID 字段</span></span><br><span class="line"><span class="variable">$mailMessage</span>.Headers.Add(<span class="string">&quot;Message-ID&quot;</span>, (Generate<span class="literal">-MessageID</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加附件</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">Test-Path</span> <span class="variable">$Attachment</span>) &#123;</span><br><span class="line">    <span class="variable">$attachmentData</span> = <span class="built_in">New-Object</span> System.Net.Mail.Attachment(<span class="variable">$Attachment</span>)</span><br><span class="line">    <span class="variable">$mailMessage</span>.Attachments.Add(<span class="variable">$attachmentData</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置附件的 Content-Disposition 头信息，指定附件的显示名称</span></span><br><span class="line">    <span class="variable">$attachmentData</span>.ContentDisposition.FileName = <span class="variable">$Subject</span>  <span class="comment"># 替换为附件的显示名称</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置 SMTP 服务器</span></span><br><span class="line"><span class="variable">$smtpClient</span> = <span class="built_in">New-Object</span> System.Net.Mail.SmtpClient</span><br><span class="line"><span class="variable">$smtpClient</span>.Host = <span class="string">&quot;smtp.aliyun.com&quot;</span>  <span class="comment"># 替换为您的 SMTP 服务器地址</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Port = <span class="number">25</span>  <span class="comment"># 替换为您的 SMTP 服务器端口</span></span><br><span class="line"><span class="variable">$smtpClient</span>.EnableSsl = <span class="variable">$false</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Credentials = <span class="built_in">New-Object</span> System.Net.NetworkCredential(<span class="variable">$EmailAccount</span>, <span class="variable">$EmailPassword</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发送邮件</span></span><br><span class="line"><span class="variable">$smtpClient</span>.Send(<span class="variable">$mailMessage</span>)</span><br></pre></td></tr></table></figure>
 <p>上面<code>smtpClient.Host</code>的值替换为你实际邮箱的SMTP地址，<code>smtpClient.Port</code>替换为对应的端口。<br>我在实际使用过程中，用的是阿里云的邮箱，开启Ssl的情况下，邮件一直发送失败，所以没有启用SSL。<br>另外，在一开始的时候，发现邮件能发送成功，但是Kindle上不显示，对比了我通过powershell发送的邮件和通过网页或客户端发送的邮件的头部信息之后，我添加了<code>X-Mailer</code>和<code>Message-ID</code>，最后总算能把书籍推送到Kindle上了。我猜应该是<code>Message-ID</code>不可缺少的原因，但目前没有再进一步实践。</p>
 <h1 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h1><ul>
-<li><a href="https://chat.openai.com/" target="_blank" rel="noopener">https://chat.openai.com/</a></li>
+<li><a href="https://chat.openai.com/">https://chat.openai.com/</a></li>
 </ul>
 
         
 <!-- Google Ad -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4684296714025694" data-ad-slot="3508709485"></ins>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4684296714025694"
+     data-ad-slot="3508709485"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -328,10 +316,10 @@ var _hmt = _hmt || [];
       
         <!-- Copyright -->
 <div>
-  <hr>
+  <hr/>
   <font size="2" color="999999">
-  本文由 <a href="http://www.githang.com">浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
-  <br>
+  本文由 <a href="http://www.githang.com" >浩码农</a> 创作，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="external nofollow">CC BY-NC-SA 4.0</a> 许可协议
+  <br/>
   本站文章除注明转载/出处外，均为本站原创或翻译，转载请务必署名
   </font>
 </div>
@@ -474,7 +462,7 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Remove-valine-and-use-busuanzi-instead-of-lc_visitors" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">移除 valine 并使用不蒜子代替基于 leancloud 的页面统计</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -528,15 +516,15 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="Right-click-to-send-e-books-to-kindle-via-email-in-Windows"></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
+      <div id="SOHUCS" sid="Right-click-to-send-e-books-to-kindle-via-email-in-Windows" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
         appid: "cytUGGJnM",
         conf: "prod_6c1f7b60fcca107acfc5827835578770"
     });
 </script>
-
+</script>
     </div>
     
 
@@ -592,14 +580,14 @@ var idcomments_post_id;
 var idcomments_post_url;
 </script>
 <span id="IDCommentsPostTitle" style="display:none"></span>
-<script type="text/javascript" src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
     </div>
     
 
     
     <div class="comment-content comment-content-hide">
-      <div id="vuukle-comments"></div>
+      <div id='vuukle-comments'></div>
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
@@ -696,7 +684,7 @@ var idcomments_post_url;
         </div>
         <div class="footer-center">
             Power by
-            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"></a>
+            <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="/assets/third_party/upyun.png" width="42" height="21"/></a>
             <a href="https://beian.miit.gov.cn">粤ICP备18007944号</a>
         </div>
     </div>
@@ -779,11 +767,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">monkey</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CoordinatorLayout</a>
+                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -799,19 +795,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂文</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Bug</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -827,47 +815,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">角标</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -875,51 +827,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pipeline</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">email</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -931,23 +843,11 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jenkinsfile</a>
+                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">aiXcoder</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -979,38 +879,6 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">代码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Code Review</a>
               </li>
              
@@ -1019,15 +887,39 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+                <a href="javascript:void(0)" class="js-tag color3">代码</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
+                <a href="javascript:void(0)" class="js-tag color1">360加固</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">热修复</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Sophix</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Kotlin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Kotlin走起</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">负能量</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1039,7 +931,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">宏</a>
+                <a href="javascript:void(0)" class="js-tag color4">读后感</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">换屏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1051,11 +955,7 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1075,11 +975,15 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">年终总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">宏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1091,15 +995,19 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">书信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">powershell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1119,7 +1027,87 @@ var idcomments_post_url;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">CodeStyle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">drawable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">角标</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">bug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AndroidStudio</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nexus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Activity</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">惠州</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">email</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">颜色属性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Phabricator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ProGuard</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">captcha</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">runtime-permission</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gradle</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">DataBinding</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1127,7 +1115,7 @@ var idcomments_post_url;
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

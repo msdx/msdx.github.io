@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-07-31T17:28:27.349Z</updated>
+  <updated>2024-09-29T15:34:41.000Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于左撇子的二三事</title>
+    <link href="http://www.githang.com/2024/09/29/a-few-things-about-left-handed-people/"/>
+    <id>http://www.githang.com/2024/09/29/a-few-things-about-left-handed-people/</id>
+    <published>2024-09-29T15:34:41.000Z</published>
+    <updated>2024-09-29T15:34:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　我是一个左撇子。这在我以前看来，是件很寻常不过的事情，起码，它不算罕见。罕见的定义是难得见到，很少见到。然而从小到大，我身边一直不缺乏有和我一样是左撇子的人，比如我姐我哥，还有每天睁眼都能看到的我自己。所以我不明白，当我在店里左手拿起笔开单写字的时候，旁边的客户忽然一脸惊奇，像是发现了新大陆的哥伦布的样子。虽然我们都没见过哥伦布，也不知道他发现新大陆时是什么样子。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记春节云南旅游之大理</title>
     <link href="http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/"/>
     <id>http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/</id>
     <published>2024-07-31T15:31:18.000Z</published>
-    <updated>2024-07-31T17:28:27.349Z</updated>
+    <updated>2024-07-31T15:31:18.000Z</updated>
     
     <summary type="html">
     
@@ -50,7 +70,7 @@
     <link href="http://www.githang.com/2024/03/22/The-letter-1/"/>
     <id>http://www.githang.com/2024/03/22/The-letter-1/</id>
     <published>2024-03-22T13:36:59.000Z</published>
-    <updated>2024-07-31T15:29:20.858Z</updated>
+    <updated>2024-03-22T13:36:59.000Z</updated>
     
     <summary type="html">
     
@@ -72,7 +92,7 @@
     <link href="http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/"/>
     <id>http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/</id>
     <published>2024-03-21T13:05:01.000Z</published>
-    <updated>2024-03-21T13:10:30.956Z</updated>
+    <updated>2024-03-21T13:05:01.000Z</updated>
     
     <summary type="html">
     
@@ -92,8 +112,8 @@
   
   <entry>
     <title>移除 valine 并使用不蒜子代替基于 leancloud 的页面统计</title>
-    <link href="http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/"/>
-    <id>http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc_visitors/</id>
+    <link href="http://www.githang.com//Remove-valine-and-use-busuanzi-instead-of-lc_visitors"/>
+    <id>http://www.githang.com//Remove-valine-and-use-busuanzi-instead-of-lc_visitors</id>
     <published>2024-03-18T13:21:28.000Z</published>
     <updated>2024-03-18T13:21:28.000Z</updated>
     
@@ -119,7 +139,7 @@
     <link href="http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/"/>
     <id>http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/</id>
     <published>2024-03-15T12:59:04.000Z</published>
-    <updated>2024-07-31T15:32:41.732Z</updated>
+    <updated>2024-03-15T12:59:04.000Z</updated>
     
     <summary type="html">
     
@@ -148,7 +168,7 @@
     <link href="http://www.githang.com/2024/03/03/Travelogue-of-Yunnan-in-2024-1/"/>
     <id>http://www.githang.com/2024/03/03/Travelogue-of-Yunnan-in-2024-1/</id>
     <published>2024-03-03T14:50:59.000Z</published>
-    <updated>2024-03-05T13:36:28.674Z</updated>
+    <updated>2024-03-03T14:50:59.000Z</updated>
     
     <summary type="html">
     
@@ -177,12 +197,12 @@
     <link href="http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/"/>
     <id>http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/</id>
     <published>2022-02-24T14:00:42.000Z</published>
-    <updated>2022-03-24T15:01:11.521Z</updated>
+    <updated>2022-02-24T14:00:42.000Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;　　说几句题外话，不知不觉已有一年多没写博客了。自转行已来，生活轨迹大转变，心态也大转态，更主要的是对时间精力的掌握已不再从容。每每想着晚上静来心来写点东西，但等晚上到来，要么有其他事抢占先机，要么已经倦怠不想动，于是就连这台笔记本都许多没有翻开了。&lt;/p&gt;
-&lt;p&gt;　　回到主题。&lt;br&gt;　　在过完年后，计划着正月十五左右带着橙子和桔子北上。但却因为中间犯的几个错误，结果既打乱了安排，又耽搁了时间，也白浪费了不少钱。&lt;br&gt;
+&lt;p&gt;　　回到主题。&lt;br&gt;　　在过完年后，计划着正月十五左右带着橙子和桔子北上。但却因为中间犯的几个错误，结果既打乱了安排，又耽搁了时间，也白浪费了不少钱。&lt;/p&gt;
     
     </summary>
     
@@ -191,10 +211,10 @@
   
   <entry>
     <title>为什么我貌似消失了几个月</title>
-    <link href="http://www.githang.com/2020/05/30/why%20do%20I%20seem%20to%20disappear%20for%20months/"/>
-    <id>http://www.githang.com/2020/05/30/why do I seem to disappear for months/</id>
+    <link href="http://www.githang.com/2020/05/30/why-do-I-seem-to-disappear-for-months/"/>
+    <id>http://www.githang.com/2020/05/30/why-do-I-seem-to-disappear-for-months/</id>
     <published>2020-05-30T13:46:16.000Z</published>
-    <updated>2020-12-10T12:32:19.257Z</updated>
+    <updated>2020-05-30T13:46:16.000Z</updated>
     
     <summary type="html">
     
@@ -213,10 +233,10 @@
   
   <entry>
     <title>技术解决不了社会问题</title>
-    <link href="http://www.githang.com/2020/01/14/technology%20cannot%20solve%20social%20problems/"/>
-    <id>http://www.githang.com/2020/01/14/technology cannot solve social problems/</id>
+    <link href="http://www.githang.com/2020/01/14/technology-cannot-solve-social-problems/"/>
+    <id>http://www.githang.com/2020/01/14/technology-cannot-solve-social-problems/</id>
     <published>2020-01-14T14:09:16.000Z</published>
-    <updated>2020-12-10T12:31:53.426Z</updated>
+    <updated>2020-01-14T14:09:16.000Z</updated>
     
     <summary type="html">
     
@@ -238,7 +258,7 @@
     <link href="http://www.githang.com/2020/01/10/summary-of-2019/"/>
     <id>http://www.githang.com/2020/01/10/summary-of-2019/</id>
     <published>2020-01-10T13:52:31.000Z</published>
-    <updated>2020-12-10T12:31:59.195Z</updated>
+    <updated>2020-01-10T13:52:31.000Z</updated>
     
     <summary type="html">
     
@@ -256,10 +276,10 @@
   
   <entry>
     <title>十五言#3</title>
-    <link href="http://www.githang.com/2019/12/29/fifteen-paragraphs-3/"/>
-    <id>http://www.githang.com/2019/12/29/fifteen-paragraphs-3/</id>
+    <link href="http://www.githang.com/2019/12/29/fifteen-sentences-3/"/>
+    <id>http://www.githang.com/2019/12/29/fifteen-sentences-3/</id>
     <published>2019-12-29T15:20:49.000Z</published>
-    <updated>2020-01-05T13:06:26.697Z</updated>
+    <updated>2019-12-29T15:20:49.000Z</updated>
     
     <summary type="html">
     
@@ -284,7 +304,7 @@
     <link href="http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/"/>
     <id>http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/</id>
     <published>2019-12-25T15:35:48.000Z</published>
-    <updated>2019-12-26T14:44:20.616Z</updated>
+    <updated>2019-12-25T15:35:48.000Z</updated>
     
     <summary type="html">
     
@@ -295,9 +315,9 @@
       <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
     
     
-      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
       <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+      <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
     
@@ -305,10 +325,10 @@
   
   <entry>
     <title>十五言#2</title>
-    <link href="http://www.githang.com/2019/12/21/fifteen-paragraphs-2/"/>
-    <id>http://www.githang.com/2019/12/21/fifteen-paragraphs-2/</id>
+    <link href="http://www.githang.com/2019/12/21/fifteen-sentences-2/"/>
+    <id>http://www.githang.com/2019/12/21/fifteen-sentences-2/</id>
     <published>2019-12-21T11:56:38.000Z</published>
-    <updated>2020-01-01T12:39:01.410Z</updated>
+    <updated>2019-12-21T11:56:38.000Z</updated>
     
     <summary type="html">
     
@@ -333,11 +353,11 @@
     <link href="http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/"/>
     <id>http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/</id>
     <published>2019-12-05T13:16:33.000Z</published>
-    <updated>2019-12-25T15:37:16.575Z</updated>
+    <updated>2019-12-05T13:16:33.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;前些天群里分享了一份笔试题，其中有个问题是问如何进行 Code Review 的。我在群里调侃性地回答说：以我两年的 code review 经验，我可以告诉大家，我就是看其他人的代码风格是否和我的一致，一致就accept，不一致就refuse。&lt;br&gt;后来想想那近两年里我做的，简单地总结一下的话，似乎真如此。&lt;br&gt;
+      &lt;p&gt;前些天群里分享了一份笔试题，其中有个问题是问如何进行 Code Review 的。我在群里调侃性地回答说：以我两年的 code review 经验，我可以告诉大家，我就是看其他人的代码风格是否和我的一致，一致就accept，不一致就refuse。&lt;br&gt;后来想想那近两年里我做的，简单地总结一下的话，似乎真如此。&lt;/p&gt;
     
     </summary>
     
@@ -352,10 +372,10 @@
   
   <entry>
     <title>十五言#1</title>
-    <link href="http://www.githang.com/2019/11/26/fifteen-paragraphs-1/"/>
-    <id>http://www.githang.com/2019/11/26/fifteen-paragraphs-1/</id>
+    <link href="http://www.githang.com/2019/11/26/fifteen-sentences-1/"/>
+    <id>http://www.githang.com/2019/11/26/fifteen-sentences-1/</id>
     <published>2019-11-26T15:42:15.000Z</published>
-    <updated>2020-01-01T12:38:40.237Z</updated>
+    <updated>2019-11-26T15:42:15.000Z</updated>
     
     <summary type="html">
     
@@ -380,7 +400,7 @@
     <link href="http://www.githang.com/2019/11/09/first-soldering/"/>
     <id>http://www.githang.com/2019/11/09/first-soldering/</id>
     <published>2019-11-09T12:49:51.000Z</published>
-    <updated>2019-11-11T13:11:31.398Z</updated>
+    <updated>2019-11-09T12:49:51.000Z</updated>
     
     <summary type="html">
     
@@ -404,11 +424,11 @@
     <link href="http://www.githang.com/2019/11/05/repair-for-redmi-screen/"/>
     <id>http://www.githang.com/2019/11/05/repair-for-redmi-screen/</id>
     <published>2019-11-05T15:37:41.000Z</published>
-    <updated>2019-11-09T13:34:16.093Z</updated>
+    <updated>2019-11-05T15:37:41.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;买不到一年的红米6，因为听信了不需要贴膜和保护壳的话，早已经摔得不成样子了。背面指纹严重一道划伤，四角凸起，屏幕更是叠加了三次裂屏，已经影响到阅读的正确性了，于是便从淘宝上买了个便宜的屏幕，自己换屏。&lt;br&gt;以下仅为记事，而非教程分享，所以不会有详尽的图文教程，需要教程的，可以参考淘宝卖家发我的视频：&lt;a href=&quot;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&lt;/a&gt; 。&lt;br&gt;这次因为我直接买的屏幕总成，拆机8件套也齐全，总体来说，换屏过程还是挺轻松的。因为之前换后摄像头玻璃片时拆过后盖，所以这次有经验了，知道应该先把卡槽取出，不然有一边会卸不下来。取出卡槽后，用三角片加上吸盘很容易就把后盖打开。需要注意的是，后盖有线插在电路板接口上，所以取出时不要扯得太用力。好在虽然我自己也忘了这回事，但是也没扯坏，顺顺利利就拿了下来。
+      &lt;p&gt;买不到一年的红米6，因为听信了不需要贴膜和保护壳的话，早已经摔得不成样子了。背面指纹严重一道划伤，四角凸起，屏幕更是叠加了三次裂屏，已经影响到阅读的正确性了，于是便从淘宝上买了个便宜的屏幕，自己换屏。&lt;br&gt;以下仅为记事，而非教程分享，所以不会有详尽的图文教程，需要教程的，可以参考淘宝卖家发我的视频：&lt;a href=&quot;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&quot;&gt;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&lt;/a&gt; 。&lt;br&gt;这次因为我直接买的屏幕总成，拆机8件套也齐全，总体来说，换屏过程还是挺轻松的。因为之前换后摄像头玻璃片时拆过后盖，所以这次有经验了，知道应该先把卡槽取出，不然有一边会卸不下来。取出卡槽后，用三角片加上吸盘很容易就把后盖打开。需要注意的是，后盖有线插在电路板接口上，所以取出时不要扯得太用力。好在虽然我自己也忘了这回事，但是也没扯坏，顺顺利利就拿了下来。
     
     </summary>
     
@@ -428,7 +448,7 @@
     <link href="http://www.githang.com/2019/10/30/one-story-1/"/>
     <id>http://www.githang.com/2019/10/30/one-story-1/</id>
     <published>2019-10-30T13:27:22.000Z</published>
-    <updated>2019-11-05T12:58:44.984Z</updated>
+    <updated>2019-10-30T13:27:22.000Z</updated>
     
     <summary type="html">
     
@@ -450,10 +470,10 @@
   
   <entry>
     <title>十五言#0</title>
-    <link href="http://www.githang.com/2019/10/29/fifteen-paragraphs/"/>
-    <id>http://www.githang.com/2019/10/29/fifteen-paragraphs/</id>
+    <link href="http://www.githang.com/2019/10/29/fifteen-sentences-0/"/>
+    <id>http://www.githang.com/2019/10/29/fifteen-sentences-0/</id>
     <published>2019-10-29T13:55:03.000Z</published>
-    <updated>2020-01-01T12:38:27.078Z</updated>
+    <updated>2019-10-29T13:55:03.000Z</updated>
     
     <summary type="html">
     
@@ -472,28 +492,6 @@
     
     
       <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谈物质生活</title>
-    <link href="http://www.githang.com/2019/10/27/talk-about-the-material-life/"/>
-    <id>http://www.githang.com/2019/10/27/talk-about-the-material-life/</id>
-    <published>2019-10-27T14:01:11.000Z</published>
-    <updated>2019-10-29T13:43:01.386Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一年前，我对许多事情都会想同一个问题，本质是什么？&lt;br&gt;那时是以程序员的思维来思考的。&lt;br&gt;而这段时间，有时会想，物质生活到底是什么？那么多人共同选择的追求，是否真值得去追求？&lt;br&gt;现在我依然想不透这个问题，但是我想，它大概和写代码是一样的。我认同优秀的程序员会去追求优雅的代码，并且从从业经验来看，确实也是值得的。那么同比类推，对更高物质生活的追求，大概也是值得的。
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随想" scheme="http://www.githang.com/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-      <category term="生活" scheme="http://www.githang.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
