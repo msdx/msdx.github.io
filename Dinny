@@ -16,7 +16,7 @@
 <meta property="og:description" content="代码灾区？在我们 Android 开发中，不可避免的一个情景是在 Activity 跳转的时候传数据。比如从一个 FromActivity 界面，跳转到一个 OtherActivity 界面，需要传 username 和 password，一般我们的写法是这样的： 1234val intent &#x3D; Intent(this, OtherActivity::class.java)        .pu">
 <meta property="og:locale">
 <meta property="article:published_time" content="2018-11-30T01:34:13.000Z">
-<meta property="article:modified_time" content="2019-05-28T13:12:33.771Z">
+<meta property="article:modified_time" content="2024-09-29T16:53:39.007Z">
 <meta property="article:author" content="浩码农">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Activity">

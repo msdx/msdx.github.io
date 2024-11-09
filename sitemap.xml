@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.githang.com/2024/11/09/A-Review-of-Bad-Kids/</loc>
+    
+    <lastmod>2024-11-09T16:03:07.596Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2024/11/07/The-Reflection-on-Reading-The-Education-of-Karl-Witte/</loc>
     
     <lastmod>2024-11-07T14:57:07.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Message/index.html</loc>
+    
+    <lastmod>2024-09-29T16:53:39.010Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/resume/index.html</loc>
+    
+    <lastmod>2024-09-29T16:53:39.009Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Dinny</loc>
+    
+    <lastmod>2024-09-29T16:53:39.007Z</lastmod>
     
   </url>
   
@@ -16,9 +44,30 @@
   </url>
   
   <url>
+    <loc>http://www.githang.com/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library</loc>
+    
+    <lastmod>2024-09-29T16:53:39.004Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2018/12/25/why-do-i-discard-data-binding-in-project/</loc>
     
     <lastmod>2024-09-29T16:53:39.003Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Kotlin-Generic-Upper-Bound-And-Extension-Function</loc>
+    
+    <lastmod>2024-09-29T16:53:38.999Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Android-Kotlin-Style-Guides</loc>
+    
+    <lastmod>2024-09-29T16:53:38.996Z</lastmod>
     
   </url>
   
@@ -58,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/Remove-valine-and-use-busuanzi-instead-of-lc_visitors</loc>
+    <loc>http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc-visitors/</loc>
     
     <lastmod>2024-03-18T13:21:28.000Z</lastmod>
     
@@ -86,9 +135,9 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/Message/index.html</loc>
+    <loc>http://www.githang.com/Miss</loc>
     
-    <lastmod>2020-12-10T12:40:11.983Z</lastmod>
+    <lastmod>2021-05-10T00:23:53.000Z</lastmod>
     
   </url>
   
@@ -205,13 +254,6 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/resume/index.html</loc>
-    
-    <lastmod>2019-06-24T00:18:31.985Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.githang.com/2019/06/23/negative-energy/</loc>
     
     <lastmod>2019-06-23T12:43:27.000Z</lastmod>
@@ -240,16 +282,9 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/wps-and-macro</loc>
+    <loc>http://www.githang.com/2019/06/03/wps-and-macro/</loc>
     
     <lastmod>2019-06-03T14:54:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/The-Evolution-of-The-Gradle-Script-For-The-Skin-Library</loc>
-    
-    <lastmod>2019-06-03T11:07:28.551Z</lastmod>
     
   </url>
   
@@ -271,139 +306,6 @@
     <loc>http://www.githang.com/2019/05/28/add-post-id-to-existing-articles/</loc>
     
     <lastmod>2019-05-28T13:17:49.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Git-Contribution-Statistics</loc>
-    
-    <lastmod>2019-05-28T13:12:33.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Read-15-Secrets-Successful-People-Know-About-Time-Management</loc>
-    
-    <lastmod>2019-05-28T13:12:33.824Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Kotlin-Generic-Upper-Bound-And-Extension-Function</loc>
-    
-    <lastmod>2019-05-28T13:12:33.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/AndroidManifest-Permissions</loc>
-    
-    <lastmod>2019-05-28T13:12:33.786Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Dinny</loc>
-    
-    <lastmod>2019-05-28T13:12:33.771Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Mac-Preferences</loc>
-    
-    <lastmod>2019-05-28T13:12:33.756Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Auto-Jump</loc>
-    
-    <lastmod>2019-05-28T13:04:59.444Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Life-is-Cheaper-Than-Paper</loc>
-    
-    <lastmod>2019-05-28T13:04:59.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Implement-Pull-Up-to-Load-More-with-RecyclerView</loc>
-    
-    <lastmod>2019-05-28T13:04:59.419Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Retrofit-shows-file-upload-progress-and-bug-record</loc>
-    
-    <lastmod>2019-05-28T13:04:59.400Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/CoordinatorLayout-In-depth-understanding</loc>
-    
-    <lastmod>2019-05-28T13:04:59.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/A-preliminary-understanding-of-CoordinatorLayout</loc>
-    
-    <lastmod>2019-05-28T13:04:59.374Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Dream-Juvenile-does-not-make-trouble</loc>
-    
-    <lastmod>2019-05-28T13:04:59.360Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Miss</loc>
-    
-    <lastmod>2019-05-28T13:04:59.344Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Development-Unreasonableness</loc>
-    
-    <lastmod>2019-05-28T13:04:59.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/LoadMoreLayout</loc>
-    
-    <lastmod>2019-05-28T13:04:59.299Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/CoordinatorLayout-ViewPager-Bug</loc>
-    
-    <lastmod>2019-05-28T13:04:59.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/Mask-Layer</loc>
-    
-    <lastmod>2019-05-28T13:04:59.260Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.githang.com/OkHttp3-LogInterceptor</loc>
-    
-    <lastmod>2019-05-28T13:04:59.234Z</lastmod>
     
   </url>
   
@@ -520,9 +422,37 @@
   </url>
   
   <url>
+    <loc>http://www.githang.com/Git-Contribution-Statistics</loc>
+    
+    <lastmod>2018-12-21T02:03:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Read-15-Secrets-Successful-People-Know-About-Time-Management</loc>
+    
+    <lastmod>2018-12-18T06:59:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.githang.com/2018/12/16/Scientific-Internet-Access/</loc>
     
     <lastmod>2018-12-15T16:11:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/AndroidManifest-Permissions</loc>
+    
+    <lastmod>2018-12-10T03:42:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Mac-Preferences</loc>
+    
+    <lastmod>2018-11-21T14:21:11.000Z</lastmod>
     
   </url>
   
@@ -590,13 +520,6 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/Android-Kotlin-Style-Guides</loc>
-    
-    <lastmod>2018-08-06T01:45:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.githang.com/BadgeDrawable</loc>
     
     <lastmod>2018-06-22T06:24:27.000Z</lastmod>
@@ -653,9 +576,93 @@
   </url>
   
   <url>
-    <loc>http://www.githang.com/Summary-of-2017</loc>
+    <loc>http://www.githang.com/2018/01/05/Summary-of-2017/</loc>
     
     <lastmod>2018-01-05T03:52:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Auto-Jump</loc>
+    
+    <lastmod>2017-12-30T12:56:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Life-is-Cheaper-Than-Paper</loc>
+    
+    <lastmod>2017-12-26T14:28:04.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Implement-Pull-Up-to-Load-More-with-RecyclerView</loc>
+    
+    <lastmod>2017-12-09T02:06:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Retrofit-shows-file-upload-progress-and-bug-record</loc>
+    
+    <lastmod>2017-11-25T10:51:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/CoordinatorLayout-In-depth-understanding</loc>
+    
+    <lastmod>2017-11-09T14:25:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/A-preliminary-understanding-of-CoordinatorLayout</loc>
+    
+    <lastmod>2017-11-04T05:30:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Dream-Juvenile-does-not-make-trouble</loc>
+    
+    <lastmod>2017-10-27T14:15:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Development-Unreasonableness</loc>
+    
+    <lastmod>2017-10-03T01:32:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/LoadMoreLayout</loc>
+    
+    <lastmod>2017-09-24T11:10:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/CoordinatorLayout-ViewPager-Bug</loc>
+    
+    <lastmod>2017-09-21T05:01:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/Mask-Layer</loc>
+    
+    <lastmod>2017-09-18T13:54:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.githang.com/OkHttp3-LogInterceptor</loc>
+    
+    <lastmod>2017-09-16T01:51:52.000Z</lastmod>
     
   </url>
   

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>Kotlin泛型上界与扩展函数 | 疯狂的键盘</title>
+  <title>WPS 和宏 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="泛型场景先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。 泛型递归和链式调用为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：">
+  <meta name="description" content="我个人认为，如果非要在 Excel 上评出一个最伟大的功能创新的话，那就是宏了。尽管在一些人眼中，宏就是病毒，是危险，是不能触碰的东西。Excel 本身其他的功能已经足够强大和高效了，但是宏却使它更进一步——它能够对原本没有的功能进行定制化的扩展。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kotlin泛型上界与扩展函数">
-<meta property="og:url" content="http://www.githang.com/Kotlin-Generic-Upper-Bound-And-Extension-Function">
+<meta property="og:title" content="WPS 和宏">
+<meta property="og:url" content="http://www.githang.com/2019/06/03/wps-and-macro/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="泛型场景先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。 泛型递归和链式调用为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：">
+<meta property="og:description" content="我个人认为，如果非要在 Excel 上评出一个最伟大的功能创新的话，那就是宏了。尽管在一些人眼中，宏就是病毒，是危险，是不能触碰的东西。Excel 本身其他的功能已经足够强大和高效了，但是宏却使它更进一步——它能够对原本没有的功能进行定制化的扩展。">
 <meta property="og:locale">
-<meta property="article:published_time" content="2018-12-11T02:08:40.000Z">
-<meta property="article:modified_time" content="2024-09-29T16:53:38.999Z">
+<meta property="article:published_time" content="2019-06-03T14:54:49.000Z">
+<meta property="article:modified_time" content="2019-06-03T14:54:49.000Z">
 <meta property="article:author" content="浩码农">
-<meta property="article:tag" content="Kotlin">
+<meta property="article:tag" content="宏">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -247,20 +247,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Kotlin-Generic-Upper-Bound-And-Extension-Function" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-wps-and-macro" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Kotlin泛型上界与扩展函数
+      WPS 和宏
     </h1>
   
 
         
-        <a href="/Kotlin-Generic-Upper-Bound-And-Extension-Function" class="archive-article-date">
-  	<time datetime="2018-12-11T02:08:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-11</time>
+        <a href="/2019/06/03/wps-and-macro/" class="archive-article-date">
+  	<time datetime="2019-06-03T14:54:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-03</time>
 </a>
         <div style="margin-top:10px;">
           <!-- word count start -->
@@ -277,45 +277,11 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="泛型场景"><a href="#泛型场景" class="headerlink" title="泛型场景"></a>泛型场景</h1><p>先由我们熟悉的Java说起，有时在使用泛型的时候，会有这样的场景。<br>比如我们封装一个参数类，里面提供一个放入参数的方法，并且方法返回类型为它自身，以便调用时进行链式调用。</p>
-<h2 id="泛型递归和链式调用"><a href="#泛型递归和链式调用" class="headerlink" title="泛型递归和链式调用"></a>泛型递归和链式调用</h2><p>为了让它的子类在调用时也返回它自身，我们定义一个泛型继承于它，并且返回值为这个泛型。如下：</p>
+        <p>我个人认为，如果非要在 Excel 上评出一个最伟大的功能创新的话，那就是宏了。尽管在一些人眼中，宏就是病毒，是危险，是不能触碰的东西。<br>Excel 本身其他的功能已经足够强大和高效了，但是宏却使它更进一步——它能够对原本没有的功能进行定制化的扩展。</p>
 <span id="more"></span>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Params</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Params</span>&gt; <span class="keyword">extends</span> <span class="title class_">HashMap</span>&lt;String, Object&gt; &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">final</span> T <span class="title function_">putParams</span><span class="params">(String key, Object value)</span> &#123;</span><br><span class="line">        put(key, value);</span><br><span class="line">        <span class="keyword">return</span> (T) <span class="built_in">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>然后我们的子类，如下声明参数：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OrderParams</span> <span class="keyword">extends</span> <span class="title class_">Params</span>&lt;OrderParams&gt; &#123;</span><br><span class="line">   <span class="keyword">public</span> OrderParams <span class="title function_">page</span><span class="params">(<span class="type">int</span> page)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> putParams(<span class="string">&quot;page&quot;</span>, page);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> OrderParams <span class="title function_">pageSize</span><span class="params">(<span class="type">int</span> size)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> putParams(<span class="string">&quot;page_items&quot;</span>, size);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用的时候就可以实现链式调用了：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">OrderParams</span> <span class="variable">params</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">OrderParams</span>()</span><br><span class="line">        .page(page)</span><br><span class="line">        .pageSize(Constants.PAGE_SIZE)</span><br><span class="line">        <span class="comment">//...</span></span><br></pre></td></tr></table></figure>
-<p>这是第一种场景。</p>
-<h2 id="子类的泛型递归"><a href="#子类的泛型递归" class="headerlink" title="子类的泛型递归"></a>子类的泛型递归</h2><p>在上面的前提下，比如我们发现有许多参数类都要声明一个共同的参数，于是我们继承自<code>Params</code>再封装一个类，并且还是使用递归泛型，使得子类调用这个类声明的方法的时候能够返回子类的类型，以便一路链式调用。如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ParkParams</span>&lt;T <span class="keyword">extends</span> <span class="title class_">ParkParams</span>&gt; <span class="keyword">extends</span> <span class="title class_">Params</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> T <span class="title function_">park</span><span class="params">(String parkCode)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> putParams(<span class="string">&quot;park_code&quot;</span>, parkCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这是第二种场景。</p>
-<h2 id="直接使用父类"><a href="#直接使用父类" class="headerlink" title="直接使用父类"></a>直接使用父类</h2><p>在项目里，还有另一种场景：某个接口声明里，我们只需要<code>Params</code>类，不需要添加其他参数，所以不需要再去声明一个它的子类。<br>比如我们使用Retrofit时，声明如下的接口：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@POST(&quot;/iop/auth/logout&quot;)</span></span><br><span class="line"><span class="meta">@NeedToken</span></span><br><span class="line">Observable&lt;DataResponse&gt; <span class="title function_">logout</span><span class="params">(<span class="meta">@Body</span> Params params)</span>;</span><br></pre></td></tr></table></figure>
-<p>这是一个注销退出的接口，需要传token，但是我们已经在实现了<code>Converter&lt;T, RequestBody&gt;</code>的类里实现了token的添加，这里我们只需要一个<code>Params</code>参数。<br>这是第三种场景。</p>
-<p>这几种场景，使用Java如此实现是没有问题的，但是转成Kotlin代码问题却出来了。</p>
-<h1 id="Kotlin的问题与方式"><a href="#Kotlin的问题与方式" class="headerlink" title="Kotlin的问题与方式"></a>Kotlin的问题与方式</h1><h2 id="使用时必须指定类型的泛型的问题"><a href="#使用时必须指定类型的泛型的问题" class="headerlink" title="使用时必须指定类型的泛型的问题"></a>使用时必须指定类型的泛型的问题</h2><p>我们使用Idea的转成Kotlin代码的功能，将<code>Params</code>类转成Kotlin代码，如下：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">Params</span>&lt;<span class="type">T : Params&lt;*</span>&gt;&gt; : <span class="type">HashMap</span>&lt;<span class="type">String, Any?</span>&gt;() &#123;</span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">fun</span> <span class="title">putParams</span><span class="params">(key: <span class="type">String</span>, value: <span class="type">Any</span>?)</span></span>: T &#123;</span><br><span class="line">        put(key, value)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span> <span class="keyword">as</span> T</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这是编译不过去的，因为Kotlin的泛型不能省略，所以原来Java代码里泛型里面的<code>&lt;T extends Params&gt;</code>就被转成了<code>&lt;T : Params&lt;*&gt;&gt;</code>，但<code>Params</code>已经约束了是有上界的，所以不能使用<code>*</code>，我们改为<code>class Params&lt;T : Params&lt;T&gt;&gt;</code>。这样看起来第一种场景是通过了。</p>
-<p>但是我们刚才的<code>ParkParams</code>报错了，因为我们声明的是<code>public class ParkParams&lt;T extends ParkParams&gt; extends Params&lt;T&gt;</code>，但它需要<code>T</code>继承自<code>Params</code>。没关系，如上转为Kotlin代码就好了：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">ParkParams</span>&lt;<span class="type">T : ParkParams&lt;T</span>&gt;&gt; : <span class="type">Params</span>&lt;<span class="type">T</span>&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">park</span><span class="params">(parkCode: <span class="type">String</span>)</span></span>: T &#123;</span><br><span class="line">        <span class="keyword">return</span> putParams(<span class="string">&quot;park_code&quot;</span>, parkCode)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第二种场景也没问题。</p>
-<p>现在第三种场景的问题来了。<br>我们调用<code>logout(params)</code>需要传一个<code>Params</code>参数，把调用代码转为Kotlin之后报错了，因为Params没有指定泛型，推断出来的是<code>Params&lt;*&gt;</code>，它想要的是<code>Params&lt;Params&lt;*&gt;&gt;</code>。但是我们把它改为<code>Params&lt;Params&lt;*&gt;&gt;</code>，里面的<code>&lt;params&lt;*&gt;&gt;</code>又报了这一个问题。好吧，这对Kotlin而言，是个无穷无尽的泛型递归问题。<br>这里的问题就在于，<code>logout(params)</code>接口是用Java声明的，没有指定泛型参数的类型，所以Kotlin这边推断出来的是<code>Params&lt;*&gt;</code>，而由于<code>Params</code>的泛型有其上界，所以Kotlin创建不了这个类型的实例。</p>
-<p>我们把<code>logout(params)</code>接口的代码也转成kotlin，会发现接口的参数类型只能声明为<code>Params&lt;*&gt;</code>才能编译通过。但是会有两个问题：<br>一是使用的时候，上面的问题还是没有解决。所以只能传<code>Params</code>的其他子类，比如传个前面定义的<code>OrderParams</code>。暂时忽略这个不可理喻的调用，至少编译通过了。<br>二是运行的时候Retrofit报错了，因为它不允许参数的泛型类型为通配符。<code>&lt;*&gt;</code>就相当于Java中的<code>&lt;?&gt;</code>。<br>所以Kotlin使用泛型来解决这些问题是走不通的。</p>
-<h2 id="Kotlin的方式"><a href="#Kotlin的方式" class="headerlink" title="Kotlin的方式"></a>Kotlin的方式</h2><p>我们回顾一下，其实只是想要三个诉求：</p>
-<ol>
-<li><code>Params</code>类封装一个<code>putParams(key, value)</code>的方法，方法能够返回它的子类。</li>
-<li><code>Params</code>的子类能够封装一些方法，方法能返回它的子类的子类。</li>
-<li><code>Params</code>能够被直接调用及创建它的实例。</li>
-</ol>
-<p>Kotlin做不到吗？不是的。如果是递归泛型是Java相对于Kotlin的特性，那Kotlin也有相对于Java的语言特性可以实现以上的需求，那就是扩展函数。</p>
-<p>现在我们使用扩展函数来实现前面的功能。<br>首先，我们的Params也不需要声明泛型了，它定义如下：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">Params</span> : <span class="type">HashMap</span>&lt;<span class="type">String, Any?</span>&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : Params&gt;</span> T.<span class="title">putParams</span><span class="params">(key: <span class="type">String</span>, value: <span class="type">Any</span>?)</span></span>: T &#123;</span><br><span class="line">        put(key, value)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>由于<code>Params</code>没有泛型参数，所以第三个种场景也就解决了。然后我们在<code>Params</code>类里声明一个扩展函数，在这里我们使用了泛型。我们让这个泛型有<code>Params</code>上界，返回值类型是这个泛型。这样第一种场景也解决了。</p>
-<p>对于第二种场景，也是使用扩展函数来实现，但是这里的扩展函数需要声明在类的外面，否则无法调用到这个函数。</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">open</span> <span class="keyword">class</span> <span class="title class_">ParkParams</span> : <span class="type">Params</span>()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="type">&lt;T : ParkParams&gt;</span> T.<span class="title">park</span><span class="params">(parkCode: <span class="type">String</span>)</span></span> = putParams(<span class="string">&quot;park_code&quot;</span>, parkCode)</span><br></pre></td></tr></table></figure>
-
-<p>这样问题就解决了。<br>对比Java，我们也可以看到，Kotlin的实现看起来更简洁清晰。</p>
+<p>宏是一个很能体现程序员思维的功能——它的本质就是编程，基于VB的脚本代码。但它又降低了使用门槛——它提供了丰富的内置 API，并且你可以把对表格的操作录制为脚本，然后再去修改。使用它，你可以创建新的按钮功能、新的函数，甚至我见过有人把一个办公用的表格变成了一个小游戏。它可以实现数据的自动化处理，使得我在处理一些表格时效率可以提升数倍到数十倍。</p>
+<p>WPS 是我用得特别顺手的办公软件，它满足了我的需求又经常超出我的期望。但唯有一点让我用得不快，那就是它的宏功能。<br>WPS 默认是禁用宏功能的。要想启用它，需要另外去下载一个叫 VBS FOR WPS 的安装包进行安装，之后宏功能才可以正常使用。<br>WPS 保留了录制宏的功能，但却不能把宏单独导出，而只能与工作簿一起保存。其实有时候编写的宏是针对于某一类而不是局限于某一个工作簿的，所以在我看来，就应该允许它单独导出。而为了保存宏却同时保存一个冗余的表，在我看来没有意义，未免画蛇添足。<br>但是，WPS 上宏的局限性不止于此。如果你想在一个新的工作簿中执行之前保存的宏，你得再打开保存了宏的文档，在打开时选择启用宏，然后回到原来的文档，才能在运行宏的对话框上找到这个宏。也就是，我们无法把常用的宏保存为用户库。</p>
+<p>宏纵然具有一定危险性，但也不应该把它打入冷宫——变成一个用起来极为不便的功能。对于一般用户，可以让它的入口更深，启用时多一些询问及注意事项的提醒。但是对于有能力操控它的人，这个功能应该更开放且方便。比如，允许把宏单独保存，并且保存到用户库里使得可以直接加载而不用另外打开别的文档。而在选择宏时，能展示有关它的其他信息——比如读取它的注释作为它的自我介绍及展示它的开发者签名信息及修改时间。再者，防止宏被意外篡改，比如添加到用户库的脚本不允许再修改，只能添加或删除。总之，宏虽是双刃剑，但它毕竟是效率利器。你可以增加普通用户启用它的难度，但对于熟悉它的用户，不应该刻意降低它的效率。</p>
 
         
 <!-- Google Ad -->
@@ -388,7 +354,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Kotlin</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">宏</a>
         		</li>
       		
 		</ul>
@@ -400,7 +366,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-				<a href="/categories/Kotlin/" class="article-tag-list-link color2">Kotlin</a>
+				<a href="/categories/杂文/" class="article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
@@ -455,7 +421,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/Kotlin-Generic-Upper-Bound-And-Extension-Function" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2019/06/03/wps-and-macro/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -469,18 +435,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/12/16/Scientific-Internet-Access/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/06/06/use-gpg-to-encrypt-messages-on-mac/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Scientific Internet Access
+          Mac 下使用 GPG 加密邮件
         
       </div>
     </a>
   
   
-    <a href="/AndroidManifest-Permissions" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">AndroidManifest 权限</div>
+    <a href="/2019/05/31/set-foot-in-Beijing-again/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">再踏上北京</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -533,7 +499,7 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="Kotlin-Generic-Upper-Bound-And-Extension-Function" ></div> 
+      <div id="SOHUCS" sid="wps-and-macro" ></div> 
 <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -608,7 +574,7 @@ var idcomments_post_url;
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
-  	articleId: "/Kotlin-Generic-Upper-Bound-And-Extension-Function",
+  	articleId: "/2019/06/03/wps-and-macro/",
   };
   // ⛔️ DON'T EDIT BELOW THIS LINE
   (function() {

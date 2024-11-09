@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.githang.com">
-  <title>移除 valine 并使用不蒜子代替基于 leancloud 的页面统计 | 疯狂的键盘</title>
+  <title>2017 年总结 | 疯狂的键盘</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常处于不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会">
+  <meta name="description" content="虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。 个人开源以前的开源项目 status-bar-compat 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。 fir-publisher 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移除 valine 并使用不蒜子代替基于 leancloud 的页面统计">
-<meta property="og:url" content="http://www.githang.com/Remove-valine-and-use-busuanzi-instead-of-lc_visitors">
+<meta property="og:title" content="2017 年总结">
+<meta property="og:url" content="http://www.githang.com/2018/01/05/Summary-of-2017/index.html">
 <meta property="og:site_name" content="疯狂的键盘">
-<meta property="og:description" content="由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常处于不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会">
+<meta property="og:description" content="虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。 个人开源以前的开源项目 status-bar-compat 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。 fir-publisher 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内">
 <meta property="og:locale">
-<meta property="article:published_time" content="2024-03-18T13:21:28.000Z">
-<meta property="article:modified_time" content="2024-03-18T13:21:28.000Z">
+<meta property="article:published_time" content="2018-01-05T03:52:25.000Z">
+<meta property="article:modified_time" content="2018-01-05T03:52:25.000Z">
 <meta property="article:author" content="浩码农">
-<meta property="article:tag" content="leancloud">
-<meta property="article:tag" content="不蒜子统计">
-<meta property="article:tag" content="valine">
+<meta property="article:tag" content="Android,Gradle,程序员,浩码农,代码,开源">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="疯狂的键盘" type="application/atom+xml">
@@ -249,20 +247,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Remove-valine-and-use-busuanzi-instead-of-lc-visitors" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Summary-of-2017" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      移除 valine 并使用不蒜子代替基于 leancloud 的页面统计
+      2017 年总结
     </h1>
   
 
         
-        <a href="/Remove-valine-and-use-busuanzi-instead-of-lc_visitors" class="archive-article-date">
-  	<time datetime="2024-03-18T13:21:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-03-18</time>
+        <a href="/2018/01/05/Summary-of-2017/" class="archive-article-date">
+  	<time datetime="2018-01-05T03:52:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
 </a>
         <div style="margin-top:10px;">
           <!-- word count start -->
@@ -279,19 +277,44 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>由于使用的 valine 评论系统及页面统计都是基于 leancloud，而 leancloud 免费的开发版每天都会有强制的休眠，以前的方式现在已经无法唤醒，导致无法评论上，同时页面上无法有效统计阅读量。我原来就已经集成了7个评论系统，移除掉了挂掉的一个，还剩6个，现在索性把经常处于不可用状态的 valine 也给移除，同时把基于 leancloud 实现的页面统计也给换成不蒜子统计，提高可能会有的访客的体验。<span id="more"></span></p>
-<h2 id="移除-valine-评论系统"><a href="#移除-valine-评论系统" class="headerlink" title="移除 valine 评论系统"></a>移除 valine 评论系统</h2><p>进入我所使用的主题目录 <code>theme/yilla</code>，使用命令 <code>git grep &quot;valine&quot;</code> 查看哪里引用到了 <code>valine</code>，结果如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">_config.yml:valine:</span><br><span class="line">layout/_partial/article.ejs:      &lt;% if (theme.valine &amp;&amp; theme.leancloud.appid &amp;&amp; theme.leancloud.appkey)&#123; %&gt;</span><br><span class="line">layout/_partial/article.ejs:      &lt;li class=&quot;comment-tab-active&quot;&gt;valine&lt;/li&gt;</span><br><span class="line">layout/_partial/article.ejs:    &lt;% if (theme.valine &amp;&amp; theme.leancloud.appid &amp;&amp; theme.leancloud.appkey)&#123; %&gt;</span><br><span class="line">layout/_partial/article.ejs:      &lt;%- partial(&#x27;post/valine&#x27;) %&gt;</span><br><span class="line">layout/_partial/post/lc_visitors.ejs:        serverURLs: &quot;https://valineapi.githang.com&quot;,</span><br><span class="line">layout/_partial/post/valine.ejs:&lt;div class=&quot;valine_comment&quot;&gt;&lt;/div&gt;</span><br><span class="line">layout/_partial/post/valine.ejs:&lt;script src=&quot;//unpkg.com/valine/dist/Valine.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">layout/_partial/post/valine.ejs:  var notify = &#x27;&lt;%= theme.valine.notify %&gt;&#x27; == true ? true : false;</span><br><span class="line">layout/_partial/post/valine.ejs:  var verify = &#x27;&lt;%= theme.valine.verify %&gt;&#x27; == true ? true : false;</span><br><span class="line">layout/_partial/post/valine.ejs:  var recordIP = &#x27;&lt;%= theme.valine.recordIP %&gt;&#x27; == true ? true : false;</span><br><span class="line">layout/_partial/post/valine.ejs:      el: &#x27;.valine_comment&#x27;,</span><br><span class="line">layout/_partial/post/valine.ejs:      serverURLs: &#x27;//valineapi.githang.com&#x27;,</span><br><span class="line">layout/_partial/post/valine.ejs:      placeholder: &#x27;&lt;%= theme.valine.placeholder %&gt;&#x27;</span><br></pre></td></tr></table></figure>
-<p>接下来开始删除 <code>valine</code> 相关代码。我这边的改动如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/_config.yml b/_config.yml</span><br><span class="line">index 3330339..a0f3957 100644</span><br><span class="line">--- a/_config.yml</span><br><span class="line">+++ b/_config.yml</span><br><span class="line">@@ -102,13 +102,6 @@ disqus: https-www-githang-com</span><br><span class="line"></span><br><span class="line">-#8、Valine</span><br><span class="line">-valine:</span><br><span class="line">- verify: <span class="literal">false</span> <span class="comment">#验证码</span></span><br><span class="line">- notify: <span class="literal">false</span> <span class="comment">#评论回复提醒</span></span><br><span class="line">- placeholder: 有话要说？ <span class="comment">#评论框占位符</span></span><br><span class="line">- recordIP: <span class="literal">true</span> <span class="comment"># 记录IP</span></span><br><span class="line">-</span><br><span class="line"></span><br><span class="line">diff --git a/layout/_partial/article.ejs b/layout/_partial/article.ejs</span><br><span class="line">index 95265d5..a51f71c 100644</span><br><span class="line">--- a/layout/_partial/article.ejs</span><br><span class="line">+++ b/layout/_partial/article.ejs</span><br><span class="line">@@ -101,10 +101,6 @@</span><br><span class="line">     &lt;ul <span class="built_in">id</span>=<span class="string">&quot;comment-tab-list&quot;</span> class=<span class="string">&quot;comment-tabs&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">-      &lt;% <span class="keyword">if</span> (theme.valine &amp;&amp; theme.leancloud.appid &amp;&amp; theme.leancloud.appkey)&#123; %&gt;</span><br><span class="line">-      &lt;li class=<span class="string">&quot;comment-tab-active&quot;</span>&gt;valine&lt;/li&gt;</span><br><span class="line">-      &lt;% &#125; %&gt;</span><br><span class="line">-</span><br><span class="line">       &lt;% <span class="keyword">if</span> (theme.changyan_appid &amp;&amp; theme.changyan_conf)&#123; %&gt;</span><br><span class="line">       &lt;li class=<span class="string">&quot;&quot;</span>&gt;畅言&lt;/li&gt;</span><br><span class="line">       &lt;% &#125; %&gt;</span><br><span class="line">@@ -125,12 +121,6 @@</span><br><span class="line">       &lt;li&gt;Vuukle&lt;/li&gt;</span><br><span class="line">       &lt;% &#125; %&gt;</span><br><span class="line">     &lt;/ul&gt;</span><br><span class="line">-</span><br><span class="line">-    &lt;% <span class="keyword">if</span> (theme.valine &amp;&amp; theme.leancloud.appid &amp;&amp; theme.leancloud.appkey)&#123; %&gt;</span><br><span class="line">-    &lt;div class=<span class="string">&quot;comment-content comment-content-show&quot;</span>&gt;</span><br><span class="line">-      &lt;%- partial(<span class="string">&#x27;post/valine&#x27;</span>) %&gt;</span><br><span class="line">-    &lt;/div&gt;</span><br><span class="line">-    &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">     &lt;% <span class="keyword">if</span> (theme.changyan_appid &amp;&amp; theme.changyan_conf)&#123; %&gt;</span><br><span class="line">     &lt;div class=<span class="string">&quot;comment-content comment-content-hide&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>然后删除 <code>valine.ejs</code>文件。</p>
-<h2 id="把基于-leancloud-的访客统计改为不蒜子统计"><a href="#把基于-leancloud-的访客统计改为不蒜子统计" class="headerlink" title="把基于 leancloud 的访客统计改为不蒜子统计"></a>把基于 leancloud 的访客统计改为不蒜子统计</h2><p>我这边实现访问统计的功能写在了<code>lc_visitors</code>，删除该文件。同样执行 <code>git grep &quot;lc_vitisors&quot;</code>看哪些地方引用到，把相关代码改为不蒜子的代码。<br>要注意的是，不蒜子的统计方式使得它不支持在目录页面显示每篇文章的访问次数，所以在首页的时候不需要显示文章的阅读次数。最后我的其他改动如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/_config.yml b/_config.yml</span><br><span class="line">index a0f3957..e4243b7 100644</span><br><span class="line">--- a/_config.yml</span><br><span class="line">+++ b/_config.yml</span><br><span class="line">@@ -153,14 +153,6 @@ baidu_ziyuan: <span class="literal">true</span></span><br><span class="line"> <span class="comment">#copyright</span></span><br><span class="line"> copyright: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">-# lean cloud visitors</span><br><span class="line">-leancloud_visitors:</span><br><span class="line">+# busuanzi visitors</span><br><span class="line">+busuanzi_visitors:</span><br><span class="line">   <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">-#添加一下js插件的 CDN地址</span><br><span class="line">-js_cdn:</span><br><span class="line">-  jquery: https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js</span><br><span class="line">-  av: https://unpkg.com/leancloud-storage@4.12.2/dist/av-live-query-min.js</span><br><span class="line">-# 评论及阅读数都用到</span><br><span class="line">-leancloud:</span><br><span class="line">- appid:  <span class="comment">#Leancloud应用的appId</span></span><br><span class="line">- appkey: <span class="comment">#Leancloud应用的appKey</span></span><br><span class="line">diff --git a/layout/_partial/article.ejs b/layout/_partial/article.ejs</span><br><span class="line">index a51f71c..23525e1 100644</span><br><span class="line">--- a/layout/_partial/article.ejs</span><br><span class="line">+++ b/layout/_partial/article.ejs</span><br><span class="line">@@ -11,9 +11,10 @@</span><br><span class="line">             &lt;%- partial(<span class="string">&#x27;post/word&#x27;</span>) %&gt;</span><br><span class="line">             &lt;% &#125; %&gt;</span><br><span class="line">           &lt;!-- word count end --&gt;</span><br><span class="line">-          &lt;% <span class="keyword">if</span> (theme.leancloud_visitors.enable &amp;&amp; !post.no_visitors) &#123; %&gt;</span><br><span class="line">+          &lt;!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 --&gt;</span><br><span class="line">+          &lt;% <span class="keyword">if</span> (!index &amp;&amp; theme.busuanzi_visitors.enable &amp;&amp; !post.no_visitors) &#123; %&gt;</span><br><span class="line">             &amp;nbsp; | &amp;nbsp;</span><br><span class="line">-            &lt;span <span class="built_in">id</span>=<span class="string">&quot;&lt;%= post.id %&gt;&quot;</span> class=<span class="string">&quot;pageViews&quot;</span> data-flag-title=<span class="string">&quot;&lt;%= post.title %&gt;&quot;</span>&gt;0&lt;/span&gt;°</span><br><span class="line">+            &lt;span <span class="built_in">id</span>=<span class="string">&quot;busuanzi_container_page_pv&quot;</span>&gt;&lt;span <span class="built_in">id</span>=<span class="string">&quot;busuanzi_value_page_pv&quot;</span>&gt;0&lt;/span&gt;°&lt;/span&gt;</span><br><span class="line">           &lt;% &#125; %&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         &lt;% &#125; %&gt;</span><br><span class="line">diff --git a/layout/_partial/footer.ejs b/layout/_partial/footer.ejs</span><br><span class="line">index 39ec6ed..e7832d6 100644</span><br><span class="line">--- a/layout/_partial/footer.ejs</span><br><span class="line">+++ b/layout/_partial/footer.ejs</span><br><span class="line">@@ -17,8 +17,9 @@</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">-  &lt;% <span class="keyword">if</span> (theme.leancloud_visitors.enable)&#123; %&gt;</span><br><span class="line">+  &lt;% <span class="keyword">if</span> (theme.busuanzi_visitors.enable)&#123; %&gt;</span><br><span class="line">   &lt;!-- 文章阅读数 --&gt;</span><br><span class="line">-  &lt;%- partial(<span class="string">&#x27;post/lc_visitors&#x27;</span>) %&gt;</span><br><span class="line">+  &lt;script async src=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><br><span class="line">+&lt;/script&gt;</span><br><span class="line">   &lt;% &#125; %&gt;</span><br><span class="line"> &lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+        <p>虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。</p>
+<h1 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h1><h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><h3 id="以前的开源项目"><a href="#以前的开源项目" class="headerlink" title="以前的开源项目"></a>以前的开源项目</h3><ul>
+<li><a href="https://github.com/msdx/status-bar-compat"><code>status-bar-compat</code></a> 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。</li>
+<li><a href="https://github.com/msdx/fir-publisher"><code>fir-publisher</code></a> 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内部使用的状态。</li>
+</ul>
+<span id="more"></span>
 
-<h2 id="添加全站统计"><a href="#添加全站统计" class="headerlink" title="添加全站统计"></a>添加全站统计</h2><p>最后发现之前还使用了友盟统计，它现在也用不了了，就把友盟的给删除了，相关代码改为不蒜子的站点统计，并把前面<code>footer.ejs</code>里的统计的代码抽取出来到一个单独的文件中。关键代码修改如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">--- a/layout/_partial/footer.ejs</span><br><span class="line">+++ b/layout/_partial/footer.ejs</span><br><span class="line">@@ -8,7 +8,7 @@</span><br><span class="line">                &lt;a href=<span class="string">&quot;http://hexo.io/&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;Hexo&lt;/a&gt;  Theme &lt;a hre</span><br><span class="line">f=<span class="string">&quot;https://github.com/litten/hexo-theme-yilia&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;Yilia&lt;/a&gt; by Litten</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">         &lt;div class=<span class="string">&quot;footer-center&quot;</span>&gt;</span><br><span class="line">-            &lt;%- partial(<span class="string">&#x27;umeng-analytics&#x27;</span>) %&gt;</span><br><span class="line">+            &lt;%- partial(<span class="string">&#x27;busuanzi-visitors&#x27;</span>) %&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">         &lt;div class=<span class="string">&quot;footer-center&quot;</span>&gt;</span><br><span class="line">             Power by</span><br><span class="line">@@ -17,9 +17,4 @@</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line">   &lt;/div&gt;</span><br><span class="line">-  &lt;% <span class="keyword">if</span> (theme.busuanzi_visitors.enable)&#123; %&gt;</span><br><span class="line">-  &lt;!-- 文章阅读数 --&gt;</span><br><span class="line">-  &lt;script async src=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><br><span class="line">-&lt;/script&gt;</span><br><span class="line">-  &lt;% &#125; %&gt;</span><br><span class="line"> &lt;/footer&gt;</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="2017-年的一些开源项目"><a href="#2017-年的一些开源项目" class="headerlink" title="2017 年的一些开源项目"></a>2017 年的一些开源项目</h3><ul>
+<li><a href="https://github.com/parkingwang/vehicle-keyboard-android"><code>vehicle-keyboard-android</code></a> Android 上的车牌号码专用键盘组件，是公司主导下的开源项目。相关项目还有 iOS 及 Web 端。</li>
+<li><a href="https://github.com/msdx/hi-loadmore"><code>hi-loadmore</code></a> 自己封装的一个通用且可扩展的上拉加载组件，主要是为支持 <code>RecyclerView</code> 的上拉加载而开发。<ul>
+<li>迭代计划：嵌套滚动的支持。</li>
+</ul>
+</li>
+<li><a href="https://github.com/parkingwang/okhttp3-loginterceptor"><code>okhttp3-loginterceptor</code></a> 挂在公司组织下的一个开源项目，非常轻量的 okhttp3 拦截模块，用于打印请求响应日志，包括格式化 JSON 内容。</li>
+<li><a href="https://github.com/parkingwang/hey-permission"><code>hey-permission</code></a> 同样也是支持公司开源组织的一个项目，是对 Android 动态权限的封装。这个轮子我认为它兼俱了我所想要的合理逻辑以及灵活性。</li>
+<li><a href="https://github.com/parkingwang/sms-captcha"><code>sms-captcha</code></a> 依然是公司组织名下的开源项目。一个很轻量的读取手机验证码的工具。</li>
+</ul>
+<h3 id="未开始的开源计划"><a href="#未开始的开源计划" class="headerlink" title="未开始的开源计划"></a>未开始的开源计划</h3><ul>
+<li>下拉刷新库。</li>
+<li>CoordinatorLayout Behavior 的一些场景的封装。</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>对 Gradle 的翻译在跨度四年后，终于在 7 月份结束 1.12 版本的翻译。这个版本的翻译，从开始到结束，一共是 981 天。2018 年的目标是把 2.0 版本翻译完。</p>
+<p>另外，在 2017 年的最后两天，还实现了用电脑玩微信小游戏《跳一跳》，目前几经优化，已经可以在一小时内达到 36000 分。结果虽不计入排行榜，然而这游戏在代码目前，它存在的意义已经不是玩游戏的乐趣，而是用程序解决问题所带来的成就感。</p>
+<h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><p>2017 年初所计划的 2016 年没有完成的在 2015 年所定下的学习 Python 的目标，还是没有完成。2018 年里，学习计划上将增加 kotlin。所以新一年的语言学习计划是：</p>
+<ul>
+<li>python</li>
+<li>kotlin</li>
+</ul>
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>2017 年年初建了个微信订阅号，之后是零零散散地发。10月份，由于不满简书上满是鸡汤文的氛围，在 github 上建了个个人静态博客。后因简书的公然支持抹黑程序员的事件，又删除了在简书上的账号。目前博客多数只发自建博客，CSDN，以及个人订阅号。</p>
+<p>2017 年写博客没有前一年勤快，究其原因，时间及精力仍是主要因此。另外，博客一路写下来，对自己写博客所短也略有感悟。似乎自己并不擅长写源码解析类博客，因为找不到好的阐述方式。另外，在博客里贴大量的代码也不是一种比较好的知识分享方式，新的一年在写博客时应注意减少非核心代码，而更注重于对清晰的思路的解释，以及对思想的提炼。</p>
+<h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>之前坚持跑步的时候，小病不侵大病不入。自 8 月份出差之后，到回来时又有许多事，跑步一直搁浅。从 8 月份出差熬夜，到 9 月份奔波，10 月份一直休息不好，终于一场本来不大的感冒愣是反反复复在身上缠绕了一个多月。新的一年，希望运动上能得到改观。</p>
+<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><h2 id="码农"><a href="#码农" class="headerlink" title="码农"></a>码农</h2><p>在 2017 年春节之后，深圳这边的研发部新招了好几个同事，包括 Android 也是新招了两个。在以前，我只是一个安于一隅写代码的小码农，这一年里也不得不成为一些同事面前的大码农。不过直到这一年结束，仍是深感带人经验成长不足。但既知所短，新的一年当补其短。</p>
+<h2 id="出差"><a href="#出差" class="headerlink" title="出差"></a>出差</h2><p>今年共出差到总部两次。一次是 5 月份，约两周。一次是 8 月份，近一个月。所收获的经验是，我和一起出差的小志在水土不服的问题上仍旧严峻。9 月份回来，养了好久的胃，才终于恢复正常。</p>
+<h2 id="态度"><a href="#态度" class="headerlink" title="态度"></a>态度</h2><p>无则加勉，有则改之吧。<br>不要让同样的错误一而再再而三地出现。<br>认真做事的态度很重要；自我改正的意识薄弱很危险。<br>学会从自己身上找原因。不是问责，而是改正，提升自己。</p>
+<h2 id="沟通"><a href="#沟通" class="headerlink" title="沟通"></a>沟通</h2><p>希望新的一年在与其他地方的同事沟通时能保持谦和，耐心，不急躁。</p>
+<h1 id="家庭"><a href="#家庭" class="headerlink" title="家庭"></a>家庭</h1><h2 id="这里"><a href="#这里" class="headerlink" title="这里"></a>这里</h2><p>今年下半年有两件发生在计划之外的事情。<br>一是总算在深圳这个用生活成本来排外的城市上扎根了，也同样意味着我可能在未来的好多年都会缚着沉重的枷锁，还有就是我要学习的语言将增加一项粤语。作为一个广东人，不会说广东话，其实也是挺尴尬的一件事。<br>二是孩子，来得那么巧。这两件事相伴着一起来，让我目前对未来依旧自信而迷茫。<br>新的一年，还得想办法把车的事情给落实了。现在买车的心态准备好了，买车的欲望也有了，就差买车的钱了。</p>
+<h2 id="那里"><a href="#那里" class="headerlink" title="那里"></a>那里</h2><p>多给家里打电话，微信语音。如果可以，新的一年能回家几次。<br>尽快经济独立。</p>
+<p>新的一年，可能很忙，很累，不轻松。但总归是要积极地过下去的。</p>
 
         
 <!-- Google Ad -->
@@ -359,32 +382,13 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">leancloud</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">不蒜子统计</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">valine</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-				<a href="/categories/工具/" class="article-tag-list-link color3">工具</a>
+				<a href="/categories/杂文/" class="article-tag-list-link color3">杂文</a>
         		</li>
       		
 		</ul>
@@ -439,7 +443,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/Remove-valine-and-use-busuanzi-instead-of-lc_visitors" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.githang.com/2018/01/05/Summary-of-2017/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -453,18 +457,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/The-Design-of-HeyPermission" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Windows中实现右键把电子书通过邮件发到kindle
+          一个动态权限库的设计
         
       </div>
     </a>
   
   
-    <a href="/2024/03/15/Travelogue-of-Yunnan-in-2024-2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">记春节云南旅游之大理</div>
+    <a href="/Auto-Jump" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跳一跳——电脑能做的事就不要人工来做啦</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -517,7 +521,7 @@ var _hmt = _hmt || [];
 
     
     <div class="comment-content comment-content-hide">
-      <div id="SOHUCS" sid="Remove-valine-and-use-busuanzi-instead-of-lc-visitors" ></div> 
+      <div id="SOHUCS" sid="Summary-of-2017" ></div> 
 <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -592,7 +596,7 @@ var idcomments_post_url;
 <script>
   var VUUKLE_CONFIG = {
   	apiKey: "e5444b46-3605-42b5-8538-36c72299c8ed",
-  	articleId: "/Remove-valine-and-use-busuanzi-instead-of-lc_visitors",
+  	articleId: "/2018/01/05/Summary-of-2017/",
   };
   // ⛔️ DON'T EDIT BELOW THIS LINE
   (function() {

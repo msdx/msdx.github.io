@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-11-07T14:57:07.962Z</updated>
+  <updated>2024-11-09T16:03:07.596Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于《坏小孩》书评</title>
+    <link href="http://www.githang.com/2024/11/09/A-Review-of-Bad-Kids/"/>
+    <id>http://www.githang.com/2024/11/09/A-Review-of-Bad-Kids/</id>
+    <published>2024-11-09T15:43:36.000Z</published>
+    <updated>2024-11-09T16:03:07.596Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　前两天读完了紫金陈小说《坏小孩》。好像不是第一次读，有印象像是读过一次。&lt;/p&gt;
+&lt;p&gt;　　之前以为是一部推理小说，但是读了之后感觉，留给读者的推理空间并不多。作者像是借讲述一个故事，来讨论人性的善与恶。推理的成分不多，说是犯罪悬疑小说，可能更合适点。我想这也许是豆瓣上评分两极差异比较大的原因之一。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>读《卡尔威特的教育》一书有感</title>
@@ -132,8 +153,8 @@
   
   <entry>
     <title>移除 valine 并使用不蒜子代替基于 leancloud 的页面统计</title>
-    <link href="http://www.githang.com//Remove-valine-and-use-busuanzi-instead-of-lc_visitors"/>
-    <id>http://www.githang.com//Remove-valine-and-use-busuanzi-instead-of-lc_visitors</id>
+    <link href="http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc-visitors/"/>
+    <id>http://www.githang.com/2024/03/18/Remove-valine-and-use-busuanzi-instead-of-lc-visitors/</id>
     <published>2024-03-18T13:21:28.000Z</published>
     <updated>2024-03-18T13:21:28.000Z</updated>
     
@@ -460,31 +481,6 @@
       <category term="生命不息，折腾不止" scheme="http://www.githang.com/tags/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF%EF%BC%8C%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"/>
     
       <category term="换屏" scheme="http://www.githang.com/tags/%E6%8D%A2%E5%B1%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个故事——钟初</title>
-    <link href="http://www.githang.com/2019/10/30/one-story-1/"/>
-    <id>http://www.githang.com/2019/10/30/one-story-1/</id>
-    <published>2019-10-30T13:27:22.000Z</published>
-    <updated>2019-10-30T13:27:22.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;我满脑子在搜寻着这些记忆，却仍然串不起来一个故事，既然如此，那就编点儿吧。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;林易扬只觉得自己像是个土包子，尽管事实上可以把这个“像”去掉。在站起来的那一刻，他就觉得自己错了，但是他还是站着不动——更确切地说是没有大动，他还在努力地想把腿站得更直。&lt;br&gt;这是他在入学后第一次被老师叫起来回答问题。他紧张得直接就从原座上站起来了，而忽视了都市学校的桌椅与自己以前所用的桌椅之间的不同。那是每人一张的有靠背的凳面还透着人体工程学的学生凳子，而不是自己以前学校的那种窄窄的能坐两三人的条凳。而他的座位空间显然并不宽敞，坐着时尚且前胸微贴桌沿，所以直直地站起来时就不可避免的前桌顶前椅，后椅挤后桌了。
-    
-    </summary>
-    
-      <category term="小说" scheme="http://www.githang.com/categories/%E5%B0%8F%E8%AF%B4/"/>
-    
-    
-      <category term="一个故事" scheme="http://www.githang.com/tags/%E4%B8%80%E4%B8%AA%E6%95%85%E4%BA%8B/"/>
-    
-      <category term="小说" scheme="http://www.githang.com/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
