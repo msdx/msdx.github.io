@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-11-09T16:03:07.596Z</updated>
+  <updated>2024-11-10T14:35:25.397Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有关静态博客的评论系统</title>
+    <link href="http://www.githang.com/2024/11/10/A-Review-of-comment-systems-for-static-blogs/"/>
+    <id>http://www.githang.com/2024/11/10/A-Review-of-comment-systems-for-static-blogs/</id>
+    <published>2024-11-09T16:06:16.000Z</published>
+    <updated>2024-11-10T14:35:25.397Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　本文会不定时更新。本次更新时间：2024年11月10日。&lt;br&gt;　　&lt;br&gt;　　1. Vukkle。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&lt;/a&gt; 。&lt;br&gt;　　2. InsenseDebate。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&lt;/a&gt; 。&lt;br&gt;　　3. Disqus。目前正常使用。&lt;br&gt;　　4. 来必力。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/21/hexo-yilia-livere/&quot;&gt;https://www.githang.com/2019/05/21/hexo-yilia-livere/&lt;/a&gt; 。&lt;br&gt;　　5. 畅言。近期发现评论失败，在官方的&lt;a href=&quot;https://changyan.kuaizhan.com/static/help/common-question.html&quot;&gt;问答页面&lt;/a&gt;上评论也是失败。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="评论系统" scheme="http://www.githang.com/tags/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>关于《坏小孩》书评</title>
@@ -457,30 +477,6 @@
       <category term="生命不息，折腾不止" scheme="http://www.githang.com/tags/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF%EF%BC%8C%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"/>
     
       <category term="锡焊" scheme="http://www.githang.com/tags/%E9%94%A1%E7%84%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>红米6换屏记</title>
-    <link href="http://www.githang.com/2019/11/05/repair-for-redmi-screen/"/>
-    <id>http://www.githang.com/2019/11/05/repair-for-redmi-screen/</id>
-    <published>2019-11-05T15:37:41.000Z</published>
-    <updated>2019-11-05T15:37:41.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;买不到一年的红米6，因为听信了不需要贴膜和保护壳的话，早已经摔得不成样子了。背面指纹严重一道划伤，四角凸起，屏幕更是叠加了三次裂屏，已经影响到阅读的正确性了，于是便从淘宝上买了个便宜的屏幕，自己换屏。&lt;br&gt;以下仅为记事，而非教程分享，所以不会有详尽的图文教程，需要教程的，可以参考淘宝卖家发我的视频：&lt;a href=&quot;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&quot;&gt;https://www.bilibili.com/video/av51640075/?redirectFrom=h5&lt;/a&gt; 。&lt;br&gt;这次因为我直接买的屏幕总成，拆机8件套也齐全，总体来说，换屏过程还是挺轻松的。因为之前换后摄像头玻璃片时拆过后盖，所以这次有经验了，知道应该先把卡槽取出，不然有一边会卸不下来。取出卡槽后，用三角片加上吸盘很容易就把后盖打开。需要注意的是，后盖有线插在电路板接口上，所以取出时不要扯得太用力。好在虽然我自己也忘了这回事，但是也没扯坏，顺顺利利就拿了下来。
-    
-    </summary>
-    
-      <category term="折腾" scheme="http://www.githang.com/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="geek" scheme="http://www.githang.com/tags/geek/"/>
-    
-      <category term="生命不息，折腾不止" scheme="http://www.githang.com/tags/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF%EF%BC%8C%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"/>
-    
-      <category term="换屏" scheme="http://www.githang.com/tags/%E6%8D%A2%E5%B1%8F/"/>
     
   </entry>
   

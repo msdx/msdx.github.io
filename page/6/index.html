@@ -247,6 +247,103 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo-new-post-path" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/22/hexo-new-post-path/">如何在Hexo中对文章md文件分类</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/22/hexo-new-post-path/" class="archive-article-date">
+  	<time datetime="2018-12-22T04:57:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
+</a>
+        <div style="margin-top:10px;">
+          <!-- word count start -->
+          
+          <!-- word count end -->
+          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo是一个快速、简洁且高效的博客框架，常用在Github Page上部署个人博客。</p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>在默认配置下，我们使用<code>hexo new post [title]</code>会在<code>source/_post/</code>目录下生成对应的markdown文件，而使用<code>hexo g</code>生成的html文件路径是<code>:year/:month/:day/:title.html</code>。当我们写的博客越来越多的时候，会发现，所有文章都是在<code>source/_post/</code>下，查找起来会不大方便，而希望对它进行一个分类，但是在生成的文章链接上保持不变。</p>
+        
+          <a class="article-more-a" href="/2018/12/22/hexo-new-post-path/#more">more >></a>
+        
+      
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+				<a href="/categories/工具/" class="article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/22/hexo-new-post-path/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Git-Contribution-Statistics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1125,129 +1222,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Incompatibility-Problem-About-Attribute-Reference-In-Drawable" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Incompatibility-Problem-About-Attribute-Reference-In-Drawable">在 drawable 资源中使用属性引用的兼容问题</a>
-    </h1>
-  
-
-        
-        <a href="/Incompatibility-Problem-About-Attribute-Reference-In-Drawable" class="archive-article-date">
-  	<time datetime="2018-08-21T06:52:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-21</time>
-</a>
-        <div style="margin-top:10px;">
-          <!-- word count start -->
-          
-          <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
-          
-        </div>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在 Buly 崩溃分析里看到一个之前没见过的异常，异常信息为 <code>Can&#39;t convert to color: type=0x2 </code>。详细日志如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">java.lang.RuntimeException:Unable to start activity ComponentInfo&#123;com.parkingwang.iop/com.parkingwang.iop.home.HomeActivity&#125;: android.view.InflateException: Binary XML file line #79: Error inflating class TextView</span><br><span class="line">android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2366)</span><br><span class="line">......</span><br><span class="line">java.lang.UnsupportedOperationException:Can&#x27;t convert to color: type=0x2</span><br><span class="line">android.content.res.TypedArray.getColor(TypedArray.java:327)</span><br><span class="line">android.graphics.drawable.GradientDrawable.inflate(GradientDrawable.java:970)</span><br><span class="line">android.graphics.drawable.Drawable.createFromXmlInner(Drawable.java:937)</span><br><span class="line">android.graphics.drawable.Drawable.createFromXml(Drawable.java:877)</span><br><span class="line">android.content.res.Resources.loadDrawable(Resources.java:2206)</span><br><span class="line">android.content.res.TypedArray.getDrawable(TypedArray.java:602)</span><br><span class="line">android.widget.TextView.&lt;init&gt;(TextView.java:854)</span><br><span class="line">android.support.v7.widget.AppCompatTextView.&lt;init&gt;(TbsSdkJava)```</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">我在 google 中搜索这个异常信息，在 stackoverflow 上得到了一个答案，地址如下：</span><br><span class="line">https://stackoverflow.com/a/34279007/2673757</span><br><span class="line">&gt;I faced the same issue, that was caused by using attributes as a reference to color in xml drawable. As mentioned here on API &lt; 21 you can&#x27;t use attrs to color in xml drawable. So only way is to use a reference to a color resource (@color/YOURS_COLOR) or use #RGB format.</span><br><span class="line"></span><br><span class="line">意思是，**在 API 21（即 Android 5.0) 以下，不支持在 xml 定义的 drawable 里使用属性（像 `?attr/xxx` 这一类）来指定颜色。**</span><br><span class="line"></span><br><span class="line">在这个项目里，之所以会这样使用颜色属性，是因为项目里有一个换肤的需求，而皮肤是内置在应用中的。本来项目中有使用第三方皮肤框架，但是由于有很多新增的 drawable 的颜色都和皮肤有关，采用皮肤框架的方式需要在每个皮肤包项目中也增加相应的 drawable 资源，并且布局里要设置对应的属性，会比较麻烦。考虑到 Android 中的 Theme 可以通过调用 `applyStyle(int resId, boolean force)` 方法覆盖主题里的属性，那么如果为不同的皮肤定义不同的 style，然后在 Activity 创建时把对应的皮肤 style 覆盖到原来的主题上，在使用的时候直接引用属性就可以减少皮肤相关的代码了。</span><br><span class="line">当时在测试机上试了一下，确定方案可行，但是使用的是 5.0 以上的设备，也没有考虑到 5.0 以下是否兼容，所以才会出此问题。</span><br><span class="line"></span><br><span class="line">既然有这个原因，那只能老老实实地把相关代码改成皮肤框架的方案了。</span><br><span class="line"></span><br><span class="line">除此之外，在 drawable 资源里通过属性来指定 drawable 在 5.0 以下也是不支持的。如下：</span><br><span class="line"></span><br><span class="line">```xml</span><br><span class="line">&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</span><br><span class="line">    &lt;item android:drawable=&quot;@android:color/white&quot;/&gt;</span><br><span class="line">    &lt;item android:drawable=&quot;?attr/selectableItemBackground&quot;/&gt;</span><br><span class="line">&lt;/layer-list&gt;</span><br></pre></td></tr></table></figure>
-
-<p>它会报如下的 xml 解析异常：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">Caused by: org.xmlpull.v1.XmlPullParserException: Binary XML file </span><br><span class="line">line #8: &lt;item&gt; tag requires a &#x27;drawable&#x27; attribute or child tag </span><br><span class="line">defining a drawable</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.LayerDrawable.inflate(LayerDrawable.java:161)</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.Drawable.createFromXmlInner(Drawable.java:901)</span><br><span class="line">        at </span><br><span class="line">android.graphics.drawable.Drawable.createFromXml(Drawable.java:837)</span><br><span class="line">        at android.content.res.Resources.loadDrawable(Resources.java:2182)</span><br><span class="line">        at android.content.res.TypedArray.getDrawable(TypedArray.java:601)</span><br></pre></td></tr></table></figure>
-
-<p>关于这类问题的讨论见 <a href="https://issuetracker.google.com/issues/36941443">https://issuetracker.google.com/issues/36941443</a> ，也就是，<strong>5.0 之前在 xml 定义的 drawable 中，是不支持通过属性引用的方式来指定 color 或 drawable 资源的，这个特性在 5.0 开始才被实现。</strong></p>
-
-        
-<!-- Google Ad -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-4684296714025694"
-     data-ad-slot="3508709485"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- End Google Ad -->
-
-
-      
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">颜色属性</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">兼容性</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-				<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Incompatibility-Problem-About-Attribute-Reference-In-Drawable">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
@@ -1710,6 +1684,10 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Multibranch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">评论系统</a>
               </li>
             
             <div class="clearfix"></div>
