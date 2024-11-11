@@ -266,9 +266,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="64" class="pageViews" data-flag-title="WPS 和宏">0</span>°
+          
+         </div>
         
       </header>
     
@@ -362,9 +366,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="63" class="pageViews" data-flag-title="再踏上北京">0</span>°
+          
+         </div>
         
       </header>
     
@@ -459,9 +467,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="62" class="pageViews" data-flag-title="Hexo yilia 基于 leancloud 实现文章阅读量统计">0</span>°
+          
+         </div>
         
       </header>
     
@@ -567,9 +579,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="61" class="pageViews" data-flag-title="Hexo 向以前的文章添加id">0</span>°
+          
+         </div>
         
       </header>
     
@@ -667,9 +683,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="60" class="pageViews" data-flag-title="Hexo yilia 添加 Vuukle 评论系统">0</span>°
+          
+         </div>
         
       </header>
     
@@ -768,9 +788,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="59" class="pageViews" data-flag-title="Hexo yilia 添加 intensedebate 评论系统">0</span>°
+          
+         </div>
         
       </header>
     
@@ -869,9 +893,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="58" class="pageViews" data-flag-title="Hexo yilia 主题添加 valine 评论系统">0</span>°
+          
+         </div>
         
       </header>
     
@@ -975,9 +1003,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="57" class="pageViews" data-flag-title="Hexo yilia 主题添加 widgetpack 评论系统">0</span>°
+          
+         </div>
         
       </header>
     
@@ -1077,9 +1109,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="56" class="pageViews" data-flag-title="Hexo yilia 主题添加来必力评论系统">0</span>°
+          
+         </div>
         
       </header>
     
@@ -1178,9 +1214,13 @@ var _hmt = _hmt || [];
           <!-- word count start -->
           
           <!-- word count end -->
-          <!-- 不蒜子统计不支持在目录页面显示各文章阅读次数 -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
           
-        </div>
+            &nbsp; | &nbsp;
+            <span id="55" class="pageViews" data-flag-title="码农故事2——岁前落脚得安定 年后求职寻转机">0</span>°
+          
+         </div>
         
       </header>
     
@@ -1287,6 +1327,91 @@ var _hmt = _hmt || [];
         </div>
     </div>
   </div>
+  
+  <!-- 文章阅读数 -->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/leancloud-storage@4.12.2/dist/av-live-query-min.js"></script>
+<script type="text/javascript">
+if(true){
+    var leancloud_app_id  = 'gIFaPh0tJO7OEtT6XF5fKEel-gzGzoHsz';
+    var leancloud_app_key = 'ywkCbkvRxDTYdByDhIdVdH2x';
+    AV.init({
+        serverURLs: "https://valineapi.githang.com",
+        appId: leancloud_app_id,
+        appKey: leancloud_app_key
+    });
+    var pageViewsLength = $(".pageViews").length;
+    var isIndex = $(".pageViews").length > 1 ?true:false;
+    function showTime() {
+        var Pageview = AV.Object.extend("Pageview");
+        if(isIndex){
+            $(".pageViews").each(function(){
+                showPageViewsNum($(this), Pageview);
+            });
+        }else{
+            addPageViewsNum($(".pageViews"));
+        }
+    }
+    //仅显示阅读量
+    function showPageViewsNum(ele, Pageview){
+        var id = ele.attr('id').trim();
+        var query = new AV.Query("Pageview");
+        query.equalTo("post_id", id);
+        query.descending('createdAt');
+        query.limit(1);
+        query.find().then(function (results) {
+            $(document.getElementById(id)).text(results && results.length > 0?  results[0].get("count") : '0');
+        }, function (error) {
+             $(document.getElementById(id)).text('0');
+        });
+    }
+    //追加并显示阅读量
+    function addPageViewsNum(ele){
+        var id = ele.attr('id').trim();
+        var title = ele.attr('data-flag-title').trim();
+        var query = new AV.Query("Pageview");
+        query.equalTo("post_id", id);
+        query.descending('createdAt');
+        query.limit(1);
+        query.find().then(function (results) {
+            if (results.length == 0) {
+               saveNewPageview(id, title);
+               return;
+            } 
+            var pageview = results[0];
+            var count = pageview.get("count");
+            count++;
+            pageview.set("count", count);
+            pageview.set("title", title);
+            pageview.save().then(function (pageview) {
+                $(document.getElementById(id)).text(count);
+            })
+        }, function (error) {
+            saveNewPageview(id, title);
+        })
+    }
+
+    function saveNewPageview(id, title) {
+       var Pageview = AV.Object.extend("Pageview");
+       var query = new Pageview;
+       query.save({
+           post_id: id,
+           title: title,
+           count: 1
+       }).then(function (pageview) {
+           $(document.getElementById(id)).text(pageview.count);
+       }, function (error) {
+       });
+
+    }
+
+    if(pageViewsLength){ //此处判断等于 1 在执行 可去除循环
+        showTime();
+    }
+}
+</script>
+
+  
 </footer>
 
     </div>
