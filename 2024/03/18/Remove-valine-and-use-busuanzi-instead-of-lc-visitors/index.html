@@ -495,6 +495,10 @@ var _hmt = _hmt || [];
     <ul id="comment-tab-list" class="comment-tabs">
 
       
+      <li class="comment-tab-active">valine</li>
+      
+
+      
       <li class="">畅言</li>
       
 
@@ -514,6 +518,48 @@ var _hmt = _hmt || [];
       <li>Vuukle</li>
       
     </ul>
+
+    
+    <div class="comment-content comment-content-show">
+      <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="https://unpkg.com/leancloud-storage@4.12.2/dist/av-live-query-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  var notify = 'false' == true ? true : false;
+  var verify = 'false' == true ? true : false;
+  var recordIP = 'true' == true ? true : false;
+  new Valine({
+      // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+      av: AV, 
+      el: '.valine_comment',
+      emoticon_url: 'https://cloud.panjunwen.com/alu',
+      emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+      serverURLs: '//valineapi.githang.com',
+      app_id: 'gIFaPh0tJO7OEtT6XF5fKEel-gzGzoHsz',
+      app_key: 'ywkCbkvRxDTYdByDhIdVdH2x',
+      notify: notify,
+      verify: verify,
+      recordIP: recordIP,
+      placeholder: '有话要说？'
+    });
+</script>
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (data.from_who === null) {
+        data.from_who = '';
+      }
+      document.getElementById("veditor").setAttribute("placeholder", data.hitokoto + "——" + data.from_who + "《" + data.from + "》" + "\n\n请不要忘记填上你的昵称和邮箱喔！");
+    })
+    .catch(console.error)
+</script>
+
+    </div>
+    
 
     
     <div class="comment-content comment-content-hide">
