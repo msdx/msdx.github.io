@@ -16,7 +16,7 @@
 <meta property="og:description" content="虽是迟了几天，但总归是有了总结了。回顾过去一年，分几个方面概括一下。 个人开源以前的开源项目 status-bar-compat 在过去几个月的 star 量有些增幅，目前已过 400，算是我那些小打小闹的开源项目中 star 量最多的一个。 fir-publisher 发布到 fir 的一个 Gradle 插件，简单，轻量，新增了对 Android Gradle 3.0 的支持，目前仍是仅公司内">
 <meta property="og:locale">
 <meta property="article:published_time" content="2018-01-05T03:52:25.000Z">
-<meta property="article:modified_time" content="2018-01-05T03:52:25.000Z">
+<meta property="article:modified_time" content="2018-01-05T03:52:00.000Z">
 <meta property="article:author" content="浩码农">
 <meta property="article:tag" content="Android,Gradle,程序员,浩码农,代码,开源">
 <meta name="twitter:card" content="summary">
@@ -476,7 +476,7 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/The-Design-of-HeyPermission" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/01/09/The-Design-of-HeyPermission/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -486,7 +486,7 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/Auto-Jump" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/30/Auto-Jump/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">跳一跳——电脑能做的事就不要人工来做啦</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -519,6 +519,10 @@ var _hmt = _hmt || [];
 
       
       <li class="comment-tab-active">valine</li>
+      
+
+      
+        <li class="">gitment</li>
       
 
       
@@ -579,6 +583,31 @@ var _hmt = _hmt || [];
       document.getElementById("veditor").setAttribute("placeholder", data.hitokoto + "——" + data.from_who + "《" + data.from + "》" + "\n\n请不要忘记填上你的昵称和邮箱喔！");
     })
     .catch(console.error)
+</script>
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+    <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "2017 年总结",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
 </script>
 
     </div>
@@ -711,7 +740,6 @@ var idcomments_post_url;
 
   </div>
     
-  
 
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

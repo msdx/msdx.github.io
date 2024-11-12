@@ -443,7 +443,7 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/OkHttp3-LogInterceptor" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/09/16/OkHttp3-LogInterceptor/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -481,6 +481,10 @@ var _hmt = _hmt || [];
 
       
       <li class="comment-tab-active">valine</li>
+      
+
+      
+        <li class="">gitment</li>
       
 
       
@@ -541,6 +545,31 @@ var _hmt = _hmt || [];
       document.getElementById("veditor").setAttribute("placeholder", data.hitokoto + "——" + data.from_who + "《" + data.from + "》" + "\n\n请不要忘记填上你的昵称和邮箱喔！");
     })
     .catch(console.error)
+</script>
+
+    </div>
+    
+
+    
+    <div class="comment-content comment-content-hide">
+    <div id="gitment-ctn"></div> 
+<!--<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+
+<link rel="stylesheet" href="/gitment/style/default.css">
+<script src="/gitment/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "你好，Hexo",
+  owner: 'msdx',
+  repo: 'blog-comments',
+  oauth: {
+    client_id: '86dd63ff5497d3a9d07b',
+    client_secret: 'cf349a067c91167efb97690daed43a545ff31d6e',
+  },
+})
+gitment.render('gitment-ctn')
 </script>
 
     </div>
@@ -673,7 +702,6 @@ var idcomments_post_url;
 
   </div>
     
-  
 
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
