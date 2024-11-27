@@ -247,6 +247,125 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Change-Sonatype-Nexus2-Base-Url" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/05/Change-Sonatype-Nexus2-Base-Url/">修改 Sonatype Nexus2 的 baseUrl</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/05/Change-Sonatype-Nexus2-Base-Url/" class="archive-article-date">
+  	<time datetime="2018-09-05T06:10:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
+        <div style="margin-top:10px;">
+          <!-- word count start -->
+          
+            <span class="post-time">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-keyboard-o"></i>
+    <span class="post-meta-item-text">  字数统计: </span>
+    <span class="post-count">363字</span>
+  </span>
+</span>
+
+<span class="post-time">
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-hourglass-half"></i>
+    <span class="post-meta-item-text">  阅读时长: </span>
+    <span class="post-count">1分</span>
+  </span>
+</span>
+
+            
+          <!-- word count end -->
+
+          <!-- 使用基于leancloud的阅读统计 -->
+          
+            &nbsp; | &nbsp;
+            <span id="34" class="pageViews" data-flag-title="修改 Sonatype Nexus2 的 baseUrl">0</span>°
+          
+         </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>背景：<br>搭建 nexus 是使用的 sonatype 的官方 nexus docker 镜像，跑起来之后，发现访问路径带了 <code>/nexus</code> 而不是 <code>/</code>，于是想修改这个路径。</p>
+<p>尝试方法一：<br>以管理员账号登录，打开 <strong>Administration</strong> 中的 <strong>Servier</strong> 面板，修改 <strong>Application Server Settings</strong> 里的 <code>Base URL</code> 配置。<br>但发现无效。勾上 <code>Force Base URL</code> 之后依然不起作用，仓库不加上 <code>/nexus</code> 无法访问。<br>此处实际上修改的是 nexus 数据目录下的 <code>conf/nexus.xml</code> 配置文件。</p>
+        
+          <a class="article-more-a" href="/2018/09/05/Change-Sonatype-Nexus2-Base-Url/#more">more >></a>
+        
+      
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nexus</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+				<a href="/categories/工具/" class="article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/05/Change-Sonatype-Nexus2-Base-Url/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Incompatibility-Problem-About-Attribute-Reference-In-Drawable" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1367,125 +1486,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/06/22/BadgeDrawable/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Phabricator-Pygments-Kotlin-Syntax-Highlight" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/">Phabricator 添加对 Kotlin 的语法高亮</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/" class="archive-article-date">
-  	<time datetime="2018-05-15T03:44:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        <div style="margin-top:10px;">
-          <!-- word count start -->
-          
-            <span class="post-time">
-  <span class="post-meta-item-icon">
-    <i class="fa fa-keyboard-o"></i>
-    <span class="post-meta-item-text">  字数统计: </span>
-    <span class="post-count">549字</span>
-  </span>
-</span>
-
-<span class="post-time">
-  &nbsp; | &nbsp;
-  <span class="post-meta-item-icon">
-    <i class="fa fa-hourglass-half"></i>
-    <span class="post-meta-item-text">  阅读时长: </span>
-    <span class="post-count">2分</span>
-  </span>
-</span>
-
-            
-          <!-- word count end -->
-
-          <!-- 使用基于leancloud的阅读统计 -->
-          
-            &nbsp; | &nbsp;
-            <span id="24" class="pageViews" data-flag-title="Phabricator 添加对 Kotlin 的语法高亮">0</span>°
-          
-         </div>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一直难以忍受在做 Code Review 时，Phabricator 无法对 kotlin 代码进行高亮显示，直到今天项目的阶段性开发终于告一段落进入测试，于是着手处理该问题。</p>
-<p>Phabricator 对语法高亮有两种支持方式，一种是其自带的高亮，还是一种是对 pygments 的集成。在 Phabricator 的设置界面上提到，如果想支持更多种语言的语法高亮，可以启用 pygments，于是我就配置为使用 pygments。</p>
-        
-          <a class="article-more-a" href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/#more">more >></a>
-        
-      
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Phabricator</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-				<a href="/categories/工具/" class="article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/Phabricator-Pygments-Kotlin-Syntax-Highlight/">展开全文 >></a>
         </p>
       
 

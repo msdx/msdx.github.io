@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-11-10T14:35:25.397Z</updated>
+  <updated>2024-11-27T15:33:17.034Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,15 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《早期教育与天才》读后感</title>
+    <link href="http://www.githang.com/2024/11/27/Reflections-on-Early-Education-and-Genius/"/>
+    <id>http://www.githang.com/2024/11/27/Reflections-on-Early-Education-and-Genius/</id>
+    <published>2024-11-27T15:12:37.000Z</published>
+    <updated>2024-11-27T15:33:17.034Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　这本书，其实更像是作者的读后读或者说是读书笔记集。&lt;/p&gt;
+&lt;p&gt;　　我是先看完《卡尔威特的教育》，之后再看到这本《早期教育与天才》的，所以从这本书的第二章起，看到大量熟悉的来自《卡尔威特的教育》的内容，我甚至都有点怀疑这本书的意图了。整章的内容，几乎都是对其内容的摘抄与复述，属于作者本身的观点的内容少之又少。如果说有，那不过是他在“同意着”《卡尔威特的教育》里的观点。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.githang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="读后感" scheme="http://www.githang.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>有关静态博客的评论系统</title>
     <link href="http://www.githang.com/2024/11/10/A-Review-of-comment-systems-for-static-blogs/"/>
     <id>http://www.githang.com/2024/11/10/A-Review-of-comment-systems-for-static-blogs/</id>
     <published>2024-11-09T16:06:16.000Z</published>
-    <updated>2024-11-10T14:35:25.397Z</updated>
+    <updated>2024-11-13T14:19:07.659Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;　　本文会不定时更新。本次更新时间：2024年11月10日。&lt;br&gt;　　&lt;br&gt;　　1. Vukkle。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&lt;/a&gt; 。&lt;br&gt;　　2. InsenseDebate。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&lt;/a&gt; 。&lt;br&gt;　　3. Disqus。目前正常使用。&lt;br&gt;　　4. 来必力。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/21/hexo-yilia-livere/&quot;&gt;https://www.githang.com/2019/05/21/hexo-yilia-livere/&lt;/a&gt; 。&lt;br&gt;　　5. 畅言。近期发现评论失败，在官方的&lt;a href=&quot;https://changyan.kuaizhan.com/static/help/common-question.html&quot;&gt;问答页面&lt;/a&gt;上评论也是失败。
+      &lt;p&gt;　　本文会不定时更新。本次更新时间：2024年11月10日。&lt;br&gt;　　&lt;br&gt;　　1. Vukkle。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-vuukle/&lt;/a&gt; 。&lt;br&gt;　　2. InsenseDebate。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&quot;&gt;https://www.githang.com/2019/05/22/hexo-yilia-intensedebate/&lt;/a&gt; 。&lt;br&gt;　　3. Disqus。目前正常使用。&lt;br&gt;　　4. 来必力。目前正常使用，添加过程见博客：&lt;a href=&quot;https://www.githang.com/2019/05/21/hexo-yilia-livere/&quot;&gt;https://www.githang.com/2019/05/21/hexo-yilia-livere/&lt;/a&gt; 。&lt;br&gt;　　5. &lt;del&gt;畅言&lt;/del&gt;。近期发现评论失败，在官方的&lt;a href=&quot;https://changyan.kuaizhan.com/static/help/common-question.html&quot;&gt;问答页面&lt;/a&gt;上评论也是失败。
     
     </summary>
     
@@ -41,7 +62,7 @@
     <link href="http://www.githang.com/2024/11/09/A-Review-of-Bad-Kids/"/>
     <id>http://www.githang.com/2024/11/09/A-Review-of-Bad-Kids/</id>
     <published>2024-11-09T15:43:36.000Z</published>
-    <updated>2024-11-09T16:03:07.596Z</updated>
+    <updated>2024-11-09T15:43:00.000Z</updated>
     
     <summary type="html">
     
@@ -62,7 +83,7 @@
     <link href="http://www.githang.com/2024/11/07/The-Reflection-on-Reading-The-Education-of-Karl-Witte/"/>
     <id>http://www.githang.com/2024/11/07/The-Reflection-on-Reading-The-Education-of-Karl-Witte/</id>
     <published>2024-11-07T14:25:22.000Z</published>
-    <updated>2024-11-07T14:57:07.962Z</updated>
+    <updated>2024-11-07T14:25:00.000Z</updated>
     
     <summary type="html">
     
@@ -82,7 +103,7 @@
     <link href="http://www.githang.com/2024/09/29/a-few-things-about-left-handed-people/"/>
     <id>http://www.githang.com/2024/09/29/a-few-things-about-left-handed-people/</id>
     <published>2024-09-29T15:34:41.000Z</published>
-    <updated>2024-09-29T15:34:41.000Z</updated>
+    <updated>2024-09-29T15:34:00.000Z</updated>
     
     <summary type="html">
     
@@ -102,7 +123,7 @@
     <link href="http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/"/>
     <id>http://www.githang.com/2024/07/31/Travelogue-of-Yunnan-in-2024-3/</id>
     <published>2024-07-31T15:31:18.000Z</published>
-    <updated>2024-11-12T16:02:52.401Z</updated>
+    <updated>2024-07-31T15:31:00.000Z</updated>
     
     <summary type="html">
     
@@ -131,7 +152,7 @@
     <link href="http://www.githang.com/2024/03/22/The-letter-1/"/>
     <id>http://www.githang.com/2024/03/22/The-letter-1/</id>
     <published>2024-03-22T13:36:59.000Z</published>
-    <updated>2024-03-22T13:36:59.000Z</updated>
+    <updated>2024-03-22T13:36:00.000Z</updated>
     
     <summary type="html">
     
@@ -153,7 +174,7 @@
     <link href="http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/"/>
     <id>http://www.githang.com/2024/03/21/Right-click-to-send-e-books-to-kindle-via-email-in-Windows/</id>
     <published>2024-03-21T13:05:01.000Z</published>
-    <updated>2024-03-21T13:05:01.000Z</updated>
+    <updated>2024-03-21T13:05:00.000Z</updated>
     
     <summary type="html">
     
@@ -200,7 +221,7 @@
     <link href="http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/"/>
     <id>http://www.githang.com/2024/03/15/Travelogue-of-Yunnan-in-2024-2/</id>
     <published>2024-03-15T12:59:04.000Z</published>
-    <updated>2024-03-15T12:59:04.000Z</updated>
+    <updated>2024-03-15T12:59:00.000Z</updated>
     
     <summary type="html">
     
@@ -229,7 +250,7 @@
     <link href="http://www.githang.com/2024/03/03/Travelogue-of-Yunnan-in-2024-1/"/>
     <id>http://www.githang.com/2024/03/03/Travelogue-of-Yunnan-in-2024-1/</id>
     <published>2024-03-03T14:50:59.000Z</published>
-    <updated>2024-03-03T14:50:59.000Z</updated>
+    <updated>2024-03-03T14:50:00.000Z</updated>
     
     <summary type="html">
     
@@ -258,7 +279,7 @@
     <link href="http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/"/>
     <id>http://www.githang.com/2022/02/24/The-Ups-And-Downs-Of-The-Trip-To-The-North/</id>
     <published>2022-02-24T14:00:42.000Z</published>
-    <updated>2022-02-24T14:00:42.000Z</updated>
+    <updated>2022-02-24T14:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -275,7 +296,7 @@
     <link href="http://www.githang.com/2020/05/30/why-do-I-seem-to-disappear-for-months/"/>
     <id>http://www.githang.com/2020/05/30/why-do-I-seem-to-disappear-for-months/</id>
     <published>2020-05-30T13:46:16.000Z</published>
-    <updated>2020-05-30T13:46:16.000Z</updated>
+    <updated>2020-05-30T13:46:00.000Z</updated>
     
     <summary type="html">
     
@@ -297,7 +318,7 @@
     <link href="http://www.githang.com/2020/01/14/technology-cannot-solve-social-problems/"/>
     <id>http://www.githang.com/2020/01/14/technology-cannot-solve-social-problems/</id>
     <published>2020-01-14T14:09:16.000Z</published>
-    <updated>2020-01-14T14:09:16.000Z</updated>
+    <updated>2020-01-14T14:09:00.000Z</updated>
     
     <summary type="html">
     
@@ -319,7 +340,7 @@
     <link href="http://www.githang.com/2020/01/10/summary-of-2019/"/>
     <id>http://www.githang.com/2020/01/10/summary-of-2019/</id>
     <published>2020-01-10T13:52:31.000Z</published>
-    <updated>2020-01-10T13:52:31.000Z</updated>
+    <updated>2020-01-10T13:52:00.000Z</updated>
     
     <summary type="html">
     
@@ -340,7 +361,7 @@
     <link href="http://www.githang.com/2019/12/29/fifteen-sentences-3/"/>
     <id>http://www.githang.com/2019/12/29/fifteen-sentences-3/</id>
     <published>2019-12-29T15:20:49.000Z</published>
-    <updated>2019-12-29T15:20:49.000Z</updated>
+    <updated>2019-12-29T15:20:00.000Z</updated>
     
     <summary type="html">
     
@@ -365,7 +386,7 @@
     <link href="http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/"/>
     <id>http://www.githang.com/2019/12/25/reflection-to-economics-in-one-lesson/</id>
     <published>2019-12-25T15:35:48.000Z</published>
-    <updated>2019-12-25T15:35:48.000Z</updated>
+    <updated>2019-12-25T15:35:00.000Z</updated>
     
     <summary type="html">
     
@@ -389,7 +410,7 @@
     <link href="http://www.githang.com/2019/12/21/fifteen-sentences-2/"/>
     <id>http://www.githang.com/2019/12/21/fifteen-sentences-2/</id>
     <published>2019-12-21T11:56:38.000Z</published>
-    <updated>2019-12-21T11:56:38.000Z</updated>
+    <updated>2019-12-21T11:56:00.000Z</updated>
     
     <summary type="html">
     
@@ -414,7 +435,7 @@
     <link href="http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/"/>
     <id>http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/</id>
     <published>2019-12-05T13:16:33.000Z</published>
-    <updated>2019-12-05T13:16:33.000Z</updated>
+    <updated>2019-12-05T13:16:00.000Z</updated>
     
     <summary type="html">
     
@@ -436,7 +457,7 @@
     <link href="http://www.githang.com/2019/11/26/fifteen-sentences-1/"/>
     <id>http://www.githang.com/2019/11/26/fifteen-sentences-1/</id>
     <published>2019-11-26T15:42:15.000Z</published>
-    <updated>2019-11-26T15:42:15.000Z</updated>
+    <updated>2019-11-26T15:42:00.000Z</updated>
     
     <summary type="html">
     
@@ -453,30 +474,6 @@
     
     
       <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初次锡焊</title>
-    <link href="http://www.githang.com/2019/11/09/first-soldering/"/>
-    <id>http://www.githang.com/2019/11/09/first-soldering/</id>
-    <published>2019-11-09T12:49:51.000Z</published>
-    <updated>2019-11-09T12:49:51.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在家里用的一个插排，其中两个USB充电口因为进过水导致短路，差点被扔掉，我拿到后把短路的USB充电口的电路板的接线拆掉，使得它又复活了。&lt;br&gt;但复活之后，USB充电口少掉一半，使得需要对乐心手环充电时，就要拔掉上面的USB线（虽然能用的还有两个USB口，但是它们太近了，要把另一个口的USB线拔掉手环才能插进去），略有不爽。有天忽然想到短路的只是USB充电口电路板的其中一角，于是一个不成熟的想法在脑海中形成了。&lt;br&gt;在淘宝上10块买到一套很便宜的电烙铁套装，含40W外热式电烙铁，两卷1.7米的焊锡，一块松香，一个简易支架还有一张薄薄的海绵，然后就开始拆插排了。&lt;br&gt;第一次拿电烙铁，全无经验，想像了一下刚毕业那年看到的以前同事使用电烙铁的样子，感觉自己大概也会，于是通上电。一开始，感觉毫无动静，不料没几秒，电烙笔上冒出一股烟，我心想，不妙，工具烧了。
-    
-    </summary>
-    
-      <category term="折腾" scheme="http://www.githang.com/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    
-      <category term="geek" scheme="http://www.githang.com/tags/geek/"/>
-    
-      <category term="生命不息，折腾不止" scheme="http://www.githang.com/tags/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF%EF%BC%8C%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"/>
-    
-      <category term="锡焊" scheme="http://www.githang.com/tags/%E9%94%A1%E7%84%8A/"/>
     
   </entry>
   
