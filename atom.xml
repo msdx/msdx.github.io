@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2024-11-27T15:33:17.034Z</updated>
+  <updated>2025-01-01T15:20:13.094Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024年的最后一天</title>
+    <link href="http://www.githang.com/2024/12/31/The-Last-Day-of-2024/"/>
+    <id>http://www.githang.com/2024/12/31/The-Last-Day-of-2024/</id>
+    <published>2024-12-31T15:03:17.000Z</published>
+    <updated>2025-01-01T15:20:13.094Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　这是2024年的最后一天。留给我的时间真的不多了。&lt;br&gt;　　在这一年的最后几天，还一连出现状况。先是一年两千元左右的货丢了，而主要责任在于我。虽然通过调取监控找到了一定线索，但香河的警察实在拉垮。最终还是凭运气及自己的人，才在第三天找回了这件货。&lt;br&gt;　　结果这一天还未结束，我就把自己摔伤了。冬天的干燥使得外伤也变得轻而易举。我从未想过，有一居然会被纸箱的一角刺破手掌，深入肌肉，连脂肪层都露了出来。而且还因此，加重了伤手的冻伤——毕竟捂着伤手去医院的过程也不会考虑如何给它戴上手套。庆幸的一点是，这次的受伤不影响一个左撇子写字。遗憾同时也存在，那就是在接下来的一段时间里，我都不能再开电动车了。
+    
+    </summary>
+    
+      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+      <category term="随笔" scheme="http://www.githang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>《早期教育与天才》读后感</title>
@@ -449,31 +469,6 @@
       <category term="Code Review" scheme="http://www.githang.com/tags/Code-Review/"/>
     
       <category term="代码规范" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十五言#1</title>
-    <link href="http://www.githang.com/2019/11/26/fifteen-sentences-1/"/>
-    <id>http://www.githang.com/2019/11/26/fifteen-sentences-1/</id>
-    <published>2019-11-26T15:42:15.000Z</published>
-    <updated>2019-11-26T15:42:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;“货币的当前价值往往取决于人们对未来的货币数量的预期。”——《一课经济学》&lt;/li&gt;
-&lt;li&gt;“当我们专注于某个单一经济群体时，看起来可能是千真万确的许多事情，在转而考虑既是消费者又是生产者的每一个人的利益时，却有可能是一串错觉。”——《一课经济学》&lt;/li&gt;
-&lt;li&gt;“看问题时，是看整体，不是看片段。这就是经济学的目标。”——《一课经济学》&lt;/li&gt;
-&lt;li&gt;“越来越多人开始意识到，政府若不先从纳税人手里拿走些什么，就不可能带给他们任何好处。”——《一课经济学》&lt;/li&gt;
-&lt;li&gt;“以纯朴的眼光看，人类至少面临四项普遍约束：（1）东西不够；（2）生命有限；（3）互相依赖；和（4）需要协调。人类种种制度安排，一概是为了就会这些约束而衍生的。粗略地概括，这四项约束对应着四类经济理论：（1）需求定律；（2）利息理论；（3）制度理论；和（4）宏观理论。”——《经济学通识》
-    
-    </summary>
-    
-      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
-    
-    
-      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
     
   </entry>
   
