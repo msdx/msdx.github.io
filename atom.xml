@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2025-01-01T15:20:13.094Z</updated>
+  <updated>2026-10-08T15:04:51.000Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用AI搓了个送货路线规划应用</title>
+    <link href="http://www.githang.com/2026/10/08/route-planning/"/>
+    <id>http://www.githang.com/2026/10/08/route-planning/</id>
+    <published>2026-10-08T14:01:29.000Z</published>
+    <updated>2026-10-08T15:04:51.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　事情起因是这样的：我因为对送货时间的意识不足，因此没能尽早安排送货时间，导致店里司机在上午出车太晚而赶不回中午吃饭，于是决定做一个应用解决这个问题。&lt;/p&gt;
+&lt;p&gt;其实早在很早之前我就在微信小程序上摸索这种送货的路线规划应用，但用了不少都不大满意，有遇上过一个功能如我所想的，但却是收费应用，后来便搁浅了。只是如今又想起，而近来 AI 功能成熟许多，于是便通过它来实现这一想法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="造轮子" scheme="http://www.githang.com/categories/%E9%80%A0%E8%BD%AE%E5%AD%90/"/>
+    
+    
+      <category term="AI" scheme="http://www.githang.com/tags/AI/"/>
+    
+      <category term="开发" scheme="http://www.githang.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>2024年的最后一天</title>
@@ -447,28 +470,6 @@
     
     
       <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我是如何进行 Code Review 的</title>
-    <link href="http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/"/>
-    <id>http://www.githang.com/2019/12/05/how-do-i-conduct-code-review/</id>
-    <published>2019-12-05T13:16:33.000Z</published>
-    <updated>2019-12-05T13:16:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前些天群里分享了一份笔试题，其中有个问题是问如何进行 Code Review 的。我在群里调侃性地回答说：以我两年的 code review 经验，我可以告诉大家，我就是看其他人的代码风格是否和我的一致，一致就accept，不一致就refuse。&lt;br&gt;后来想想那近两年里我做的，简单地总结一下的话，似乎真如此。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="杂文" scheme="http://www.githang.com/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-      <category term="Code Review" scheme="http://www.githang.com/tags/Code-Review/"/>
-    
-      <category term="代码规范" scheme="http://www.githang.com/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
