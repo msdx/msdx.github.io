@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.githang.com/"/>
-  <updated>2026-10-09T13:22:07.709Z</updated>
+  <updated>2026-10-09T14:23:15.721Z</updated>
   <id>http://www.githang.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>用AI搓了个送货路线规划应用</title>
+    <title>用 AI 搓了个线性切割优化应用</title>
+    <link href="http://www.githang.com/2026/10/09/cut-optimizer/"/>
+    <id>http://www.githang.com/2026/10/09/cut-optimizer/</id>
+    <published>2026-10-09T13:46:40.000Z</published>
+    <updated>2026-10-09T14:23:15.721Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;　　上次用 AI 做了路线规划的应用之后，心血来潮，便想到用它来做一个型材切割优化程序，没想到效果却是出奇的好，完全超出我的期望。&lt;br&gt;　　还是先上图：&lt;br&gt;　　&lt;img src=&quot;http://upyun.githang.com/2026/10/09/17915538378578.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　界面有些 WINDOWS 应用的风格，是因为起初 AI 生成的界面交互与我所想相差太远，于是就让其参考一个 WINDOWS 上的同类应用，并基于此进行修改。&lt;br&gt;　　经过十余个版本的迭代，现在各个功能点的实现都超出我的设想。我择其中罗列如下：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="造轮子" scheme="http://www.githang.com/categories/%E9%80%A0%E8%BD%AE%E5%AD%90/"/>
+    
+    
+      <category term="AI" scheme="http://www.githang.com/tags/AI/"/>
+    
+      <category term="开发" scheme="http://www.githang.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 AI 搓了个送货路线规划应用</title>
     <link href="http://www.githang.com/2026/10/08/route-planning/"/>
     <id>http://www.githang.com/2026/10/08/route-planning/</id>
     <published>2026-10-08T14:01:29.000Z</published>
-    <updated>2026-10-09T13:22:07.709Z</updated>
+    <updated>2026-10-09T13:47:13.215Z</updated>
     
     <summary type="html">
     
@@ -445,31 +468,6 @@
       <category term="读书" scheme="http://www.githang.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
       <category term="经济学" scheme="http://www.githang.com/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十五言#2</title>
-    <link href="http://www.githang.com/2019/12/21/fifteen-sentences-2/"/>
-    <id>http://www.githang.com/2019/12/21/fifteen-sentences-2/</id>
-    <published>2019-12-21T11:56:38.000Z</published>
-    <updated>2019-12-21T11:56:00.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;“休息并不是浪费时间，恰恰相反，高质量的休息才是我们新的推动力和创造力的最佳来源。”——《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;“如果我们接到一项任务就马上着手对其进行处理，这项任务所耗费的时间就会缩短许多。”——《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;“许多问题是不能拖延的。时间拖得越长，由此衍生出来的问题就会越多，解决总体问题的难度也会不断增长，这就无形中增加了我们的工作量。”——《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;“成功的关键并不是为日程表上的事务安排先后次序，而是用具有优先权的事情来安排日程表。”——我蒂芬·柯维。摘自《把时间留给最重要的事》&lt;/li&gt;
-&lt;li&gt;“处理事情的优先原则：先重要后紧急！”——《把时间留给最重要的事》
-    
-    </summary>
-    
-      <category term="杂记" scheme="http://www.githang.com/categories/%E6%9D%82%E8%AE%B0/"/>
-    
-    
-      <category term="十五言" scheme="http://www.githang.com/tags/%E5%8D%81%E4%BA%94%E8%A8%80/"/>
     
   </entry>
   
